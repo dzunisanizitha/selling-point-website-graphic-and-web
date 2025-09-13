@@ -36,7 +36,7 @@ a {
 /* ================= HEADER ================= */
 header {
     background: var(--secondary);
-    padding: 15px 0;
+    padding: 0 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -70,7 +70,7 @@ header {
 /* Mobile screens */
 @media screen and (max-width: 600px) {
   .logo-img {
-    max-height: 120px;
+    max-height: 150px;
   }
 }
 
@@ -125,6 +125,7 @@ header {
     font-size: 30px;
     cursor: pointer;
     z-index: 1002;
+    margin-right: 20px;
 }
 
 .hamburger .close {
@@ -156,9 +157,9 @@ header {
 }
 
 .mobile-logo img {
-    width: 330px;
+    width: 300px;
     height: auto;
-    align-items: center;
+    margin-right: -70px;
 }
 
 /* Menu List */
@@ -204,7 +205,7 @@ header {
     #menu-toggle:checked + .hamburger .close {
         display: inline;
         position: absolute;
-        top: 20px;
+        top: -40px;
         right: 20px;
         font-size: 40px;
         color: var(--primary);
@@ -324,6 +325,7 @@ header {
 
 
 /* ================= STATIC WEBSITE LOGO SLIDER ================= */
+/* ================= STATIC WEBSITE LOGO SLIDER ================= */
 .portfolio-logos-section {
   padding: 50px 20px;
   background: var(--secondary);
@@ -336,55 +338,66 @@ header {
   margin-bottom: 25px;
 }
 
-/* Wrapper for overflow */
+/* Wrapper for overflow + left/right spacing */
 .logos-wrapper {
   overflow: hidden;
   width: 100%;
+  padding: 0 50px; /* space on left and right edges */
+  box-sizing: border-box;
 }
 
 /* Track that moves */
 .logos-track {
   display: flex;
   align-items: center;
-  animation: logos-scroll 5s linear infinite;
+  width: calc(200%); /* double width for seamless loop */
+  animation: logos-scroll 12s linear infinite;
 }
 
 /* Individual logo item */
 .logo-item {
   display: block;
-  margin-right: 47px;
+  margin-right: 40px; /* spacing between logos */
 }
 
 .logo-item img {
-  width: 75px; /* adjust size as needed */
+  width: 75px; /* adjust logo size */
   height: auto;
   object-fit: contain;
   cursor: pointer;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-item img:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(252, 209, 42, 0.5); /* accent color shadow */
+  box-shadow: 0 6px 15px rgba(252, 209, 42, 0.5);
 }
 
 /* Scroll animation */
 @keyframes logos-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); } /* move half the track */
 }
 
-
-
-/* Mobile adjustments for logos */
+/* Mobile adjustments */
 @media screen and (max-width: 768px) {
   .logo-item img {
-    width: 55px;    /* smaller logos on mobile */
+    width: 55px; /* smaller logos on mobile */
   }
   .logo-item {
-    margin-right: 20px;  /* reduce spacing for small screens */
+    margin-right: 44px; /* less spacing on mobile */
+  }
+  .logos-wrapper {
+    padding: 0 20px; /* smaller side padding */
   }
 }
+
+@media screen and (min-width: 769px) {
+  .logo-item {
+    margin-right: 120px; /* adjust spacing between logos */
+  }
+}
+
 
 
 
