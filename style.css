@@ -616,8 +616,6 @@ header {
 }
 /* ================= QUOTE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ================= */
 
-
-
 .blog {
   background: #1e1e2f;
   padding: 50px 20px;
@@ -667,18 +665,47 @@ header {
   font-size: 1rem;
 }
 
+
+/* ===== blog image: fit exactly to content width ===== */
+.blog-details img {
+  display: block;         /* remove inline spacing */
+  width: 100%;            /* fill the .container / .blog-post width */
+  height: auto;           /* preserve aspect ratio */
+  object-fit: cover;      /* crop if necessary so it fills the box */
+  border-radius: 10px;    /* match your card style */
+  margin: 0 0 16px;       /* small spacing under image */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35); /* subtle contrast shadow */
+}
+
+/* Make the <summary> area full-width and clearly clickable */
+.blog-details summary {
+  display: block;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Tiny, content-width divider (preferred when moved inside .container) */
 .blog-divider {
-  height: 1px;               /* very thin line */
-  background-color: #ff3c78; /* brand pink */
-  width: 100%;                /* full width of the content container */
-  margin: 20px 0 0 0;        /* spacing above, optional below */
-  border-radius: 0.5px;      /* tiny rounding for smoothness */
+  height: 1px;
+  background-color: #ff3c78;    /* brand pink */
+  width: 100%;
+  margin: 20px 0 0;
+  border-radius: 0.5px;
+}
+
+/* Fallback: if divider remains outside container, center and match container width */
+.blog-divider.fallback {
+  max-width: var(--max-width);   /* uses your site variable */
+  width: calc(100% - 40px);     /* subtract container horizontal padding (20px each side) */
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 
 
 
-/* ================= VARIABLES ================= */
+/* ================= VARIABLES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>================= */
 :root {
   --primary: #ff3c78;
   --secondary: #1e1e2f;
