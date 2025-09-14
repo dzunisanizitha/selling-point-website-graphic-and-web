@@ -156,7 +156,7 @@ header {
   height: auto;        /* keep aspect ratio */
   display: block;
   margin: 0;           /* no need for margin-left if using flexbox */
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 /* menu links */
@@ -210,7 +210,7 @@ header {
 .menu-toggle.close::before{
   content: "\00d7"; /* × */
   line-height: 1;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* When menu is open (targeted): hide open, show close */
@@ -330,7 +330,7 @@ header {
 #portfolio-graphics {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #ff6ec7, #6a5af9, #4fd1c5);
+  background: linear-gradient(135deg, #ff6ec7, #6a5af9, #fcd12a);
   background-size: 600% 600%;
   animation: gradientShift 15s ease infinite;
   border-radius: 15px;
@@ -371,6 +371,7 @@ header {
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Staggered animation delays for cards */
@@ -381,11 +382,12 @@ header {
 
 #portfolio-graphics .portfolio-item img {
   width: 100%;
-  max-width: 250px; /* max width per logo */
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  height: 100%; /* make image cover entire card */
+  object-fit: cover; /* crop to fill container */
+  border-radius: 12px; /* match card border radius */
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+
 }
 
 #portfolio-graphics .portfolio-item:hover {
@@ -410,7 +412,7 @@ header {
 
 #portfolio-websites h2 {
   font-size: 2rem;
-  color: #ffc82d; /* brand accent */
+  color: white; /* brand accent */
   margin-bottom: 40px;
   font-weight: 700;
   text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
@@ -489,7 +491,6 @@ header {
     color: #ffffff;
 }
 
-
 /* ================= FAQ ================= */
 .faq {
   padding: 60px 20px;
@@ -499,7 +500,7 @@ header {
 
 .faq h2 {
   text-align: center;
-  color: var(--primary);
+  color: white;
   margin-bottom: 40px;
 }
 
@@ -524,7 +525,7 @@ header {
   cursor: pointer;
   position: relative;
   transition: background var(--transition);
-  color: var(--accent);
+  color: white;
 }
 
 .faq-item .question::after {
@@ -566,7 +567,7 @@ header {
 }
 
 .contact h2 {
-  color: var(--primary);
+  color: white;
   margin-bottom: 15px;
 }
 
@@ -598,8 +599,6 @@ header {
   background: var(--primary);     /* pink hover */
   color: var(--light);            /* white icon on hover */
 }
-
-
 /* ================= QUOTE ================= */
 .quote {
     padding: 50px 0;
@@ -615,73 +614,65 @@ header {
     margin-top: 20px;
     transition: var(--transition);
 }
+/* ================= QUOTE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ================= */
 
 
-.blog-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  color: var(--light);
+
+.blog {
+  background: #1e1e2f;
+  padding: 50px 20px;
+  border-radius: 15px;
+  color: #fff;
 }
 
-.blog-item {
-  border: 1px solid var(--accent);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  background: var(--secondary);
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.blog-toggle {
-  display: none;
-}
-
-.blog-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
+.blog-details summary {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
   cursor: pointer;
-  background: var(--primary);
-  color: var(--light);
-  transition: background 0.3s ease;
+  outline: none;
+  list-style: none;
+  margin-bottom: 20px;
 }
 
-.blog-title:hover {
-  background: var(--accent);
+.blog-details summary::-webkit-details-marker {
+  display: none; /* remove default arrow */
 }
 
-.blog-title .toggle-symbol {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-/* Summary shown initially */
-.blog-summary {
-  padding: 12px 20px;
-  font-size: 0.95rem;
-  color: #ddd;
-}
-
-/* Hidden content */
 .blog-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  margin-top: 20px;
+  line-height: 1.6;
 }
 
-/* Show content when toggled */
-.blog-toggle:checked ~ .blog-title .toggle-symbol {
-  transform: rotate(45deg); /* + becomes × */
+.blog-content p, .blog-content ul {
+  margin-bottom: 15px;
 }
 
-.blog-toggle:checked ~ .blog-content {
-  max-height: 2000px;
-  padding: 16px 20px;
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-content a {
+  color: #ff3c78;
+  text-decoration: underline;
+}
+
+.blog-details[open] summary::after {
+  content: " ▲";
+  font-size: 1rem;
+}
+
+.blog-details summary::after {
+  content: " ▼";
+  font-size: 1rem;
+}
+
+.blog-divider {
+  height: 1px;               /* very thin line */
+  background-color: #ff3c78; /* brand pink */
+  width: 100%;                /* full width of the content container */
+  margin: 20px 0 0 0;        /* spacing above, optional below */
+  border-radius: 0.5px;      /* tiny rounding for smoothness */
 }
 
 
