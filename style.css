@@ -156,7 +156,7 @@ header {
   height: auto;        /* keep aspect ratio */
   display: block;
   margin: 0;           /* no need for margin-left if using flexbox */
-  margin-left: 60px;
+  margin-left: 20px;
 }
 
 /* menu links */
