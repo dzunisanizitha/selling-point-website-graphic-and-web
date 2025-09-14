@@ -59,37 +59,41 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="./blog.html">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#quote" class="btn-quote">Get a Quote</a></li>
         </ul>
       </nav>
 
-<!-- Mobile Menu using CSS Checkbox Hack -->
-<!-- Hamburger Toggle -->
-<input type="checkbox" id="menu-toggle" />
-<label for="menu-toggle" class="hamburger">
-  <span class="open">&#9776;</span> <!-- Hamburger icon -->
-  <span class="close">&times;</span> <!-- X icon -->
-</label>
+<!-- Hamburger (always visible when menu is closed) -->
+<!-- ===== MOBILE NAV (replace your old mobile-nav / hamburger markup with THIS only) ===== -->
+<!-- NOTE: place this NAV BEFORE the two menu-toggle links below (as shown) -->
 
-<!-- Mobile Navigation -->
-<nav class="mobile-nav">
-  <!-- Logo at top of menu -->
-  <div class="mobile-logo">
-    <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
+<nav id="menu" class="mobile-nav" aria-hidden="true">
+  <div class="mobile-top">
+    <!-- Logo at top of mobile menu -->
+    <div class="mobile-logo">
+      <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
+    </div>
   </div>
 
-  <!-- Menu Links -->
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="./blog.html">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#quote" class="btn-quote">Get a Quote</a></li>
   </ul>
 </nav>
+
+<!-- two toggle anchors (open + close). They are the SAME visual spot — CSS shows only one at a time -->
+<a href="#menu" class="menu-toggle open" aria-label="Open menu"></a>
+<a href="#" class="menu-toggle close" aria-label="Close menu"></a>
+<!-- ===== end mobile nav block ===== -->
+
 
     </div>
   </header>

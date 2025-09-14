@@ -114,103 +114,126 @@ header {
 
 
 /* ================= HAMBURGER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ================= */
-#menu-toggle {
-    display: none;
+
+
+/* ===== MOBILE MENU PANEL ===== */
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--secondary);
+  transform: translateX(-100%);     /* hidden -> off-screen left */
+  transition: transform 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px;
+  text-align: center;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-/* ================= HAMBURGER ================= */
-.hamburger {
-    display: none; /* only visible on mobile */
-    position: relative;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1002;
-    margin-right: 20px;
+/* Show menu when targeted */
+#menu:target {
+  transform: translateX(0);
 }
 
-.hamburger .close {
-    display: none;
+/* top logo block inside mobile menu */
+.mobile-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* logo left, hamburger right */
+  align-items: center;             /* vertical center */
+  padding: 0 20px;                 /* space from edges */
+  box-sizing: border-box;
+  
 }
 
-/* ================= MOBILE NAV ================= */
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--secondary);
-    text-align: center;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-}
-
-/* Mobile Logo */
-.mobile-logo {
-    display: none;
-    margin-bottom: 40px;
-}
-
+/* logo image styling (keeps your original look) */
 .mobile-logo img {
-    width: 300px;
-    height: auto;
-    margin-right: -70px;
+  width: 300px;        /* set desired width */
+  max-width: none;     /* remove previous cap */
+  height: auto;        /* keep aspect ratio */
+  display: block;
+  margin: 0;           /* no need for margin-left if using flexbox */
+  margin-left: 30px;
 }
 
-/* Menu List */
-.mobile-nav ul {
-    list-style: none;
-    padding: 0;
+/* menu links */
+.mobile-nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  width: 100%;
+  max-width: 420px;
+}
+.mobile-nav ul li{
+  margin: 16px 0;
+}
+.mobile-nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: var(--light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 6px;
 }
 
-.mobile-nav ul li {
-    margin: 20px 0;
+/* ===== TOGGLE BUTTONS (open + close) =====
+   We use two anchors but CSS shows only one at a time.
+   They must come AFTER the #menu element in the DOM so the sibling selector works:
+     #menu:target ~ .menu-toggle.open  (hide open when menu is active)
+     #menu:target ~ .menu-toggle.close (show close when menu is active)
+*/
+.menu-toggle{
+  position: relative; /* relative to .mobile-top flex container */
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  z-index: 1100;
+  background: transparent;
+  color: #ff3c78;
 }
 
-.mobile-nav ul li a {
-    font-size: 1.5rem;
-    color: var(--light);
-    transition: var(--transition);
+/* hamburger (open) */
+.menu-toggle.open::before{
+  content: "\2630"; /* ☰ */
+  line-height: 1;
+  font-size: 28px;
 }
 
-.mobile-nav ul li a:hover {
-    color: var(--accent);
+/* close (X) button (hidden by default) */
+.menu-toggle.close{
+  display: none;
+}
+.menu-toggle.close::before{
+  content: "\00d7"; /* × */
+  line-height: 1;
+  font-size: 30px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 768px) {
-    .desktop-nav { display: none; }
-    .hamburger { display: block; color: var(--primary); }
+/* When menu is open (targeted): hide open, show close */
+#menu:target ~ .menu-toggle.open{ display: none; }
+#menu:target ~ .menu-toggle.close{ display: flex; }
 
-    /* Show menu when checkbox is checked */
-    #menu-toggle:checked ~ .mobile-nav {
-        transform: translateX(0);
-    }
-
-    /* Show mobile logo when menu is open */
-    #menu-toggle:checked ~ .mobile-nav .mobile-logo {
-        display: block;
-    }
-
-    /* Hamburger → X toggle */
-    #menu-toggle:checked + .hamburger .open {
-        display: none;
-    }
-
-    #menu-toggle:checked + .hamburger .close {
-        display: inline;
-        position: absolute;
-        top: -40px;
-        right: 20px;
-        font-size: 40px;
-        color: var(--primary);
-    }
+/* small touch feedback (optional) */
+.menu-toggle:active,
+.menu-toggle:focus {
+  outline: none;
 }
+
+/* make sure desktop nav remains unaffected: keep higher breakpoint logic as in your original CSS */
+@media (min-width: 768px){
+  /* hide mobile nav and toggles on desktop if you want */
+  .mobile-nav { display: none; }
+  .menu-toggle { display: none; }
+}
+
+
+
 
 /* ================= HERO =======>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>========== */
 .hero {
@@ -555,6 +578,255 @@ header {
     margin-top: 20px;
     transition: var(--transition);
 }
+
+
+.blog-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: var(--light);
+}
+
+.blog-item {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: var(--secondary);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.blog-toggle {
+  display: none;
+}
+
+.blog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--light);
+  transition: background 0.3s ease;
+}
+
+.blog-title:hover {
+  background: var(--accent);
+}
+
+.blog-title .toggle-symbol {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Summary shown initially */
+.blog-summary {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Hidden content */
+.blog-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* Show content when toggled */
+.blog-toggle:checked ~ .blog-title .toggle-symbol {
+  transform: rotate(45deg); /* + becomes × */
+}
+
+.blog-toggle:checked ~ .blog-content {
+  max-height: 2000px;
+  padding: 16px 20px;
+}
+
+
+
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #ff3c78;
+  --secondary: #1e1e2f;
+  --accent: #fcd12a;
+  --light: #ffffff;
+  --dark: #0d0d0d;
+  --max-width: 1200px;
+  --transition: 0.3s ease;
+}
+
+/* ================= GLOBAL ================= */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Arial',sans-serif;}
+body {color:var(--light); background-color:var(--secondary);}
+a {text-decoration:none; color:inherit;}
+.container {max-width: var(--max-width); margin:0 auto; padding:0 20px;}
+
+/* ================= HEADER ================= */
+header {
+  background: var(--secondary);
+  position: sticky;
+  top:0;
+  z-index:1000;
+  padding:0;
+}
+.header-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width: var(--max-width);
+  margin:0 auto;
+  padding:10px 20px;
+}
+.logo-img{max-height:100px; width:auto;}
+
+/* Desktop Menu */
+.desktop-nav ul {
+  display:flex;
+  list-style:none;
+  gap:20px;
+  align-items:center;
+}
+.desktop-nav ul li a{
+  padding:8px 15px;
+  font-weight:550;
+}
+.desktop-nav ul li a.active{
+  color: var(--accent);
+}
+.btn-quote{
+  padding:8px 20px;
+  background: var(--primary);
+  border-radius:5px;
+  font-weight:bold;
+  color: var(--light);
+}
+.desktop-nav ul li a:hover,
+.btn-quote:hover {background: var(--accent); color: var(--dark); border-radius:5px;}
+
+/* ================= MOBILE HAMBURGER ================= */
+.hamburger {display:none; cursor:pointer; font-size:28px; color: var(--primary);}
+#menu-toggle {display:none;}
+.mobile-nav{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:var(--secondary);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:20px 0;
+  z-index:1000;
+}
+.mobile-top {
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+}
+.mobile-logo img{width:180px; height:auto;}
+.mobile-nav ul{
+  list-style:none;
+  width:100%;
+  max-width:400px;
+  margin-top:20px;
+  padding:0;
+}
+.mobile-nav ul li{
+  margin:12px 0;
+}
+.mobile-nav ul li a{
+  display:block;
+  padding:10px 12px;
+  font-size:1.1rem;
+  font-weight:600;
+  border-radius:6px;
+}
+#menu-toggle:checked + .mobile-nav{transform: translateX(0);}
+.hamburger span{display:inline-block; transition: all 0.3s ease;}
+#menu-toggle:checked + .mobile-nav + .hamburger .open{
+  transform: rotate(45deg);
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+#menu-toggle:checked + .mobile-nav + .hamburger .close{display:inline-block;}
+.hamburger .close{display:none; color: var(--primary);}
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .hamburger {display:block;}
+}
+
+/* ================= BLOG SECTION ================= */
+#blog{
+  padding:50px 20px;
+  background: var(--secondary);
+  scroll-margin-top:120px;
+}
+#blog h2{
+  font-size:2rem;
+  margin-bottom:30px;
+  color: var(--primary);
+}
+.blog-post{
+  border:1px solid #444;
+  border-radius:8px;
+  margin-bottom:15px;
+  overflow:hidden;
+  transition: all 0.3s ease;
+}
+.blog-post input{display:none;}
+.blog-post label{
+  display:block;
+  padding:15px 20px;
+  font-weight:600;
+  cursor:pointer;
+  background: #2c2c3c;
+  color: var(--light);
+}
+.blog-post label:hover{background: #3a3a4d;}
+.blog-post .content{
+  max-height:0;
+  overflow:hidden;
+  padding:0 20px;
+  background:#1e1e2f;
+  transition: max-height 0.35s ease;
+}
+.blog-post input:checked ~ .content{
+  max-height:1000px;
+  padding:15px 20px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  padding:20px;
+  text-align:center;
+  background: #111;
+  color: var(--light);
+  margin-top:50px;
+}
+.footer-social a{
+  margin:0 8px;
+  color: var(--primary);
+}
+
+
+
+
+
+
+
+
 
 /* ================= FOOTER ================= */
 footer {
