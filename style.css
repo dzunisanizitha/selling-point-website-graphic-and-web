@@ -418,11 +418,11 @@ header {
   text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
 }
 
-/* Horizontal logo slider animations */
+/* Horizontal logo slider */
 #portfolio-websites .logos-wrapper {
   overflow: hidden;
-  padding-left: 50px;  /* breathing room left */
-  padding-right: 50px; /* breathing room right */
+  max-width: calc(3 * 150px + 2 * 60px); /* 3 images + 2 gaps */
+  margin: 0 auto; /* center slider */
   box-sizing: border-box;
 }
 
@@ -430,14 +430,13 @@ header {
   display: flex;
   align-items: center;
   gap: 60px; /* spacing between logos */
-  width: max-content; /* allows flexible width */
+  width: max-content;
   animation: logos-scroll 12s linear infinite;
 }
 
-/* Scroll animation with breathing room */
 @keyframes logos-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% + 50px)); } /* stops 50px before the left */
+  100% { transform: translateX(calc(-50% + 50px)); }
 }
 
 #portfolio-websites .logo-item img {
@@ -455,14 +454,13 @@ header {
 /* Mobile adjustments */
 @media screen and (max-width: 768px) {
   #portfolio-websites .logos-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: calc(3 * 60px + 2 * 30px); /* 3 small images + 2 gaps */
   }
   #portfolio-websites .logo-item img {
     width: 60px;
-    margin-right: 30px;
   }
 }
+
 /* ================= TESTIMONIALS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>================= */
 .testimonials {
     padding: 50px 0;
@@ -664,7 +662,6 @@ header {
   content: " ▼";
   font-size: 1rem;
 }
-
 
 /* ===== blog image: fit exactly to content width ===== */
 .blog-details img {
