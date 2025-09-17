@@ -54,7 +54,7 @@ header {
 
 /* Default logo styling */
 .logo-img {
-  max-height: 180px !important;   /* fits nicely in desktop header */
+  max-height: 70px !important;   /* fits nicely in desktop header */
   width: auto;        /* keep proportions */
   height: auto;       /* ensures scaling */
   display: block;
@@ -63,16 +63,25 @@ header {
 /* Tablet screens */
 @media screen and (max-width: 992px) {
   .logo-img {
-    max-height: 165px !important;
+    max-height: 100px !important;
   }
 }
 
 /* Mobile screens */
 @media screen and (max-width: 600px) {
   .logo-img {
-    max-height: 165px !important;
+    max-height: 70px !important;  /* adjust to fit neatly */
+    width: auto !important;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+    header {
+    padding: 0; /* remove extra padding */
   }
 }
+
+
 
 
 /* Desktop Navigation */
@@ -88,16 +97,7 @@ header {
     padding: 8px 15px;
     transition: var(--transition);
 }
-
-/* Button inside nav */
-.btn-quote {
-    padding: 8px 20px;
-    background: var(--primary);
-    border-radius: 5px;
-    font-weight: bold;
-    color: var(--light);
-}
-
+ 
 .desktop-nav ul li a:hover,
 .btn-quote:hover,
 .btn-hero:hover {
@@ -105,6 +105,16 @@ header {
     color: var(--dark);
     border-radius: 5px;
 }
+
+.btn-quote {
+
+    font-weight: 550;               /* match nav link font */
+    width: 150px;   /* fixed width */
+    text-align: center; /* center text horizontally */
+    line-height: 15px;  /* center text vertically */
+    margin-bottom: 15px;
+}
+   
 
 /* ================= RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
@@ -151,12 +161,13 @@ header {
 
 /* logo image styling (keeps your original look) */
 .mobile-logo img {
-  width: 300px !important;        /* set desired width */
+  width: 180px !important;        /* set desired width */
   max-width: none;     /* remove previous cap */
   height: auto;        /* keep aspect ratio */
   display: block;
   margin: 0;           /* no need for margin-left if using flexbox */
-  margin-left: 25px;
+  margin-left: 90px;
+  margin-top: -60px;
 }
 
 /* menu links */
