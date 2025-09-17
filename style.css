@@ -70,7 +70,7 @@ header {
 /* Mobile screens */
 @media screen and (max-width: 600px) {
   .logo-img {
-    max-height: 70px !important;  /* adjust to fit neatly */
+    max-height: 71px !important;  /* adjust to fit neatly */
     width: auto !important;
     margin-left: 0;
     padding: 0 20px;
@@ -166,7 +166,7 @@ header {
   height: auto;        /* keep aspect ratio */
   display: block;
   margin: 0;           /* no need for margin-left if using flexbox */
-  margin-left: 90px;
+  margin-left: 60px;
   margin-top: -60px;
 }
 
