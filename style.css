@@ -164,7 +164,7 @@ header {
 
 /* logo image styling (keeps your original look) */
 .mobile-logo img {
-  width:200px !important;        /* set desired width */
+  width:240px !important;        /* set desired width */
   max-width: none;     /* remove previous cap */
   height: auto;        /* keep aspect ratio */
   display: block;
@@ -225,6 +225,7 @@ header {
   content: "\00d7"; /* × */
   line-height: 1;
   font-size: 40px;
+  margin-top: 30px;
 }
 
 /* When menu is open (targeted): hide open, show close */
