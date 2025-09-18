@@ -50,11 +50,13 @@ header {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
+    height: 80px;          /* fix header height */
+    overflow: hidden;      /* prevents logo from pushing it bigger */
 }
 
 /* Default logo styling */
 .logo-img {
-  max-height: 70px !important;   /* fits nicely in desktop header */
+  max-height: 140px !important;   /* fits nicely in desktop header */
   width: auto;        /* keep proportions */
   height: auto;       /* ensures scaling */
   display: block;
@@ -70,15 +72,16 @@ header {
 /* Mobile screens */
 @media screen and (max-width: 600px) {
   .logo-img {
-    max-height: 71px !important;  /* adjust to fit neatly */
+    max-height: 120px !important;  /* adjust to fit neatly */
     width: auto !important;
     margin-left: 0;
     padding: 0 20px;
   }
 
-    header {
-    padding: 0; /* remove extra padding */
+  .header-container {
+    height: 70px;  /* compact header */
   }
+
 }
 
 
@@ -161,13 +164,13 @@ header {
 
 /* logo image styling (keeps your original look) */
 .mobile-logo img {
-  width: 180px !important;        /* set desired width */
+  width:200px !important;        /* set desired width */
   max-width: none;     /* remove previous cap */
   height: auto;        /* keep aspect ratio */
   display: block;
   margin: 0;           /* no need for margin-left if using flexbox */
-  margin-left: 60px;
-  margin-top: -60px;
+  margin-left: 70px;
+  margin-top: -65px;
 }
 
 /* menu links */
