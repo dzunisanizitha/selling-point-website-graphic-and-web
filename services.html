@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | ARIDESIGN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- SEO META -->
+  <meta name="description" content="ARIDESIGN offers creative graphic design, branding, and web services in South Africa. Discover our professional services to elevate your business.">
+  <meta name="keywords" content="ARIDESIGN, graphic design, web design, branding, logo design, marketing services, South Africa">
+  <meta name="author" content="ARIDESIGN">
+  <meta name="robots" content="index, follow">
+
+  <!-- INLINE CSS -->
+  <style>
+    /* ===== GLOBAL ===== */
+    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+    body {line-height:1.6; color:#333; background:#f9f9f9;}
+    a {text-decoration:none; color:inherit;}
+    .container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+
+    /* ===== HEADER / NAV ===== */
+header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
+    .header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+    .logo-img {height:120px;}
+    .desktop-nav ul {list-style:none; display:flex; gap:20px;}
+    .desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
+    .desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+
+    /* ===== MOBILE NAV ===== */
+    .menu-toggle {display:none; cursor:pointer;}
+    .menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+    .mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
+    .mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+    .mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
+    .mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+    .mobile-nav.show { display: block;}
+
+    /* ===== HERO ===== */
+    .hero {position:relative; text-align:center; color:#fff; padding:120px 20px; background:#000;}
+    .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+    .hero-content {position:relative; z-index:1; max-width:800px; margin:0 auto;}
+    .hero h1 {font-size:2.5rem; margin-bottom:20px; color: #ff3c78;}
+    .hero p {font-size:1.2rem; margin-bottom:25px;}
+    .btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
+    .btn-hero:hover {background:#790231;}
+
+    /* ===== SERVICE SECTIONS ===== */
+    .service-intro {padding:80px 20px; text-align:center; background:#f9f9f9;}
+    .service-intro h2 {font-size:2rem; margin-bottom:20px; color:#ff3c78;}
+    .service-intro p {max-width:700px; margin:0 auto; font-size:1.1rem; color:#555;}
+
+    .service-cards {display:flex; flex-wrap:wrap; gap:30px; justify-content:center; padding:60px 0; background:#fff;}
+    .card {background:#fdfdfd; padding:30px 20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); flex:1 1 250px; max-width:280px; transition:0.3s;}
+    .card:hover {transform:translateY(-8px); box-shadow:0 6px 20px rgba(0,0,0,0.15);}
+    .card i {font-size:2.5rem; color:#ff3c78; margin-bottom:15px;}
+    .card h3 {font-size:1.4rem; margin-bottom:10px; color:#333;}
+    .card p {font-size:1rem; color:#555;}
+
+    /* ===== FEATURED SERVICE ===== */
+    .featured-service {padding:80px 20px; text-align:center; background:#f2f2f2;}
+    .featured-service h2 {font-size:2rem; margin-bottom:20px; color:#ff3c78;}
+    .featured-service p {max-width:700px; margin:0 auto 30px; font-size:1.1rem; color:#555;}
+    .featured-service img {max-width:100%; border-radius:15px; margin-top:30px;}
+
+    /* ===== CALL TO ACTION ===== */
+    .cta {padding:80px 20px; text-align:center; background:#000; color:#fff;}
+    .cta h2 {font-size:2rem; margin-bottom:20px;}
+    .cta p {max-width:700px; margin:0 auto 30px; font-size:1.1rem;}
+    .cta a {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
+    .cta a:hover {background:#790231;}
+
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
+
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .menu-toggle {display:block;}
+  .hero h1 {font-size:2rem;}
+  .hero p {font-size:1rem;}
+  .service-cards {flex-direction:column; align-items:center;}
+  .testimonial-cards {flex-direction:column; align-items:center;}
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+}
+
+/* ===== SHOW MOBILE NAV ===== */
+.mobile-nav.show {display:block;}
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/sneaker.webp" alt="Our Services" class="hero-bg">
+  <div class="hero-content">
+    <h1>Professional Services to Elevate Your Brand</h1>
+    <p>Explore our range of <strong>graphic design</strong>, <strong>branding</strong>, <strong>web design</strong>, and <strong>marketing solutions</strong> crafted to grow your business in South Africa.</p>
+    <a href="quote.html" class="btn-hero">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- SERVICE INTRO -->
+<section class="service-intro">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p>At ARIDESIGN, we provide tailor-made solutions that fit your brand’s unique needs. From eye-catching logos to responsive websites, every service is designed to make your business shine online.</p>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="service-cards">
+  <div class="card">
+    <i class="fas fa-paint-brush"></i>
+    <h3>Graphic Design</h3>
+    <p>Professional logos, flyers, posters, and digital content that attract attention and communicate your brand effectively.</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-code"></i>
+    <h3>Static Websites</h3>
+    <p>Modern, responsive, and user-friendly websites that showcase your brand and convert visitors into customers.</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-search"></i>
+    <h3>SEO Optimization</h3>
+    <p>Basic on-page SEO to ensure your website is search engine-friendly and your business is visible online.</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-share-alt"></i>
+    <h3>Social Media Management</h3>
+    <p>Boost your online presence with strategic social media content, scheduling, and engagement.</p>
+  </div>
+</section>
+
+<!-- FEATURED SERVICE -->
+<section class="featured-service">
+  <div class="container">
+    <h2>Featured Project</h2>
+    <p>We recently helped a client revamp their branding with a complete logo, stationery, and social media package, increasing their engagement by over 50%.</p>
+    <img src="images/featured-project.webp" alt="Featured Project">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Elevate Your Brand?</h2>
+    <p>Contact ARIDESIGN today to discuss your project and get a personalized quote for your business.</p>
+    <a href="quote.html">Request Your Quote</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-logo"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimony.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:info@aridesign.com">info@aridesign.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
+        <p>South Africa</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS FOR MOBILE MENU -->
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
+        <

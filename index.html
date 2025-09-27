@@ -1,346 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARIDESIGN | Graphic & Web Design in South Africa</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARIDESIGN | Graphic & Web Design in South Africa</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-
-<!-- ================= SEO META ================= -->
+<!-- SEO META -->
 <meta name="description" content="ARIDESIGN offers creative graphic design, branding, and static web design solutions in South Africa. Build your brand with modern, professional designs.">
 <meta name="keywords" content="ARIDESIGN, graphic design, web design, branding, logo design, South Africa, creative design, marketing design">
 <meta name="author" content="ARIDESIGN">
-<meta name="robots" content="index, follow"> <!-- ensures Google indexes the page -->
+<meta name="robots" content="index, follow">
 
-<!-- ================= OPEN GRAPH (Facebook & Instagram) ================= -->
+<!-- OPEN GRAPH -->
 <meta property="og:title" content="ARIDESIGN | Graphic & Web Design in South Africa">
 <meta property="og:description" content="Creative graphic and web design services to elevate your brand.">
 <meta property="og:image" content="https://dzunisanizitha.github.io/selling-point-website-graphic-and-web/images/ARI-LOGO.png">
 <meta property="og:url" content="https://dzunisanizitha.github.io/selling-point-website-graphic-and-web/">
 <meta property="og:type" content="website">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ARIDESIGN",
-  "url": "https://dzunisanizitha.github.io/selling-point-website-graphic-and-web/",
-  "logo": "https://dzunisanizitha.github.io/selling-point-website-graphic-and-web/images/ARI-LOGO.png",
-  "sameAs": [
-    "https://facebook.com/yourpage",
-    "https://instagram.com/yourprofile"
-  ]
+<!-- INLINE CSS -->
+<style>
+/* ===== GLOBAL ===== */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; color:#333; background:#f9f9f9;}
+a {text-decoration:none; color:inherit;}
+.container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+
+/* ===== HEADER / NAV ===== */
+header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
+.header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+.logo-img {height:120px;}
+.desktop-nav ul {list-style:none; display:flex; gap:20px;}
+.desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
+.desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+
+/* ===== MOBILE NAV ===== */
+.menu-toggle {display:none; cursor:pointer;}
+.menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+.mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
+.mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+.mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
+.mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+
+
+/* ===== HERO ===== */
+/* ===== SECTION SPACING ===== */
+.about {padding: 60px 20px;  margin-bottom: -80px !important;    margin-top: 20px !important;/* space between sections */}
+.services {padding: 60px 20px;  margin-bottom: -80px !important;    margin-top: -80px !important;/* space between sections */}
+.portfolio {padding: 60px 20px;  margin-bottom: -80px !important;    margin-top: -80px !important;/* space between sections */}
+.testimonials {padding: 60px 20px;  margin-bottom: -80px !important;    margin-top: -80px !important;/* space between sections */}
+.contact {padding: 60px 20px;  margin-bottom: 20px !important;    margin-top: -80px !important;/* space between sections */}
+
+/* Make spacing smaller on mobile */
+@media(max-width:768px){
+  .about { padding: 40px 15px; margin-top: 10px !important; margin-bottom: -100px !important;}
+  .services { padding: 40px 15px; margin-top: -100px !important; margin-bottom: -100px !important;}
+  .portfolio { padding: 40px 15px; margin-top: -100px !important; margin-bottom: -100px !important;}
+  .testimonials { padding: 40px 15px; margin-top: -100px !important; margin-bottom: -100px !important;}
+  .contact { padding: 40px 15px; margin-top: -100px !important; margin-bottom: 10px !important;}
+/* SPACING    SPACING    SPECING    SPECING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
 }
-</script>
+
+/* HERO SECTION */
+.hero {position:relative; text-align:center; color:#fff; padding:120px 20px; background:#000; overflow:hidden;}
+
+/* Hero Background Image */
+.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+
+/* Animated Gradient Overlay */
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(120deg,  #1da1df, #7700ff, #1a1a40);
+  background-size: 600% 600%;
+  z-index:0;
+  opacity:0.5;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0%{background-position:0% 50%;}
+  35%{background-position:100% 35%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Hero Content */
+.hero::before {
+  animation: gradientShift 6s ease infinite;
+}
+.hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
+.hero-logo img {width:120px; margin-bottom:20px;}
+.hero h1 {font-size:2.5rem; margin-bottom:20px; color:#ff3c78;}
+.hero p {font-size:1.1rem; margin-bottom:25px;}
+.btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
+.btn-hero:hover {background:#790231; transform:scale(1.05);}
 
 
+/* ===== ABOUT ===== */
+.about {padding:80px 20px; text-align:center; background:#f9f9f9;}
+.about h2 {font-size:2rem; margin-bottom:20px; color:#333;}
+.about span {color:#ff3c78;}
+.about p {max-width:700px; margin:0 auto 20px; font-size:1.1rem;}
+.btn-link {display:inline-block; color:#fff; background:#ff3c78; padding:10px 20px; border-radius:5px; transition:0.3s; font-weight:bold; margin-top: 35px;}
+.btn-link:hover {background:#790231;}
 
+/* ===== SERVICES ===== */
+.services {padding:80px 20px; text-align:center;}
+.services h2 {font-size:2rem; margin-bottom:40px;}
+.service-cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); flex:1 1 220px; max-width:250px;}
+.card i {font-size:2rem; color:#ff3c78; margin-bottom:15px;}
+.card h3 {font-size:1.3rem; margin-bottom:10px;}
+.contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
+.contact-links a:hover {color:#ff3c78;}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {padding:80px 20px; background:#f9f9f9; text-align:center;}
+.portfolio h2 {font-size:2rem; margin-bottom:40px;}
+.portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px;}
+.portfolio-grid img {width:100%; border-radius:10px; transition:0.3s;}
+.portfolio-grid img:hover {transform:scale(1.05);}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {padding:80px 20px; text-align:center;}
+.testimonials h2 {font-size:2rem; margin-bottom:40px;}
+.testimonial-cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.testimonial-card {background:#fff; padding:25px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); max-width:300px;}
+.testimonial-card p {font-style:italic; margin-bottom:15px;}
+.testimonial-card h4 {font-weight:bold; color:#ff3c78;}
+
+/* ===== CONTACT ===== */
+.contact {padding:80px 20px; text-align:center; background:#f9f9f9;}
+.contact h2 {font-size:2rem; margin-bottom:20px;}
+.contact p {margin-bottom:30px; font-size:1.1rem;}
+.contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
+.contact-links a:hover {color:#ff3c78;}
+
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none; }
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#ffffff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
+
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .menu-toggle {display:block;}
+  .hero h1 {font-size:2rem;}
+  .hero p {font-size:1rem;}
+  .service-cards {flex-direction:column; align-items:center;}
+  .testimonial-cards {flex-direction:column; align-items:center;}
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+}
+
+/* ===== SHOW MOBILE NAV ===== */
+.mobile-nav.show {display:block;}
+</style>
 </head>
 <body>
 
-  <!-- ================= HEADER / NAVIGATION ================= -->
+<!-- HEADER / NAV -->
 <header>
   <div class="container header-container">
     <div class="logo">
-      <a href="index.html">
-        <img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img">
-      </a>
+      <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
     </div>
-
-      <!-- Desktop Menu -->
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="index.html#portfolio-websites">Portfolio</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#quote" class="btn-quote">Get a Quote</a></li>
-        </ul>
-      </nav>
-
-<!-- Hamburger (always visible when menu is closed) -->
-<!-- ===== MOBILE NAV (replace your old mobile-nav / hamburger markup with THIS only) ===== -->
-<!-- NOTE: place this NAV BEFORE the two menu-toggle links below (as shown) -->
-
-<nav id="menu" class="mobile-nav" aria-hidden="true">
-  <div class="mobile-top">
-    <!-- Logo at top of mobile menu -->
-    <div class="mobile-logo">
-      <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimony.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimony.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="index.html#portfolio-websites">Portfolio</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="./blog.html">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <a href="mailto:info@aridesign.com" class="btn-quote">Get a Quote</a></li> 
-  </ul>
-</nav>
-
-<!-- two toggle anchors (open + close). They are the SAME visual spot — CSS shows only one at a time -->
-<a href="#menu" class="menu-toggle open" aria-label="Open menu"></a>
-<a href="#" class="menu-toggle close" aria-label="Close menu"></a>
-<!-- ===== end mobile nav block ===== -->
-    </div>
-  </header>
-
-  <!-- ================= HERO SECTION ================= >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-overlay"></div>
   <img src="images/graphic-design-banner.webp" alt="Marketing Image" class="hero-bg">
-  
-  <div class="hero-logo">
-    <img src="images/logo.png" alt="ARIDESIGN Logo">
-  </div>
-
   <div class="hero-content">
-    <h1>Elevate Your Brand with <span style="color:#ff3c78;">ARIDESIGN</span>- Graphic Design & Marketing Solutions</h1>
-     <p>We provide modern, eye-catching <strong>graphic design services</strong> and <strong>marketing strategies</strong> to help businesses grow online in <strong>South Africa</strong>. Whether you need a <strong>logo</strong>, <strong>flyers</strong>, or a <strong>static website</strong>, ARIDESIGN delivers professional solutions that boost your brand visibility.</p>
-     <a href="#quote" class="btn-hero" title="Request a Free Quote from ARIDESIGN">Request a Free Quote</a>
-  </div>
+    <h1>Elevate Your Brand with <span>ARIDESIGN</span></h1>
+    <p>We provide modern, eye-catching <strong>graphic design services</strong> and <strong>marketing strategies</strong> to help businesses grow online in <strong>South Africa</strong>. Whether you need a <strong>logo</strong>, <strong>flyers</strong>, or a <strong>static website</strong>, ARIDESIGN delivers professional solutions that boost your brand visibility.</p>
+    <a href="quote.html" class="btn-hero">Request a Free Quote</a>
   </div>
 </section>
 
-
-  <!-- ================= ABOUT SECTION ================= -->
+<!-- ABOUT -->
 <section id="about" class="about">
   <div class="container">
-    <h2>About <span style="color:#ff3c78;">ARIDESIGN</span>- Graphic Design & Marketing</h2>
-    <br>
-    <p>
-      ARIDESIGN is a creative <strong>graphic design and marketing agency</strong> in <strong>South Africa</strong>. 
-      We deliver professional <strong>logo design, flyers, branding, and static websites</strong> to help your business stand out online.
-    </p>
+    <h2>About <span>ARIDESIGN</span></h2>
+    <p>ARIDESIGN is a creative <strong>graphic design and marketing agency</strong> in <strong>South Africa</strong>. We deliver professional <strong>logo design, flyers, branding, and static websites</strong> to help your business stand out online.</p>
+    <a href="about.html" class="btn-link">Learn More</a>
   </div>
 </section>
 
-<!-- ================= SERVICES SECTION ================= -->
+<!-- SERVICES -->
 <section id="services" class="services">
   <div class="container">
-    <h2>Our Services - Graphic Design & Static Website Solutions</h2>
-
+    <h2>Our Services</h2>
     <div class="service-cards">
-
-      <!-- Graphic Design -->
-      <div class="card">
-        <i class="fas fa-paint-brush"></i>
-        <h3>Graphic Design</h3>
-        <p>Professional <strong>logo design, flyers, posters</strong> and digital content to make your brand stand out online.</p>
-      </div>
-
-      <!-- Static Website Design -->
-      <div class="card">
-        <i class="fas fa-code"></i>
-        <h3>Static Website Design</h3>
-        <p>Clean and responsive <strong>static websites</strong> that showcase your business or portfolio effectively.</p>
-      </div>
-
-      <!-- Basic SEO -->
-      <div class="card">
-        <i class="fas fa-search"></i>
-        <h3>SEO Optimization</h3>
-        <p>Basic <strong>on-page SEO</strong> to help your website rank higher in search engines for relevant keywords.</p>
-      </div>
-
-      <!-- Social Media Support -->
-      <div class="card">
-        <i class="fas fa-share-alt"></i>
-        <h3>Social Media Support</h3>
-        <p>Set up and manage your <strong>Social Media</strong> accounts to boost brand visibility.</p>
-      </div>
-
+      <div class="card"><i class="fas fa-paint-brush"></i><h3>Graphic Design</h3><p>Professional <strong>logos, flyers, posters</strong> and digital content.</p></div>
+      <div class="card"><i class="fas fa-code"></i><h3>Static Websites</h3><p>Clean and responsive <strong>websites</strong> that showcase your brand.</p></div>
+      <div class="card"><i class="fas fa-search"></i><h3>SEO Optimization</h3><p>Basic <strong>on-page SEO</strong> to help your business rank online.</p></div>
+      <div class="card"><i class="fas fa-share-alt"></i><h3>Social Media</h3><p>Boost visibility with professional <strong>social media support</strong>.</p></div>
     </div>
+    <a href="services.html" class="btn-link">View All Services</a>
   </div>
 </section>
 
-
-<!-- ================= GRAPHIC DESIGN PORTFOLIO ================= -->
-<section id="portfolio-graphics" class="portfolio">
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
   <div class="container">
-    <h2>Graphic Design Portfolio - Logos, Flyers & Branding</h2> <!-- H2 with keywords -->
+    <h2>Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="images//logo.webp" alt="Logo design project by ARIDESIGN">
-      </div>
-      <div class="portfolio-item">
-        <img src="images/flyer1.webp" alt="Flyer design project by ARIDESIGN">
-      </div>
-      <div class="portfolio-item">
-        <img src="images/sneaker.webp" alt="social media  design by ARIDESIGN">
-      </div>
-      <div class="portfolio-item">
-        <img src="images/business-card.webp" alt="Business card design by ARIDESIGN">
-      </div>
+      <img src="images/logo.webp" alt="Logo Design">
+      <img src="images/flyer1.webp" alt="Flyer Design">
+      <img src="images/flyer1.webp" alt="Social Media Design">
+      <img src="images/business-card.webp" alt="Business Card Design">
     </div>
+    <a href="portfolio.html" class="btn-link">See Full Portfolio</a>
   </div>
 </section>
 
-<!-- ================= STATIC WEBSITE LOGO PORTFOLIO ================= -->
-<section id="portfolio-websites" class="portfolio-logos-section">
-  <div class="container">
-    <h2>Static Website Portfolio - Responsive Websites</h2>
-    <div class="logos-wrapper">
-      <div class="logos-track">
-        <!-- Original logos -->
-        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="logo-item">
-          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
-        </a>
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="logo-item">
-          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website project by ARIDESIGN">
-        </a>
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="logo-item">
-          <img src="images/dhm-logo.png" alt="deliverancehealingministries website design by ARIDESIGN">
-        </a>
-
-        <!-- Duplicate logos for seamless loop -->
-        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="logo-item">
-          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
-        </a>
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="logo-item">
-          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website project by ARIDESIGN">
-        </a>
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="logo-item">
-          <img src="images/dhm-logo.png" alt="deliverance healing ministries website design by ARIDESIGN">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= TESTIMONIALS SECTION ================= -->
+<!-- TESTIMONIALS -->
 <section id="testimonials" class="testimonials">
   <div class="container">
-    <h2>Client Testimonials - <span style="color:#ff3c78;">ARIDESIGN</span> Graphic Design & Marketing</h2> <!-- H2 with keywords -->
+    <h2>What Our Clients Say</h2>
     <div class="testimonial-cards">
-
-      <div class="testimonial-card">
-        <p>"ARIDESIGN transformed our brand! Their <strong>graphic design</strong> and <strong>marketing strategies</strong> brought in more clients than ever."</p>
-        <h4>- Sarah N.</h4>
-        <p class="client-role">Small Business Owner, South Africa</p>
-      </div>
-
-      <div class="testimonial-card">
-        <p>"Amazing service and creative solutions. Highly recommend ARIDESIGN for any <strong>branding</strong> or <strong>static website design</strong> project."</p>
-        <h4>- John M.</h4>
-        <p class="client-role">Marketing Manager, South Africa</p>
-      </div>
-
+      <div class="testimonial-card"><p>"ARIDESIGN transformed our brand! Their designs brought in more clients than ever."</p><h4>- Sarah N.</h4></div>
+      <div class="testimonial-card"><p>"Amazing service and creative solutions. Highly recommend ARIDESIGN!"</p><h4>- John M.</h4></div>
     </div>
+    <a href="testimony.html" class="btn-link">Read More Testimonials</a>
   </div>
 </section>
 
-
-<!-- ================= FAQ SECTION ================= -->
-<section id="faq" class="faq">
-  <div class="container">
-    <h2>Frequently Asked Questions - <span style="color:#ff3c78;">ARIDESIGN</span> Graphic Design & Marketing</h2>
-
-    <!-- FAQ Item 1 -->
-    <div class="faq-item">
-      <input type="checkbox" id="faq1">
-      <label for="faq1" class="question">1. What services does ARIDESIGN offer?</label>
-      <div class="answer">
-        We specialize in <strong>graphic design</strong>, including <strong>logo design, flyers, and branding</strong>, as well as <strong>static website design</strong>, basic <strong>SEO</strong>, and <strong>social media support</strong> to grow your business online in South Africa.
-      </div>
-    </div>
-
-    <!-- FAQ Item 2 -->
-    <div class="faq-item">
-      <input type="checkbox" id="faq2">
-      <label for="faq2" class="question">2. How long does it take to complete a project?</label>
-      <div class="answer">
-        Project timelines vary. <strong>Graphic design</strong> typically takes 2-5 days, while <strong>static website projects</strong> take 1-2 weeks depending on complexity.
-      </div>
-    </div>
-
-    <!-- FAQ Item 3 -->
-    <div class="faq-item">
-      <input type="checkbox" id="faq3">
-      <label for="faq3" class="question">3. Do you provide revisions?</label>
-      <div class="answer">
-        Yes! We include a limited number of revisions to ensure the final <strong>design or website</strong> meets your expectations.
-      </div>
-    </div>
-
-    <!-- FAQ Item 4 -->
-    <div class="faq-item">
-      <input type="checkbox" id="faq4">
-      <label for="faq4" class="question">4. How can I contact ARIDESIGN for a project?</label>
-      <div class="answer">
-        You can reach us via <strong>WhatsApp, email</strong>, or through our website’s contact form. We usually respond within 24 hours.
-      </div>
-    </div>
-
-    <!-- FAQ Item 5 -->
-    <div class="faq-item">
-      <input type="checkbox" id="faq5">
-      <label for="faq5" class="question">5. Do you provide ongoing support?</label>
-      <div class="answer">
-        Yes, we offer ongoing support for <strong>website updates, design tweaks, and social media guidance</strong> after project completion.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================= CONTACT SECTION ================= -->
+<!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="container">
-    <h2>Contact <span style="color:#ff3c78;">ARIDESIGN</span> - Graphic Design & Marketing in South Africa</h2>
-    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, <strong>static websites</strong>, and <strong>marketing services</strong> in South Africa.</p>
-
+    <h2>Contact Us</h2>
+    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong>.</p>
     <div class="contact-links">
-      <!-- WhatsApp -->
-      <a href="https://wa.me/27684757321" target="_blank" class="contact-icon" title="Chat with ARIDESIGN on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-
-      <!-- Email -->
-      <a href="mailto:yourname@email.com" target="_blank" class="contact-icon" title="Email ARIDESIGN">
-        <i class="fas fa-envelope"></i>
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://facebook.com" target="_blank" class="contact-icon" title="Follow ARIDESIGN on Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://instagram.com" target="_blank" class="contact-icon" title="Follow ARIDESIGN on Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+      <a href="https://wa.me/27684757321" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:info@aridesign.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
+    <a href="quote.html" class="btn-link">Get Quote</a>
   </div>
 </section>
 
-  <!-- ================= QUOTE SECTION ================= -->
-<section id="quote" class="quote">
-  <div class="container">
-    <h2>Request a Free Quote -  <span style="color:#ff3c78;">ARIDESIGN</span> Graphic Design & Marketing</h2>
-    <br>
-    <p>Discuss your project with ARIDESIGN and get a tailored <strong>graphic design</strong>, <strong>branding</strong>, or <strong>static website</strong> plan today.</p>
-    <a href="mailto:info@aridesign.com" class="btn-quote" title="Request a free quote from ARIDESIGN">Request Quote</a>
-  </div>
-</section>
-
-
-  <!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
   <div class="container footer-container">
-    <p>&copy; 2025 ARIDESIGN. All Rights Reserved.</p>
+    <div class="footer-top">
+      <div class="footer-logo"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimony.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:info@aridesign.com">info@aridesign.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
+        <p>South Africa</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
+    </div>
   </div>
 </footer>
+
+<!-- JS FOR MOBILE MENU -->
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>

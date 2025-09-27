@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote | ARIDESIGN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+<style>
+  /* ===== GLOBAL ===== */
+  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+  body {line-height:1.6; color:#333; background:#f9f9f9;}
+  a {text-decoration:none; color:inherit;}
+  .container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+
+  /* ===== HEADER / NAV ===== */
+header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
+  .header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+  .logo-img {height:120px;}
+  .desktop-nav ul {list-style:none; display:flex; gap:20px;}
+  .desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
+  .desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+
+  /* ===== MOBILE NAV ===== */
+  .menu-toggle {display:none; cursor:pointer;}
+  .menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+  .mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
+  .mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+  .mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
+  .mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+
+  /* ===== HERO ===== */
+  .hero {position:relative; text-align:center; color:#fff; padding:100px 20px; background:#000;}
+  .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+  .hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
+  .hero h1 {font-size:2.5rem; margin-bottom:20px;}
+  .btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
+  .btn-hero:hover {background:#790231;}
+
+  /* ===== QUOTE FORM ===== */
+  .quote-form {background:#fff; padding:50px 20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin:40px auto;}
+  .quote-form h2 {color:#ff3c78; text-align:center; margin-bottom:15px;}
+  .quote-form p {text-align:center; margin-bottom:30px; font-size:1rem;}
+  .form-group {margin-bottom:20px;}
+  .form-group label {display:block; margin-bottom:5px; font-weight:bold;}
+  .form-group input, .form-group textarea {width:100%; padding:12px; border:1px solid #ccc; border-radius:5px; font-size:1rem;}
+  .form-group textarea {resize:none; height:120px;}
+  .quote-form button {display:block; margin:0 auto; background:#ff3c78; color:#fff; padding:12px 30px; font-size:1.1rem; border:none; border-radius:5px; cursor:pointer; transition:0.3s;}
+  .quote-form button:hover {background:#790231;}
+
+  /* ===== CONTACT ===== */
+.contact {padding:80px 20px; text-align:center; background:#f9f9f9;}
+.contact h2 {font-size:2rem; margin-bottom:20px; color: #ff3c78;}
+.contact p {margin-bottom:30px; font-size:1.1rem;}
+.contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
+.contact-links a:hover {color:#790231;}
+
+
+  /* ===== MEDIA QUERIES ===== */
+  @media(max-width:768px){
+    .desktop-nav {display:none;}
+    .menu-toggle {display:block;}
+  }
+
+  /* ===== SHOW MOBILE NAV ===== */
+  .mobile-nav.show {display:block;}
+</style>
+</head>
+<body>
+
+<!-- HEADER / NAV -->
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
+    </div>
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio-websites">Portfolio</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio-websites">Portfolio</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/graphic-design-banner.webp" alt="Marketing & Graphic Design" class="hero-bg">
+  <div class="hero-content">
+    <h1>Request a Free Quote from <span style="color:#ff3c78;">ARIDESIGN</span></h1>
+    <p>Get a tailored plan for <strong>graphic design</strong>, <strong>branding</strong>, or <strong>static websites</strong> to elevate your business online in South Africa.</p>
+    <a href="mailto:info@aridesign.com" class="btn-hero">Request Quote</a>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="quote-form">
+  <div class="container">
+    <h2>Tell Us About Your Project</h2>
+    <p>Fill out the form below and we'll get back to you with a personalized quote.</p>
+    <form action="mailto:info@aridesign.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Your email">
+      </div>
+      <div class="form-group">
+        <label for="project">Project Details</label>
+        <textarea id="project" name="project" required placeholder="Describe your project"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="budget">Budget (Optional)</label>
+        <input type="text" id="budget" name="budget" placeholder="Your budget range">
+      </div>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong>.</p>
+    <div class="contact-links">
+      <a href="https://wa.me/27684757321" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:info@aridesign.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimony.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:info@aridesign.com">info@aridesign.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
+        <p>South Africa</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- ================= FOOTER CSS ================= -->
+  <style>
+  /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
+
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width:768px){
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+}
+
+  </style>
+</footer>
+
+
+
+<!-- JS FOR MOBILE MENU -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

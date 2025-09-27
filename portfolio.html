@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | ARIDESIGN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+<!-- SEO META -->
+<meta name="description" content="Explore ARIDESIGN's creative portfolio showcasing graphic design, branding, and static websites in South Africa.">
+<meta name="keywords" content="ARIDESIGN, portfolio, graphic design, web design, branding, logo design, South Africa">
+<meta name="author" content="ARIDESIGN">
+<meta name="robots" content="index, follow">
+
+<!-- INLINE CSS -->
+<style>
+/* ===== GLOBAL ===== */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; color:#333; background:#f9f9f9;}
+a {text-decoration:none; color:inherit;}
+.container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+
+/* ===== HEADER / NAV ===== */
+header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
+.header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+.logo-img {height:120px;}
+.desktop-nav ul {list-style:none; display:flex; gap:20px;}
+.desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
+.desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+
+/* ===== MOBILE NAV ===== */
+.menu-toggle {display:none; cursor:pointer;}
+.menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+.mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px; transition: transform 0.3s ease-in-out; transform: translateX(100%);}
+.mobile-nav.open {display:block; transform: translateX(0);}
+.mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+.mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
+.mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+
+/* ===== HERO ===== */
+.hero {position:relative; text-align:center; color:#fff; padding:120px 20px; background:#000;}
+.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+.hero-content {position:relative; z-index:1; max-width:800px; margin:0 auto;}
+.hero h1 {font-size:2.5rem; margin-bottom:20px; color: #ff3c78;}
+.hero p {font-size:1.1rem; margin-bottom:25px;}
+.btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight: 900}
+.btn-hero:hover {background:#790231;}
+
+/* ===== PORTFOLIO SECTIONS ===== */
+.portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center;}
+.portfolio-graphics h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
+.portfolio-graphics .portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
+.portfolio-graphics .portfolio-item {background:#fff; padding:15px; border-radius:10px; transition:0.3s;}
+.portfolio-graphics .portfolio-item img {width:100%; border-radius:10px; margin-bottom:10px; transition:0.3s;}
+.portfolio-graphics .portfolio-item img:hover {transform:scale(1.05);}
+.portfolio-graphics .portfolio-item p {font-weight:600; color:#333;}
+
+/* STATIC WEBSITE PORTFOLIO - CAROUSEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* STATIC WEBSITE PORTFOLIO - CAROUSEL */
+.portfolio-websites {padding:80px 20px; background:#fff; text-align:center; font-family:Arial, sans-serif;}
+.portfolio-websites h3 {font-size:2rem; color:#ff3c78; margin-bottom:50px; position:relative;}
+.portfolio-websites h3::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px; transition:0.3s;}
+.portfolio-websites h3:hover::after {width:100px;}
+
+/* Carousel */
+.carousel {overflow:hidden; position:relative; padding:20px 0;}
+.carousel-track {display:flex; gap:30px; animation:scroll-left 20s linear infinite;}
+
+/* Cards */
+.portfolio-websites .portfolio-card {flex:0 0 180px; background:#f9f9f9; border-radius:15px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.5s;}
+.portfolio-websites .portfolio-card img {width:100%; border-radius:10px; transition:transform 0.5s, filter 0.5s;}
+
+/* Hover Effects */
+.portfolio-websites .portfolio-card:hover img {transform:scale(1.08); filter:brightness(1.1);}
+.portfolio-websites .portfolio-card:hover {background:#fff0f6; box-shadow:0 15px 25px rgba(0,0,0,0.2); transform:translateY(-5px);}
+
+/* Scroll Animation */
+@keyframes scroll-left {
+  0% {transform:translateX(0);}
+  100% {transform:translateX(-50%);}
+}
+
+/* Responsive */
+@media(max-width:1024px){.carousel-track {gap:30px;}}
+@media(max-width:768px){.portfolio-websites{padding:60px 15px;} .portfolio-websites h3{font-size:1.8rem;}}
+@media(max-width:480px){.portfolio-websites .portfolio-card{flex:0 0 150px;}}
+
+
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
+
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .menu-toggle {display:block;}
+  .hero h1 {font-size:2rem;}
+  .hero p {font-size:1rem;}
+  .service-cards {flex-direction:column; align-items:center;}
+  .testimonial-cards {flex-direction:column; align-items:center;}
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+}
+
+/* ===== SHOW MOBILE NAV ===== */
+.mobile-nav.show {display:block;}
+</style>
+</head>
+<body>
+
+<!-- HEADER / NAV -->
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
+    </div>
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="btn-quote">Portfolio</a></li>
+        <li><a href="testimony.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="btn-quote">Portfolio</a></li>
+        <li><a href="testimony.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/portfolio-banner.webp" alt="Portfolio Banner" class="hero-bg">
+  <div class="hero-content">
+    <h1>Our Creative Portfolio</h1>
+    <p>Discover ARIDESIGN's professional <strong>graphic design</strong> and <strong>web design</strong> projects that inspire and deliver results.</p>
+    <a href="quote.html" class="btn-hero">Request a Free Quote</a>
+  </div>
+</section>
+
+<!-- GRAPHIC DESIGN PORTFOLIO -->
+<section class="portfolio-graphics">
+  <div class="container">
+    <h3>Graphic Design Projects</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/logo.webp" alt="Logo design by ARIDESIGN">
+        <p>Logo Design - Brand Identity</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/flyer1.webp" alt="Flyer design by ARIDESIGN">
+        <p>Flyer Design - Marketing Campaign</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sneaker.webp" alt="Social media design by ARIDESIGN">
+        <p>Social Media Design - Engagement Post</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/business-card.webp" alt="Business card design by ARIDESIGN">
+        <p>Business Card Design - Corporate Branding</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/poster.webp" alt="Poster design by ARIDESIGN">
+        <p>Poster Design - Event Promotion</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/banner.webp" alt="Banner design by ARIDESIGN">
+        <p>Banner Design - Online Advertising</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATIC WEBSITE PORTFOLIO -->
+<section class="portfolio-websites">
+  <div class="container">
+    <h3>Static Website Projects</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="portfolio-card">
+          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
+        </a>
+        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="portfolio-card">
+          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website by ARIDESIGN">
+        </a>
+        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="portfolio-card">
+          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries website by ARIDESIGN">
+        </a>
+        <!-- Duplicate for infinite scroll -->
+        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="portfolio-card">
+          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
+        </a>
+        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="portfolio-card">
+          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website by ARIDESIGN">
+        </a>
+        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="portfolio-card">
+          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries website by ARIDESIGN">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-logo"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimony.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:info@aridesign.com">info@aridesign.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
+        <p>South Africa</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE MENU JS -->
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
