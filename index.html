@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+
 <!-- SEO META -->
 <meta name="description" content="ARIDESIGN offers creative graphic design, branding, and static web design solutions in South Africa. Build your brand with modern, professional designs.">
 <meta name="keywords" content="ARIDESIGN, graphic design, web design, branding, logo design, South Africa, creative design, marketing design">
@@ -121,11 +122,20 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .contact-links a:hover {color:#ff3c78;}
 
 /* ===== PORTFOLIO ===== */
-.portfolio {padding:80px 20px; background:#f9f9f9; text-align:center;}
-.portfolio h2 {font-size:2rem; margin-bottom:40px;}
-.portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px;}
-.portfolio-grid img {width:100%; border-radius:10px; transition:0.3s;}
-.portfolio-grid img:hover {transform:scale(1.05);}
+.homepage-portfolio {padding:80px 20px; text-align:center; background:#f9f9f9;} 
+.homepage-portfolio h2 {font-size:2.2rem; color:#ff3c78; margin-bottom:15px;} 
+.homepage-portfolio p {font-size:1.1rem; margin-bottom:40px; color:#333;} 
+.homepage-portfolio .portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; justify-items:center;} 
+.homepage-portfolio .portfolio-item {background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s;} 
+.homepage-portfolio .portfolio-item img {width:100%; display:block; border-bottom:1px solid #eee; transition:transform 0.3s, filter 0.3s;} 
+.homepage-portfolio .portfolio-item:hover img {transform:scale(1.05); filter:brightness(1.1);} 
+.homepage-portfolio .portfolio-item p {padding:15px; font-weight:600; color:#333;} 
+.homepage-portfolio .portfolio-btn {margin-top:40px;} 
+.homepage-portfolio .btn-hero {background:#ff3c78; color:#fff; padding:12px 30px; border-radius:6px; font-weight:700; text-decoration:none; transition:background 0.3s;} 
+.homepage-portfolio .btn-hero:hover {background:#790231;} 
+@media(max-width:768px){.homepage-portfolio .portfolio-grid {gap:20px;}} 
+@media(max-width:480px){.homepage-portfolio .portfolio-grid {grid-template-columns:1fr;}}
+
 
 /* ===== TESTIMONIALS ===== */
 .testimonials {padding:80px 20px; text-align:center;}
@@ -248,19 +258,35 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio">
-  <div class="container">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <img src="images/logo.webp" alt="Logo Design">
-      <img src="images/flyer1.webp" alt="Flyer Design">
-      <img src="images/flyer1.webp" alt="Social Media Design">
-      <img src="images/business-card.webp" alt="Business Card Design">
+<!-- Featured Portfolio on Homepage -->
+<section class="homepage-portfolio">
+  <h2>Featured Projects</h2>
+  <p>Take a look at some of my recent graphic design and website projects.</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="images/menu branding.webp" alt="Project 1">
+      <p>Branding & Logo Design</p>
     </div>
-    <a href="portfolio.html" class="btn-link">See Full Portfolio</a>
+    <div class="portfolio-item">
+      <img src="images/responsive-web-design-.webp" alt="Project 2">
+      <p>Responsive Static Website</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/ads.webp" alt="Project 3">
+      <p>Social Media Graphics</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/landing page.webp" alt="Project 4">
+      <p>Landing Page & Campaign</p>
+    </div>
+  </div>
+
+  <div class="portfolio-btn">
+    <a href="portfolio.html" class="btn-hero">See Full Portfolio</a>
   </div>
 </section>
+
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="testimonials">

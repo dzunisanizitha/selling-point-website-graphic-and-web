@@ -40,37 +40,65 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
     /* ===== HERO ===== */
     .hero {position:relative; text-align:center; color:#fff; padding:120px 20px; background:#000;}
-    .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+    .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.1; z-index:0;}
     .hero-content {position:relative; z-index:1; max-width:800px; margin:0 auto;}
     .hero h1 {font-size:2.5rem; margin-bottom:20px; color: #ff3c78;}
     .hero p {font-size:1.2rem; margin-bottom:25px;}
     .btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
     .btn-hero:hover {background:#790231;}
 
-    /* ===== SERVICE SECTIONS ===== */
-    .service-intro {padding:80px 20px; text-align:center; background:#f9f9f9;}
-    .service-intro h2 {font-size:2rem; margin-bottom:20px; color:#ff3c78;}
-    .service-intro p {max-width:700px; margin:0 auto; font-size:1.1rem; color:#555;}
+/* ===== SERVICES PAGE ===== */
+.services-page {padding:80px 20px; max-width:1100px; margin:auto;}
+.service-detail {margin-bottom:60px; text-align:center;}
+.service-detail h2 {font-size:2rem; color:#ff3c78; margin-bottom:15px; position:relative;}
+.service-detail h2::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px;}
+.service-detail p {color:#555; margin-bottom:15px;}
+.service-detail ul {list-style:none; padding:0;}
+.service-detail ul li {background:#f1f1f1; margin:10px 0; padding:10px 15px; border-radius:8px; font-weight:600; color:#333; transition:0.3s;}
+.service-detail ul li:hover {background:#ffedf2;}
 
-    .service-cards {display:flex; flex-wrap:wrap; gap:30px; justify-content:center; padding:60px 0; background:#fff;}
-    .card {background:#fdfdfd; padding:30px 20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); flex:1 1 250px; max-width:280px; transition:0.3s;}
-    .card:hover {transform:translateY(-8px); box-shadow:0 6px 20px rgba(0,0,0,0.15);}
-    .card i {font-size:2.5rem; color:#ff3c78; margin-bottom:15px;}
-    .card h3 {font-size:1.4rem; margin-bottom:10px; color:#333;}
-    .card p {font-size:1rem; color:#555;}
+/* ===== SERVICES PAGE ===== */
+.services-page {padding:80px 20px; max-width:1200px; margin:auto;}
 
-    /* ===== FEATURED SERVICE ===== */
-    .featured-service {padding:80px 20px; text-align:center; background:#f2f2f2;}
-    .featured-service h2 {font-size:2rem; margin-bottom:20px; color:#ff3c78;}
-    .featured-service p {max-width:700px; margin:0 auto 30px; font-size:1.1rem; color:#555;}
-    .featured-service img {max-width:100%; border-radius:15px; margin-top:30px;}
+/* ===== SERVICE DETAIL SECTIONS ===== */
+.service-detail {margin-bottom:60px; text-align:center;}
+.service-detail h2 {font-size:2rem; color:#ff3c78; margin-bottom:15px; position:relative;}
+.service-detail h2::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px;}
+.service-detail p {color:#555; margin-bottom:30px;}
 
-    /* ===== CALL TO ACTION ===== */
-    .cta {padding:80px 20px; text-align:center; background:#000; color:#fff;}
-    .cta h2 {font-size:2rem; margin-bottom:20px;}
-    .cta p {max-width:700px; margin:0 auto 30px; font-size:1.1rem;}
-    .cta a {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
-    .cta a:hover {background:#790231;}
+/* ===== SERVICE ITEMS GRID ===== */
+.service-items {display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; justify-items:center; margin-top:20px;}
+.service-item {background:#fff; padding:20px; border-radius:15px; text-align:center; width:100%; max-width:250px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.3s ease-in-out;}
+.service-item img {width:70px; height:70px; margin-bottom:15px; padding:15px; background:#ff3c78; border-radius:50%; transition:transform 0.3s ease, filter 0.3s ease;}
+.service-item p {font-weight:600; color:#333;}
+
+.service-item i {font-size: 30px;color: #ff3c78; /* Pink brand color */margin-bottom: 10px;transition: transform 0.3s;}
+
+.service-item:hover i {transform: scale(1.2);}
+
+
+/* ===== HOVER EFFECTS ===== */
+.service-item:hover {transform:translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.2);}
+.service-item:hover img {transform:scale(1.1); filter:brightness(1.2);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){.service-detail h2{font-size:1.8rem;}}
+@media(max-width:768px){.service-detail h2{font-size:1.6rem;}.service-items{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}.service-item img{width:60px;height:60px;}}
+@media(max-width:480px){.service-detail h2{font-size:1.4rem;}}
+
+
+/* ===== CTA ===== */
+.cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center;}
+.cta h2 {font-size:2rem; margin-bottom:20px; color: #333;}
+.cta p {font-size:1.1rem; margin-bottom:30px; color: #333;}
+.btn-cta {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
+.btn-cta:hover {background:#790231; color:#fff;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){.hero h1{font-size:2rem;}}
+@media(max-width:768px){.hero h1{font-size:1.8rem;} .service-detail h2{font-size:1.6rem;}}
+@media(max-width:480px){.hero h1{font-size:1.5rem;} .service-detail h2{font-size:1.4rem;}}
+
 
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
@@ -140,9 +168,10 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </header>
 
-<!-- HERO -->
+<!-- SERVICES HERO -->
 <section class="hero">
-  <img src="images/sneaker.webp" alt="Our Services" class="hero-bg">
+  <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+       alt="Creative Services Banner" class="hero-bg">
   <div class="hero-content">
     <h1>Professional Services to Elevate Your Brand</h1>
     <p>Explore our range of <strong>graphic design</strong>, <strong>branding</strong>, <strong>web design</strong>, and <strong>marketing solutions</strong> crafted to grow your business in South Africa.</p>
@@ -150,55 +179,125 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </section>
 
-<!-- SERVICE INTRO -->
-<section class="service-intro">
-  <div class="container">
-    <h2>Our Services</h2>
-    <p>At ARIDESIGN, we provide tailor-made solutions that fit your brand’s unique needs. From eye-catching logos to responsive websites, every service is designed to make your business shine online.</p>
+
+<section class="services-page">
+
+  <!-- Graphic Design -->
+  <div class="service-detail">
+    <h2>Graphic Design</h2>
+    <p>Professional branding and creative designs tailored to your audience.</p>
+    <div class="service-items">
+      <div class="service-item">
+        <i class="fas fa-paint-brush"></i>
+        <p>Logo Design & Brand Identity</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-id-card"></i>
+        <p>Business Cards, Flyers, Posters</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-share-alt"></i>
+        <p>Social Media Graphics</p>
+      </div>
+      <div class="service-item">
+      <i class="fas fa-book"></i>
+      <p>Brochures & Catalogs</p>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-bullhorn"></i>
+      <p>Event Posters & Promotional Materials</p>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-ad"></i>
+      <p>Digital Ads & Banners</p>
+    </div>
+    </div>
   </div>
+
+  <!-- Website Design -->
+  <div class="service-detail">
+    <h2>Website Design</h2>
+    <p>Responsive static websites that are fast, professional, and user-friendly.</p>
+    <div class="service-items">
+      <div class="service-item">
+        <i class="fas fa-code"></i>
+        <p>Single-Page & Multi-Page Websites</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-laptop-code"></i>
+        <p>Business & Portfolio Sites</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-columns"></i>
+        <p>Landing Pages & Campaign Pages</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-search"></i>
+        <p>Basic On-Page SEO</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Media Management -->
+  <div class="service-detail">
+    <h2>Social Media Management</h2>
+    <p>Grow your online presence with consistent posts and engaging campaigns.</p>
+    <div class="service-items">
+      <div class="service-item">
+        <i class="fas fa-user-cog"></i>
+        <p>Account Setup & Optimization</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-pencil-alt"></i>
+        <p>Content Creation (Graphics & Captions)</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-calendar-alt"></i>
+        <p>Scheduling & Posting</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-chart-line"></i>
+        <p>Performance Tracking & Reports</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO Optimization -->
+  <div class="service-detail">
+    <h2>SEO Optimization</h2>
+    <p>Improve your website’s visibility and attract more clients with basic SEO.</p>
+    <div class="service-items">
+      <div class="service-item">
+        <i class="fas fa-key"></i>
+        <p>Keyword Research</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-tools"></i>
+        <p>On-Page Optimization</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-tags"></i>
+        <p>Meta Tags & Descriptions</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-chart-pie"></i>
+        <p>Google Analytics Setup</p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
-<!-- SERVICE CARDS -->
-<section class="service-cards">
-  <div class="card">
-    <i class="fas fa-paint-brush"></i>
-    <h3>Graphic Design</h3>
-    <p>Professional logos, flyers, posters, and digital content that attract attention and communicate your brand effectively.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-code"></i>
-    <h3>Static Websites</h3>
-    <p>Modern, responsive, and user-friendly websites that showcase your brand and convert visitors into customers.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-search"></i>
-    <h3>SEO Optimization</h3>
-    <p>Basic on-page SEO to ensure your website is search engine-friendly and your business is visible online.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-share-alt"></i>
-    <h3>Social Media Management</h3>
-    <p>Boost your online presence with strategic social media content, scheduling, and engagement.</p>
-  </div>
-</section>
 
-<!-- FEATURED SERVICE -->
-<section class="featured-service">
-  <div class="container">
-    <h2>Featured Project</h2>
-    <p>We recently helped a client revamp their branding with a complete logo, stationery, and social media package, increasing their engagement by over 50%.</p>
-    <img src="images/featured-project.webp" alt="Featured Project">
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <h2>Ready to Elevate Your Brand?</h2>
-    <p>Contact ARIDESIGN today to discuss your project and get a personalized quote for your business.</p>
-    <a href="quote.html">Request Your Quote</a>
-  </div>
-</section>
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h2>Ready to Take Your Business to the Next Level?</h2>
+    <p>Contact us today for a free quote and let’s start building your brand online.</p>
+    <a href="contact.html" class="btn-cta">Request a Quote</a>
+  </section>
+
+
 
 <!-- FOOTER -->
 <footer>

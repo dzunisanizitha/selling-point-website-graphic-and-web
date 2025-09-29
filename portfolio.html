@@ -39,52 +39,91 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
 
 /* ===== HERO ===== */
+/* ===== HEADER / NAV ===== */
+header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px;}
+.logo-img {height:120px;}
+.desktop-nav ul {list-style:none; display:flex; gap:20px;}
+.desktop-nav ul li a {padding:8px 12px; color:#333; font-weight:550; transition:0.3s;}
+.desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+.menu-toggle {display:none; cursor:pointer;}
+.menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+.mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px; transform:translateX(100%); transition:transform 0.3s ease-in-out;}
+.mobile-nav.open {display:block; transform:translateX(0);}
+.mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+.mobile-nav ul li a {padding:8px 12px; color:#333; border-radius:5px;}
+.mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+
+/* ===== HERO ===== */
 .hero {position:relative; text-align:center; color:#fff; padding:120px 20px; background:#000;}
 .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
 .hero-content {position:relative; z-index:1; max-width:800px; margin:0 auto;}
-.hero h1 {font-size:2.5rem; margin-bottom:20px; color: #ff3c78;}
+.hero h1 {font-size:2.5rem; margin-bottom:20px; color:#ff3c78;}
 .hero p {font-size:1.1rem; margin-bottom:25px;}
-.btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight: 900}
+.btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; font-weight:900; transition:0.3s;}
 .btn-hero:hover {background:#790231;}
 
-/* ===== PORTFOLIO SECTIONS ===== */
+/* ===== GRAPHIC DESIGN PORTFOLIO ===== */
 .portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center;}
 .portfolio-graphics h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
-.portfolio-graphics .portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-.portfolio-graphics .portfolio-item {background:#fff; padding:15px; border-radius:10px; transition:0.3s;}
-.portfolio-graphics .portfolio-item img {width:100%; border-radius:10px; margin-bottom:10px; transition:0.3s;}
-.portfolio-graphics .portfolio-item img:hover {transform:scale(1.05);}
-.portfolio-graphics .portfolio-item p {font-weight:600; color:#333;}
+.portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.portfolio-item {background:#fff; padding:15px; border-radius:10px; transition:0.3s;}
+.portfolio-item img {width:100%; border-radius:10px; margin-bottom:10px; transition:0.3s;}
+.portfolio-item img:hover {transform:scale(1.05);}
+.portfolio-item p {font-weight:600; color:#333;}
 
-/* STATIC WEBSITE PORTFOLIO - CAROUSEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/* STATIC WEBSITE PORTFOLIO - CAROUSEL */
-.portfolio-websites {padding:80px 20px; background:#fff; text-align:center; font-family:Arial, sans-serif;}
-.portfolio-websites h3 {font-size:2rem; color:#ff3c78; margin-bottom:50px; position:relative;}
-.portfolio-websites h3::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px; transition:0.3s;}
-.portfolio-websites h3:hover::after {width:100px;}
+/* ===== STATIC WEBSITE PORTFOLIO ===== */
+.portfolio-websites { padding: 80px 20px; background: #fff; text-align: center; }
+.portfolio-websites h3 { font-size: 2rem; color: #ff3c78; margin-bottom: 50px; position: relative; }
+.portfolio-websites h3::after { content: ""; display: block; width: 60px; height: 4px; background: #ff3c78; margin: 10px auto 0; border-radius: 2px; transition: 0.3s; }
+.portfolio-websites h3:hover::after { width: 100px; }
+.carousel { overflow-x: auto; overflow-y: hidden; white-space: nowrap; padding: 20px 0; -webkit-overflow-scrolling: touch; }
+.carousel-track { display: flex; gap: 30px; align-items: center; }
+.portfolio-card { flex: 0 0 auto; width: 180px; border-radius: 15px; transition: transform 0.5s; text-align: center; }
+.portfolio-card a { display: block; }
+.portfolio-card img { width: 120px; height: auto; border-radius: 10px; transition: transform 0.5s, filter 0.5s; }
+.portfolio-card a:hover img { transform: scale(1.08); filter: brightness(1.1); }
+.carousel::-webkit-scrollbar { display: none; }
+.carousel { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ===== OTHER PORTFOLIO (SOCIAL MEDIA / SEO) ===== */
+.portfolio-other {padding:80px 20px; background:#f1f1f1; text-align:center;}
+.portfolio-other h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
 
 /* Carousel */
 .carousel {overflow:hidden; position:relative; padding:20px 0;}
-.carousel-track {display:flex; gap:30px; animation:scroll-left 20s linear infinite;}
+.carousel-track {display:flex; gap:30px; animation:scroll-left 25s linear infinite;}
 
-/* Cards */
-.portfolio-websites .portfolio-card {flex:0 0 180px; background:#f9f9f9; border-radius:15px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.5s;}
-.portfolio-websites .portfolio-card img {width:100%; border-radius:10px; transition:transform 0.5s, filter 0.5s;}
+/* Fade edges so items disappear smoothly */
+.carousel::before, .carousel::after {
+  content:"";
+  position:absolute;
+  top:0;
+  width:80px; height:100%;
+  z-index:2;
+  pointer-events:none;
+}
+.carousel::before {left:0; background:linear-gradient(to right,#fff 0%,transparent 100%);}
+.carousel::after {right:0; background:linear-gradient(to left,#fff 0%,transparent 100%);}
 
-/* Hover Effects */
-.portfolio-websites .portfolio-card:hover img {transform:scale(1.08); filter:brightness(1.1);}
-.portfolio-websites .portfolio-card:hover {background:#fff0f6; box-shadow:0 15px 25px rgba(0,0,0,0.2); transform:translateY(-5px);}
-
-/* Scroll Animation */
+/* Fix: Scroll full track */
 @keyframes scroll-left {
   0% {transform:translateX(0);}
-  100% {transform:translateX(-50%);}
+  100% {transform:translateX(-100%);}
 }
 
-/* Responsive */
+/* CALL TO ACTION */
+.cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center;}
+.cta h2 {font-size:2rem; margin-bottom:20px; color: #333;}
+.cta p {font-size:1.1rem; margin-bottom:30px; color: #333;}
+.btn-cta {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
+.btn-cta:hover {background:#790231; color:#fff;}
+
+
+/* ===== RESPONSIVE ===== */
 @media(max-width:1024px){.carousel-track {gap:30px;}}
-@media(max-width:768px){.portfolio-websites{padding:60px 15px;} .portfolio-websites h3{font-size:1.8rem;}}
-@media(max-width:480px){.portfolio-websites .portfolio-card{flex:0 0 150px;}}
+@media(max-width:768px){.portfolio-graphics,.portfolio-websites,.portfolio-other{padding:60px 15px;} h3{font-size:1.8rem;}}
+@media(max-width:480px){.portfolio-card{flex:0 0 150px;} .hero h1{font-size:2rem;} .hero p{font-size:1rem;}}
+
 
 
 /* ===== FOOTER ===== */
@@ -164,7 +203,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- HERO -->
 <section class="hero">
-  <img src="images/portfolio-banner.webp" alt="Portfolio Banner" class="hero-bg">
+  <img src="images/about-banner.webp" alt="Portfolio Banner" class="hero-bg">
   <div class="hero-content">
     <h1>Our Creative Portfolio</h1>
     <p>Discover ARIDESIGN's professional <strong>graphic design</strong> and <strong>web design</strong> projects that inspire and deliver results.</p>
@@ -174,65 +213,108 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- GRAPHIC DESIGN PORTFOLIO -->
 <section class="portfolio-graphics">
-  <div class="container">
-    <h3>Graphic Design Projects</h3>
-    <div class="portfolio-grid">
+  <h3>Graphic Design Projects</h3>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="images/logo.webp" alt="Logo Design">
+      <p>Logo Design</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/branding.webp" alt="Branding Design">
+      <p>Branding / Visual Identity</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/social-media-ads.webp" alt="social-media-ads">
+      <p>Social Media Graphics</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/flyer1.webp" alt="Flyer Design">
+      <p>Flyer/Poster</p>
+    </div>
+    <!-- Add more as needed -->
       <div class="portfolio-item">
-        <img src="images/logo.webp" alt="Logo design by ARIDESIGN">
-        <p>Logo Design - Brand Identity</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/flyer1.webp" alt="Flyer design by ARIDESIGN">
-        <p>Flyer Design - Marketing Campaign</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/sneaker.webp" alt="Social media design by ARIDESIGN">
-        <p>Social Media Design - Engagement Post</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/business-card.webp" alt="Business card design by ARIDESIGN">
-        <p>Business Card Design - Corporate Branding</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/poster.webp" alt="Poster design by ARIDESIGN">
-        <p>Poster Design - Event Promotion</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="images/banner.webp" alt="Banner design by ARIDESIGN">
-        <p>Banner Design - Online Advertising</p>
-      </div>
+      <img src="images/business-card.webp" alt="Business Card Design">
+      <p>Business Card</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/Tri-Fold-Mockup-US-A4-Vol4.webp" alt="Brochures Design">
+      <p>Brochures</p>
     </div>
   </div>
 </section>
 
-<!-- STATIC WEBSITE PORTFOLIO -->
+<!-- STATIC WEBSITES PORTFOLIO -->
+<!-- STATIC WEBSITES PORTFOLIO -->
 <section class="portfolio-websites">
-  <div class="container">
-    <h3>Static Website Projects</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="portfolio-card">
-          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
-        </a>
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="portfolio-card">
-          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website by ARIDESIGN">
-        </a>
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="portfolio-card">
-          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries website by ARIDESIGN">
-        </a>
-        <!-- Duplicate for infinite scroll -->
-        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" class="portfolio-card">
-          <img src="images/barber-logo.png" alt="Barber responsive website by ARIDESIGN">
-        </a>
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" class="portfolio-card">
-          <img src="images/e-commerce-logo.png" alt="Amanda Fashion E-commerce website by ARIDESIGN">
-        </a>
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" class="portfolio-card">
-          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries website by ARIDESIGN">
+  <h3>Static Website Projects</h3>
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <div class="portfolio-card">
+        <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
+          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
         </a>
       </div>
+
+      <div class="portfolio-card">
+        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
+          <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
+        </a>
+      </div>
+
+      <div class="portfolio-card">
+        <a href=" https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
+          <img src="images/barber-logo.png" alt="Landing Page Logo">
+        </a>
+      </div>
+
+      <!-- Duplicate cards for smooth loop -->
+      <div class="portfolio-card">
+        <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
+          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
+        </a>
+      </div>
+
+      <div class="portfolio-card">
+        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
+          <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
+        </a>
+      </div>
+
+      <div class="portfolio-card">
+        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
+          <img src="images/barber-logo.png" alt="Landing Page Logo">
+        </a>
+      </div>
+
     </div>
   </div>
+</section>
+
+
+
+
+<!-- SOCIAL MEDIA MANAGEMENT / SEO -->
+<section class="portfolio-other">
+  <h3>Social Media & Optimized Websites</h3>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="images/Social Media Campaign – Engagement.webp" alt="Social Media Campaign">
+      <p>Social Media Campaign – Increased Engagement</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/responsive website.webp" alt="SEO Optimized Website">
+      <p>SEO Optimized Website – Improved Ranking</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <h2>Ready to Work Together?</h2>
+  <p>Let’s bring your brand, website, or campaign to life with creative design and optimized solutions.</p>
+  <a href="contact.html" class="btn-cta">Request a Quote</a>
 </section>
 
 

@@ -39,9 +39,18 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== HERO / TOP ABOUT ===== */
 .about-hero {
-  background: url('images/graphic-design-banner.webp') no-repeat center center/cover;
-  color:#fff; text-align:center; padding:120px 20px; position:relative;
-}
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1740174459709-ecb607094a4c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+              no-repeat center center / cover;
+  color: #fff;text-align: center;padding: 120px 20px;z-index: 0;}
+
+/* Dark overlay */
+.about-hero::before {content: "";position: absolute;top: 0; left: 0;width: 100%; height: 100%;background: rgba(0,0,0,0.8); /* adjust 0.3 → 0.7 for lighter/darker */z-index: 1;}
+
+/* Make sure text is above overlay */
+.about-hero * {position: relative;z-index: 2;}
+
+
 .about-hero h1 {font-size:2.8rem;  color: #ff3c78; margin-bottom:20px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5);}
 .about-hero p {max-width:700px; margin:0 auto; font-size:1.1rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);}
 
@@ -172,10 +181,12 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       <p>Our goal is to help businesses stand out online and offline, achieving measurable results through <strong>thoughtful design and branding</strong>.</p>
     </div>
     <div class="image">
-      <img src="images/mission.jpg" alt="Mission Image">
+      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+           alt="Creative Team Collaboration">
     </div>
   </div>
 </section>
+
 
 <!-- HISTORY / TIMELINE -->
 <section class="history">
