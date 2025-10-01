@@ -61,7 +61,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .hero p {font-size:1.1rem; margin-bottom:25px;}
 
 /* ===== GRAPHIC DESIGN PORTFOLIO ===== */
-.portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center;}
+.portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center; margin-bottom: -80px;}
 .portfolio-graphics h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
 .portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
 .portfolio-item {background:#fff; padding:15px; border-radius:10px; transition:0.3s;}
@@ -70,18 +70,22 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .portfolio-item p {font-weight:600; color:#333;}
 
 /* ===== STATIC WEBSITE PORTFOLIO ===== */
-.portfolio-websites { padding: 80px 20px; background: #fff; text-align: center; margin-bottom: -30px;}
-.portfolio-websites h3 { font-size: 2rem; color: #ff3c78; margin-bottom: 50px; position: relative; }
+.portfolio-websites { padding: 60px 20px; background: #fff; text-align: center; margin-bottom: -15px; }
+.portfolio-websites h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px; }
 .portfolio-websites h3::after { content: ""; display: block; width: 60px; height: 4px; background: #ff3c78; margin: 10px auto 0; border-radius: 2px; transition: 0.3s; }
 .portfolio-websites h3:hover::after { width: 100px; }
-.carousel { overflow-x: auto; overflow-y: hidden; white-space: nowrap; padding: 20px 0; -webkit-overflow-scrolling: touch; }
-.carousel-track { display: flex; gap: 30px; align-items: center; }
-.portfolio-card { flex: 0 0 auto; width: 180px; border-radius: 15px; transition: transform 0.5s; text-align: center; }
+.carousel-fade { position: relative; width: 200px; height: 100px; margin: 0 auto; }
+.carousel-fade .portfolio-card { position: absolute; top: -10px; left: 0; width: 100%; opacity: 0; animation: fade 9s infinite; }
+.carousel-fade .portfolio-card:nth-child(1) { animation-delay: 0s; }
+.carousel-fade .portfolio-card:nth-child(2) { animation-delay: 3s; }
+.carousel-fade .portfolio-card:nth-child(3) { animation-delay: 6s; }
+@keyframes fade { 0% { opacity: 0; } 5% { opacity: 1; } 30% { opacity: 1; } 35% { opacity: 0; } 100% { opacity: 0; } }
 .portfolio-card a { display: block; }
-.portfolio-card img { width: 120px; height: auto; border-radius: 10px; transition: transform 0.5s, filter 0.5s; }
-.portfolio-card a:hover img { transform: scale(1.08); filter: brightness(1.1); }
-.carousel::-webkit-scrollbar { display: none; }
-.carousel { -ms-overflow-style: none; scrollbar-width: none; }
+.portfolio-card img { width: 80%; height: auto; border-radius: 10px; transition: transform 0.3s; margin: 0 auto; margin-top: -20px; }
+.portfolio-card a:hover img { transform: scale(1.05); }
+
+
+
 
 /* ===== OTHER PORTFOLIO (SOCIAL MEDIA / SEO) ===== */
 .portfolio-other {padding:80px 20px; background:#f1f1f1; text-align:center;}
@@ -244,49 +248,25 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- STATIC WEBSITES PORTFOLIO -->
 <section class="portfolio-websites">
   <h3>Static Website Projects</h3>
-  <div class="carousel">
-    <div class="carousel-track">
-
-      <div class="portfolio-card">
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
-          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
-        </a>
-      </div>
-
-      <div class="portfolio-card">
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
-          <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
-        </a>
-      </div>
-
-      <div class="portfolio-card">
-        <a href=" https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
-          <img src="images/barber-logo.png" alt="Landing Page Logo">
-        </a>
-      </div>
-
-      <!-- Duplicate cards for smooth loop -->
-      <div class="portfolio-card">
-        <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
-          <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
-        </a>
-      </div>
-
-      <div class="portfolio-card">
-        <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
-          <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
-        </a>
-      </div>
-
-      <div class="portfolio-card">
-        <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
-          <img src="images/barber-logo.png" alt="Landing Page Logo">
-        </a>
-      </div>
-
+  <div class="carousel-fade">
+    <div class="portfolio-card">
+      <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
+        <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
+      </a>
+    </div>
+    <div class="portfolio-card">
+      <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
+        <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
+      </a>
+    </div>
+    <div class="portfolio-card">
+      <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
+        <img src="images/barber-logo.png" alt="Landing Page Logo">
+      </a>
     </div>
   </div>
 </section>
+
 
 
 
@@ -311,7 +291,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <section class="cta">
   <h2>Ready to Work Together?</h2>
   <p>Let’s bring your brand, website, or campaign to life with creative design and optimized solutions.</p>
-  <a href="contact.html" class="btn-cta">Request a Quote</a>
+  <a href="quote.html" class="btn-cta">Request a Quote</a>
 </section>
 
 
