@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://aridesign.co.za/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://aridesign.co.za/blog.html</loc>
-    <priority>0.8</priority>
-  </url>
+   <url>
+      <loc>https://aridesign.co.za/</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/about.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/blog.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/portfolio.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/quote.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/services.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/testimony.html</loc>
+   </url>
+   <url>
+      <loc>https://aridesign.co.za/thank-you.html</loc>
+   </url>
 </urlset>
+
