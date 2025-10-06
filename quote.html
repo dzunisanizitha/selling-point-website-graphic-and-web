@@ -78,6 +78,22 @@ button:hover { background-color: #a8264d; }
 
   /* ===== SHOW MOBILE NAV ===== */
   .mobile-nav.show {display:block;}
+
+.whatsapp-button {
+    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
+}
+
+.whatsapp-button img {
+    width: 24px;height: 24px;margin-right: 10px;
+}
+
+.whatsapp-button span {
+    display: inline-block;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
 </style>
 </head>
 <body>
@@ -187,6 +203,12 @@ button:hover { background-color: #a8264d; }
     </div>
   </div>
 </section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+  <span>Chat with us</span>
+</a>
 
 <!-- FOOTER -->
 <!-- ================= FOOTER ================= -->
