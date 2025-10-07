@@ -14,10 +14,33 @@
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
 <!-- SEO META -->
-<meta name="description" content="Read testimonials from ARIDESIGN clients. See how our graphic design, branding, and website solutions have helped businesses in South Africa.">
-<meta name="keywords" content="ARIDESIGN, testimonials, reviews, client feedback, graphic design, web design, branding, South Africa">
+<meta name="description" content="Read testimonials from ARIDESIGN clients in South Africa. See how our graphic design, branding, and website solutions helped businesses in Limpopo, Gauteng, and beyond.">
+<meta name="keywords" content="ARIDESIGN, testimonials, client reviews, graphic design South Africa, web design Limpopo, branding services">
 <meta name="author" content="ARIDESIGN">
 <meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "John Doe"
+  },
+  "reviewBody": "ARIDESIGN provided excellent service and a stunning website design!",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "itemReviewed": {
+    "@type": "Organization",
+    "name": "ARIDESIGN",
+    "url": "https://aridesign.co.za"
+  }
+}
+</script>
+
 
 <!-- INLINE CSS -->
 <style>
@@ -153,7 +176,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ARIDESIGN Testimonials" class="hero-bg">
+  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ARIDESIGN Testimonials" class="hero-bg" loading="lazy">
   <div class="hero-content">
     <h1>Our Clients Love Us</h1>
     <p>Discover how ARIDESIGN has helped businesses in South Africa elevate their brand through creative <strong>graphic design</strong> and professional <strong>web solutions</strong>.</p>
@@ -167,19 +190,21 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <div class="testimonial-cards">
       <div class="testimonial-card">
         <p>"ARIDESIGN transformed our brand identity! The logo and marketing material exceeded our expectations."</p>
-        <h4><b>J. Smith </b> - Marketing Manager</h4>
+      <h4 aria-label="Marketing Manager J. Smith"><b>J. Smith</b> - Marketing Manager</h4>
+
       </div>
       <div class="testimonial-card">
         <p>"The website they built for us is sleek, responsive, and easy to manage. Highly recommended!"</p>
-        <h4><b>S. Ngobeni</b> – Business Startup</h4>
+        <h4 aria-label="Business Startup S. Ngobeni"><b>S. Ngobeni</b> - Business Startup</h4>
+
       </div>
       <div class="testimonial-card">
         <p>"Amazing creative work! Our social media engagement grew significantly thanks to their designs."</p>
-        <h4><b>A. Ngema</b> – Startup Founder C</h4>
+        <h4 aria-label="Startup Founder A. Ngema"><b>A. Ngema</b> - Startup Founder</h4>
       </div>
       <div class="testimonial-card">
         <p>"Professional, reliable, and creative. ARIDESIGN helped our business stand out online."</p>
-        <h4>s. <b>Molefe</b> - Shop Owner</h4>
+        <h4 aria-label="Shop Owner S. Molefe"><b>S. Molefe</b> - Shop Owner</h4>
       </div>
     </div>
   </div>

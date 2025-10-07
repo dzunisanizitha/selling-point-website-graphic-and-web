@@ -14,38 +14,37 @@
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
 <style>
-  /* ===== GLOBAL ===== */
-  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
-  body {line-height:1.6; color:#333; background:#f9f9f9;}
-  a {text-decoration:none; color:inherit;}
-  .container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+/* ===== GLOBAL ===== */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; color:#333; background:#f9f9f9;}
+a {text-decoration:none; color:inherit;}
+.container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
 
-  /* ===== HEADER / NAV ===== */
+/* ===== HEADER / NAV ===== */
 header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
-  .header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
-  .logo-img {height:120px;}
-  .desktop-nav ul {list-style:none; display:flex; gap:20px;}
-  .desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
-  .desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+.header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
+.logo-img {height:120px;}
+.desktop-nav ul {list-style:none; display:flex; gap:20px;}
+.desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
+.desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
 
-  /* ===== MOBILE NAV ===== */
-  .menu-toggle {display:none; cursor:pointer;}
-  .menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
-  .mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
-  .mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
-  .mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
-  .mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
+/* ===== MOBILE NAV ===== */
+.menu-toggle {display:none; cursor:pointer;}
+.menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
+.mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
+.mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
+.mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
+.mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
 
-  /* ===== HERO ===== */
-  .hero {position:relative; text-align:center; color:#fff; padding:40px 20px; background:#000;}
-  .hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
-  .hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
-  .hero h1 {font-size:2.4rem; margin-bottom:20px;}
-  .btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
-  .btn-hero:hover {background:#790231;}
+/* ===== HERO ===== */
+.hero {position:relative; text-align:center; color:#fff; padding:40px 20px; background:#000;}
+.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
+.hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
+.hero h1 {font-size:2.4rem; margin-bottom:20px;}
+.btn-hero {display:inline-block; background:#ff3c78; color:#fff; padding:12px 25px; border-radius:5px; transition:0.3s; font-weight:bold;}
+.btn-hero:hover {background:#790231;}
 
-  /* ===== QUOTE FORM ===== */
-body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+/* ===== QUOTE FORM ===== */
 .quote-form { max-width: 900px; margin: 50px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 .quote-form h2 { text-align: center; color: #ff3c78; margin-bottom: 10px; }
 .quote-form p { text-align: center; color: #555; margin-bottom: 30px; font-size: 16px; }
@@ -57,43 +56,40 @@ input, textarea { padding: 10px; font-size: 16px; border: 1px solid #ccc; border
 textarea { min-height: 100px; }
 button { padding: 15px 30px; font-size: 18px; background-color: #ff3c78; color: #fff; border: none; border-radius: 6px; cursor: pointer; align-self: flex-start; transition: background 0.3s; }
 button:hover { background-color: #a8264d; }
-@media (max-width: 1024px) { .form-row { gap: 15px; } }
-@media (max-width: 768px) { .form-row { flex-direction: column; } }
-@media (max-width: 480px) { .quote-form { padding: 20px; } button { width: 100%; } }
 
-  /* ===== CONTACT ===== */
+/* ===== CONTACT ===== */
 .contact {padding:80px 20px; text-align:center; background:#f9f9f9;}
 .contact h2 {font-size:2rem; margin-bottom:20px; color: #ff3c78;}
 .contact p {margin-bottom:30px; font-size:1.1rem;}
 .contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
 .contact-links a:hover {color:#790231;}
 
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
 
-  /* ===== MEDIA QUERIES ===== */
-  @media(max-width:768px){
-    .desktop-nav {display:none;}
-    .menu-toggle {display:block;}
-    .footer-logo img {    margin-left: 47px;}
-  }
-
-  /* ===== SHOW MOBILE NAV ===== */
-  .mobile-nav.show {display:block;}
-
-.whatsapp-button {
-    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .menu-toggle {display:block;}
+  .footer-logo img { margin-left: 47px;}
 }
-
-.whatsapp-button img {
-    width: 24px;height: 24px;margin-right: 10px;
-}
-
-.whatsapp-button span {
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
+.mobile-nav.show {display:block;}
+.whatsapp-button {position: fixed; bottom:20px; right:20px; background-color: #25D366; color:white; display:flex; align-items:center; padding:10px 15px; border-radius:50px; text-decoration:none; font-family: Arial, sans-serif; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s; z-index:9999;}
+.whatsapp-button img { width:24px; height:24px; margin-right:10px;}
+.whatsapp-button span { display:inline-block;}
+.whatsapp-button:hover { transform: scale(1.1); box-shadow:0 6px 10px rgba(0,0,0,0.3);}
 </style>
 </head>
 <body>
@@ -104,7 +100,6 @@ button:hover { background-color: #a8264d; }
     <div class="logo">
       <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
     </div>
-    <!-- Desktop Nav -->
     <nav class="desktop-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -116,15 +111,9 @@ button:hover { background-color: #a8264d; }
         <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
       </ul>
     </nav>
-
-    <!-- Hamburger -->
     <div class="menu-toggle" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
-
-    <!-- Mobile Nav -->
     <nav class="mobile-nav" id="mobileMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -149,39 +138,33 @@ button:hover { background-color: #a8264d; }
 </section>
 
 <!-- QUOTE FORM -->
-<!-- QUOTE FORM -->
 <section class="quote-form">
   <div class="container">
     <h2>Tell Us About Your Project</h2>
     <p>Fill out the form below and we'll get back to you with a personalized quote.</p>
     <form action="https://formspree.io/f/mrbykzgp" method="POST" accept-charset="UTF-8">
       <!-- Redirect to Thank You page -->
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-
+      <input type="hidden" name="_next" value="thank-you.html">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Your full name">
         </div>
-
         <div class="form-group">
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" required placeholder="Your email">
         </div>
       </div>
-
       <div class="form-row">
         <div class="form-group">
           <label for="project">Project Details</label>
           <textarea id="project" name="project" required placeholder="Describe your project"></textarea>
         </div>
-
         <div class="form-group">
           <label for="budget">Budget (Optional)</label>
           <input type="text" id="budget" name="budget" placeholder="Your budget range">
         </div>
       </div>
-
       <div class="form-row">
         <button type="submit">Submit Request</button>
       </div>
@@ -189,6 +172,11 @@ button:hover { background-color: #a8264d; }
   </div>
 </section>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+  <span>Chat with us</span>
+</a>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
@@ -204,24 +192,13 @@ button:hover { background-color: #a8264d; }
   </div>
 </section>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
-  <span>Chat with us</span>
-</a>
-
 <!-- FOOTER -->
-<!-- ================= FOOTER ================= -->
-<!-- ================= FOOTER ================= -->
 <footer>
   <div class="container footer-container">
     <div class="footer-top">
-      <!-- Logo -->
       <div class="footer-logo">
         <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
       </div>
-
-      <!-- Quick Links -->
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
@@ -234,65 +211,28 @@ button:hover { background-color: #a8264d; }
           <li><a href="quote.html">Contact</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
       <div class="footer-contact">
         <h4>Contact Us</h4>
         <p>Email: <a href="mailto:infoaridesignza@gmail.com">infoaridesignza@gmail.com</a></p>
         <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
         <p>South Africa</p>
       </div>
-
-      <!-- Social Media -->
       <div class="footer-social">
         <h4>Follow Us</h4>
         <a href="https://www.facebook.com/share/1GgWqnkdcM/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
     </div>
   </div>
 </footer>
 
-
-  <!-- ================= FOOTER CSS ================= -->
-  <style>
-  /* ===== FOOTER ===== */
-/* ===== FOOTER ===== */
-footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
-.footer-container {max-width:1200px; margin:0 auto;}
-.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
-.footer-logo img { height:100px; width:auto; object-fit:contain;}
-.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
-.footer-links ul {list-style:none; padding:0;}
-.footer-links ul li {margin-bottom:8px;}
-.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
-.footer-links ul li a:hover {color:#ff3c78;}
-.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
-.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
-.footer-social a:hover {color:#ff3c78;}
-.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
-
-/* ===== RESPONSIVE FOOTER ===== */
-@media (max-width:768px){
-  .footer-top {flex-direction:column; text-align:center; gap:20px;}
-  .footer-social a {margin-right:15px;}
-}
-
-  </style>
-</footer>
-
-
-
 <!-- JS FOR MOBILE MENU -->
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-
   hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
   });

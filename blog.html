@@ -189,7 +189,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1516414447565-b14be0adf13e?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ARIDESIGN Blog" class="hero-bg">
+  <img src="https://images.unsplash.com/photo-1516414447565-b14be0adf13e?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ARIDESIGN Blog" class="hero-bg" loading="lazy">
   <div class="hero-content">
     <h1>Insights & Inspiration</h1>
     <p>Read the latest blogs from ARIDESIGN on graphic design, web design, branding, and creative solutions.</p>
@@ -200,12 +200,13 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 
   <section class="blog-container">
+    <article>
     <h1>Why a Static Website Could Be the Perfect Choice</h1>
     <p class="intro">Learn how static websites are fast, secure, cost-effective, and perfect for showcasing your brand online.</p>
     
-    <img src="images/responsive website.webp" alt="Static Website Example">
+    <img src="images/responsive website.webp" alt="Static Website Example" loading="lazy">
 
-    <span class="read-more-btn" onclick="toggleBlog()">Read More</span>
+    <span class="read-more-btn" onclick="toggleBlog()" aria-label="Read full blog content">Read More</span>
 
     <div class="blog-content" id="fullBlog">
       <h2>What is a Static Website?</h2>
@@ -235,6 +236,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         <a href="quote.html">Get Your Static Website Today</a>
       </div>
     </div>
+    </article>
   </section>
 
   <!-- WhatsApp Floating Button -->

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | ARIDESIGN</title>
+<title>Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -14,10 +14,38 @@
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
 <!-- SEO META -->
-<meta name="description" content="Explore ARIDESIGN's creative portfolio showcasing graphic design, branding, and static websites in South Africa.">
+<meta name="description" content="Explore ARIDESIGN's professional graphic and web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
 <meta name="keywords" content="ARIDESIGN, portfolio, graphic design, web design, branding, logo design, South Africa">
 <meta name="author" content="ARIDESIGN">
 <meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa">
+<meta property="og:description" content="Explore ARIDESIGN's professional graphic & web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
+<meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
+<meta property="og:url" content="https://aridesign.co.za/portfolio.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARIDESIGN">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ARIDESIGN",
+  "url": "https://aridesign.co.za",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Limpopo",
+    "addressCountry": "South Africa"
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/1GgWqnkdcM/",
+    "https://www.instagram.com/yourprofile/"
+  ]
+}
+</script>
+
 
 <!-- INLINE CSS -->
 <style>
@@ -76,19 +104,16 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .portfolio-item p {font-weight:600; color:#333;}
 
 /* ===== STATIC WEBSITE PORTFOLIO ===== */
-.portfolio-websites { padding: 60px 20px; background: #fff; text-align: center; margin-bottom: -15px; }
-.portfolio-websites h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px; }
-.portfolio-websites h3::after { content: ""; display: block; width: 60px; height: 4px; background: #ff3c78; margin: 10px auto 0; border-radius: 2px; transition: 0.3s; }
-.portfolio-websites h3:hover::after { width: 100px; }
-.carousel-fade { position: relative; width: 200px; height: 100px; margin: 0 auto; }
-.carousel-fade .portfolio-card { position: absolute; top: -10px; left: 0; width: 100%; opacity: 0; animation: fade 9s infinite; }
-.carousel-fade .portfolio-card:nth-child(1) { animation-delay: 0s; }
-.carousel-fade .portfolio-card:nth-child(2) { animation-delay: 3s; }
-.carousel-fade .portfolio-card:nth-child(3) { animation-delay: 6s; }
-@keyframes fade { 0% { opacity: 0; } 5% { opacity: 1; } 30% { opacity: 1; } 35% { opacity: 0; } 100% { opacity: 0; } }
-.portfolio-card a { display: block; }
-.portfolio-card img { width: 80%; height: auto; border-radius: 10px; transition: transform 0.3s; margin: 0 auto; margin-top: -20cpx; }
+.portfolio-websites { padding: 60px 20px; text-align: center; background: #fff; }
+.portfolio-websites h3 { font-size: 2rem; color: #ff3c78; margin-bottom: 40px; }
+.portfolio-websites h3::after { content: ""; display: block; width: 60px; height: 4px; background: #ff3c78; margin: 10px auto 0; border-radius: 2px; }
+
+.carousel { position: relative; width: 300px; height: 200px; margin: 0 auto; }
+.portfolio-card { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; }
+.portfolio-card.active { opacity: 1; z-index: 1; }
+.portfolio-card img { width: 100%; border-radius: 10px; transition: transform 0.3s; }
 .portfolio-card a:hover img { transform: scale(1.05); }
+
 
 
 
@@ -229,48 +254,47 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <section class="hero">
   <img src="images/about-banner.webp" alt="Portfolio Banner" class="hero-bg">
   <div class="hero-content">
-    <h1>Our Creative Portfolio</h1>
+    <h1>Creative Graphic & Web Design Portfolio in Limpopo</h1>
     <p>Discover ARIDESIGN's professional <strong>graphic design</strong> and <strong>web design</strong> projects that inspire and deliver results.</p>
   </div>
 </section>
 
 <!-- GRAPHIC DESIGN PORTFOLIO -->
 <section class="portfolio-graphics">
-  <h3>Graphic Design Projects</h3>
+  <h3>Graphic Design Projects in Limpopo</h3>
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <img src="images/logo.webp" alt="Logo Design">
+      <img src="images/logo.webp" alt="Logo Design by ARIDESIGN in Limpopo">
       <p>Logo Design</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/branding.webp" alt="Branding Design">
+      <img src="images/branding.webp" alt="Branding and Visual Identity for Limpopo clients">
       <p>Branding / Visual Identity</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/social-media-ads.webp" alt="social-media-ads">
+      <img src="images/social-media-ads.webp" alt="social-media-ads designed by ARIDESIGN for Limpopo Client">
       <p>Social Media Graphics</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/flyer1.webp" alt="Flyer Design">
+      <img src="images/flyer1.webp" alt="Flyer Design in Limpopo">
       <p>Flyer/Poster</p>
     </div>
     <!-- Add more as needed -->
       <div class="portfolio-item">
-      <img src="images/business-card.webp" alt="Business Card Design">
+      <img src="images/business-card.webp" alt="Business Card Design by ARIDESIGN  in Limpopo">
       <p>Business Card</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/Tri-Fold-Mockup-US-A4-Vol4.webp" alt="Brochures Design">
+      <img src="images/Tri-Fold-Mockup-US-A4-Vol4.webp" alt="Brochures Design for Limpopo Small business">
       <p>Brochures</p>
     </div>
   </div>
 </section>
 
 <!-- STATIC WEBSITES PORTFOLIO -->
-<!-- STATIC WEBSITES PORTFOLIO -->
 <section class="portfolio-websites">
-  <h3>Static Website Projects</h3>
-  <div class="carousel-fade">
+  <h3>Static Website Projects for Limpopo Businesses</h3>
+  <div class="carousel">
     <div class="portfolio-card">
       <a href="https://www.deliverancehealingministries.org/" target="_blank" rel="noopener">
         <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Logo">
@@ -278,12 +302,12 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     </div>
     <div class="portfolio-card">
       <a href="https://dzunisanizitha.github.io/Amanda-Fashion-E-commerce/" target="_blank" rel="noopener">
-        <img src="images/e-commerce-logo.png" alt="Portfolio Website Logo">
+        <img src="images/e-commerce-logo.png" alt="E-Commerce Website Logo">
       </a>
     </div>
     <div class="portfolio-card">
       <a href="https://dzunisanizitha.github.io/barber-website/" target="_blank" rel="noopener">
-        <img src="images/barber-logo.png" alt="Landing Page Logo">
+        <img src="images/barber-logo.png" alt="Barber Website Logo">
       </a>
     </div>
   </div>
@@ -293,16 +317,17 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 
 
+
 <!-- SOCIAL MEDIA MANAGEMENT / SEO -->
 <section class="portfolio-other">
-  <h3>Social Media & Optimized Websites</h3>
+  <h3>Social Media & SEO Projects in Limpopo</h3>
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <img src="images/Social Media Campaign – Engagement.webp" alt="Social Media Campaign">
+      <img src="images/Social Media Campaign – Engagement.webp" alt="Social Media Campaign for Limpopo Client">
       <p>Social Media Campaign – Increased Engagement</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/responsive website.webp" alt="SEO Optimized Website">
+      <img src="images/responsive website.webp" alt="SEO Optimized Website for startup in limpopo">
       <p>SEO Optimized Website – Improved Ranking</p>
     </div>
   </div>
@@ -357,6 +382,28 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     </div>
   </div>
 </footer>
+
+<!-- WEBSITE IMAGE LINK  -->
+<script>
+const cards = document.querySelectorAll('.portfolio-card');
+let current = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
+  });
+}
+
+function nextCard() {
+  current = (current + 1) % cards.length;
+  showCard(current);
+}
+
+// Initialize
+showCard(current);
+setInterval(nextCard, 3000); // Change slide every 3 seconds
+</script>
+
 
 <!-- MOBILE MENU JS -->
 <script>

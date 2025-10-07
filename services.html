@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | ARIDESIGN</title>
+  <title>Services in Limpopo | ARIDESIGN - Graphic & Web Design South Africa</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -14,10 +14,37 @@
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
   <!-- SEO META -->
-  <meta name="description" content="ARIDESIGN offers creative graphic design, branding, and web services in South Africa. Discover our professional services to elevate your business.">
-  <meta name="keywords" content="ARIDESIGN, graphic design, web design, branding, logo design, marketing services, South Africa">
-  <meta name="author" content="ARIDESIGN">
-  <meta name="robots" content="index, follow">
+<meta name="description" content="ARIDESIGN offers professional graphic design, branding, website design, social media management, and SEO services in Limpopo, South Africa. Elevate your business with creative solutions.">
+<meta name="keywords" content="graphic design Limpopo, web design Limpopo, branding Limpopo, social media management Limpopo, SEO services Limpopo, ARIDESIGN South Africa">
+<meta name="author" content="ARIDESIGN">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Services in Limpopo | ARIDESIGN - Graphic & Web Design South Africa">
+<meta property="og:description" content="ARIDESIGN offers creative graphic design, branding, web design, social media, and SEO services in Limpopo. Grow your business today!">
+<meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
+<meta property="og:url" content="https://aridesign.co.za/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARIDESIGN">
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ARIDESIGN",
+  "image": "https://aridesign.co.za/images/logo-picture.png",
+  "url": "https://aridesign.co.za",
+  "telephone": "+27684757321",
+  "email": "infoaridesignza@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Limpopo",
+    "addressCountry": "South Africa"
+  },
+  "description": "ARIDESIGN provides graphic design, web design, branding, social media management, and SEO services in Limpopo, South Africa."
+}
+</script>
 
   <!-- INLINE CSS -->
   <style>
@@ -103,6 +130,17 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 @media(max-width:768px){.hero h1{font-size:1.8rem;} .service-detail h2{font-size:1.6rem;}}
 @media(max-width:480px){.hero h1{font-size:1.5rem;} .service-detail h2{font-size:1.4rem;}}
 
+
+
+/* Portfolio Link */
+.portfolio-link {margin-top: 20px;text-align: center;}
+.portfolio-link a {display: inline-block;background: #ff3c78; /* brand pink */color: #fff;padding: 10px 20px;border-radius: 5px;font-weight: 600;transition: 0.3s;text-decoration: none;}
+.portfolio-link a:hover {background: #790231; /* darker pink for hover */color: #fff; transform: scale(1.05);}
+
+
+
+
+
 .whatsapp-button {
     position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
 }
@@ -150,6 +188,19 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 /* ===== SHOW MOBILE NAV ===== */
 .mobile-nav.show {display:block;}
+
+/* ===== it hides some code visually but keep it readable for search engines: ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
   </style>
 </head>
 <body>
@@ -191,7 +242,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- SERVICES HERO -->
 <section class="hero">
   <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1600" 
-       alt="Creative Services Banner" class="hero-bg">
+       alt="Creative Services Banner" class="hero-bg"loading="lazy">
   <div class="hero-content">
    <h1>Elevate Your Brand with <span>ARIDESIGN</span></h1>
     <p>Explore our range of <strong>graphic design</strong>, <strong>branding</strong>, <strong>web design</strong>, and <strong>marketing solutions</strong> crafted to grow your business in South Africa.</p>
@@ -203,31 +254,31 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
   <!-- Graphic Design -->
   <div class="service-detail">
-    <h2>Graphic Design</h2>
+    <h2>Graphic Design Services in Limpopo</h2>
     <p>Professional branding and creative designs tailored to your audience.</p>
     <div class="service-items">
       <div class="service-item">
-        <i class="fas fa-paint-brush"></i>
+        <i class="fas fa-paint-brush" aria-label="Logo Design & Brand Identity in Limpopo"></i>
         <p>Logo Design & Brand Identity</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-id-card"></i>
+        <i class="fas fa-id-card" aria-label="business cards, flyers and posters in limpopo"></i>
         <p>Business Cards, Flyers, Posters</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-share-alt" aria-label="Social Media Graphics for small businesses in Limpopo"></i>
         <p>Social Media Graphics</p>
       </div>
       <div class="service-item">
-      <i class="fas fa-book"></i>
+      <i class="fas fa-book" aria-label="Brochures & Catalogs in Limpopo"></i>
       <p>Brochures & Catalogs</p>
     </div>
     <div class="service-item">
-      <i class="fas fa-bullhorn"></i>
+      <i class="fas fa-bullhorn" aria-label="Event Posters & Promotional Materials in Limpopo"></i>
       <p>Event Posters & Promotional Materials</p>
     </div>
     <div class="service-item">
-      <i class="fas fa-ad"></i>
+      <i class="fas fa-ad" aria-label="Digital Ads & Banners in Limpopo"></i>
       <p>Digital Ads & Banners</p>
     </div>
     </div>
@@ -235,23 +286,23 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
   <!-- Website Design -->
   <div class="service-detail">
-    <h2>Website Design</h2>
+    <h2>Professional Website Design in Limpopo</h2>
     <p>Responsive static websites that are fast, professional, and user-friendly.</p>
     <div class="service-items">
       <div class="service-item">
-        <i class="fas fa-code"></i>
+        <i class="fas fa-code" aria-label="Single-Page & Multi-Page Websites in Limpopo"></i>
         <p>Single-Page & Multi-Page Websites</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-laptop-code"></i>
+        <i class="fas fa-laptop-code" aria-label="Business & Portfolio Sites in Limpopo"></i>
         <p>Business & Portfolio Sites</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-columns"></i>
+        <i class="fas fa-columns" aria-label="Landing Pages & Campaign Pages in Limpopo"></i>
         <p>Landing Pages & Campaign Pages</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-search"></i>
+        <i class="fas fa-search" aria-label="Basic On-Page SEO in Limpopo"></i>
         <p>Basic On-Page SEO</p>
       </div>
     </div>
@@ -259,15 +310,15 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
   <!-- Social Media Management -->
   <div class="service-detail">
-    <h2>Social Media Management</h2>
+    <h2>Social Media Management Services in Limpopo</h2>
     <p>Grow your online presence with consistent posts and engaging campaigns.</p>
     <div class="service-items">
       <div class="service-item">
-        <i class="fas fa-user-cog"></i>
+        <i class="fas fa-user-cog" aria-label="Account Setup & Optimization in Limpopo"></i>
         <p>Account Setup & Optimization</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-pencil-alt"></i>
+        <i class="fas fa-pencil-alt" aria-label="Content Creation (Graphics & Captions) in Limpopo"></i>
         <p>Content Creation (Graphics & Captions)</p>
       </div>
       <div class="service-item">
@@ -275,7 +326,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         <p>Scheduling & Posting</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-chart-line"></i>
+        <i class="fas fa-chart-line" aria-label="Performance Tracking & Reports in Limpopo"></i>
         <p>Performance Tracking & Reports</p>
       </div>
     </div>
@@ -283,29 +334,33 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
   <!-- SEO Optimization -->
   <div class="service-detail">
-    <h2>SEO Optimization</h2>
+    <h2>SEO Optimization Services in Limpopo</h2>
     <p>Improve your website’s visibility and attract more clients with basic SEO.</p>
     <div class="service-items">
       <div class="service-item">
-        <i class="fas fa-key"></i>
+        <i class="fas fa-key" aria-label="Keyword Research in Limpopo"></i>
         <p>Keyword Research</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-tools"></i>
+        <i class="fas fa-tools" aria-label="On-Page Optimization in Limpopo"></i>
         <p>On-Page Optimization</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-tags"></i>
+        <i class="fas fa-tags" aria-label="Meta Tags & Descriptions in Limpopo"></i>
         <p>Meta Tags & Descriptions</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-chart-pie"></i>
+        <i class="fas fa-chart-pie" aria-label="Google Analytics Setup in Limpopo"></i>
         <p>Google Analytics Setup</p>
       </div>
     </div>
-  </div>
+    <div class="portfolio-link">
+  <a href="portfolio.html">See our Limpopo portfolio</a>
+     </div>
 
+  </div>
 </section>
+
 
 
 
@@ -370,4 +425,4 @@ hamburger.addEventListener('click', () => {
 
 </body>
 </html>
-        <
+        
