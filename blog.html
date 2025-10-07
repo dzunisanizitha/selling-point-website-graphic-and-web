@@ -51,35 +51,22 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .hero p {font-size:1.1rem; margin-bottom:25px; color:#fff;}
 
 /* ===== BLOG CONTAINER ===== */
-.blog-container {max-width:850px; margin:40px auto; padding:0 20px; font-family:'Montserrat',sans-serif; line-height:1.6; color:#333;}
+.blog-container{max-width:850px;margin:40px auto;padding:0 20px;font-family:'Montserrat',sans-serif;line-height:1.6;color:#333;}
+.blog-container h1{color:#e91e63;text-align:center;margin-bottom:20px;font-size:2.3rem;}
+.blog-container h2{color:#e91e63;text-align:left;}
+.blog-container p.intro{text-align:center;font-size:1.1rem;max-width:700px;margin:0 auto 20px auto;}
+.blog-container img{width:90%;max-width:800px;display:block;margin:20px auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+details{margin-top:10px;}
+details[open] .blog-content{animation:fadeIn 0.4s ease-in-out;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+summary.read-more-btn{color:#e91e63;cursor:pointer;font-weight:bold;text-decoration:underline;margin-top:15px;display:inline-block;transition:0.3s;list-style:none;}
+summary.read-more-btn:hover{opacity:0.7;}
+summary.read-more-btn::marker{display:none;}
+.cta{text-align:center;margin:50px 0;}
+.cta a{background-color:#e91e63;color:white;text-decoration:none;padding:18px 28px;border-radius:8px;font-weight:600;display:inline-block;transition:0.3s;}
+.cta a:hover{background:#790231;}
+@media(max-width:768px){.blog-container h1{font-size:2rem;}.blog-container img{width:100%;max-width:100%;}}
 
-/* ===== BLOG TITLE ===== */
-.blog-container h1 {color:#e91e63; text-align:center; margin-bottom:20px; font-size:2.3rem;}
-.blog-container p.intro {text-align:center; font-size:1.1rem; max-width:700px; margin:0 auto 20px auto;}
-
-/* ===== BLOG VISUAL ===== */
-.blog-container img {width:90%; max-width:800px; display:block; margin:20px auto; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
-
-/* ===== BLOG CONTENT ===== */
-.blog-content {max-height:0; overflow:hidden; transition:max-height 0.5s ease; margin-top:20px;}
-.blog-content.open {max-height:2000px;} /* Large enough to fit full content */
-.blog-content h2 {color:#e91e63; margin-bottom:15px;}
-.blog-content p, .blog-content ul {margin-bottom:20px;}
-
-/* ===== READ MORE BUTTON ===== */
-.read-more-btn {color:#e91e63; cursor:pointer; font-weight:bold; display:inline-block; margin-top:10px; text-decoration:underline; transition:0.3s; font-weight:bold;}
-.read-more-btn:hover {opacity:0.3;}
-
-/* ===== CTA ===== */
-.cta {text-align:center; margin:50px 0;}
-.cta a {background-color:#e91e63; color:white; text-decoration:none; padding:18px 28px; border-radius:8px; font-weight:600; display:inline-block; transition:0.3s;}
-.cta a:hover {background: #790231;;}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  .blog-container h1 {font-size:2rem;}
-  .blog-container img {width:100%; max-width:100%;}
-}
 
 .whatsapp-button {
     position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
@@ -199,45 +186,100 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- BLOG GRID -->
 
 
-  <section class="blog-container">
-    <article>
+<!-- ===== BLOG 1 ===== -->
+<section class="blog-container">
+  <article>
     <h1>Why a Static Website Could Be the Perfect Choice</h1>
-    <p class="intro">Learn how static websites are fast, secure, cost-effective, and perfect for showcasing your brand online.</p>
-    
+    <p class="intro">
+      Learn how static websites are fast, secure, cost-effective, and perfect for showcasing your brand online.
+    </p>
+
     <img src="images/responsive website.webp" alt="Static Website Example" loading="lazy">
 
-    <span class="read-more-btn" onclick="toggleBlog()" aria-label="Read full blog content">Read More</span>
+    <details>
+      <summary class="read-more-btn">Read More</summary>
+      <div class="blog-content">
+        <h2>What is a Static Website?</h2>
+        <p>
+          A static website has fixed content that doesn’t change unless manually updated by a designer. Unlike dynamic websites, static websites load exactly as designed, offering simplicity and speed. Think of it as a digital brochure for your business.
+        </p>
 
-    <div class="blog-content" id="fullBlog">
-      <h2>What is a Static Website?</h2>
-      <p>A static website has fixed content that doesn’t change unless manually updated by a designer. Unlike dynamic websites, static websites load exactly as designed, offering simplicity and speed. Think of it as a digital brochure for your business.</p>
+        <h2>Speed and Performance</h2>
+        <p>
+          Static websites load faster because they don’t rely on databases or server-side processing. This improves user experience and reduces bounce rates.
+        </p>
 
-      <h2>Speed and Performance</h2>
-      <p>Static websites load faster because they don’t rely on databases or server-side processing. This improves user experience and reduces bounce rates.</p>
+        <h2>Security</h2>
+        <p>
+          With no database or complex server logic, static websites are less vulnerable to hacking, keeping your site and client data safe.
+        </p>
 
-      <h2>Security</h2>
-      <p>With no database or complex server logic, static websites are less vulnerable to hacking, keeping your site and client data safe.</p>
+        <h2>Cost-Effective</h2>
+        <p>
+          Static websites are cheaper to build and maintain, making them ideal for small businesses and startups.
+        </p>
 
-      <h2>Cost-Effective</h2>
-      <p>Static websites are cheaper to build and maintain, making them ideal for small businesses and startups.</p>
+        <h2>Branding and Design</h2>
+        <p>
+          Static websites give designers full control over layout, typography, and graphics, ensuring your website looks exactly as envisioned.
+        </p>
 
-      <h2>Branding and Design</h2>
-      <p>Static websites give designers full control over layout, typography, and graphics, ensuring your website looks exactly as envisioned.</p>
+        <h2>When Should You Choose a Static Website?</h2>
+        <ul>
+          <li>Professional online presence to showcase services</li>
+          <li>Portfolio or showcase for creative professionals</li>
+          <li>Fast and secure websites for small businesses</li>
+          <li>Cost-effective solutions without ongoing maintenance headaches</li>
+        </ul>
 
-      <h2>When Should You Choose a Static Website?</h2>
-      <ul>
-        <li>Professional online presence to showcase services</li>
-        <li>Portfolio or showcase for creative professionals</li>
-        <li>Fast and secure websites for small businesses</li>
-        <li>Cost-effective solutions without ongoing maintenance headaches</li>
-      </ul>
-
-      <div class="cta">
-        <a href="quote.html">Get Your Static Website Today</a>
+        <div class="cta">
+          <a href="quote.html">Get Your Static Website Today</a>
+        </div>
       </div>
-    </div>
-    </article>
-  </section>
+    </details>
+  </article>
+</section>
+
+<!-- ===== BLOG 2 ===== -->
+<section class="blog-container">
+  <article>
+    <h1>How to Make Your Business Stand Out Online with ARIDESIGN</h1>
+    <p class="intro">
+      Discover practical tips and professional strategies to make your Limpopo business shine online with a stunning website, eye-catching branding, and effective social media management.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjBvbmxpbmV8ZW58MHx8MHx8fDA%3D" alt="Business Online Presence Example by ARIDESIGN" loading="lazy">
+
+    <details>
+      <summary class="read-more-btn">Read More</summary>
+      <div class="blog-content">
+        <h2>1. Professional Website Design</h2>
+        <p>Your website is your digital storefront. A clean, responsive, and fast-loading website designed by ARIDESIGN ensures your visitors have an excellent first impression. Static websites are particularly effective for small businesses looking for speed, security, and simplicity.</p>
+
+        <h2>2. Consistent Branding</h2>
+        <p>From logos to color schemes, your branding should be consistent across all online channels. ARIDESIGN creates professional branding that reflects your business values and appeals to your target audience in Limpopo and across South Africa.</p>
+
+        <h2>3. Engaging Social Media Presence</h2>
+        <p>Social media is a powerful tool for attracting and retaining clients. Our social media management services help your business post engaging content, interact with customers, and grow your online presence organically.</p>
+
+        <h2>4. Search Engine Visibility</h2>
+        <p>Being online is not enough; you need to be found. ARIDESIGN incorporates basic SEO strategies into your website to improve visibility on Google, helping your Limpopo business reach more potential clients.</p>
+
+        <h2>5. Showcasing Your Work</h2>
+        <p>A portfolio or showcase page highlights your services or products professionally. Potential clients can see your quality work, boosting trust and credibility.</p>
+
+        <h2>6. Call to Action</h2>
+        <p>Always guide your visitors on the next step. Whether it’s requesting a quote or contacting you, ARIDESIGN helps you create compelling calls to action that convert visitors into clients.</p>
+
+        <div class="cta">
+          <a href="quote.html">Get Started with ARIDESIGN Today</a>
+        </div>
+      </div>
+    </details>
+  </article>
+</section>
+
+
 
   <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
