@@ -79,43 +79,39 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
     .hero p {font-size:1.2rem; margin-bottom:25px;}
 
 /* ===== SERVICES PAGE ===== */
-.services-page {padding:80px 20px; max-width:1100px; margin:auto;}
+.services-page {padding:80px 20px; max-width:1200px; margin:auto; font-family:'Arial', sans-serif;}
 .service-detail {margin-bottom:60px; text-align:center;}
 .service-detail h2 {font-size:2rem; color:#ff3c78; margin-bottom:15px; position:relative;}
 .service-detail h2::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px;}
-.service-detail p {color:#555; margin-bottom:15px;}
-.service-detail ul {list-style:none; padding:0;}
-.service-detail ul li {background:#f1f1f1; margin:10px 0; padding:10px 15px; border-radius:8px; font-weight:600; color:#333; transition:0.3s;}
-.service-detail ul li:hover {background:#ffedf2;}
-
-/* ===== SERVICES PAGE ===== */
-.services-page {padding:80px 20px; max-width:1200px; margin:auto;}
-
-/* ===== SERVICE DETAIL SECTIONS ===== */
-.service-detail {margin-bottom:60px; text-align:center;}
-.service-detail h2 {font-size:2rem; color:#ff3c78; margin-bottom:15px; position:relative;}
-.service-detail h2::after {content:""; display:block; width:60px; height:4px; background:#ff3c78; margin:10px auto 0; border-radius:2px;}
-.service-detail p {color:#555; margin-bottom:30px;}
-
-/* ===== SERVICE ITEMS GRID ===== */
+.service-detail p {color:#555; margin-bottom:30px; font-size:1.1rem; line-height:1.6;}
 .service-items {display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; justify-items:center; margin-top:20px;}
-.service-item {background:#fff; padding:20px; border-radius:15px; text-align:center; width:100%; max-width:250px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.3s ease-in-out;}
-.service-item img {width:70px; height:70px; margin-bottom:15px; padding:15px; background:#ff3c78; border-radius:50%; transition:transform 0.3s ease, filter 0.3s ease;}
-.service-item p {font-weight:600; color:#333;}
+.service-item {background:#fff; padding:25px; border-radius:20px; text-align:center; width:100%; max-width:260px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; position:relative; cursor:pointer;}
+.service-item i {font-size:2.5rem; color:#ff3c78; margin-bottom:15px; display:inline-block; transition:transform 0.3s ease, color 0.3s ease;}
+.service-item:hover i {transform:scale(1.2) translateY(-5px); color:#790231;}
+.service-item p {font-size:1rem; line-height:1.6; color:#333; font-weight:600;}
+.service-item:hover {transform:translateY(-7px); box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+.portfolio-link {margin-top:30px;}
+.portfolio-link a{display: inline-block; color: #fff; background: #ff3c78; padding: 12px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; box-shadow: 0 6px 20px rgba(255, 60, 120, 0.3); transition: all 0.3s ease; position: relative; z-index: 1;}
+.portfolio-link a:hover {background: #fff; color: #ff3c78; transform: scale(1.05); box-shadow: 0 10px 25px rgba(255, 60, 120, 0.5);}
 
-.service-item i {font-size: 30px;color: #ff3c78; /* Pink brand color */margin-bottom: 10px;transition: transform 0.3s;}
+@media(max-width:1024px) {.service-detail h2{font-size:1.8rem;}}
+@media(max-width:768px) {.service-detail h2{font-size:1.6rem;}.service-items{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}.service-item i{font-size:2rem; margin-bottom:12px;}}
+@media(max-width:480px) {.service-detail h2{font-size:1.4rem;}.service-item{padding:20px;}}
+/* ===== FLOATING SHAPES FOR SERVICES ===== */
+.services-page {position:relative; overflow:hidden;}
 
-.service-item:hover i {transform: scale(1.2);}
+.services-page::before {content:""; position:absolute; top:-50px; left:-50px; width:200px; height:200px; background:#ff3c78; border-radius:50%; opacity:0.1; animation:floatShape 8s ease-in-out infinite alternate; z-index:0;}
+.services-page::after {content:""; position:absolute; bottom:-50px; right:-50px; width:150px; height:150px; background:#ff3c78; border-radius:50%; opacity:0.1; animation:floatShape 10s ease-in-out infinite alternate-reverse; z-index:0;}
 
+/* FLOATING SHAPE ANIMATION */
+@keyframes floatShape {
+  0% {transform:translateY(0) rotate(0deg);}
+  50% {transform:translateY(-20px) rotate(45deg);}
+  100% {transform:translateY(0) rotate(0deg);}
+}
 
-/* ===== HOVER EFFECTS ===== */
-.service-item:hover {transform:translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.2);}
-.service-item:hover img {transform:scale(1.1); filter:brightness(1.2);}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:1024px){.service-detail h2{font-size:1.8rem;}}
-@media(max-width:768px){.service-detail h2{font-size:1.6rem;}.service-items{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}.service-item img{width:60px;height:60px;}}
-@media(max-width:480px){.service-detail h2{font-size:1.4rem;}}
+/* Ensure cards appear above shapes */
+.card {position:relative; z-index:1;}
 
 
 /* ===== CTA ===== */
@@ -125,6 +121,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .btn-cta {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
 .btn-cta:hover {background:#790231; color:#fff;}
 
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){.hero h1{font-size:2rem;}}
 @media(max-width:768px){.hero h1{font-size:1.8rem;} .service-detail h2{font-size:1.6rem;}}
@@ -132,10 +129,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 
 
-/* Portfolio Link */
-.portfolio-link {margin-top: 20px;text-align: center;}
-.portfolio-link a {display: inline-block;background: #ff3c78; /* brand pink */color: #fff;padding: 10px 20px;border-radius: 5px;font-weight: 600;transition: 0.3s;text-decoration: none;}
-.portfolio-link a:hover {background: #790231; /* darker pink for hover */color: #fff; transform: scale(1.05);}
+
 
 
 
@@ -254,111 +248,49 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
   <!-- Graphic Design -->
   <div class="service-detail">
-    <h2>Graphic Design Services in Limpopo</h2>
-    <p>Professional branding and creative designs tailored to your audience.</p>
+    <h2>Graphic Design Services</h2>
+    <p>Creative branding and designs tailored to your audience for businesses, ministries, and local projects.</p>
     <div class="service-items">
-      <div class="service-item">
-        <i class="fas fa-paint-brush" aria-label="Logo Design & Brand Identity in Limpopo"></i>
-        <p>Logo Design & Brand Identity</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-id-card" aria-label="business cards, flyers and posters in limpopo"></i>
-        <p>Business Cards, Flyers, Posters</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-share-alt" aria-label="Social Media Graphics for small businesses in Limpopo"></i>
-        <p>Social Media Graphics</p>
-      </div>
-      <div class="service-item">
-      <i class="fas fa-book" aria-label="Brochures & Catalogs in Limpopo"></i>
-      <p>Brochures & Catalogs</p>
-    </div>
-    <div class="service-item">
-      <i class="fas fa-bullhorn" aria-label="Event Posters & Promotional Materials in Limpopo"></i>
-      <p>Event Posters & Promotional Materials</p>
-    </div>
-    <div class="service-item">
-      <i class="fas fa-ad" aria-label="Digital Ads & Banners in Limpopo"></i>
-      <p>Digital Ads & Banners</p>
-    </div>
+      <div class="service-item"><i class="fas fa-paint-brush"></i><p>Logo Design & Brand Identity</p></div>
+      <div class="service-item"><i class="fas fa-id-card"></i><p>Business Cards, Flyers, Posters</p></div>
+      <div class="service-item"><i class="fas fa-share-alt"></i><p>Social Media Graphics</p></div>
+      <div class="service-item"><i class="fas fa-book"></i><p>Brochures & Catalogs</p></div>
+      <div class="service-item"><i class="fas fa-bullhorn"></i><p>Event Posters & Promotional Materials</p></div>
+      <div class="service-item"><i class="fas fa-ad"></i><p>Digital Ads & Banners</p></div>
     </div>
   </div>
 
   <!-- Website Design -->
   <div class="service-detail">
-    <h2>Professional Website Design in Limpopo</h2>
-    <p>Responsive static websites that are fast, professional, and user-friendly.</p>
+    <h2>Website Design Services</h2>
+    <p>Fast, professional, and responsive static websites that elevate your online presence.</p>
     <div class="service-items">
-      <div class="service-item">
-        <i class="fas fa-code" aria-label="Single-Page & Multi-Page Websites in Limpopo"></i>
-        <p>Single-Page & Multi-Page Websites</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-laptop-code" aria-label="Business & Portfolio Sites in Limpopo"></i>
-        <p>Business & Portfolio Sites</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-columns" aria-label="Landing Pages & Campaign Pages in Limpopo"></i>
-        <p>Landing Pages & Campaign Pages</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-search" aria-label="Basic On-Page SEO in Limpopo"></i>
-        <p>Basic On-Page SEO</p>
-      </div>
+      <div class="service-item"><i class="fas fa-code"></i><p>Single-Page & Multi-Page Websites</p></div>
+      <div class="service-item"><i class="fas fa-laptop-code"></i><p>Business & Portfolio Sites</p></div>
+      <div class="service-item"><i class="fas fa-columns"></i><p>Landing Pages & Campaign Pages</p></div>
     </div>
   </div>
 
-  <!-- Social Media Management -->
+  <!-- Digital Marketing (Social Media + SEO) -->
   <div class="service-detail">
-    <h2>Social Media Management Services in Limpopo</h2>
-    <p>Grow your online presence with consistent posts and engaging campaigns.</p>
+    <h2>Digital Marketing & SEO Services</h2>
+    <p>Boost your online visibility and grow your audience with social media management and basic SEO optimization.</p>
     <div class="service-items">
-      <div class="service-item">
-        <i class="fas fa-user-cog" aria-label="Account Setup & Optimization in Limpopo"></i>
-        <p>Account Setup & Optimization</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-pencil-alt" aria-label="Content Creation (Graphics & Captions) in Limpopo"></i>
-        <p>Content Creation (Graphics & Captions)</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-calendar-alt"></i>
-        <p>Scheduling & Posting</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-chart-line" aria-label="Performance Tracking & Reports in Limpopo"></i>
-        <p>Performance Tracking & Reports</p>
-      </div>
+      <!-- Social Media -->
+      <div class="service-item"><i class="fas fa-user-cog"></i><p>Account Setup & Optimization</p></div>
+      <div class="service-item"><i class="fas fa-pencil-alt"></i><p>Content Creation (Graphics & Captions)</p></div>
+      <div class="service-item"><i class="fas fa-calendar-alt"></i><p>Scheduling & Posting</p></div>
+      <div class="service-item"><i class="fas fa-chart-line"></i><p>Performance Tracking & Reports</p></div>
+
+      <!-- SEO -->
+      <div class="service-item"><i class="fas fa-key"></i><p>Keyword Research</p></div>
+      <div class="service-item"><i class="fas fa-tools"></i><p>On-Page Optimization</p></div>
+      <div class="service-item"><i class="fas fa-tags"></i><p>Meta Tags & Descriptions</p></div>
+      <div class="service-item"><i class="fas fa-chart-pie"></i><p>Google Analytics Setup</p></div>
     </div>
+    <div class="portfolio-link"><a href="portfolio.html">See Our Portfolio</a></div>
   </div>
 
-  <!-- SEO Optimization -->
-  <div class="service-detail">
-    <h2>SEO Optimization Services in Limpopo</h2>
-    <p>Improve your website’s visibility and attract more clients with basic SEO.</p>
-    <div class="service-items">
-      <div class="service-item">
-        <i class="fas fa-key" aria-label="Keyword Research in Limpopo"></i>
-        <p>Keyword Research</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-tools" aria-label="On-Page Optimization in Limpopo"></i>
-        <p>On-Page Optimization</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-tags" aria-label="Meta Tags & Descriptions in Limpopo"></i>
-        <p>Meta Tags & Descriptions</p>
-      </div>
-      <div class="service-item">
-        <i class="fas fa-chart-pie" aria-label="Google Analytics Setup in Limpopo"></i>
-        <p>Google Analytics Setup</p>
-      </div>
-    </div>
-    <div class="portfolio-link">
-  <a href="portfolio.html">See our Limpopo portfolio</a>
-     </div>
-
-  </div>
 </section>
 
 

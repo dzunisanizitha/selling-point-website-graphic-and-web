@@ -67,6 +67,14 @@ summary.read-more-btn::marker{display:none;}
 .cta a:hover{background:#790231;}
 @media(max-width:768px){.blog-container h1{font-size:2rem;}.blog-container img{width:100%;max-width:100%;}}
 
+/* ===== BLOG SECTION DECORATIVE SHAPES ===== */
+.blog-container {position:relative; background:#fff; padding:80px 20px; overflow:hidden; z-index:1;}
+.blog-container::before {content:""; position:absolute; top:-60px; left:-60px; width:220px; height:220px; background:#ff3c78; border-radius:50%; opacity:0.12; animation:floatShape 9s ease-in-out infinite alternate; z-index:0;}
+.blog-container::after {content:""; position:absolute; bottom:-60px; right:-60px; width:170px; height:170px; background:#ff3c78; border-radius:50%; opacity:0.12; animation:floatShape 10s ease-in-out infinite alternate-reverse; z-index:0;}
+.blog-container article, .blog-container h1, .blog-container p, .blog-container img, .blog-container details {position:relative; z-index:2;}
+@keyframes floatShape {0%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(15px) rotate(10deg);}100%{transform:translateY(0) rotate(-10deg);}}
+
+
 
 .whatsapp-button {
     position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;

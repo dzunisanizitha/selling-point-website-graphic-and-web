@@ -95,13 +95,32 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .hero p {font-size:1.1rem; margin-bottom:25px;}
 
 /* ===== GRAPHIC DESIGN PORTFOLIO ===== */
-.portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center; margin-bottom: -80px;}
+.portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center;}
 .portfolio-graphics h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
-.portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
-.portfolio-item {background:#fff; padding:15px; border-radius:10px; transition:0.3s;}
-.portfolio-item img {width:100%; border-radius:10px; margin-bottom:10px; transition:0.3s;}
-.portfolio-item img:hover {transform:scale(1.05);}
-.portfolio-item p {font-weight:600; color:#333;}
+.portfolio-graphics h4 {color:#333; font-size:1.5rem; margin:30px 0 15px;}
+
+.slider {overflow:hidden; width:100%; position:relative; margin-bottom:40px;}
+.slider-track {display:flex; width:max-content; animation:slide 20s linear infinite;}
+
+.slide {min-width:250px; margin-right:20px; background:#fff; border-radius:20px; padding:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center; transition:transform 0.3s ease;}
+.slide img {width:100%; border-radius:15px; margin-bottom:10px; object-fit:cover;}
+.slide p {font-weight:600; color:#333; text-align:center;}
+.slide:hover {transform:scale(1.05);}
+
+@keyframes slide {0% {transform:translateX(0);} 100% {transform:translateX(-50%);}}
+
+@media(max-width:768px) {.slide {min-width:180px; margin-right:15px;}}
+@media(max-width:480px) {.slide {min-width:150px; margin-right:10px;}}
+
+/* ===== PORTFOLIO GRAPHICS DECORATIVE SHAPES ===== */
+.portfolio-graphics {position:relative; padding:80px 20px; background:#f1f1f1; overflow:hidden;}
+.portfolio-graphics::before {content:""; position:absolute; top:-50px; left:-50px; width:200px; height:200px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 8s ease-in-out infinite alternate; z-index:0;}
+.portfolio-graphics::after {content:""; position:absolute; bottom:-50px; right:-50px; width:150px; height:150px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 10s ease-in-out infinite alternate-reverse; z-index:0;}
+@keyframes floatShape {0% {transform:translateY(0) rotate(0deg);} 50% {transform:translateY(15px) rotate(10deg);} 100% {transform:translateY(0) rotate(-10deg);}}
+.portfolio-graphics h3, .portfolio-graphics h4, .slider, .slider-track, .slide {position:relative; z-index:1;}
+
+
+
 
 /* ===== STATIC WEBSITE PORTFOLIO ===== */
 .portfolio-websites { padding: 60px 20px; text-align: center; background: #fff; }
@@ -115,34 +134,19 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .portfolio-card a:hover img { transform: scale(1.05); }
 
 
+/* --- SOCIAL MEDIA & SEO SECTION --- */ 
+.portfolio-other {background:linear-gradient(135deg,#fafafa 0%,#ffffff 100%);padding:60px 20px;text-align:center;}
+.portfolio-other h3 {font-size:1.8rem;color:#ff3c78;margin-bottom:40px;letter-spacing:0.5px;position:relative;display:inline-block;}
+.portfolio-other h3::after {content:"";position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);width:80px;height:3px;background:#333;border-radius:3px;}
+.portfolio-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1000px;margin:0 auto;}
+.portfolio-item {background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:transform 0.4s ease,box-shadow 0.4s ease;position:relative;}
+.portfolio-item:hover {transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,0.15);}
+.portfolio-item img {width:100%;height:200px;object-fit:cover;transition:transform 0.5s ease;}
+.portfolio-item:hover img {transform:scale(1.05);}
+.portfolio-item p {margin:0;padding:15px 10px 20px;font-size:1rem;color:#333;background:#fff;font-weight:500;letter-spacing:0.3px;border-top:1px solid #eee;}
+.portfolio-item::before {content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,rgba(255, 3, 158, 0.1),rgba(255, 0, 149, 0.3));opacity:0;transition:opacity 0.4s ease;}
+.portfolio-item:hover::before {opacity:1;}
 
-
-
-/* ===== OTHER PORTFOLIO (SOCIAL MEDIA / SEO) ===== */
-.portfolio-other {padding:80px 20px; background:#f1f1f1; text-align:center;}
-.portfolio-other h3 {font-size:2rem; color:#ff3c78; margin-bottom:40px;}
-
-/* Carousel */
-.carousel {overflow:hidden; position:relative; padding:0 0;}
-.carousel-track {display:flex; gap:30px; animation:scroll-left 25s linear infinite;}
-
-/* Fade edges so items disappear smoothly */
-.carousel::before, .carousel::after {
-  content:"";
-  position:absolute;
-  top:0;
-  width:80px; height:100%;
-  z-index:2;
-  pointer-events:none;
-}
-.carousel::before {left:0; background:linear-gradient(to right,#fff 0%,transparent 100%);}
-.carousel::after {right:0; background:linear-gradient(to left,#fff 0%,transparent 100%);}
-
-/* Fix: Scroll full track */
-@keyframes scroll-left {
-  0% {transform:translateX(0);}
-  100% {transform:translateX(-100%);}
-}
 
 /* CALL TO ACTION */
 .cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center;}
@@ -262,34 +266,62 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- GRAPHIC DESIGN PORTFOLIO -->
 <section class="portfolio-graphics">
   <h3>Graphic Design Projects in Limpopo</h3>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="images/logo.webp" alt="Logo Design by ARIDESIGN in Limpopo">
-      <p>Logo Design</p>
+
+  <!-- Logos Slider -->
+  <h4>Logo Design</h4>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/logo.webp" alt="mixed logos by aridesign in Limpopo"></div>
+      <div class="slide"><img src="images/sheriebia logo design by aridesign.webp" alt="consulting group logo by aridesign"></div>
+      <div class="slide"><img src="images/digital marketing  logo by aridesign.webp" alt="digital marketing  logo by aridesign"></div>
+      <div class="slide"><img src="images/sheriebia glasslogo by aridesign.webp" alt="sheriebia logo design by aridesign in limpopo"></div>
+  </div>
+
+  <!-- Branding Slider -->
+  <h4>Branding / Visual Identity</h4>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/consulting group branding.webp" alt="consulting group branding by aridesign"></div>
+      <div class="slide"><img src="images/resturant branding.webp" alt="resturant branding bt aridesign"></div>
+      <div class="slide"><img src="images/company branding.webp" alt="company branding by aridesign in limpopo"></div>
+      <div class="slide"><img src="images/coffee branding.webp " alt="Bcoffee branding by aridesign in limpopo"></div>
     </div>
-    <div class="portfolio-item">
-      <img src="images/branding.webp" alt="Branding and Visual Identity for Limpopo clients">
-      <p>Branding / Visual Identity</p>
+  </div>
+
+  <!-- Social Media Slider -->
+  <h4>Social Media Graphics</h4>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/social media graphics.webp" alt="social media graphics by aridesign"></div>
+      <div class="slide"><img src="images/dr social media graphics.webp" alt="medical social media graphics designed by aridesign"></div>
+      <div class="slide"><img src="images/social-media-ads.webp" alt="social-media-ads designed by aridesign"></div>
+      <div class="slide"><img src="images/social media graphics.webp" alt="mixed social media graphics designed by aridesign"></div>
     </div>
-    <div class="portfolio-item">
-      <img src="images/social-media-ads.webp" alt="social-media-ads designed by ARIDESIGN for Limpopo Client">
-      <p>Social Media Graphics</p>
+  </div>
+
+  <!-- Flyers Slider -->
+  <h4>Flyers / Posters</h4>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/flyer1.webp" alt="resturant flyer designed by aridesign"></div>
+      <div class="slide"><img src="images/mix flyer design.webp" alt="Flyer grid-template designed by aridesign"></div>
+      <div class="slide"><img src="images/church flyer design.webp" alt="Church flyer Grid design by aridesign"></div>
+      <div class="slide"><img src="images/doctor flyer.webp" alt="Medical Flyer designed buy aridesign"></div>
     </div>
-    <div class="portfolio-item">
-      <img src="images/flyer1.webp" alt="Flyer Design in Limpopo">
-      <p>Flyer/Poster</p>
-    </div>
-    <!-- Add more as needed -->
-      <div class="portfolio-item">
-      <img src="images/business-card.webp" alt="Business Card Design by ARIDESIGN  in Limpopo">
-      <p>Business Card</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="images/Tri-Fold-Mockup-US-A4-Vol4.webp" alt="Brochures Design for Limpopo Small business">
-      <p>Brochures</p>
+  </div>
+
+  <!-- Brochures Slider -->
+  <h4>Brochures / Business Cards</h4>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/brouchure design.webp" alt="Brochure designed by arigraphcs in limpopo"></div>
+      <div class="slide"><img src="images/business-card.webp" alt="Business Card designed by aridesign in limpopo"></div>
+      <div class="slide"><img src="images//business-card design 1.webp" alt="business-card for consulting company desiged by aridesign"></div>
+      <div class="slide"><img src="images/business card design.webp" alt="business card for consulting firm designed by aridesign"></div>
     </div>
   </div>
 </section>
+
 
 <!-- STATIC WEBSITES PORTFOLIO -->
 <section class="portfolio-websites">
@@ -314,10 +346,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </section>
 
 
-
-
-
-
 <!-- SOCIAL MEDIA MANAGEMENT / SEO -->
 <section class="portfolio-other">
   <h3>Social Media & SEO Projects in Limpopo</h3>
@@ -327,12 +355,11 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       <p>Social Media Campaign – Increased Engagement</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/responsive website.webp" alt="SEO Optimized Website for startup in limpopo">
+      <img src="images/responsive website.webp" alt="SEO Optimized Website for startup in Limpopo">
       <p>SEO Optimized Website – Improved Ranking</p>
     </div>
   </div>
 </section>
-
 
 <!-- CALL TO ACTION -->
 <section class="cta">

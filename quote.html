@@ -64,6 +64,14 @@ button:hover { background-color: #a8264d; }
 .contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
 .contact-links a:hover {color:#790231;}
 
+/* ===== QUOTE FORM DECORATIVE SHAPES ===== */
+.quote-form {position:relative; background:#f9f9f9; padding:80px 20px; overflow:hidden; z-index:1;}
+.quote-form::before {content:""; position:absolute; top:-50px; left:-50px; width:200px; height:200px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 9s ease-in-out infinite alternate; z-index:0;}
+.quote-form::after {content:""; position:absolute; bottom:-50px; right:-50px; width:150px; height:150px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 11s ease-in-out infinite alternate-reverse; z-index:0;}
+@keyframes floatShape {0% {transform:translateY(0) rotate(0deg);} 50% {transform:translateY(15px) rotate(10deg);} 100% {transform:translateY(0) rotate(-10deg);}}
+.quote-form .container, .quote-form h2, .quote-form p, .quote-form form {position:relative; z-index:2;}
+
+
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
 .footer-container {max-width:1200px; margin:0 auto;}
