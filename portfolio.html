@@ -124,13 +124,13 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== STATIC WEBSITE PORTFOLIO ===== */
 .portfolio-websites { padding: 60px 20px; text-align: center; background: #fff; }
-.portfolio-websites h3 { font-size: 2rem; color: #ff3c78; margin-bottom: 40px; }
+.portfolio-websites h3 { font-size: 2rem; color: #ff3c78; margin-bottom: 20px; }
 .portfolio-websites h3::after { content: ""; display: block; width: 60px; height: 4px; background: #ff3c78; margin: 10px auto 0; border-radius: 2px; }
 
 .carousel { position: relative; width: 300px; height: 200px; margin: 0 auto; }
 .portfolio-card { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; }
 .portfolio-card.active { opacity: 1; z-index: 1; }
-.portfolio-card img { width: 100%; border-radius: 10px; transition: transform 0.3s; }
+.portfolio-card img { width: 85%; border-radius: 10px; transition: transform 0.3s; }
 .portfolio-card a:hover img { transform: scale(1.05); }
 
 
@@ -148,8 +148,46 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .portfolio-item:hover::before {opacity:1;}
 
 
+/* ===== FREE RESOURCES SECTION ===== */
+/* ===== FREE RESOURCES SECTION ===== */ 
+.free-resources { background: #fff; padding: 70px 20px; text-align: center; } 
+.free-resources h3 { color: #ff3c78; font-size: 2rem; margin-bottom: 20px; } 
+.free-resources p { max-width: 700px; margin: 0 auto 40px; font-size: 1rem; color: #555; } 
+.resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto; } 
+.resource-item { background: #f9f9f9; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s ease; } 
+.resource-item:hover { transform: translateY(-5px); } 
+.resource-item img { width: 100%; height: 180px; object-fit: cover; } 
+.btn-download { display: block; background: #ff3c78; color: #fff; padding: 12px; font-weight: bold; text-transform: uppercase; transition: 0.3s; } 
+.btn-download:hover { background: #790231; }
+
+
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-group .btn-download {
+  flex: 1;
+  background: #ff3c78;   /* pink background */
+  color: #fff;           /* white text */
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn-group .btn-download:hover {
+  background: #790231;   /* dark pink on hover */
+}
+
 /* CALL TO ACTION */
-.cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center;}
+.cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center; margin-top:50px;}
 .cta h2 {font-size:2rem; margin-bottom:20px; color: #333;}
 .cta p {font-size:1.1rem; margin-bottom:30px; color: #333;}
 .btn-cta {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
@@ -245,7 +283,13 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         <li><a href="index.html#home">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html" class="btn-quote">Portfolio</a></li>
+        <li class="has-dropdown">
+  <a href="portfolio.html" class="btn-quote">Portfolio</a>
+  <ul class="dropdown">
+    <li><a href="free-resources.html">Free Templates</a></li>
+  </ul>
+</li>
+
         <li><a href="testimony.html">Testimonials</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
@@ -360,6 +404,76 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     </div>
   </div>
 </section>
+
+<!-- ===== FREE RESOURCES SECTION ===== --> 
+<section id="free-resources" class="free-resources">
+  <h3>Free Flyer Templates (PSD)</h3>
+  <p>Download professionally designed, fully editable flyer templates — perfect for events, parties, weddings, churches, restaurants, dental clinics, beauty spas, and other businesses. Easy to customize in Photoshop or any compatible editor.</p>
+
+  <div class="resource-grid">
+
+    <div class="resource-item">
+      <img src="images/church flyer.webp" alt="Free Church Event Flyer Template PSD by ARIDESIGN">
+      <h4>Church Event Flyer</h4>
+      <p>Inspire your community with a bold, elegant flyer for your next church event.</p>
+      
+      <div class="btn-group">
+        <a href="downloads/special-sunday service flyer template.zip.zip" class="btn-download">Download PSD</a>
+      </div>
+      <p class="note"><b>Note:</b> Download the PSD to edit in Photoshop or any compatible editor.</p>
+    </div>
+
+    <!-- ===== party flyer ===== --> 
+    <div class="resource-item">
+      <img src="images/party flyer.webp" alt="Free party Flyer Template PSD by ARIDESIGN">
+      <h4>party Flyer</h4>
+      <p>Modern Party flyer template - Free and easy to edit</p>
+
+      <div class="btn-group">
+        <a href="downloads/Happy Birthday_Flyer.zip.zip" class="btn-download">Download PSD</a>
+      </div>
+      <p class="note"><b>Note:</b> Download the PSD to edit in Photoshop or any compatible editor.</p>
+    </div>
+
+    <!-- ===== dental flyer ===== --> 
+    <div class="resource-item">
+      <img src="images/dental flyer.webp" alt="Free dental Flyer Template PSD by ARIDESIGN">
+      <h4>Dental Clinic Flyer</h4>
+      <p>Perfect for dentists or dental studios — Modern care for every smile.</p>
+
+      <div class="btn-group">
+        <a href="downloads/dental flyer.zip.zip" class="btn-download">Download PSD</a>
+      </div>
+      <p class="note"><b>Note:</b> Download the PSD to edit in Photoshop or any compatible editor.</p>
+    </div>
+
+    <!-- ===== resturant flyer ===== --> 
+    <div class="resource-item">
+      <img src="images/resturant flyer.webp" alt="Free Resturant Flyer Template PSD by ARIDESIGN">
+      <h4>Resturant Flyer</h4>
+      <p>Delicious pizzas and meals — perfect for promotions and special offers!</p>
+
+      <div class="btn-group">
+        <a href="downloads/resturant flyer.zip.zip" class="btn-download">Download PSD</a>
+      </div>
+      <p class="note"><b>Note:</b> Download the PSD to edit in Photoshop or any compatible editor.</p>
+    </div>
+
+    <!-- ===== beauty spa flyer ===== --> 
+    <div class="resource-item">
+      <img src="images/beauty spa.webp" alt="Free Business Flyer Template PSD by ARIDESIGN">
+      <h4>beauty spa Flyer</h4>
+      <p>Promote your spa services with this professional flyer!</p>
+
+      <div class="btn-group">
+        <a href="downloads/beauty spa.zip.zip" class="btn-download">Download PSD</a>
+      </div>
+      <p class="note"><b>Note:</b>s Download the PSD to edit in Photoshop or any compatible editor.</p>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- CALL TO ACTION -->
 <section class="cta">
