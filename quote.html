@@ -71,7 +71,6 @@ button:hover { background-color: #a8264d; }
 @keyframes floatShape {0% {transform:translateY(0) rotate(0deg);} 50% {transform:translateY(15px) rotate(10deg);} 100% {transform:translateY(0) rotate(-10deg);}}
 .quote-form .container, .quote-form h2, .quote-form p, .quote-form form {position:relative; z-index:2;}
 
-
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
 .footer-container {max-width:1200px; margin:0 auto;}
@@ -91,8 +90,17 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 @media(max-width:768px){
   .desktop-nav {display:none;}
   .menu-toggle {display:block;}
-  .footer-logo img { margin-left: 47px;}
+  .hero h1 {font-size:2rem;}
+  .hero p {font-size:1rem;}
+  .service-cards {flex-direction:column; align-items:center;}
+  .testimonial-cards {flex-direction:column; align-items:center;}
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+  .footer-logo img {    margin-left: 47px;}
 }
+
+/* ===== SHOW MOBILE NAV ===== */
+.mobile-nav.show {display:block;}
 .mobile-nav.show {display:block;}
 .whatsapp-button {position: fixed; bottom:20px; right:20px; background-color: #25D366; color:white; display:flex; align-items:center; padding:10px 15px; border-radius:50px; text-decoration:none; font-family: Arial, sans-serif; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s; z-index:9999;}
 .whatsapp-button img { width:24px; height:24px; margin-right:10px;}
@@ -204,9 +212,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <footer>
   <div class="container footer-container">
     <div class="footer-top">
-      <div class="footer-logo">
-        <img src="images/MY LOGO.png" alt="ARIDESIGN Logo">
-      </div>
+      <div class="footer-logo"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
@@ -237,13 +243,10 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </footer>
 
-<!-- JS FOR MOBILE MENU -->
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
-  });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('show'); });
 </script>
 
 </body>
