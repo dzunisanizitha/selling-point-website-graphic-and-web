@@ -199,21 +199,13 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 @media(max-width:768px){.portfolio-graphics,.portfolio-websites,.portfolio-other{padding:60px 15px;} h3{font-size:1.8rem;}}
 @media(max-width:480px){.portfolio-card{flex:0 0 150px;} .hero h1{font-size:2rem;} .hero p{font-size:1rem;}}
 
-.whatsapp-button {
-    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
-}
-
-.whatsapp-button img {
-    width: 24px;height: 24px;margin-right: 10px;
-}
-
-.whatsapp-button span {
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
+/* ===== WHATSAPP STYLING ===== */
+.whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ff3c78, rgb(255, 196, 0)); color: #fff; display: flex; align-items: center; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 0.3px; box-shadow: 0 4px 10px rgba(255,60,120,0.3); transition: all 0.3s ease; z-index: 9999; animation: pulseGlow 2.5s infinite ease-in-out; }
+.whatsapp-button img { width: 26px; height: 26px; margin-right: 10px; filter: brightness(1.1); }
+.whatsapp-button:hover { transform: scale(1.07); box-shadow: 0 6px 20px rgba(255,60,120,0.5); }
+@keyframes pulseGlow { 0% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } 50% { box-shadow: 0 0 20px rgba(255,60,120,0.6); } 100% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } }
+.whatsapp-tooltip { position: fixed; bottom: 90px; right: 30px; background: #333; color: #fff; padding: 8px 14px; border-radius: 20px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; animation: fadeInOut 6s ease-in-out infinite; opacity: 0.8; }
+@keyframes fadeInOut { 0%, 100% { opacity: 0; transform: translateY(10px); } 20%, 80% { opacity: 1; transform: translateY(0); } }
 
 
 

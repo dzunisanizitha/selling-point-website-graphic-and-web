@@ -90,134 +90,151 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 
 /* ===== MISSION (split layout) ===== */
-/* ===== MISSION (split layout with dynamic styling) ===== */
-.mission {
-  display:flex; flex-wrap:wrap; align-items:center; gap:40px;
-  padding:80px 20px; background:#fff; position:relative; overflow:hidden;
-}
+/* ===== MISSION SECTION (Animated Split Layout) ===== */
+.mission {display:flex; flex-wrap:wrap; align-items:center; gap:40px; padding:80px 20px; background:#fff; position:relative; overflow:hidden;}
+.mission::before {content:""; position:absolute; top:0; left:50%; width:150%; height:100%; background:linear-gradient(135deg,#ff3c78,#fff,#ff3c78); transform:translateX(-50%) rotate(25deg); opacity:0.08; z-index:0; animation:gradientFloat 15s ease-in-out infinite alternate;}
+.mission .text {flex:1; min-width:300px; position:relative; z-index:1; animation:fadeInLeft 1.2s ease forwards;}
+.mission .text h2 {color:#ff3c78; font-size:2.2rem; margin-bottom:20px; position:relative;}
+.mission .text p {font-size:1.15rem; line-height:1.8; color:#333; margin-bottom:15px;}
+.mission .image {flex:1; min-width:300px; position:relative; z-index:1; animation:fadeInRight 1.2s ease forwards;}
+.mission .image img {width:100%; border-radius:20px; transition:transform 0.6s ease, box-shadow 0.6s ease;}
+.mission .image img:hover {transform:scale(1.05) rotate(-1deg); box-shadow:0 20px 40px rgba(255,60,120,0.3);}
 
-.mission::before {
-  content:"";
-  position:absolute; top:0; left:50%; width:150%; height:100%;
-  background:linear-gradient(135deg, #ff3c78, #fff, #ff3c78);
-  transform:translateX(-50%) rotate(25deg);
-  opacity:0.1; z-index:0;
-  animation: gradientFloat 15s ease-in-out infinite;
-}
+/* === KEYFRAME ANIMATIONS === */
+@keyframes fadeInLeft {0%{opacity:0; transform:translateX(-60px);}100%{opacity:1; transform:translateX(0);}}
+@keyframes fadeInRight {0%{opacity:0; transform:translateX(60px);}100%{opacity:1; transform:translateX(0);}}
+@keyframes gradientFloat {0%{transform:translateX(-50%) rotate(25deg);}50%{transform:translateX(-55%) rotate(28deg);}100%{transform:translateX(-50%) rotate(25deg);}}
 
-.mission .text {
-  flex:1; min-width:300px; position:relative; z-index:1;
-}
+/* === GLOW ANIMATION (subtle pulsing light) === */
+.mission::after {content:""; position:absolute; bottom:-100px; right:-100px; width:250px; height:250px; background:radial-gradient(circle,rgba(255,60,120,0.15),transparent 70%); border-radius:50%; animation:glowPulse 6s ease-in-out infinite alternate;}
+@keyframes glowPulse {0%{opacity:0.3; transform:scale(1);}100%{opacity:0.6; transform:scale(1.3);}}
 
-.mission .text h2 {
-  color:#ff3c78; font-size:2.2rem; margin-bottom:20px;
-  position:relative; z-index:1;
-}
-
-.mission .text p {
-  font-size:1.15rem; line-height:1.8; color:#333; margin-bottom:15px;
-}
-
-.mission .image {
-  flex:1; min-width:300px; position:relative; z-index:1;
-}
-
-.mission .image img {
-  width:100%; border-radius:20px;
-  transition:transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.mission .image img:hover {
-  transform:scale(1.05) rotate(-1deg);
-  box-shadow:0 15px 35px rgba(255,60,120,0.3);
-}
-
-/* Animated background gradient movement */
-@keyframes gradientFloat {
-  0% {transform:translateX(-50%) rotate(25deg);}
-  50% {transform:translateX(-55%) rotate(30deg);}
-  100% {transform:translateX(-50%) rotate(25deg);}
-}
-
-/* Responsive adjustments */
+/* === Responsive Adjustments === */
 @media(max-width:768px){
-  .mission {flex-direction:column; text-align:center;}
-  .mission .text, .mission .image {min-width:100%;}
-  .mission .image {margin-top:30px;}
+  .mission{flex-direction:column; text-align:center;}
+  .mission .text, .mission .image{min-width:100%;}
+  .mission .image{margin-top:30px;}
 }
+
 
 
 /* ===== HISTORY / TIMELINE ===== */
-/* ===== HISTORY / TIMELINE IMPROVED ===== */
+/* ===== HISTORY / TIMELINE ANIMATION ===== */
 .history {
-  background:#111; color:#fff; padding:80px 20px; position:relative; overflow:hidden;
-  font-family:'Arial', sans-serif;
+  background:#111; color:#fff;
+  padding:80px 20px; position:relative; overflow:hidden;
+  font-family:'Poppins', sans-serif;
 }
 
 .history h2 {
-  color:#ff3c78; font-size:2.4rem; margin-bottom:50px; text-align:center; position:relative;
+  color:#ff3c78; font-size:2.5rem;
+  margin-bottom:50px; text-align:center;
+  letter-spacing:1px; position:relative;
+  animation: fadeDown 1.2s ease forwards;
 }
 
+/* Timeline layout */
 .timeline {
-  display:flex; flex-direction:column; gap:30px; max-width:900px; margin:0 auto; position:relative;
+  display:flex; flex-direction:column;
+  gap:35px; max-width:900px;
+  margin:0 auto; position:relative;
 }
 
+/* Each event card */
 .timeline-event {
-  background:#222; padding:25px 20px; border-left:5px solid #ff3c78; border-radius:12px;
-  position:relative; overflow:hidden; transition:0.4s ease, transform 0.4s ease;
+  background:#1a1a1a;
+  padding:25px 20px;
+  border-left:5px solid #ff3c78;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  opacity:0;
+  transform:translateX(-40px);
+  animation: slideFade 1s ease forwards;
 }
 
+.timeline-event:nth-child(2) {
+  animation-delay:0.4s;
+}
+.timeline-event:nth-child(3) {
+  animation-delay:0.8s;
+}
+
+/* Headings and text */
 .timeline-event h4 {
-  margin-bottom:10px; color:#ff3c78; font-size:1.25rem;
+  color:#ff3c78; font-size:1.25rem;
+  margin-bottom:10px;
+  font-weight:600;
 }
 
 .timeline-event p {
-  color:#ccc; line-height:1.7; font-size:1rem;
+  color:#ccc; line-height:1.7;
+  font-size:1rem;
 }
 
-/* ICONS IN TIMELINE */
+/* Icon bullets */
 .timeline-event::before {
-  content:'\f111';
-  font-family:"Font Awesome 6 Free"; font-weight:900;
-  position:absolute; left:-18px; top:22px; color:#ff3c78; font-size:16px;
+  content:'';
+  position:absolute;
+  left:-13px; top:25px;
+  width:12px; height:12px;
+  background:#ff3c78; border-radius:50%;
+  box-shadow:0 0 15px rgba(255,60,120,0.4);
   transition:0.4s ease;
 }
 
-/* Timeline hover effect - elevate and glow */
-.timeline-event:hover {
-  background:#333; transform: translateX(5px); box-shadow:0 10px 30px rgba(255,60,120,0.3);
-}
-
 .timeline-event:hover::before {
-  color:#fff; transform: scale(1.4);
+  background:#fff;
+  box-shadow:0 0 20px rgba(255,255,255,0.5);
 }
 
-/* Floating timeline accent shapes */
+/* Hover lift effect */
+.timeline-event:hover {
+  transform:translateX(5px) scale(1.02);
+  box-shadow:0 10px 30px rgba(255,60,120,0.25);
+}
+
+/* Background floating shapes */
+.history::after, .history::before {
+  content:""; position:absolute; border-radius:50%;
+  background:#ff3c78; opacity:0.1;
+}
+
 .history::after {
-  content:""; position:absolute; width:100px; height:100px; background:#ff3c78; border-radius:50%;
-  top:10%; left:5%; opacity:0.1; animation: floatTimeline1 8s ease-in-out infinite alternate;
+  width:120px; height:120px; top:12%; left:8%;
+  animation: floatCircle 8s ease-in-out infinite alternate;
 }
 
 .history::before {
-  content:""; position:absolute; width:150px; height:150px; background:#ff3c78; border-radius:50%;
-  bottom:10%; right:5%; opacity:0.08; animation: floatTimeline2 12s ease-in-out infinite alternate;
+  width:180px; height:180px; bottom:8%; right:6%;
+  animation: floatCircle2 10s ease-in-out infinite alternate;
 }
 
-/* Floating animations */
-@keyframes floatTimeline1 {
-  0% {transform:translateY(0) rotate(0deg);}
-  50% {transform:translateY(-20px) rotate(15deg);}
-  100% {transform:translateY(0) rotate(0deg);}
+/* ===== KEYFRAMES ===== */
+@keyframes slideFade {
+  0% {opacity:0; transform:translateX(-40px);}
+  100% {opacity:1; transform:translateX(0);}
 }
 
-@keyframes floatTimeline2 {
-  0% {transform:translateY(0) rotate(0deg);}
-  50% {transform:translateY(15px) rotate(-10deg);}
-  100% {transform:translateY(0) rotate(0deg);}
+@keyframes fadeDown {
+  0% {opacity:0; transform:translateY(-20px);}
+  100% {opacity:1; transform:translateY(0);}
 }
 
-/* Responsive adjustments */
-@media(max-width:768px) {
+@keyframes floatCircle {
+  0% {transform:translateY(0) scale(1);}
+  50% {transform:translateY(-25px) scale(1.05);}
+  100% {transform:translateY(0) scale(1);}
+}
+
+@keyframes floatCircle2 {
+  0% {transform:translateY(0) scale(1);}
+  50% {transform:translateY(25px) scale(1.1);}
+  100% {transform:translateY(0) scale(1);}
+}
+
+/* Responsive */
+@media(max-width:768px){
   .timeline-event {padding:20px 15px;}
   .timeline-event h4 {font-size:1.15rem;}
   .timeline-event p {font-size:0.95rem;}
@@ -232,21 +249,13 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .about-cta a {display:inline-block; margin-top:40px; color:#fff; background:#ff3c78; padding:15px 35px; border-radius:50px; font-weight:700; font-size:1rem; box-shadow:0 8px 20px rgba(255,60,120,0.4); transition:all 0.3s ease; text-decoration:none; position:relative; z-index:1;} 
 .about-cta a:hover {background:#fff; color:#ff3c78; transform:scale(1.05) translateY(-3px); box-shadow:0 12px 30px rgba(255,60,120,0.6);} 
 
-.whatsapp-button {
-    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
-}
-
-.whatsapp-button img {
-    width: 24px;height: 24px;margin-right: 10px;
-}
-
-.whatsapp-button span {
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
+/* ===== WHATSAPP STYLING ===== */
+.whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ff3c78, rgb(255, 196, 0)); color: #fff; display: flex; align-items: center; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 0.3px; box-shadow: 0 4px 10px rgba(255,60,120,0.3); transition: all 0.3s ease; z-index: 9999; animation: pulseGlow 2.5s infinite ease-in-out; }
+.whatsapp-button img { width: 26px; height: 26px; margin-right: 10px; filter: brightness(1.1); }
+.whatsapp-button:hover { transform: scale(1.07); box-shadow: 0 6px 20px rgba(255,60,120,0.5); }
+@keyframes pulseGlow { 0% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } 50% { box-shadow: 0 0 20px rgba(255,60,120,0.6); } 100% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } }
+.whatsapp-tooltip { position: fixed; bottom: 90px; right: 30px; background: #333; color: #fff; padding: 8px 14px; border-radius: 20px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; animation: fadeInOut 6s ease-in-out infinite; opacity: 0.8; }
+@keyframes fadeInOut { 0%, 100% { opacity: 0; transform: translateY(10px); } 20%, 80% { opacity: 1; transform: translateY(0); } }
 
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
@@ -350,8 +359,9 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </section>
 
 
+
 <!-- HISTORY / TIMELINE -->
-<section class="history">
+<section class="history"> 
   <div class="container">
     <h2>Our Journey</h2>
     <div class="timeline">
@@ -370,6 +380,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     </div>
   </div>
 </section>
+
+
 
 <!-- CTA -->
 <section class="about-cta">

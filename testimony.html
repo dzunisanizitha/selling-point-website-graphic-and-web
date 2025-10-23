@@ -67,44 +67,36 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
  .mobile-nav.show { display: block;}
 
 /* ===== HERO ===== */
-.hero {position:relative; text-align:center; color:#fff; padding:40px 20px; background:#000;}
-.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.2; z-index:0;}
-.hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
-.hero h1 {font-size:2.4rem; margin-bottom:20px; color:#ff3c78;}
-.hero p {font-size:1.1rem; margin-bottom:25px; color:#fff;}
+:root {--brand-pink:#ff3c78;--white:#fff;--gray:#333;}
 
-/* ===== TESTIMONIALS GRID ===== */
-/* ===== TESTIMONIALS ===== */
-.testimonials {position:relative; padding:80px 20px; text-align:center; background:#f9f9f9; overflow:hidden;}
-.testimonials h2 {font-size:2rem; margin-bottom:40px; color:#ff3c78; z-index:1; position:relative;}
-
-/* Floating shapes */
-.testimonials::before {content:""; position:absolute; top:-60px; left:-60px; width:200px; height:200px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 8s ease-in-out infinite alternate; z-index:0;}
-.testimonials::after {content:""; position:absolute; bottom:-60px; right:-60px; width:150px; height:150px; background:#ff3c78; border-radius:50%; opacity:0.15; animation:floatShape 10s ease-in-out infinite alternate-reverse; z-index:0;}
-
-/* Testimonials slider */
-.testimonial-slider {overflow:hidden; width:100%; position:relative; margin:auto; z-index:1;}
-.testimonial-track {display:flex; width:max-content; animation:slideTestimonials 20s linear infinite;}
-.testimonial-card {background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); max-width:300px; margin-right:20px; transition:transform 0.3s, box-shadow 0.3s;}
-.testimonial-card:hover {transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.2);}
-.testimonial-card p {font-style:italic; margin-bottom:15px; color:#555;}
-.testimonial-card h4 {font-weight:500; color:#ff3c78;}
-
-/* Animations */
-@keyframes floatShape {0% {transform:translateY(0);} 100% {transform:translateY(20px);}}
-@keyframes slideTestimonials {0% {transform:translateX(0);} 100% {transform:translateX(-50%);}}
-
-@media(max-width:1024px){.testimonial-card{max-width:250px;}}
-@media(max-width:768px){.testimonial-card{max-width:200px; padding:20px;}}
+/* HERO */
+.hero {position:relative;text-align:center;color:var(--white);}
+.hero-bg {width:100%;height:50vh;object-fit:cover;filter:brightness(50%);}
+.hero-content {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:700px;}
+.hero-content h1 {font-size:2.5rem;margin-bottom:15px;animation:fadeUp 1s ease forwards;}
+.hero-content p {font-size:1.1rem;line-height:1.6;animation:fadeUp 1.2s ease forwards;}
 
 
+.testimonials { background:var(--white); padding:80px 20px; text-align:center; position:relative; overflow:hidden; }
+.testimonials h2 { color:var(--brand-pink); font-size:2rem; font-weight:700; margin-bottom:50px; text-transform:uppercase; letter-spacing:1px; animation:fadeUp 1s ease forwards; }
+.testimonial-slider { position:relative; width:100%; max-width:700px; margin:0 auto; overflow:hidden; }
+.testimonial-track { display:flex; animation:slideTestimonials 24s infinite; }
+.testimonial-card { flex:0 0 100%; box-sizing:border-box; padding:40px 25px; background:#fff; border-radius:20px; box-shadow:0 10px 30px rgba(255,60,120,0.1); text-align:center; transition:transform 0.4s ease, box-shadow 0.4s ease; }
+.testimonial-card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 15px 40px rgba(255,60,120,0.25); }
+.avatar { width:70px; height:70px; background:var(--brand-pink); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; margin:0 auto 20px; box-shadow:0 4px 12px rgba(255,60,120,0.4); }
+.testimonial-card p { font-style:italic; color:#555; line-height:1.6; margin-bottom:15px; font-size:1.05rem; }
+.testimonial-card h4 { color:var(--gray); font-weight:600; margin-bottom:10px; }
+.stars { color:gold; font-size:1.2rem; letter-spacing:2px; }
 
-/* ===== CALL TO ACTION ===== */
-.cta-section {background:#ff3c78; padding:60px 20px; text-align:center; border-radius:10px; margin:60px 0;}
-.cta-section h3 {color:#333; font-size:2rem; margin-bottom:20px;}
-.cta-section p {color:#333; font-size:1.1rem; margin-bottom:30px;}
-.cta-section a {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
-.cta-section a:hover {background:#790231; color:#fff;}
+@keyframes slideTestimonials { 0%,20%{transform:translateX(0%);} 25%,45%{transform:translateX(-100%);} 50%,70%{transform:translateX(-200%);} 75%,95%{transform:translateX(-300%);} 100%{transform:translateX(0%);} }
+@keyframes fadeUp { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+@media(max-width:768px){ .testimonial-card{padding:30px 20px;} .testimonials h2{font-size:1.6rem;} }
+
+.section-intro { color: #555; font-size: 1.1rem; max-width: 650px; margin: 0 auto 40px; line-height: 1.6; animation: fadeUp 1.2s ease forwards; }
+.stars { color: gold; font-size: 1.2rem; margin-bottom: 10px; animation: fadeUp 1s ease forwards; }
+.avatar { width: 70px; height: 70px; background: var(--brand-pink); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(255, 60, 120, 0.4); animation: fadeUp 1s ease forwards; }
+
+
 
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
@@ -137,21 +129,14 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 /* ===== SHOW MOBILE NAV ===== */
 .mobile-nav.show {display:block;}
 
-.whatsapp-button {
-    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
-}
+/* ===== WHATSAPP STYLING ===== */
+.whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ff3c78, rgb(255, 196, 0)); color: #fff; display: flex; align-items: center; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 0.3px; box-shadow: 0 4px 10px rgba(255,60,120,0.3); transition: all 0.3s ease; z-index: 9999; animation: pulseGlow 2.5s infinite ease-in-out; }
+.whatsapp-button img { width: 26px; height: 26px; margin-right: 10px; filter: brightness(1.1); }
+.whatsapp-button:hover { transform: scale(1.07); box-shadow: 0 6px 20px rgba(255,60,120,0.5); }
+@keyframes pulseGlow { 0% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } 50% { box-shadow: 0 0 20px rgba(255,60,120,0.6); } 100% { box-shadow: 0 0 10px rgba(255,60,120,0.4); } }
+.whatsapp-tooltip { position: fixed; bottom: 90px; right: 30px; background: #333; color: #fff; padding: 8px 14px; border-radius: 20px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; animation: fadeInOut 6s ease-in-out infinite; opacity: 0.8; }
+@keyframes fadeInOut { 0%, 100% { opacity: 0; transform: translateY(10px); } 20%, 80% { opacity: 1; transform: translateY(0); } }
 
-.whatsapp-button img {
-    width: 24px;height: 24px;margin-right: 10px;
-}
-
-.whatsapp-button span {
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
 </style>
 
 </head>
@@ -193,49 +178,56 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ARIDESIGN Testimonials" class="hero-bg" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop" alt="ARIDESIGN Testimonials" class="hero-bg" loading="lazy">
   <div class="hero-content">
     <h1>Our Clients Love Us</h1>
     <p>Discover how ARIDESIGN has helped businesses in South Africa elevate their brand through creative <strong>graphic design</strong> and professional <strong>web solutions</strong>.</p>
   </div>
 </section>
 
-<!-- TESTIMONIALS GRID -->
+<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS SECTION -->
 <section class="testimonials">
   <div class="container">
     <h2>Client Testimonials</h2>
+    <p class="section-intro">Real stories from happy clients who trusted <strong>ARIDESIGN</strong> to build their brand identity and online presence.</p>
+
     <div class="testimonial-slider">
       <div class="testimonial-track">
+        
         <div class="testimonial-card">
-          <p>"ARIDESIGN transformed our brand identity! The logo and marketing material exceeded our expectations."</p>;
-          <h4 aria-label="Marketing Manager J. Smith"><b>J. Smith</b> - Marketing Manager</h4>;
-        </div>;
-        <div class="testimonial-card">
-          <p>"The website they built for us is sleek, responsive, and easy to manage. Highly recommended!"</p>;
-          <h4 aria-label="Business Startup S. Ngobeni"><b>S. Ngobeni</b> - Business Startup</h4>;
-        </div>;
-        <div class="testimonial-card">
-          <p>"Amazing creative work! Our social media engagement grew significantly thanks to their designs."</p>;
-          <h4 aria-label="Startup Founder A. Ngema"><b>A. Ngema</b> - Startup Founder</h4>;
-        </div>;
-        <div class="testimonial-card">
-          <p>"Professional, reliable, and creative. ARIDESIGN helped our business stand out online."</p>;
-          <h4 aria-label="Shop Owner S. Molefe"><b>S. Molefe</b> - Shop Owner</h4>;
-        </div>;
-      </div>;
-    </div>;
-  </div>;
-</section>;
+          <div class="avatar">JS</div>
+          <div class="stars">★★★★★</div>
+          <p>"ARIDESIGN transformed our brand identity! The logo and marketing material exceeded our expectations."</p>
+          <h4><b>J. Smith</b> — Marketing Manager, Ermelo</h4>
+        </div>
 
+        <div class="testimonial-card">
+          <div class="avatar">SN</div>
+          <div class="stars">★★★★★</div>
+          <p>"The website they built for us is sleek, responsive, and easy to manage. Highly recommended!"</p>
+          <h4><b>S. Ngobeni</b> — Startup Owner, Polokwane</h4>
+        </div>
 
-<!-- CALL TO ACTION -->
-<section class="cta-section">
-  <div class="container">
-    <h3>Ready to Elevate Your Brand?</h3>
-    <p>Work with ARIDESIGN to create eye-catching graphics and responsive websites that help your business grow.</p>
-    <a href="quote.html">Get a Quote</a>
+        <div class="testimonial-card">
+          <div class="avatar">AN</div>
+          <div class="stars">★★★★★</div>
+          <p>"Amazing creative work! Our social media engagement grew significantly thanks to their designs."</p>
+          <h4><b>A. Ngema</b> — Digital Brand, Johannesburg</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="avatar">SM</div>
+          <div class="stars">★★★★★</div>
+          <p>"Professional, reliable, and creative. ARIDESIGN helped our business stand out online."</p>
+          <h4><b>S. Molefe</b> — Local Shop Owner, Tzaneen</h4>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
