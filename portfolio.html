@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa</title>
+<title>Portfolio | ARIDESIGN — Graphic & Web Design for Businesses in Limpopo & South Africa</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -13,38 +13,61 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/logo-picture.png">
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
-<!-- SEO META -->
-<meta name="description" content="Explore ARIDESIGN's professional graphic and web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
-<meta name="keywords" content="ARIDESIGN, portfolio, graphic design, web design, branding, logo design, South Africa">
-<meta name="author" content="ARIDESIGN">
-<meta name="robots" content="index, follow">
+  <!-- SEO META -->
+  <meta name="description" content="View ARIDESIGN’s creative portfolio featuring professional graphic design, branding, logo design, and static website projects for small businesses, churches, and startups across Limpopo and South Africa.">
+  <meta name="keywords" content="ARIDESIGN portfolio, graphic design Limpopo, web design South Africa, logo design, branding, freelance designer, static websites, creative design agency, South Africa designer">
+  <meta name="author" content="ARIDESIGN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aridesign.co.za/portfolio.html">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa">
-<meta property="og:description" content="Explore ARIDESIGN's professional graphic & web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
-<meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
-<meta property="og:url" content="https://aridesign.co.za/portfolio.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ARIDESIGN">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa">
+  <meta property="og:description" content="Explore ARIDESIGN's professional graphic & web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
+  <meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
+  <meta property="og:url" content="https://aridesign.co.za/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARIDESIGN">
+  <meta property="og:locale" content="en_ZA">
+
+    <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="ZA-LP">
+  <meta name="geo.placename" content="Limpopo, South Africa">
+  <meta name="ICBM" content="-23.8962, 29.4486">
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ARIDESIGN",
-  "url": "https://aridesign.co.za",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Limpopo",
-    "addressCountry": "South Africa"
-  },
-  "sameAs": [
-    "https://www.facebook.com/share/1GgWqnkdcM/",
-    "https://www.instagram.com/yourprofile/"
-  ]
-}
-</script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Structured Data: Portfolio / Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "name": "ARIDESIGN Portfolio",
+    "description": "A showcase of graphic design, web design, and branding projects created by ARIDESIGN for clients in Limpopo and across South Africa.",
+    "creator": {
+      "@type": "Organization",
+      "name": "ARIDESIGN",
+      "url": "https://aridesign.co.za",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aridesign.co.za/images/logo-picture.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1GgWqnkdcM/",
+        "https://www.instagram.com/yourprofile/"
+      ]
+    },
+    "image": "https://aridesign.co.za/images/portfolio-banner.webp",
+    "inLanguage": "en-ZA",
+    "url": "https://aridesign.co.za/portfolio.html"
+  }
+  </script>
 
 
 <!-- INLINE CSS -->
@@ -94,10 +117,14 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 .hero h1 {font-size:2.4rem; margin-bottom:20px; color:#ff3c78;}
 .hero p {font-size:1.1rem; margin-bottom:25px;}
 
+ /* IT HIDES CONTENT ON MY HERO SECTION FOR VIEWERS  BUT VISIBLE FOR SEO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.visually-hidden {position: absolute !important;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0;}
+
 /* ===== GRAPHIC DESIGN PORTFOLIO ===== */
 .portfolio-graphics {padding:80px 20px; background:#f1f1f1; text-align:center;}
-.portfolio-graphics h3 {font-size:1.8em !important; margin-bottom:15px; position:relative; display:inline-block; color:#ff3c78; font: weight 700px !important;}
+.portfolio-graphics h3 { font-size: 1.8rem; color: #ff3c78; font-weight: 700; margin-bottom: 15px; display: inline-block; } 
 .portfolio-graphics h4 {color:#333; font-size:1.5rem; margin:30px 0 15px;}
+.portfolio-graphics P { font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; } 
 
 .slider {overflow:hidden; width:100%; position:relative; margin-bottom:40px;}
 .slider-track {display:flex; width:max-content; animation:slide 20s linear infinite;}
@@ -282,8 +309,8 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* CALL TO ACTION */
 .cta {padding:80px 20px; background:#ff3c78; color:#fff; text-align:center; margin-top:50px;}
-.cta h2 {font-size:2rem; margin-bottom:20px; color: #333;}
-.cta p {font-size:1.1rem; margin-bottom:30px; color: #333;}
+.cta h2 {font-size:2.5rem; margin-bottom:20px; color: #333; font-weight: 700;margin: 0 auto 15px auto;max-width: 800px; /* adjust as needed */line-height: 1.3;  }     
+.cta p { font-size: 1.1rem; color: #333; max-width: 700px; margin: 0 auto 30px auto; }
 .btn-cta {display:inline-block; background:#fff; color:#ff3c78; padding:12px 25px; border-radius:5px; font-weight:700; transition:0.3s;}
 .btn-cta:hover {background:#790231; color:#fff;}
 
@@ -386,37 +413,57 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- HERO -->
 <section class="hero">
-  <img src="images/about-banner.webp" alt="Portfolio Banner" class="hero-bg">
+  <img src="images/about-banner.webp" alt="ARIDESIGN Graphic and Web Design Portfolio Banner" class="hero-bg">
+
   <div class="hero-content">
-    <h1>Creative Graphic & Web Design Services in Limpopo and Across South Africa</h1>
-    <p>Explore ARIDESIGN’s professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong> projects crafted for businesses in Limpopo and beyond. We help brands across South Africa stand out with modern, results-driven design.</p>
+    <!-- Visible, simple H1 for users -->
+    <h1>Creative Design Portfolio</h1>
+
+    <!-- Supporting keyword paragraph -->
+    <p>Explore <strong>ARIDESIGN’s graphic and web design portfolio</strong> — featuring professional <strong>branding, logo design,</strong> and <strong>static websites</strong> crafted for small businesses, churches, and startups in <strong>Limpopo</strong> and across <strong>South Africa</strong>. Every project is built to inspire, connect, and deliver real results.</p>
+
+    <!-- Hidden SEO H2 (Google still reads it for keywords) -->
+    <h2 class="visually-hidden">
+      ARIDESIGN Portfolio — Professional Graphic Design, Branding, and Web Design for Small Businesses and Churches in Limpopo and South Africa
+    </h2>
   </div>
 </section>
 
-<!-- GRAPHIC DESIGN PORTFOLIO -->
-<section class="portfolio-graphics">
-<h3>Graphic Design Projects</h3>
-<p>Creative graphic design projects in Limpopo: logos, branding, social media, and marketing visuals crafted for businesses.</p>
 
+
+<section class="portfolio-graphics">
+  <!-- Upgrade your heading to H2 for SEO hierarchy -->
+  <h3>Graphic Design Portfolio — ARIDESIGN in Limpopo & South Africa</h3>
+
+  <p>
+    Explore our creative <strong>graphic design projects</strong> crafted for <strong>small businesses, startups, and churches</strong> in Limpopo and across South Africa. 
+    From <strong>logo design</strong> to <strong>branding</strong> and <strong>social media graphics</strong>, each project reflects our passion for helping brands stand out locally and nationwide.
+  </p>
+
+  <!-- Hidden SEO line (optional, screen readers only) -->
+  <h3 class="visually-hidden">
+    Graphic design services and portfolio including logos, flyers, posters, brochures, and brand identity design in Limpopo and South Africa.
+  </h3>
 
   <!-- Logos Slider -->
-  <h4>Logo Design</h4>
+  <h4>Logo Design Projects</h4>
   <div class="slider">
     <div class="slider-track">
-      <div class="slide"><img src="images/logo.webp" alt="mixed logos by aridesign in Limpopo"></div>
-      <div class="slide"><img src="images/sheriebia logo design by aridesign.webp" alt="consulting group logo by aridesign"></div>
-      <div class="slide"><img src="images/digital marketing  logo by aridesign.webp" alt="digital marketing  logo by aridesign"></div>
-      <div class="slide"><img src="images/sheriebia glasslogo by aridesign.webp" alt="sheriebia logo design by aridesign in limpopo"></div>
+      <div class="slide"><img src="images/logo.webp" alt="Logo design projects by ARIDESIGN in Limpopo, South Africa"></div>
+      <div class="slide"><img src="images/sheriebia logo design by aridesign.webp" alt="Consulting company logo by ARIDESIGN"></div>
+      <div class="slide"><img src="images/digital marketing  logo by aridesign.webp" alt="Digital marketing logo by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/sheriebia glasslogo by aridesign.webp" alt="Logo design by ARIDESIGN for Sheriebia, Limpopo"></div>
+    </div>
   </div>
 
   <!-- Branding Slider -->
-  <h4>Branding / Visual Identity</h4>
+  <h4>Branding & Visual Identity</h4>
   <div class="slider">
     <div class="slider-track">
-      <div class="slide"><img src="images/consulting group branding.webp" alt="consulting group branding by aridesign"></div>
-      <div class="slide"><img src="images/resturant branding.webp" alt="resturant branding bt aridesign"></div>
-      <div class="slide"><img src="images/company branding.webp" alt="company branding by aridesign in limpopo"></div>
-      <div class="slide"><img src="images/coffee branding.webp " alt="Bcoffee branding by aridesign in limpopo"></div>
+      <div class="slide"><img src="images/consulting group branding.webp" alt="Consulting group branding design by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/resturant branding.webp" alt="Restaurant branding design by ARIDESIGN"></div>
+      <div class="slide"><img src="images/company branding.webp" alt="Company visual identity designed by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/coffee branding.webp" alt="Coffee brand identity design by ARIDESIGN in Limpopo"></div>
     </div>
   </div>
 
@@ -424,32 +471,32 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   <h4>Social Media Graphics</h4>
   <div class="slider">
     <div class="slider-track">
-      <div class="slide"><img src="images/social media graphics.webp" alt="social media graphics by aridesign"></div>
-      <div class="slide"><img src="images/dr social media graphics.webp" alt="medical social media graphics designed by aridesign"></div>
-      <div class="slide"><img src="images/social-media-ads.webp" alt="social-media-ads designed by aridesign"></div>
-      <div class="slide"><img src="images/social media graphics.webp" alt="mixed social media graphics designed by aridesign"></div>
+      <div class="slide"><img src="images/social media graphics.webp" alt="Social media graphics for small businesses by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/dr social media graphics.webp" alt="Medical social media design by ARIDESIGN"></div>
+      <div class="slide"><img src="images/social-media-ads.webp" alt="Social media ad designs by ARIDESIGN"></div>
+      <div class="slide"><img src="images/social media graphics.webp" alt="Custom social media graphics by ARIDESIGN South Africa"></div>
     </div>
   </div>
 
   <!-- Flyers Slider -->
-  <h4>Flyers / Posters</h4>
+  <h4>Flyers & Posters</h4>
   <div class="slider">
     <div class="slider-track">
-      <div class="slide"><img src="images/flyer1.webp" alt="resturant flyer designed by aridesign"></div>
-      <div class="slide"><img src="images/mix flyer design.webp" alt="Flyer grid-template designed by aridesign"></div>
-      <div class="slide"><img src="images/church flyer design.webp" alt="Church flyer Grid design by aridesign"></div>
-      <div class="slide"><img src="images/doctor flyer.webp" alt="Medical Flyer designed buy aridesign"></div>
+      <div class="slide"><img src="images/flyer1.webp" alt="Restaurant flyer designed by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/mix flyer design.webp" alt="Flyer design templates for small businesses by ARIDESIGN"></div>
+      <div class="slide"><img src="images/church flyer design.webp" alt="Church flyer design by ARIDESIGN South Africa"></div>
+      <div class="slide"><img src="images/doctor flyer.webp" alt="Medical flyer designed by ARIDESIGN Limpopo"></div>
     </div>
   </div>
 
   <!-- Brochures Slider -->
-  <h4>Brochures / Business Cards</h4>
+  <h4>Brochures & Business Cards</h4>
   <div class="slider">
     <div class="slider-track">
-      <div class="slide"><img src="images/brouchure design.webp" alt="Brochure designed by arigraphcs in limpopo"></div>
-      <div class="slide"><img src="images/business-card.webp" alt="Business Card designed by aridesign in limpopo"></div>
-      <div class="slide"><img src="images//business-card design 1.webp" alt="business-card for consulting company desiged by aridesign"></div>
-      <div class="slide"><img src="images/business card design.webp" alt="business card for consulting firm designed by aridesign"></div>
+      <div class="slide"><img src="images/brouchure design.webp" alt="Brochure design by ARIDESIGN Limpopo South Africa"></div>
+      <div class="slide"><img src="images/business-card.webp" alt="Business card design by ARIDESIGN in Limpopo"></div>
+      <div class="slide"><img src="images/business-card design 1.webp" alt="Consulting company business card designed by ARIDESIGN"></div>
+      <div class="slide"><img src="images/business card design.webp" alt="Professional business card for consulting firm by ARIDESIGN"></div>
     </div>
   </div>
 </section>
@@ -457,8 +504,16 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- STATIC WEBSITES PORTFOLIO -->
 <section class="portfolio-websites">
-  <h3>Creative Website Portfolio Projects</h3>
-<p>Showcasing professional website projects designed for businesses in Limpopo and beyond, combining modern design with responsive functionality.</p>
+  <h3>Website Design Portfolio — ARIDESIGN Limpopo & South Africa</h3>
+  <p>
+    Explore our collection of <strong>modern, responsive website designs</strong> created for <strong>small businesses, ministries, and brands</strong> across Limpopo and South Africa. 
+    Each project showcases our commitment to clean design, smooth functionality, and a strong online presence.
+  </p>
+
+    <!-- Hidden SEO text for Google -->
+  <h2 class="visually-hidden">
+    ARIDESIGN professional website design portfolio — including barber websites, fashion e-commerce, ministries, and salon websites built for Limpopo and South Africa businesses.
+  </h2>
 
   <div class="carousel">
     <div class="portfolio-card">
@@ -489,15 +544,21 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- SOCIAL MEDIA MANAGEMENT / SEO -->
 <section class="portfolio-other">
-  <h3>Social Media & SEO Projects in Limpopo Across and South Africa</h3>
+  <h3>Social Media & SEO Projects — Limpopo & South Africa</h3>
+
+  <!-- HIDEN TEXT FOR GOOGLE  SEO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+  <h2 class="visually-hidden">
+  ARIDESIGN social media marketing and SEO projects portfolio — campaigns and websites for small businesses, churches, and startups in Limpopo and South Africa.
+</h2>
+
   <div class="portfolio-grid">
     <div class="portfolio-item">
       <img src="images/Social Media Campaign – Engagement.webp" alt="Social Media Campaign for Limpopo Client">
-      <p>Social Media Campaign – Increased Engagement</p>
+      <p>  Explore our <strong>social media campaigns</strong> created for small businesses, startups, and ministries in <strong>Limpopo</strong></p>
     </div>
     <div class="portfolio-item">
       <img src="images/responsive website.webp" alt="SEO Optimized Website for startup in Limpopo">
-      <p>SEO Optimized Website – Improved Ranking</p>
+      <p>Explore our <strong>SEO-optimized websites</strong> Every project is designed to boost engagement, visibility, and brand growth in limpopo and beyond.</p>
     </div>
   </div>
 </section>
@@ -505,15 +566,15 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- ===== FREE RESOURCES SECTION ===== --> 
 <section id="free-resources" class="free-resources">
-  <h3>Free Flyer Templates (PSD)</h3>
-  <p>Download professionally designed, fully editable flyer templates — perfect for events, parties, weddings, churches, restaurants, dental clinics, beauty spas, and other businesses. Easy to customize in Photoshop or any compatible editor.</p>
+  <h3>Free Editable Flyer Templates for Small Businesses, Churches & Events</h3>
+ <p>Download ARIDESIGN’s <strong>free editable flyer templates</strong> for <strong>small businesses</strong>, <strong>church events</strong>, <strong>parties</strong>, <strong>restaurants</strong>, <strong>dental clinics</strong>, <strong>beauty spas</strong>, and more in <strong>Limpopo</strong> and across <strong>South Africa</strong>. Fully customizable and easy to edit in Photoshop or compatible editors.</p>
 
   <div class="resource-grid">
 
     <div class="resource-item">
       <img src="images/church flyer.webp" alt="Free Church Event Flyer Template PSD by ARIDESIGN">
-      <h4>Church Event Flyer</h4>
-      <p>Inspire your community with a bold, elegant flyer for your next church event.</p>
+      <h4>Church Event Flyer Template — Small Business & Ministry Use</h4>
+      <p>Inspire your community with a professional <strong>church flyer template</strong> for events in Limpopo and South Africa.</p>
       
       <div class="btn-group">
         <a href="downloads/special-sunday service flyer template.zip.zip" class="btn-download">Download PSD</a>
@@ -524,8 +585,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <!-- ===== party flyer ===== --> 
     <div class="resource-item">
       <img src="images/party flyer.webp" alt="Free party Flyer Template PSD by ARIDESIGN">
-      <h4>party Flyer</h4>
-      <p>Modern Party flyer template - Free and easy to edit</p>
+      <h4>Party Flyer Template — Free Editable PSD for Events</h4>
+      <p>Create a fun and engaging <strong>party flyer template</strong> for events and small business promotions.</p>
 
       <div class="btn-group">
         <a href="downloads/Happy Birthday_Flyer.zip.zip" class="btn-download">Download PSD</a>
@@ -536,8 +597,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <!-- ===== dental flyer ===== --> 
     <div class="resource-item">
       <img src="images/dental flyer.webp" alt="Free dental Flyer Template PSD by ARIDESIGN">
-      <h4>Dental Clinic Flyer</h4>
-      <p>Perfect for dentists or dental studios — Modern care for every smile.</p>
+      <h4>Dental Clinic Flyer Template — Promotional Flyer for Businesses</h4>
+      <p>Promote your dental clinic with a modern <strong>flyer template</strong> designed for small business marketing.</p>
 
       <div class="btn-group">
         <a href="downloads/dental flyer.zip.zip" class="btn-download">Download PSD</a>
@@ -548,8 +609,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <!-- ===== resturant flyer ===== --> 
     <div class="resource-item">
       <img src="images/resturant flyer.webp" alt="Free Resturant Flyer Template PSD by ARIDESIGN">
-      <h4>Resturant Flyer</h4>
-      <p>Delicious pizzas and meals — perfect for promotions and special offers!</p>
+      <h4>Restaurant Flyer Template — Promotions & Special Offers</h4>
+      <p>Advertise your restaurant specials using a free <strong>restaurant flyer template</strong> from ARIDESIGN.</p>
 
       <div class="btn-group">
         <a href="downloads/resturant flyer.zip.zip" class="btn-download">Download PSD</a>
@@ -560,8 +621,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <!-- ===== beauty spa flyer ===== --> 
     <div class="resource-item">
       <img src="images/beauty spa.webp" alt="Free Business Flyer Template PSD by ARIDESIGN">
-      <h4>beauty spa Flyer</h4>
-      <p>Promote your spa services with this professional flyer!</p>
+      <h4>Beauty Spa Flyer Template — Free PSD for Small Business</h4>
+      <p>Enhance your beauty spa marketing with a professional <strong>flyer template</strong> for small businesses in Limpopo.</p>
 
       <div class="btn-group">
         <a href="downloads/beauty spa.zip.zip" class="btn-download">Download PSD</a>
@@ -575,8 +636,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 <!-- CALL TO ACTION -->
 <section class="cta">
-  <h2>Ready to Work Together?</h2>
-  <p>Let’s bring your brand, website, or campaign to life with creative design and optimized solutions.</p>
+  <h2>Ready to Start Your Graphic & Web Design Project in Limpopo & South Africa?</h2>
+  <p>Partner with ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong> services for small businesses, churches, and startups in <strong>Limpopo</strong> and across <strong>South Africa</strong>. We deliver creative, results-driven solutions that make your brand stand out.</p>
   <a href="quote.html" class="btn-cta">Request a Quote</a>
 </section>
 

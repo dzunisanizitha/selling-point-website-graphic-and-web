@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | ARIDESIGN</title>
+<title>About ARIDESIGN | Freelance Graphic & Web Design for Small Businesses and Startups in Limpopo and across South Africa</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -13,11 +13,12 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/logo-picture.png">
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
-<!-- SEO META -->
-<meta name="description" content="Discover ARIDESIGN, a creative freelance graphic and web design service in South Africa. Learn about our journey, mission, and creative approach.">
-<meta name="keywords" content="ARIDESIGN, freelance graphic design, web design, branding, South Africa, creative services, mission, journey">
-<meta name="author" content="ARIDESIGN">
-<meta name="robots" content="index, follow">
+  <!-- SEO META -->
+  <meta name="description" content="Learn about ARIDESIGN, a freelance graphic and web design service in Limpopo and South Africa. We help small businesses, startups, and churches grow with creative logos, branding, and responsive websites.">
+  <meta name="keywords" content="ARIDESIGN, freelance graphic design, web design, branding, South Africa, creative services, mission, journey">
+  <meta name="author" content="ARIDESIGN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aridesign.co.za/about.html">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="About ARIDESIGN | Graphic & Web Design in Limpopo, South Africa">
@@ -26,25 +27,39 @@
   <meta property="og:url" content="https://aridesign.co.za/about.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ARIDESIGN">
+  <meta property="og:locale" content="en_ZA">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "ARIDESIGN",
-  "image": "https://aridesign.co.za/images/MY LOGO.png",
-  "url": "https://aridesign.co.za",
-  "telephone": "+27684757321",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "ZA"
-  },
-  "sameAs": [
-    "https://www.facebook.com/share/1GgWqnkdcM/",
-    "https://www.instagram.com/"
-  ]
-}
-</script>
+    <!-- Local SEO Geo Tags -->
+  <meta name="geo.region" content="ZA-LP">
+  <meta name="geo.placename" content="Limpopo, South Africa">
+  <meta name="ICBM" content="-23.8962, 29.4486">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Structured Data: LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ARIDESIGN",
+    "image": "https://aridesign.co.za/images/MY LOGO.png",
+    "url": "https://aridesign.co.za",
+    "telephone": "+27684757321",
+    "email": "infoaridesignza@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Limpopo",
+      "addressCountry": "ZA"
+    },
+    "description": "ARIDESIGN provides creative freelance web and graphic design services for small businesses, startups, and churches across South Africa.",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/share/1GgWqnkdcM/",
+      "https://www.instagram.com/"
+    ]
+  }
+  </script>
 
 
 <style>
@@ -84,10 +99,11 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 /* Make sure text is above overlay */
 .about-hero * {position: relative;z-index: 2;}
 
-
 .about-hero h1 {font-size:2.4rem;  color: #ff3c78; margin-top:-35px; text-shadow: 2px 2px 6px rgba(0,0,0,0.5);}
 .about-hero p { margin:0 auto; font-size:1.1rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); margin-top: 20px;}
 
+ /* IT HIDES CONTENT ON MY HERO SECTION FOR VIEWERS  BUT VISIBLE FOR SEO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.visually-hidden {position: absolute !important;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0;}
 
 /* ===== MISSION (split layout) ===== */
 /* ===== MISSION SECTION (Animated Split Layout) ===== */
@@ -120,125 +136,43 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== HISTORY / TIMELINE ===== */
 /* ===== HISTORY / TIMELINE ANIMATION ===== */
-.history {
-  background:#111; color:#fff;
-  padding:80px 20px; position:relative; overflow:hidden;
-  font-family:'Poppins', sans-serif;
-}
-
-.history h2 {
-  color:#ff3c78; font-size:2.5rem;
-  margin-bottom:50px; text-align:center;
-  letter-spacing:1px; position:relative;
-  animation: fadeDown 1.2s ease forwards;
-}
+.history { background:#111; color:#fff; padding:80px 20px; position:relative; overflow:hidden; font-family:'Poppins', sans-serif; }
+.history h2 { color:#ff3c78; font-size:2.5rem; margin-bottom:50px; text-align:center; letter-spacing:1px; position:relative; animation:fadeDown 1.2s ease forwards; }
 
 /* Timeline layout */
-.timeline {
-  display:flex; flex-direction:column;
-  gap:35px; max-width:900px;
-  margin:0 auto; position:relative;
-}
+.timeline { display:flex; flex-direction:column; gap:35px; max-width:900px; margin:0 auto; position:relative; }
 
 /* Each event card */
-.timeline-event {
-  background:#1a1a1a;
-  padding:25px 20px;
-  border-left:5px solid #ff3c78;
-  border-radius:12px;
-  position:relative;
-  overflow:hidden;
-  opacity:0;
-  transform:translateX(-40px);
-  animation: slideFade 1s ease forwards;
-}
+.timeline-event { background:#1a1a1a; padding:25px 20px; border-left:5px solid #ff3c78; border-radius:12px; position:relative; overflow:hidden; opacity:0; transform:translateX(-40px); animation:slideFade 1s ease forwards; margin-bottom:7px; }
 
-.timeline-event:nth-child(2) {
-  animation-delay:0.4s;
-}
-.timeline-event:nth-child(3) {
-  animation-delay:0.8s;
-}
+.timeline-event:nth-child(2) { animation-delay:0.4s; }
+.timeline-event:nth-child(3) { animation-delay:0.8s; }
 
 /* Headings and text */
-.timeline-event h4 {
-  color:#ff3c78; font-size:1.25rem;
-  margin-bottom:10px;
-  font-weight:600;
-}
-
-.timeline-event p {
-  color:#ccc; line-height:1.7;
-  font-size:1rem;
-}
+.timeline-event h4 { color:#ff3c78; font-size:1.25rem; margin-bottom:10px; font-weight:600; }
+.timeline-event p { color:#ccc; line-height:1.7; font-size:1rem; }
 
 /* Icon bullets */
-.timeline-event::before {
-  content:'';
-  position:absolute;
-  left:-13px; top:25px;
-  width:12px; height:12px;
-  background:#ff3c78; border-radius:50%;
-  box-shadow:0 0 15px rgba(255,60,120,0.4);
-  transition:0.4s ease;
-}
-
-.timeline-event:hover::before {
-  background:#fff;
-  box-shadow:0 0 20px rgba(255,255,255,0.5);
-}
+.timeline-event::before { content:''; position:absolute; left:-13px; top:25px; width:12px; height:12px; background:#ff3c78; border-radius:50%; box-shadow:0 0 15px rgba(255,60,120,0.4); transition:0.4s ease; }
+.timeline-event:hover::before { background:#fff; box-shadow:0 0 20px rgba(255,255,255,0.5); }
 
 /* Hover lift effect */
-.timeline-event:hover {
-  transform:translateX(5px) scale(1.02);
-  box-shadow:0 10px 30px rgba(255,60,120,0.25);
-}
+.timeline-event:hover { transform:translateX(5px) scale(1.02); box-shadow:0 10px 30px rgba(255,60,120,0.25); }
 
 /* Background floating shapes */
-.history::after, .history::before {
-  content:""; position:absolute; border-radius:50%;
-  background:#ff3c78; opacity:0.1;
-}
-
-.history::after {
-  width:120px; height:120px; top:12%; left:8%;
-  animation: floatCircle 8s ease-in-out infinite alternate;
-}
-
-.history::before {
-  width:180px; height:180px; bottom:8%; right:6%;
-  animation: floatCircle2 10s ease-in-out infinite alternate;
-}
+.history::after, .history::before { content:""; position:absolute; border-radius:50%; background:#ff3c78; opacity:0.1; }
+.history::after { width:120px; height:120px; top:12%; left:8%; animation:floatCircle 8s ease-in-out infinite alternate; }
+.history::before { width:180px; height:180px; bottom:8%; right:6%; animation:floatCircle2 10s ease-in-out infinite alternate; }
 
 /* ===== KEYFRAMES ===== */
-@keyframes slideFade {
-  0% {opacity:0; transform:translateX(-40px);}
-  100% {opacity:1; transform:translateX(0);}
-}
-
-@keyframes fadeDown {
-  0% {opacity:0; transform:translateY(-20px);}
-  100% {opacity:1; transform:translateY(0);}
-}
-
-@keyframes floatCircle {
-  0% {transform:translateY(0) scale(1);}
-  50% {transform:translateY(-25px) scale(1.05);}
-  100% {transform:translateY(0) scale(1);}
-}
-
-@keyframes floatCircle2 {
-  0% {transform:translateY(0) scale(1);}
-  50% {transform:translateY(25px) scale(1.1);}
-  100% {transform:translateY(0) scale(1);}
-}
+@keyframes slideFade { 0% {opacity:0; transform:translateX(-40px);} 100% {opacity:1; transform:translateX(0);} }
+@keyframes fadeDown { 0% {opacity:0; transform:translateY(-20px);} 100% {opacity:1; transform:translateY(0);} }
+@keyframes floatCircle { 0% {transform:translateY(0) scale(1);} 50% {transform:translateY(-25px) scale(1.05);} 100% {transform:translateY(0) scale(1);} }
+@keyframes floatCircle2 { 0% {transform:translateY(0) scale(1);} 50% {transform:translateY(25px) scale(1.1);} 100% {transform:translateY(0) scale(1);} }
 
 /* Responsive */
-@media(max-width:768px){
-  .timeline-event {padding:20px 15px;}
-  .timeline-event h4 {font-size:1.15rem;}
-  .timeline-event p {font-size:0.95rem;}
-}
+@media(max-width:768px) { .timeline-event {padding:20px 15px;} .timeline-event h4 {font-size:1.15rem;} .timeline-event p {font-size:0.95rem;} }
+
 
 
 
@@ -337,8 +271,14 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
        alt="Creative design background" 
        loading="lazy" style="width:100%; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:-1;">
   <div class="container">
-    <h1>About <span>ARIDESIGN</span></h1>
-    <p>Transforming brands with <strong>creative freelance graphic and web design solutions</strong> that captivate audiences across South Africa.</p>
+    <h1>About ARIDESIGN</h1>
+
+<!-- THIS H2 IS HIDEN FOR SCREEN   ONLY VISIBLE FOR SEO-->
+   <h1 class="visually-hidden">
+       ARIDESIGN — Freelance Graphic & Web Design for Small Businesses, Startups, and Churches in Limpopo and South Africa
+   </h1>
+
+   <p>We provide professional <strong>graphic and web design services</strong> to help small businesses, startups, and churches in Limpopo and across South Africa build their brand, attract clients, and grow online.</p>
   </div>
 </section>
 
@@ -348,8 +288,13 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   <div class="container">
     <div class="text">
       <h2>Our Mission</h2>
-      <p>ARIDESIGN creates <strong>strategic design solutions</strong> that elevate your brand and make a lasting impression. We combine creativity, functionality, and innovation in every project.</p>
-      <p>Our goal is to help businesses stand out online and offline, achieving measurable results through <strong>thoughtful design and branding</strong>.</p>
+
+      <!-- THIS H2 IS HIDEN FOR SCREEN   ONLY VISIBLE FOR SEO-->
+      <h2 class="visually-hidden">
+          ARIDESIGN Mission — Freelance Graphic & Web Design for Small Businesses, Startups, and Churches in Limpopo and South Africa
+      </h2>
+      <p>ARIDESIGN creates <strong>strategic graphic and web design solutions</strong> that elevate your brand and make a lasting impression for <strong>small businesses, startups, and churches</strong> in Limpopo and across South Africa.</p>
+      <p>We combine creativity, functionality, and innovation in every project to help businesses stand out online and offline with <strong>effective branding, logos, and static websites</strong>.</p>
     </div>
     <div class="image">
       <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600" 
@@ -363,34 +308,47 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- HISTORY / TIMELINE -->
 <section class="history"> 
   <div class="container">
-    <h2>Our Journey</h2>
+    <h2>Our Journey</h2>  
+<!-- THIS H2 IS HIDEN FOR SCREEN   ONLY VISIBLE FOR SEO-->
+    <h2 class="visually-hidden">
+    ARIDESIGN History — Freelance Graphic & Web Design for Small Businesses, Startups, and Churches in Limpopo and South Africa
+   </h2>
     <div class="timeline">
       <div class="timeline-event">
         <h4>2019 - Started Freelance Services</h4>
-        <p>Began offering creative graphic design, branding, and digital solutions to small businesses.</p>
+        <p>Began offering creative <strong>freelance graphic design</strong>, <strong>branding</strong>, and digital solutions for <strong>small businesses</strong> in Limpopo.</p>
       </div>
       <div class="timeline-event">
         <h4>2021 - Expanded Services</h4>
-        <p>Added website design, social media content, and marketing strategies for clients across South Africa.</p>
+        <p>Added <strong>static website design</strong>, <strong>social media content</strong>, and marketing strategies for clients across South Africa.</p>
       </div>
       <div class="timeline-event">
         <h4>2023 - Recognized Nationally</h4>
-        <p>Received acclaim for creative campaigns and impactful brand designs nationwide.</p>
+         <p>Received acclaim for impactful <strong>brand designs</strong> and creative campaigns serving <strong>small businesses, startups, and churches</strong> nationwide.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- CTA -->
 <section class="about-cta">
   <div class="container">
     <h2>Ready to Transform Your Brand?</h2>
-    <p>Partner with ARIDESIGN for professional freelance graphic design, branding, and web solutions that make your business stand out.</p>
-    <a href="quote.html">Request Your Free Quote Today!</a>
+    <h2 class="visually-hidden">
+      ARIDESIGN — Freelance Graphic & Web Design for Small Businesses, Churches, and Startups in Limpopo and Across South Africa
+    </h2>
+
+    <p>
+      Partner with <strong>ARIDESIGN</strong> for creative <strong>freelance graphic design, branding, and static website design</strong> solutions tailored for 
+      <strong>small businesses, churches, and startups</strong> in <strong>Limpopo</strong> and throughout <strong>South Africa</strong>.
+    </p>
+
+    <a href="quote.html" class="btn-hero" title="Request a free web or graphic design quote from ARIDESIGN in Limpopo">
+      Request Your Free Quote Today!
+    </a>
   </div>
 </section>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">

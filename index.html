@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARIDESIGN | Graphic & Web Design for Small Businesses & Churches in Limpopo</title>
+<title>ARIDESIGN | Web & Graphic Design for Small Businesses, Startups & Churches in Limpopo & South Africa</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- Favicon -->
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" href="images/logo-picture.png" sizes="32x32">
@@ -16,45 +17,51 @@
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
 
-<!-- SEO META -->
-<meta name="description" content="ARIDESIGN offers professional graphic design, static web design, social media management, and basic SEO for small businesses, churches, and local projects in Limpopo and South Africa.">
-<meta name="keywords" content="ARIDESIGN, graphic design Limpopo, web design Limpopo, church websites, small business website South Africa, social media management, branding, logo design, static website">
-<meta name="author" content="ARIDESIGN">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aridesign.co.za/">
+  <!-- SEO Meta -->
+  <meta name="description" content="Professional web and graphic design for small businesses, startups, and churches in Limpopo. ARIDESIGN builds creative, responsive websites that grow brands across South Africa.">
+  <meta name="keywords" content="graphic design Limpopo, web design Limpopo, church websites South Africa, small business web design, ARIDESIGN branding, logo design, static websites">
+  <meta name="author" content="ARIDESIGN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aridesign.co.za/">
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="ARIDESIGN | Graphic & Web Design in South Africa">
-<meta property="og:description" content="Creative graphic and web design services to elevate your brand.">
-<meta property="og:image" content="https://aridesign.co.za/images/ARI-LOGO.png">
-<meta property="og:url" content="https://aridesign.co.za/">
-<meta property="og:type" content="website">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="ARIDESIGN | Professional Graphic & Web Design in South Africa">
+  <meta property="og:description" content="Creative freelance web and graphic design for small businesses, startups, and churches in Limpopo & across South Africa.">
+  <meta property="og:image" content="https://aridesign.co.za/images/logo-picture.png">
+  <meta property="og:url" content="https://aridesign.co.za/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- Local SEO (Optional but powerful) -->
+  <meta name="geo.region" content="ZA-LP">
+  <meta name="geo.placename" content="Limpopo, South Africa">
+  <meta name="geo.position" content="-23.8962;29.4486">
+  <meta name="ICBM" content="-23.8962, 29.4486">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "ARIDESIGN",
-  "image": "https://aridesign.co.za/images/logo-picture.png",
-  "url": "https://aridesign.co.za",
-  "telephone": "+27684757321",
-  "email": "infoaridesignza@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "South Africa"
-  },
-  "sameAs": [
-    "https://www.facebook.com/share/1GgWqnkdcM/",
-    "https://www.instagram.com/"
-  ],
-  "priceRange": "$$",
-  "description": "ARIDESIGN offers creative freelance graphic and web design services in South Africa."
-}
-</script>
+  <!-- Structured Data / Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ARIDESIGN",
+    "image": "https://aridesign.co.za/images/logo-picture.png",
+    "url": "https://aridesign.co.za",
+    "telephone": "+27684757321",
+    "email": "infoaridesignza@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Limpopo",
+      "addressRegion": "South Africa"
+    },
+    "priceRange": "$$",
+    "description": "ARIDESIGN offers creative freelance graphic and web design services for small businesses, churches, and startups across South Africa.",
+    "sameAs": [
+      "https://www.facebook.com/share/1GgWqnkdcM/",
+      "https://www.instagram.com/"
+    ]
+  }
+  </script>
 
 
 
@@ -180,6 +187,10 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
   }
 }
 
+ /* IT HIDES CONTENT ON MY HERO SECTION FOR VIEWERS  BUT VISIBLE FOR SEO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.visually-hidden {position: absolute !important;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0;}
+
+
 
 /* ===== ABOUT ===== */
 .about {position: relative; padding: 100px 20px; text-align: center; background: #fff; overflow: hidden; font-family: 'Arial', sans-serif;}
@@ -220,7 +231,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== PORTFOLIO ===== */
 .homepage-portfolio {position:relative; padding:100px 20px; text-align:center; background:#f9f9f9; font-family:'Arial',sans-serif;} 
-.homepage-portfolio h2 {font-size:2.5rem; color:#ff3c78; margin-bottom:10px; font-weight:700; position:relative;} 
+.homepage-portfolio h2 {font-size: 2.5rem;color: #ff3c78;font-weight: 700;margin: 0 auto 15px auto;max-width: 800px; /* adjust as needed */line-height: 1.3; /* controls spacing between lines */word-wrap: break-word; /* ensures long words break */}
 .homepage-portfolio h2::after {content:""; display:block; width:80px; height:4px; background:#ff3c78; margin:15px auto 0; border-radius:2px;} 
 .homepage-portfolio p {font-size:1.15rem; margin-bottom:50px; color:#333; max-width:700px; margin-left:auto; margin-right:auto;} 
 .homepage-portfolio .portfolio-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; justify-items:center; position:relative; z-index:1;} 
@@ -239,8 +250,8 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== FREE RESOURCES SECTION  ===== */
 .home-cta { text-align: center; padding: 100px 20px !important; background: #fff0f5; font-family: 'Arial', sans-serif; margin-top: -50px; margin-bottom: 70px; }
-.home-cta h2 { font-size: 2.5rem; color: #ff3c78; font-weight: 700; margin-bottom: 15px; }
-.home-cta p { font-size: 1.15rem; color: #333; max-width: 700px; margin: 0 auto 30px auto; }
+.home-cta h2 {font-size: 2.5rem;color: #ff3c78;font-weight: 700;margin: 0 auto 15px auto;max-width: 800px; /* adjust as needed */line-height: 1.3; /* controls spacing between lines */word-wrap: break-word; /* ensures long words break */}
+.home-cta p { font-size: 1.1rem; color: #333; max-width: 700px; margin: 0 auto 30px auto; }
 .home-cta .btn-hero { background: #ff3c78; color: #fff; padding: 15px 35px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(255,60,120,0.4); transition: all 0.3s ease; }
 .home-cta .btn-hero:hover { background: #fff; color: #ff3c78; transform: scale(1.05) translateY(-3px); box-shadow: 0 12px 30px rgba(255,60,120,0.6); }
 @media(max-width:768px){ .home-cta h2 { font-size: 2rem; } .home-cta p { font-size: 1rem; } .home-cta .btn-hero { padding: 12px 30px; } }
@@ -250,8 +261,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== TESTIMONIALS ===== */
 .testimonials {padding:100px 20px; text-align:center; background:#f9f9f9; font-family:'Arial',sans-serif;}
-.testimonials h2 {font-size:2.5rem; color:#ff3c78; margin-bottom:50px; font-weight:700; position:relative;}
-.testimonials h2::after {content:""; display:block; width:80px; height:4px; background:#ff3c78; margin:15px auto 0; border-radius:2px;}
+.testimonials h2{font-size: 2.5rem; margin-bottom: 50px !important;  color: #ff3c78;font-weight: 700;margin: 0 auto 15px auto;max-width: 800px; /* adjust as needed */line-height: 1.3; /* controls spacing between lines */word-wrap: break-word; /* ensures long words break */}
 
 .testimonial-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:30px; position:relative;}
 .testimonial-card {background:#fff; padding:25px 20px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); width:280px; font-style:italic; line-height:1.5; color:#333; transition:transform 0.3s ease;}
@@ -276,7 +286,7 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== CONTACT ===== */
 .contact {padding:80px 20px; text-align:center; background:#f9f9f9;}
-.contact h2 {font-size:2rem; margin-bottom:20px;}
+.contact h2 {font-size: 2.5rem;color: #ff3c78;font-weight: 700;margin: 0 auto 15px auto;max-width: 800px; /* adjust as needed */line-height: 1.3; /* controls spacing between lines */word-wrap: break-word; /* ensures long words break */}
 .contact p {margin-bottom:30px; font-size:1.1rem;}
 .contact-links a {display:inline-block; margin:0 10px; font-size:1.5rem; color:#000; transition:0.3s; font-weight:bold;}
 .contact-links a:hover {color:#ff3c78;}
@@ -365,12 +375,12 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </header>
 
 <!-- HERO -->
-<!-- HERO -->
 <section id="home" class="hero" role="banner" aria-label="ARIDESIGN Web & Graphic Design Services in Limpopo">
-  <div class="hero-overlay"></div>
 
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <!-- Animated headline -->
+
+    <!-- 1️⃣ Visible creative headline -->
     <h1 aria-hidden="true">
       We Build
       <span class="words">
@@ -382,35 +392,47 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       </span>
     </h1>
 
-    <!-- Hidden SEO keyword version -->
+    <!-- 2️⃣ Hidden SEO headline -->
+    <h1 class="visually-hidden">
+      Professional Web Design for Small Businesses and Churches in Limpopo & South Africa
+    </h1>
+
+    <!-- 3️⃣ Hidden H2 for extra keyword support -->
     <h2 class="visually-hidden">
-      ARIDESIGN — Web and Graphic Design Services in Limpopo, South Africa and Beyond.
+      Freelance Web and Graphic Design Services for Startups and Ministries Across Limpopo
     </h2>
 
-    <!-- Shorter visible tagline -->
+    <!-- 4️⃣ Visible paragraph -->
     <p>
-      Creative web & brand design solutions for startups, small businesses and ministries.
+      Creative and affordable <strong>web design for small businesses</strong>, <strong>church website design</strong>, and <strong>graphic design services</strong> in Limpopo and beyond.
     </p>
 
-    <a href="quote.html" class="btn-hero" title="Request a free web or branding quote from ARIDESIGN">
-      Get a Free Quote
+    <a href="quote.html" class="btn-hero" title="Request a website or graphic design quote from ARIDESIGN in Limpopo">
+      Get a Free Design Quote
     </a>
+
   </div>
 
   <!-- Floating shapes -->
   <div class="shape shape1"></div>
   <div class="shape shape2"></div>
   <div class="shape shape3"></div>
+
 </section>
+
 
 
 
 <!-- ABOUT -->
 <section id="about" class="about">
   <div class="container">
-    <h2>About <span>ARIDESIGN</span></h2>
-    <p>ARIDESIGN is a freelance <strong>graphic and web designer</strong> based in <strong>Limpopo, South Africa</strong>. We create <strong>logos, flyers, branding, and static websites</strong> for small businesses, churches, and community projects, helping them grow their online presence and stand out locally and nationwide.</p>
-    <a href="about.html" class="btn-link" title="Learn more about ARIDESIGN's services" aria-label="Learn more about ARIDESIGN's services">About ARIDESIGN</a>
+    <h2>About <span>ARIDESIGN</span> — Freelance Web & Graphic Design for Small Businesses</h2>
+    <p>
+       ARIDESIGN is a <strong>freelance web and graphic design studio</strong> based in <strong>Limpopo, South Africa</strong>. We specialize in <strong>website design for small businesses</strong>, <strong>church website design</strong>, and <strong>branding for startups</strong>. Our creative team builds <strong>logos, flyers, brand identities, and professional websites</strong> that help local and national clients grow their online presence and stand out competitively.
+   </p>
+   <a href="about.html" class="btn-link" title="Learn more about ARIDESIGN's freelance web and graphic design services" aria-label="Learn more about ARIDESIGN's freelance web and graphic design services">
+     Learn More About ARIDESIGN
+   </a>
 
   </div>
 </section>
@@ -418,75 +440,75 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- SERVICES -->
 <section id="services" class="services">
   <div class="container">
-    <h2>Our Services</h2>
+    <h2>Freelance Web & Graphic Design Services in Limpopo</h2>
     <div class="service-cards">
       <div class="card">
         <i class="fas fa-paint-brush"></i>
-        <h3>Graphic Design</h3>
-        <p>Professional <strong>logos, flyers, posters</strong> and digital content for small businesses, ministries, and local projects.</p>
+        <h3>Freelance Graphic Design Services</h3>
+        <p>Professional <strong>logos, flyers, posters, and branding</strong> for <strong>small businesses and churches</strong> across Limpopo. Affordable <strong>freelance graphic design</strong> that helps your brand stand out locally and nationwide.</p>
       </div>
       <div class="card">
         <i class="fas fa-code"></i>
-        <h3>Static Websites</h3>
-        <p>Fast, responsive, and easy-to-manage <strong>websites</strong> for small businesses, churches, and community initiatives in Limpopo and across South Africa.</p>
+       <h3>Website Design for Small Businesses & Churches</h3>
+       <p>Fast, responsive, and affordable <strong>website design for small businesses</strong>, <strong>church website design</strong>, and local startups. We build <strong>SEO-friendly websites</strong> that represent your brand and attract more visitors.</p>
       </div>
       <div class="card">
         <i class="fas fa-search"></i>
-        <h3>SEO Optimization</h3>
-        <p>Basic <strong>on-page SEO</strong> to improve search visibility for local and national clients.</p>
+        <h3>Basic SEO Optimization</h3>
+       <p>Improve your <strong>Google ranking</strong> with our <strong>on-page SEO services</strong>. We help <strong>small businesses in Limpopo</strong> gain more traffic and visibility across South Africa through optimized content and structure.</p>
       </div>
       <div class="card">
         <i class="fas fa-share-alt"></i>
-        <h3>Social Media Management</h3>
-        <p>Boost online presence with professional <strong>social media support</strong> tailored for small businesses and organizations.</p>
+         <h3>Social Media Management </h3>
+        <p>Grow your online reach with <strong>social media management</strong> tailored for <strong>small businesses, startups, and churches</strong>. We create engaging content that strengthens your digital brand presence.</p>
       </div>
     </div>
-    <a href="services.html" class="btn-link">View MORE Services</a>
+    <a href="services.html" class="btn-link">View MORE Design Services</a>
   </div>
 </section>
 
 
 <!-- Featured Portfolio on Homepage -->
 <section class="homepage-portfolio">
-  <h2>Featured Projects</h2>
-  <p>Check out some of our recent <strong>graphic design</strong> and <strong>static website projects</strong> for small businesses, churches, and community projects in Limpopo and South Africa.</p>
+   <h2>Featured Graphic & Web Design Projects for Small Businesses, Startups and Churches in Limpopo</h2>
+    <p>Explore some of our recent <strong>freelance graphic design</strong> and <strong>static website projects</strong> created for <strong>small businesses, startups, and churches</strong> in <strong>Limpopo and South Africa</strong>. See how ARIDESIGN brings brands to life locally and nationwide.</p>
 
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <img src="images/logo.webp" alt="Branding and Logo Design Project">
-      <p>Branding & Logo Design</p>
+      <img src="images/logo.webp" alt="Limpopo Branding and Logo Design for Small Business">
+      <p>Branding & Logo Design for Small Businesses</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/responsive-web-design-.webp" alt="Responsive Static Website Project">
-      <p>Responsive Static Website</p>
+      <img src="images/responsive-web-design-.webp" alt="Responsive Static Website Design for Church in Limpopo">
+      <p>Responsive Static Website for Churches & Small Businesses</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/ads.webp" alt="Social Media Graphics Project">
-      <p>Social Media Graphics</p>
+      <img src="images/ads.webp" alt="Social Media Graphics Design for Small Business">
+      <p>Social Media Graphics for Startups & Local Projects</p>
     </div>
     <div class="portfolio-item">
-      <img src="images/landing page.webp" alt="Landing Page & Campaign Project">
-      <p>Landing Page & Campaign</p>
+      <img src="images/landing page.webp" alt="Landing Page & Campaign Project for Startup or Ministry">
+       <p>Landing Page & Campaign Design for Local Businesses & Ministries</p>
     </div>
   </div>
 
   <div class="portfolio-btn">
-    <a href="portfolio.html" class="btn-hero">View MORE Portfolios</a>
+    <a href="portfolio.html" class="btn-hero" title="View ARIDESIGN Graphic & Web Design Portfolio Projects in Limpopo">View More Portfolio Projects</a>
   </div>
 </section>
 
 <!-- FREE RESOURCES -->
 <section class="home-cta" style="text-align:center; padding:60px 20px;">
-  <h2>Get Free Editable Flyer Templates for Every Occasion</h2>
-  <p>Access professionally designed flyers for parties, churches, restaurants, beauty spas, dental clinics, and more. Fully customizable and ready to download!</p>
-  <a href="portfolio.html#free-resources" class="btn-hero">Explore Free Resources</a>
+  <h2>Free Editable Flyer & Graphic Templates for Small Businesses, Churches & Startups in Limpopo</h2>
+    <p>Access professionally designed <strong>flyers, posters, and graphic templates</strong> for <strong>small businesses, ministries, restaurants, beauty spas, dental clinics</strong>, and more. Fully customizable, ready to download, and perfect for <strong>local projects in Limpopo and across South Africa</strong>.</p>
+  <a href="portfolio.html#free-resources" class="btn-hero" title="Explore ARIDESIGN Free Flyer and Graphic Templates for Small Businesses & Churches">Explore Free Resources</a>
 </section>
 
 
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="testimonials">
-  <h2>What Our Clients Say</h2>
+  <h2>Client Testimonials — ARIDESIGN Web & Graphic Design for Small Businesses, Churches, and Startups in Limpopo</h2>
   <div class="testimonial-cards">
     <div class="testimonial-card">
       <p>"ARIDESIGN transformed our brand! Their designs brought in more clients than ever."</p>
@@ -501,7 +523,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       <h4>- Thabo K.</h4>
     </div>
   </div>
-  <a href="testimony.html" class="btn-link">Read More Testimonials</a>
+  <a href="testimony.html" class="btn-link" title="Read ARIDESIGN Client Testimonials for Web and Graphic Design in Limpopo">Read More Testimonials</a>
 </section>
 
 
@@ -509,17 +531,21 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="container">
-    <h2>Contact ARIDESIGN</h2>
-    <p>Reach out for professional <strong>graphic design, branding, static web design</strong>, and <strong>social media services</strong> for small businesses, churches, and community projects in Limpopo and South Africa.</p>
+    <h2>Contact ARIDESIGN — Web & Graphic Design for Small Businesses and Startups in Limpopo and Across South Africa</h2>
+    
+    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, <strong>static website design</strong>, and <strong>social media management services</strong> tailored for small businesses, churches, and community projects in <strong>Limpopo</strong> and across South Africa.</p>
+    
     <div class="contact-links">
       <a href="https://wa.me/27684757321" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="mailto:infoaridesignza@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       <a href="https://www.facebook.com/share/1GgWqnkdcM/" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
-    <a href="quote.html" class="btn-link">Get a Quote</a>
+    
+    <a href="quote.html" class="btn-link" title="Request a Quote for Web & Graphic Design in Limpopo and South Africa">Get a Quote</a>
   </div>
 </section>
+
 
 
 <!-- WhatsApp Floating Button -->

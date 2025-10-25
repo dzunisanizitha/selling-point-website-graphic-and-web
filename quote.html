@@ -3,15 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request a Quote | ARIDESIGN</title>
+<title>Request a Free Quote for Graphic & Web Design | ARIDESIGN Limpopo & South Africa</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/logo-picture.png" sizes="32x32">
 <link rel="icon" type="image/png" href="images/logo-picture.png" sizes="64x64">
 <link rel="apple-touch-icon" sizes="180x180" href="images/logo-picture.png">
 <link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
+
+  <!-- SEO META -->
+  <meta name="description" content="Get a free quote from ARIDESIGN for professional graphic design, web design, branding, and social media services for small businesses, churches, and startups in Limpopo and South Africa.">
+  <meta name="keywords" content="ARIDESIGN, graphic design quote, web design quote, branding services Limpopo, small business design South Africa, church website quote">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aridesign.co.za/quote.html">
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Request a Free Quote for Graphic & Web Design | ARIDESIGN Limpopo & South Africa">
+  <meta property="og:description" content="Get a free quote from ARIDESIGN for professional graphic design, web design, branding, and social media services for small businesses, churches, and startups in Limpopo and South Africa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aridesign.co.za/quote.html">
+  <meta property="og:image" content="https://aridesign.co.za/images/quote-page-banner.webp">
+  <meta property="og:site_name" content="ARIDESIGN">
+  <meta property="og:locale" content="en_ZA">
+
+    <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="ZA-LP">
+  <meta name="geo.placename" content="Limpopo, South Africa">
+  <meta name="ICBM" content="-23.8962, 29.4486">
+
+  <!-- Structured Data: Contact / Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Graphic and Web Design Quote",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ARIDESIGN",
+      "image": "https://aridesign.co.za/images/logo-picture.png",
+      "url": "https://aridesign.co.za",
+      "telephone": "+27684757321",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1GgWqnkdcM/",
+        "https://www.instagram.com/"
+      ]
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "South Africa"
+    },
+    "description": "Request a free quote from ARIDESIGN for professional graphic and web design services in Limpopo and across South Africa."
+  }
+  </script>
+
+
 
 <style>
 /* ===== GLOBAL ===== */
@@ -112,6 +166,10 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 @keyframes fadeInOut { 0%, 100% { opacity: 0; transform: translateY(10px); } 20%, 80% { opacity: 1; transform: translateY(0); } }
 
 
+ /* IT HIDES CONTENT ON MY HERO SECTION FOR VIEWERS  BUT VISIBLE FOR SEO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.visually-hidden {position: absolute !important;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0;}
+
+
 </style>
 </head>
 <body>
@@ -153,17 +211,27 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- HERO -->
 <section class="hero">
   <img src="https://images.unsplash.com/photo-1672249720268-095a577bab89?q=80&w=1072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marketing & Graphic Design" class="hero-bg">
+
   <div class="hero-content">
+    <!-- Visible CTA H1 -->
     <h1>Request a Free Quote <span style="color:#ff3c78;">NOW!</span></h1>
-    <p>Get a tailored plan for <strong>graphic design</strong>, <strong>branding</strong>, or <strong>static websites</strong> to elevate your business online in South Africa.</p>
+
+    <!-- Hidden SEO H1 for Google -->
+    <h1 class="visually-hidden">
+      Free Quote for Graphic Design, Branding, and Website Services in Limpopo & South Africa | ARIDESIGN
+    </h1>
+
+    <!-- Optimized paragraph -->
+    <p>Get a personalized plan for <strong>graphic design, branding, and static websites</strong> for startups, small businesses, and churches in <strong>Limpopo</strong> and across <strong>South Africa</strong>. Fast, professional, and tailored to your brand.</p>
   </div>
 </section>
+
 
 <!-- QUOTE FORM -->
 <section class="quote-form">
   <div class="container">
-    <h2>Every Project is Unique</h2>
-    <p>Whether you need a new website, eye-catching graphics, or help growing your brand online, We'll craft a personalized quote just for you. Tell us about your goals below, and We'll get back to you with a plan tailored to your needs.</p>
+    <h2>Get a Personalized Quote for Graphic Design, Branding, or Web Design in Limpopo & South Africa</h2>
+    <p>Whether you need a new <strong>static website</strong>, eye-catching <strong>graphic design</strong>, or help building your <strong>brand identity</strong>, ARIDESIGN will craft a personalized quote tailored to your business, church, or startup in <strong>Limpopo</strong> and across <strong>South Africa</strong>. Share your goals below, and we’ll provide a professional plan designed to grow your online presence.</p>
     <form action="https://formspree.io/f/mrbykzgp" method="POST" accept-charset="UTF-8">
       <!-- Redirect to Thank You page -->
       <input type="hidden" name="_next" value="thank-you.html">
@@ -188,7 +256,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         </div>
       </div>
       <div class="form-row">
-        <button type="submit">Submit Request</button>
+      <button type="submit"><strong>Get Your Free Quote</strong></button>
       </div>
     </form>
   </div>
@@ -203,8 +271,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong>.</p>
+    <h2>Contact ARIDESIGN — Graphic Design, Branding & Web Design Services in Limpopo</h2>
+    <p>Reach out to ARIDESIGN for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong> solutions for small businesses, churches, startups, and community projects in <strong>Limpopo</strong> and across <strong>South Africa</strong>.</p>
     <div class="contact-links">
       <a href="https://wa.me/27684757321" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="mailto:infoaridesignza@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
