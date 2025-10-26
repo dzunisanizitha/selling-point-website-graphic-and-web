@@ -148,14 +148,19 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 
 /* ===== ENHANCED ANIMATIONS & INTERACTIONS ===== */
 
-/* Fade-in for headings */
-.portfolio-graphics h3, .portfolio-graphics h4 {
+/* Fade-in for headings and paragraph */
+.portfolio-graphics h3, 
+.portfolio-graphics h4, 
+.portfolio-graphics p {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
 }
+
+/* Timing delays */
 .portfolio-graphics h3 { animation-delay: 0.2s; }
-.portfolio-graphics h4 { animation-delay: 0.4s; }
+.portfolio-graphics p  { animation-delay: 0.4s; }
+.portfolio-graphics h4 { animation-delay: 0.6s; }
 
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
