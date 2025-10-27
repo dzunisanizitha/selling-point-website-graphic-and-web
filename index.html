@@ -114,15 +114,6 @@ header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; 
 }
 
 
-/* Hero Background Image */
-.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
-
-/* Animated Gradient Overlay */
-.hero::before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(120deg,#1da1df,#7700ff,#1a1a40); background-size:600% 600%; z-index:0; opacity:0.5; animation:gradientShift 20s ease infinite; }
-@keyframes gradientShift { 0%{background-position:0% 50%;} 35%{background-position:100% 35%;} 100%{background-position:0% 50%;} }
-
-
-/* Hero Content */
 /* ===== HERO SECTION ===== */
 .hero { position: relative;   min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); color: #fff; overflow: hidden; font-family: 'Poppins', sans-serif; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,60,120,0.3), rgba(0,0,0,0.7)); animation: gradientShift 10s ease-in-out infinite alternate; z-index: 1; }
