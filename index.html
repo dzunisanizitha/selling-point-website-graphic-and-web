@@ -190,26 +190,29 @@ a {
 
 
 /* ===== SERVICES SECTION ===== */
-/* ===== SERVICES SECTION (PROFESSIONAL STYLE) ===== */
-.services-home-pro { background: linear-gradient(180deg, #fcf3e2 0%, #fdcbdd 100%); padding: 120px 20px; font-family: 'Poppins', sans-serif; text-align: center; position: relative; overflow: hidden; } 
-.services-home-pro::before { content: ""; position: absolute; top: -100px; left: -100px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255,60,120,0.50) 0%, transparent 70%); border-radius: 50%; z-index: 0; animation: floatGlow 8s ease-in-out infinite alternate; } 
-.services-home-pro::after { content: ""; position: absolute; bottom: -120px; right: -120px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,60,120,0.12) 0%, transparent 70%); border-radius: 50%; z-index: 0; animation: floatGlow 10s ease-in-out infinite alternate-reverse; } 
-@keyframes floatGlow { from { transform: translateY(0); opacity: 0.9; } to { transform: translateY(20px); opacity: 0.6; } } 
-.services-home-pro .section-header { position: relative; z-index: 2; margin-bottom: 60px; } 
-.section-title { font-size: 2.8rem; color: #333; font-weight: 800; margin-bottom: 15px; } 
-.section-title .highlight { background: linear-gradient(90deg, #ff3c78, #fd336f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } 
-.section-subtitle { color: #555; font-size: 1.1rem; max-width: 720px; margin: 0 auto; line-height: 1.7; } 
-.services-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; position: relative; z-index: 2; margin-top: 40px; } 
-.service-box { background: #fff; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.20); padding: 50px 30px; text-align: center; transition: all 0.4s ease; position: relative; overflow: hidden; } 
-.service-box::before { content: ""; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(255,60,120,0.08), transparent); opacity: 0; transition: opacity 0.4s ease; } 
-.service-box:hover::before { opacity: 1; } 
-.service-box:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.1); } 
-.icon-circle { font-size: 2.8rem; background: rgba(255,60,120,0.1); color: #ff3c78; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 25px; } 
-.service-content h3 { font-size: 1.5rem; font-weight: 700; color: #333; margin-bottom: 15px; } 
-.service-content p { color: #555; line-height: 1.6; font-size: 1rem; margin-bottom: 30px; } 
-.btn-cta { display: inline-block; background: #ff3c78; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; } 
-.btn-cta:hover { background: #333; color: #fff; transform: translateY(-3px); } 
-@media (max-width: 768px) { .section-title { font-size: 2.2rem; } .service-box { padding: 40px 20px; } .icon-circle { width: 70px; height: 70px; font-size: 2.2rem; } }
+/* ===== SERVICES SECTION ===== */
+.services-home-pro { background:linear-gradient(180deg,#fcf3e2 0%,#fdcbdd 100%); padding:80px 20px; font-family:'Poppins',sans-serif; text-align:center; position:relative; overflow:hidden; }
+.services-home-pro::before, .services-home-pro::after { content:""; position:absolute; border-radius:50%; z-index:0; animation:floatGlow 8s ease-in-out infinite alternate; }
+.services-home-pro::before { top:-100px; left:-100px; width:250px; height:250px; background:radial-gradient(circle,rgba(255,60,120,0.5) 0%,transparent 70%); }
+.services-home-pro::after { bottom:-120px; right:-120px; width:300px; height:300px; background:radial-gradient(circle,rgba(255,60,120,0.12) 0%,transparent 70%); animation-duration:10s; animation-direction:alternate-reverse; }
+@keyframes floatGlow { 0% { transform:translateY(0); opacity:0.9; } 100% { transform:translateY(20px); opacity:0.6; } }
+.section-header { position:relative; z-index:2; margin-bottom:60px; max-width:750px; margin-left:auto; margin-right:auto; }
+.section-title { font-size:2.8rem; color:#333; font-weight:800; margin-bottom:15px; }
+.section-title .highlight { background:linear-gradient(90deg,#ff3c78,#fd336f); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.section-subtitle { color:#555; font-size:1.1rem; line-height:1.7; }
+.services-wrapper { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; position:relative; z-index:2; margin-top:40px; padding:0 10px; }
+.service-box { background:#fff; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.15); padding:40px 20px; text-align:center; transition:transform 0.4s ease, box-shadow 0.4s ease; position:relative; overflow:hidden; }
+.service-box::before { content:""; position:absolute; inset:0; background:linear-gradient(145deg,rgba(255,60,120,0.08),transparent); opacity:0; transition:opacity 0.4s ease; }
+.service-box:hover::before { opacity:1; }
+.service-box:hover { transform:translateY(-8px); box-shadow:0 25px 50px rgba(0,0,0,0.12); }
+.icon-circle { font-size:2.5rem; background:rgba(255,60,120,0.1); color:#ff3c78; width:70px; height:70px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin:0 auto 20px; }
+.service-box h3 { font-size:1.4rem; font-weight:700; color:#333; margin-bottom:15px; }
+.service-box p { color:#555; font-size:1rem; line-height:1.6; margin-bottom:25px; }
+.btn-cta { display:inline-block; background:#ff3c78; color:#fff; padding:12px 28px; border-radius:50px; text-decoration:none; font-weight:600; transition:all 0.3s ease; }
+.btn-cta:hover { background:#333; transform:translateY(-3px); }
+@media (max-width:1024px) { .section-title { font-size:2.4rem; } .service-box { padding:35px 20px; } }
+@media (max-width:768px) { .section-title { font-size:2rem; } .section-subtitle { font-size:1rem; } .icon-circle { width:60px; height:60px; font-size:2rem; } }
+@media (max-width:480px) { .section-title { font-size:1.6rem; } .service-box { padding:25px 15px; } .service-box h3 { font-size:1.2rem; } .service-box p { font-size:0.95rem; } }
 
 
 
@@ -235,23 +238,129 @@ a {
 
 
 /* ===== BLOG HOME SECTION ===== */
-.blog-home { padding:100px 20px; background-color:#ffd8e4; font-family:'Poppins',sans-serif; color:#333; box-shadow:0 10px 35px rgba(0,0,0,0.3); }
-.blog-home .section-header { text-align:center; margin-bottom:60px; }
-.blog-home .section-title { font-size:2.8rem; font-weight:700; margin-bottom:10px; }
-.blog-home .section-title .highlight { color:#ff3c78; }
-.blog-home .section-subtitle { font-size:1.1rem; color:#666; max-width:650px; margin:0 auto; }
-.blog-home .blog-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
-.blog-home .blog-card { background-color:#fff; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.4s ease, box-shadow 0.4s ease; cursor:pointer; display:flex; flex-direction:column; }
-.blog-home .blog-card img { width:100%; display:block; transition:transform 0.5s ease; }
-.blog-home .blog-card:hover { transform:translateY(-10px); box-shadow:0 20px 35px rgba(0,0,0,0.15); }
-.blog-home .blog-card:hover img { transform:scale(1.05); }
-.blog-home .blog-card h3 { font-size:1.4rem; font-weight:600; color:#333; margin:20px; }
-.blog-home .blog-card p { font-size:1rem; color:#555; margin:0 20px 20px 20px; flex-grow:1; }
-.blog-home .btn-blog { display:inline-block; margin:0 20px 20px 20px; padding:12px 25px; background-color:#ff3c78; color:#fff; font-weight:600; border-radius:50px; text-decoration:none; text-align:center; transition:background 0.3s ease, transform 0.3s ease; }
-.blog-home .btn-blog:hover { background-color:#e6326b; transform:translateY(-2px); }
-.blog-home .btn-cta { display:inline-block; padding:15px 35px; background-color:#ff3c78; color:#fff; font-weight:600; font-size:1rem; border-radius:50px; text-decoration:none; transition:background 0.3s ease, transform 0.3s ease; }
-.blog-home .btn-cta:hover { background-color:#e6326b; transform:translateY(-3px); }
-@media (max-width:768px) { .blog-home .section-title { font-size:2rem; } .blog-home .section-subtitle { font-size:1rem; } }
+/* ===== BLOG HOME SECTION ===== */
+.blog-home {
+  padding: 80px 20px;
+  background-color: #ffd8e4;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Section Header */
+.blog-home .section-header {
+  margin-bottom: 50px;
+}
+
+.blog-home .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-home .section-title .highlight {
+  color: #ff3c78;
+}
+
+.blog-home .section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blog-home .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Blog Card */
+.blog-home .blog-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-home .blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* Titles & Excerpt */
+.blog-home .blog-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.blog-home .blog-card p.blog-excerpt {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.blog-home .btn-blog {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ff3c78;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.blog-home .btn-blog:hover {
+  background-color: #e6326b;
+  transform: translateY(-2px);
+}
+
+.blog-home .btn-cta {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff3c78;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.blog-home .btn-cta:hover {
+  background-color: #e6326b;
+  transform: translateY(-3px);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .blog-home .section-title { font-size: 2rem; }
+  .blog-home .section-subtitle { font-size: 1rem; }
+  .blog-home .blog-card h3 { font-size: 1.2rem; }
+  .blog-home .blog-card p.blog-excerpt { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .blog-home .blog-grid {
+    gap: 20px;
+  }
+  .blog-home .blog-card { padding: 20px 15px; }
+  .blog-home .section-title { font-size: 1.6rem; }
+}
+
 
 
 
@@ -541,37 +650,45 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 
 <!-- ===== BLOG PREVIEW ===== -->
+<!-- ===== BLOG PREVIEW ===== -->
 <section id="blog" class="blog-home section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Latest <span class="highlight">Articles</span></h2>
-      <p class="section-subtitle">Tips, insights, and tutorials on web & graphic design to help your business grow online.</p>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <img src="images/computer.webp" alt="Why Professional Graphic Design is Essential" loading="lazy">
-        <h3>Why Professional Graphic Design is Essential</h3>
-        <p>Learn why investing in professional graphic design can make your small business stand out online and offline.</p>
-        <a href="blog.html#graphic-design-essential" class="btn-blog">Read More</a>
-      </article>
-      <article class="blog-card">
-        <img src="images/image-coding.webp" alt="How Great Graphic Design Elevates Your Website" loading="lazy">
-        <h3>How Great Graphic Design Elevates Your Website</h3>
-        <p>Discover how combining great graphic design with a static website enhances your brand and credibility.</p>
-        <a href="blog.html#graphic-design-website" class="btn-blog">Read More</a>
-      </article>
-      <article class="blog-card">
-        <img src="images/responsive website.webp" alt="Why a Static Website Could Be Perfect" loading="lazy">
-        <h3>Why a Static Website Could Be Perfect</h3>
-        <p>Learn why static websites are fast, secure, and cost-effective — ideal for small businesses in Limpopo.</p>
-        <a href="blog.html#static-website" class="btn-blog">Read More</a>
-      </article>
-    </div>
-    <div class="cta-buttons" style="text-align:center; margin-top:40px;">
-      <a href="blog.html" class="btn-cta">View All Articles</a>
-    </div>
+  <div class="section-header">
+    <h2 class="section-title">Latest <span class="highlight">Articles</span></h2>
+    <p class="section-subtitle">Tips, insights, and tutorials on web & graphic design to help your business grow online.</p>
+  </div>
+
+  <div class="blog-grid">
+    <!-- Blog Card -->
+    <article class="blog-card">
+      <h3>Why Professional Graphic Design is Essential</h3>
+      <p class="blog-excerpt">
+        Learn why investing in professional graphic design can make your small business stand out online and offline.
+      </p>
+      <a href="blog.html#graphic-design-essential" class="btn-blog">Read More</a>
+    </article>
+
+    <article class="blog-card">
+      <h3>How Great Graphic Design Elevates Your Website</h3>
+      <p class="blog-excerpt">
+        Discover how combining great graphic design with a static website enhances your brand and credibility.
+      </p>
+      <a href="blog.html#graphic-design-website" class="btn-blog">Read More</a>
+    </article>
+
+    <article class="blog-card">
+      <h3>Why a Static Website Could Be Perfect</h3>
+      <p class="blog-excerpt">
+        Learn why static websites are fast, secure, and cost-effective — ideal for small businesses in Limpopo.
+      </p>
+      <a href="blog.html#static-website" class="btn-blog">Read More</a>
+    </article>
+  </div>
+
+  <div class="cta-buttons" style="text-align:center; margin-top:40px;">
+    <a href="blog.html" class="btn-cta">View All Articles</a>
   </div>
 </section>
+
 
 <!-- CTA PORTFOLIO -->
 <section class="cta-portfolio">
