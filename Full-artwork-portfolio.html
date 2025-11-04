@@ -1,76 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | ARIDESIGN — Graphic & Web Design for Businesses in Limpopo & South Africa</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Web Design Services in Limpopo | ARIDESIGN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
    <!-- this ensures that is not indexed -->
   <meta name="robots" content="noindex, nofollow">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="images/logo-picture.png" sizes="32x32">
-<link rel="icon" type="image/png" href="images/logo-picture.png" sizes="64x64">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo-picture.png">
-<link rel="shortcut icon" href="images/logo-picture.png" type="image/x-icon">
 
   <!-- SEO META -->
-  <meta name="description" content="View ARIDESIGN’s creative portfolio featuring professional graphic design, branding, logo design, and static website projects for small businesses, churches, and startups across Limpopo and South Africa.">
-  <meta name="keywords" content="ARIDESIGN portfolio, graphic design Limpopo, web design South Africa, logo design, branding, freelance designer, static websites, creative design agency, South Africa designer">
+  <meta name="description" content="ARIDESIGN provides professional web design services in Limpopo, South Africa. Build responsive, fast, and stunning websites for your business.">
+  <meta name="keywords" content="web design Limpopo, responsive website design Limpopo, business website South Africa, portfolio website design, ARIDESIGN South Africa">
   <meta name="author" content="ARIDESIGN">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://aridesign.co.za/portfolio.html">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Portfolio | ARIDESIGN - Graphic & Web Design in Limpopo, South Africa">
-  <meta property="og:description" content="Explore ARIDESIGN's professional graphic & web design portfolio in Limpopo, South Africa. See our creative branding, websites, and social media projects.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Web Design Services in Limpopo | ARIDESIGN">
+  <meta property="og:description" content="ARIDESIGN creates professional web design solutions including business websites, portfolios, landing pages, and campaign pages in Limpopo and South Africa.">
   <meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
-  <meta property="og:url" content="https://aridesign.co.za/portfolio.html">
+  <meta property="og:url" content="https://aridesign.co.za/web-design.html">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="ARIDESIGN">
-  <meta property="og:locale" content="en_ZA">
 
-    <!-- Geo / Local SEO -->
-  <meta name="geo.region" content="ZA-LP">
-  <meta name="geo.placename" content="Limpopo, South Africa">
-  <meta name="ICBM" content="-23.8962, 29.4486">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <!-- Structured Data: Portfolio / Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CreativeWorkSeries",
-    "name": "ARIDESIGN Portfolio",
-    "description": "A showcase of graphic design, web design, and branding projects created by ARIDESIGN for clients in Limpopo and across South Africa.",
-    "creator": {
-      "@type": "Organization",
-      "name": "ARIDESIGN",
-      "url": "https://aridesign.co.za",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://aridesign.co.za/images/logo-picture.png"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Limpopo",
-        "addressCountry": "ZA"
-      },
-      "sameAs": [
-        "https://www.facebook.com/share/1GgWqnkdcM/",
-        "https://www.instagram.com/yourprofile/"
-      ]
-    },
-    "image": "https://aridesign.co.za/images/portfolio-banner.webp",
-    "inLanguage": "en-ZA",
-    "url": "https://aridesign.co.za/portfolio.html"
-  }
-  </script>
+<body>
 
 
 <style>
@@ -148,111 +105,56 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 @media (max-width: 900px) { .desktop-nav { display: none; } .menu-toggle { display: flex; } }
 
 
+/* ===== HERO SECTION ===== */
+.portfolio-hero { position: relative; background: linear-gradient(135deg, #fff 60%, #ffe4ec 100%); padding: 120px 20px; text-align: center; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); }
+.portfolio-hero .hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+.portfolio-hero h1 { font-size: 2.8rem; font-weight: 900; color: #333; margin-bottom: 15px; }
+.portfolio-hero h1 span { background: linear-gradient(90deg, #ff3c78, #ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.portfolio-hero p { color: #555; font-size: 1.1rem; margin-bottom: 30px; }
+.hero-btn { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 32px; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 60, 120, 0.4); }
+.hero-btn:hover { background: #e12f68; transform: translateY(-3px); }
+.hero-shape { position: absolute; border-radius: 50%; opacity: 0.15; z-index: 1; }
+.shape1 { width: 250px; height: 250px; background: #ff3c78; top: -60px; left: -60px; }
+.shape2 { width: 300px; height: 300px; background: #ff99b9; bottom: -100px; right: -80px; }
+.shape3 { width: 150px; height: 150px; background: #ffd2e0; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+@media (max-width: 768px) { .portfolio-hero { padding: 80px 15px; } .portfolio-hero h1 { font-size: 2rem; } .portfolio-hero p { font-size: 1rem; } .hero-btn { padding: 12px 28px; font-size: 0.95rem; } }
 
 
-/* ===== WEB DESIGN HERO SECTION ===== */
-.web-portfolio-hero {
-  position: relative;
-  background: #fff;
-  padding: 140px 20px 100px 20px;
-  text-align: center;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-}
 
-.web-portfolio-hero .hero-content {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.web-portfolio-hero h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.web-portfolio-hero h1 span {
-  background: linear-gradient(90deg, #ff3c78, #ff6899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.web-portfolio-hero p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 35px;
-}
-
-.hero-btn {
-  display: inline-block;
-  background: #ff3c78;
-  color: #fff;
-  padding: 14px 36px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 60, 120, 0.4);
-}
-
-.hero-btn:hover {
-  background: #e12f68;
-  transform: translateY(-3px);
-}
-
-.hero-shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.15;
-  z-index: 1;
-  animation: floatShape 12s infinite alternate ease-in-out;
-}
-
-.shape1 { width: 250px; height: 250px; background: #ff3c78; top: -80px; left: -60px; }
-.shape2 { width: 300px; height: 300px; background: #ff6899; bottom: -120px; right: -80px; }
-.shape3 { width: 200px; height: 200px; background: #ffd2e0; top: 40%; left: 50%; transform: translate(-50%, -50%); }
-.shape4 { width: 150px; height: 150px; background: #ff3c78; bottom: 20%; left: 15%; }
-
-@keyframes floatShape {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(45deg); }
-  100% { transform: translateY(0) rotate(90deg); }
-}
-
-@media(max-width:768px){
-  .web-portfolio-hero h1 { font-size: 2.2rem; }
-  .web-portfolio-hero p { font-size: 1rem; }
-  .hero-btn { padding: 12px 28px; font-size: 0.95rem; }
-}
-
-/* ===== WEB DESIGN PORTFOLIO ===== */
-.web-portfolio-section {background: linear-gradient(135deg, #fff 0%, #facedc 40%, #333 100%); padding: 80px 20px; text-align: center; }
-.web-portfolio-section .section-title { font-size: 2.5rem; background: linear-gradient(90deg, #ff3c78, #ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent;; margin-bottom: 10px; font-weight: 900; }
-.web-portfolio-section .section-subtitle { color: #555; font-size: 1.1rem; line-height: 1.7; max-width: 700px; margin: 0 auto; margin-bottom: 40px;}
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-.portfolio-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(255,60,120,0.2); }
-.portfolio-card img { width: 100%; height: 180px; object-fit: cover; }
-.portfolio-info { padding: 15px 20px 25px; }
-.portfolio-info h3 { color: #ff3c78; font-size: 1.2rem; margin-bottom: 10px; font-weight: 700; }
-.portfolio-info p { color: #333; font-size: 0.95rem; line-height: 1.4; }
-@media (max-width: 768px) { .portfolio-card img { height: 150px; } }
-@media (max-width: 480px) { .portfolio-card img { height: 130px; } }
+/* === GRAPHIC DESIGN PORTFOLIO SHOWCASE === */
+.graphic-samples {background: linear-gradient(135deg, #fff 0%, #facedc 40%, #333 100%); padding: 100px 20px; box-shadow: inset 0 10px 40px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Poppins', sans-serif; }
+.section-header { text-align: center; margin-bottom: 70px; }
+.section-title { font-size: 2.8rem; font-weight: 900; color: #333; margin-bottom: 15px; }
+.section-title .highlight { background: linear-gradient(90deg, #ff3c78, #ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.section-subtitle { color: #555; font-size: 1.1rem; line-height: 1.7; max-width: 700px; margin: 0 auto; }
+.design-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
+.design-card { background: #fff; border-radius: 18px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); text-align: center; padding: 25px 20px; transition: transform 0.4s ease, box-shadow 0.4s ease; position: relative; overflow: hidden; }
+.design-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15); }
+.design-card h3 { color: #ff3c78; font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; }
+.image-slider { position: relative; width: 100%; padding-top: 70%; border-radius: 15px; overflow: hidden; }
+.image-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); transition: opacity 1s ease-in-out, transform 8s ease-in-out; border-radius: 15px; }
+.image-slider img.active { opacity: 1; transform: scale(1); }
+.graphic-samples::before, .graphic-samples::after { content: ""; position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255,60,120,0.25), transparent 70%); z-index: 0; animation: floatCircles 15s infinite ease-in-out alternate; }
+.graphic-samples::before { width: 300px; height: 300px; top: 10%; left: -100px; animation-delay: 0s; }
+.graphic-samples::after { width: 250px; height: 250px; bottom: 10%; right: -80px; animation-delay: 5s; }
+@keyframes floatCircles { 0% { transform: translateY(0) scale(1); opacity: 0.6; } 50% { transform: translateY(-20px) scale(1.1); opacity: 0.8; } 100% { transform: translateY(0) scale(1); opacity: 0.6; } }
+@media (max-width: 992px) { .section-title { font-size: 2.3rem; } .design-showcase { gap: 30px; } }
+@media (max-width: 600px) { .section-title { font-size: 2rem; } .section-subtitle { font-size: 0.95rem; } .design-card { padding: 20px; } }
 
 
 
 
-/* ===== CTA SECTION ===== */
+
+/* ===== CTA PORTFOLIO ===== */
 .cta-portfolio { background: #ff3c78; color: #fff; padding: 80px 20px; text-align: center; border-radius: 20px; margin: 60px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
-.cta-portfolio .cta-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; }
-.cta-portfolio .cta-subtitle { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; line-height: 1.7; }
+.cta-portfolio h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; }
+.cta-portfolio p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; line-height: 1.7; }
 .cta-portfolio .btn-cta { display: inline-block; background: #fff; color: #ff3c78; font-weight: 700; text-transform: uppercase; padding: 15px 35px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(255,60,120,0.4); }
 .cta-portfolio .btn-cta:hover { background: #333; color: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255,60,120,0.5); }
-@media (max-width:768px) { .cta-portfolio .cta-title { font-size: 2rem; } .cta-portfolio .cta-subtitle { font-size: 1rem; } .cta-portfolio .btn-cta { padding: 12px 28px; font-size: 0.95rem; } }
+@media (max-width:768px) { .cta-portfolio h2 { font-size: 2rem; } .cta-portfolio p { font-size: 1rem; } .cta-portfolio .btn-cta { padding: 12px 28px; font-size: 0.95rem; } }
+
+
+
 
 
 /* ===== WhatsApp Floating Button (Modern Creative Style) ===== */
@@ -269,6 +171,7 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 @media (max-width: 600px) { .help-text { display: none; } .whatsapp-floating { background: transparent; box-shadow: none; padding: 0; animation: none; } }
 
 
+
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
 .footer-container {max-width:1200px; margin:0 auto;}
@@ -279,8 +182,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 .footer-links ul li {margin-bottom:8px;}
 .footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
 .footer-links ul li a:hover {color:#ff3c78;}
-.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none;}
-.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#fff;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none; }
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#ffffff;}
 .footer-social a:hover {color:#ff3c78;}
 .footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
 
@@ -300,6 +203,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 /* ===== SHOW MOBILE NAV ===== */
 .mobile-nav.show {display:block;}
 
+
 /* ==========================
    Global Scroll Reveal Animation
    ========================== */
@@ -313,10 +217,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 .pop-up:nth-of-type(3) { transition-delay: 0.45s; }
 .pop-up:nth-of-type(4) { transition-delay: 0.6s; }
 </style>
-</head>
-<body>
 
-<!-- HEADER / NAV -->
 <header>
   <div class="header-container">
     <!-- LOGO LEFT -->
@@ -350,6 +251,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </header>
 
+<!-- MOBILE MENU -->
 <!-- MOBILE MENU -->
 <nav class="mobile-nav" id="mobileMenu">
   <div class="mobile-header">
@@ -385,136 +287,121 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </nav>
 </header>
 
-<!-- HERO SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-<section class="web-portfolio-hero">
+
+<!-- HERO SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="portfolio-hero">
   <div class="hero-content">
-    <h1>ARIDESIGN’s <span>Web Design Portfolio</span></h1>
+    <h1>ARIDESIGN’s <span>Graphic Design Portfolio</span></h1>
     <p>
-      Explore professional static websites built for startups, small businesses, churches, and creatives across 
-      <strong>Limpopo</strong> and <strong>South Africa</strong>. Each project showcases clean design, usability, and brand-focused visuals.
+      Explore our creative collection of logos, branding, packaging, and social media designs crafted for businesses across 
+      <strong>Limpopo</strong> and <strong>South Africa</strong>.
     </p>
-    <a href="quote.html" class="hero-btn">Request a Quote</a>
+    <a href="quote.html" class="hero-btn">Start Your Project</a>
   </div>
 
-  <!-- Dynamic background shapes -->
+  <!-- soft background shapes -->
   <div class="hero-shape shape1"></div>
   <div class="hero-shape shape2"></div>
   <div class="hero-shape shape3"></div>
-  <div class="hero-shape shape4"></div>
 </section>
 
 
-<!-- ===== WEB DESIGN PORTFOLIO ===== >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-<section class="web-portfolio-section">
+<!-- GRAPHIC DESIGN SHOWCASE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="graphic-samples">
   <div class="container">
-    <h2 class="section-title">ARIDESIGN Web Design Projects</h2>
-    <p class="section-subtitle">
-      Static websites crafted for startups, small businesses, churches, and creatives across Limpopo and South Africa.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Full <span class="highlight">Graphic Design Portfolio</span></h2>
+      <p class="section-subtitle">
+        ARIDESIGN delivers creative, professional, and impactful graphic design solutions in Limpopo and South Africa. Explore our diverse projects below.
+      </p>
+    </div>
 
-    <div class="portfolio-grid">
-      <!-- Project 1 -->
-      <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Startup Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Tech Startup</h3>
-          <p>Landing page with modern design to convert visitors.</p>
+    <div class="design-showcase">
+      <!-- Project 1: Logo Design -->
+      <div class="design-card">
+        <h3>Logo Design</h3>
+        <div class="image-slider fade-slider">
+          <img src="images/ads.webp" alt="Logo design 1">
+          <img src="images/car wash flyer.webp" alt="Logo design 2">
+          <img src="images/church flyer design.webp" alt="Logo design 3">
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="portfolio-card">
-        <img src="images/responsive-web-design-.webp" alt="Small Business Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Boutique Store</h3>
-          <p>Professional layout showcasing products and promotions.</p>
+      <!-- Project 2: Brand Identity -->
+      <div class="design-card">
+        <h3>Brand Identity</h3>
+        <div class="image-slider fade-slider">
+          <img src="images//party flyer.webp" alt="Brand identity 1">
+          <img src="images/church flyer design.webp" alt="Brand identity 2">
+          <img src="images/church flyer.webp" alt="Brand identity 3">
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Church Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Church</h3>
-          <p>Responsive site with events, donation, and newsletter.</p>
+      <!-- Project 3: Product Labels -->
+      <div class="design-card">
+        <h3>Product Labels</h3>
+        <div class="image-slider fade-slider">
+          <img src="images/doctor flyer.webp" alt="Product label 1">
+          <img src="images/car wash flyer.webp" alt="Product label 2">
+          <img src="images/resturant flyer.webp" alt="Product label 3">
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="portfolio-card">
-        <img src="images/responsive-web-design-.webp" alt="Restaurant Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Restaurant</h3>
-          <p>Highlighting menu, specials, and booking form.</p>
+      <!-- Project 4: Brochure Design -->
+      <div class="design-card">
+        <h3>Brochure Design</h3>
+        <div class="image-slider fade-slider">
+          <img src="images/beauty spa.webp" alt="Brochure 1">
+          <img src="images/computer.webp" alt="Brochure 2">
+          <img src="images/church flyer.webp" alt="Brochure 3">
         </div>
       </div>
 
-      <!-- Project 5 -->
-      <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Fitness Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Fitness Studio</h3>
-          <p>Class schedules and trainer profiles in a clean layout.</p>
+      <!-- Project 5: Social Media Graphics -->
+      <div class="design-card">
+        <h3>Social Media Graphics</h3>
+        <div class="image-slider fade-slider">
+          <img src="images//business-card design 1.webp" alt="Social media graphic 1">
+          <img src="images/beauty spa.webp" alt="Social media graphic 2">
+          <img src="images/flyer1.webp" alt="Social media graphic 3">
         </div>
       </div>
 
-      <!-- Project 6 -->
-      <div class="portfolio-card">
-        <img src="images/responsive-web-design-.webp" alt="Education Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>School</h3>
-          <p>Courses, staff profiles, and events calendar.</p>
+      <!-- Project 6: Flyers / Posters -->
+      <div class="design-card">
+        <h3>Flyers & Posters</h3>
+        <div class="image-slider fade-slider">
+          <img src="images/dr social media graphics.webp" alt="Flyer 1">
+          <img src="images/digital marketing  logo by aridesign.webp" alt="Flyer 2">
+          <img src="images/coffee branding.webp" alt="Flyer 3">
         </div>
       </div>
 
-      <!-- Project 7 -->
-      <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Portfolio Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Portfolio</h3>
-          <p>Showcasing creative artworks and projects.</p>
+      <!-- Project 7: Business Cards -->
+      <div class="design-card">
+        <h3>Business Cards</h3>
+        <div class="image-slider fade-slider">
+          <img src="images/doctor flyer.webp" alt="Business card 1">
+          <img src="images/church flyer.webp" alt="Business card 2">
+          <img src="images//brouchure design.webp" alt="Business card 3">
         </div>
       </div>
-
-      <!-- Project 8 -->
-      <div class="portfolio-card">
-        <img src="images/responsive-web-design-.webp" alt="E-commerce Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>E-commerce</h3>
-          <p>Online shop with product pages and contact form.</p>
-        </div>
-      </div>
-
-      <!-- Project 9 -->
-      <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Event Website Design by ARIDESIGN">
-        <div class="portfolio-info">
-          <h3>Event Company</h3>
-          <p>Showcasing services, events, and booking options.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ===== CALL TO ACTION ===== >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- CTA PORTFOLIO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <section class="cta-portfolio">
   <div class="container">
-    <div class="cta-content">
-      <h2 class="cta-title">Ready to Get Your Stunning Website?</h2>
-      <p class="cta-subtitle">
-        Let’s create a beautiful, responsive, and SEO-friendly website for your business, startup, or organization. 
-        Take the next step and get a free quote today.
-      </p>
-      <a href="quote.html" class="btn-cta">Request Your Free Quote</a>
-    </div>
+    <h2>Want to Elevate Your Brand?</h2>
+    <p>Let ARIDESIGN create professional, impactful, and creative graphic design solutions for your business. Contact us today for a free consultation and quote.</p>
+    <a href="contact.html" class="btn-cta">Get Your Free Quote</a>
   </div>
 </section>
 
 
-<!-- Need Help + WhatsApp Floating Button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- Need Help + WhatsApp Floating Button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <div class="whatsapp-floating">
   <span class="help-text">💬 Need help?</span>
   <a href="https://wa.me/27684757321?text=Hi%20there!%20I'm%20interested%20in%20your%20services."
@@ -531,7 +418,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </div>
 
 
-<!-- FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <footer>
   <div class="container footer-container">
     <div class="footer-top">
@@ -543,7 +430,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
           <li><a href="web-design.html">Web Design</a></li>
           <li><a href="graphic-design.html">Graphic Design</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="quote.html">Contact</a></li>
         </ul>
@@ -566,29 +452,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </footer>
 
-<!-- WEBSITE IMAGE LINK  .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-<script>
-const cards = document.querySelectorAll('.portfolio-card');
-let current = 0;
-
-function showCard(index) {
-  cards.forEach((card, i) => {
-    card.classList.toggle('active', i === index);
-  });
-}
-
-function nextCard() {
-  current = (current + 1) % cards.length;
-  showCard(current);
-}
-
-// Initialize
-showCard(current);
-setInterval(nextCard, 3000); // Change slide every 3 seconds
-</script>
-
-
-<!-- JS FOR MOBILE MENU .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- JS FOR MOBILE MENU >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <script>
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -607,7 +471,26 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
     mobileMenu.classList.remove("active");
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".image-slider");
+
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
+    images[index].classList.add("active");
+
+    setInterval(() => {
+      images[index].classList.remove("active");
+      index = (index + 1) % images.length;
+      images[index].classList.add("active");
+    }, 4000); // 4 seconds per image
+  });
+});
 </script>
+
+
 
 
 <script>
@@ -636,5 +519,8 @@ document.addEventListener("DOMContentLoaded", function() {
   reveal();
 });
 </script>
+
+
+
 </body>
 </html>

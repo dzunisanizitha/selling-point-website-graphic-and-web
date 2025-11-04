@@ -1,0 +1,892 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Title for SEO -->
+  <title>Web & Graphic Design Services | Limpopo & South Africa | ARIDESIGN</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Meta Description -->
+  <meta name="description" content="ARIDESIGN offers professional web & graphic design services for startups, small businesses, and churches in Limpopo & South Africa. Get a responsive, fast, and visually stunning website today!">
+
+  <!-- Meta Keywords (optional) -->
+  <meta name="keywords" content="web design Limpopo, graphic design Limpopo, small business website South Africa, startup website design, church website design, responsive websites, portfolio website, professional web designer South Africa">
+
+  <!-- Author -->
+  <meta name="author" content="ARIDESIGN">
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aridesign.co.za/index.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Web & Graphic Design Services for Startups, Small Businesses & Churches | ARIDESIGN">
+  <meta property="og:description" content="Professional web & graphic design in Limpopo & South Africa. ARIDESIGN creates responsive, fast, and visually stunning websites for your business.">
+  <meta property="og:image" content="https://aridesign.co.za/images/portfolio-banner.webp">
+  <meta property="og:url" content="https://aridesign.co.za/index.html">
+  <meta property="og:type" content="website">
+
+
+  <!-- Structured Data (JSON-LD for local SEO & services) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ARIDESIGN",
+    "image": "https://aridesign.co.za/images/portfolio-banner.webp",
+    "url": "https://aridesign.co.za/index.html",
+    "telephone": "+27 123 456 789",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Limpopo",
+      "addressCountry": "ZA"
+    },
+    "areaServed": ["Limpopo", "South Africa"],
+    "description": "ARIDESIGN provides professional web & graphic design services for startups, small businesses, and churches in Limpopo & South Africa.",
+    "sameAs": [
+      "https://www.facebook.com/aridesign",
+      "https://www.linkedin.com/company/aridesign",
+      "https://www.instagram.com/aridesign"
+    ]
+  }
+  </script>
+</head>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+</head>
+<body>
+
+
+<style>
+/* ===== GLOBAL ===== */
+html, body {
+  overflow-x: hidden;
+}
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; color:#333; background:#f9f9f9;}
+a {text-decoration:none; color:inherit;}
+.container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
+
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+/* GLOBAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f9f9f9; color: #333; }
+
+/* HEADER */
+header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.15); }
+
+/* HEADER CONTAINER */
+.header-container { width: 90%; max-width: 1200px; margin: 0 auto; height: 70px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+
+/* LOGO */
+.logo-img { height: 120px; display: block; }
+
+/* DESKTOP NAV */
+.desktop-nav ul { display: flex; align-items: center; list-style: none; gap: 25px; }
+.desktop-nav ul li a { color: #333; font-weight: 600; padding: 8px 12px; transition: 0.3s; }
+.desktop-nav ul li a:hover { color: #ff3c78; }
+
+/* DROPDOWN MENU */
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; list-style: none; padding: 10px 0; border-radius: 5px; min-width: 180px; }
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li a { display: block; padding: 10px 18px; color: #333; }
+.dropdown-menu li a:hover { background: #333; color: #fff; }
+
+/* GET A QUOTE BUTTON */
+.btn-quote { background: #ff3c78; color: #fff !important; padding: 8px 20px; border-radius: 25px; font-weight: 600; transition: 0.3s ease; }
+.btn-quote:hover { background: #fff; color: #333 !important; }
+
+/* Dropdown parent */
+.desktop-nav ul li.dropdown { position: relative; }
+.desktop-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; list-style: none; padding: 10px 0; border-radius: 5px; min-width: 180px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+
+/* PROFESSIONAL HAMBURGER */
+.menu-toggle { display: none; flex-direction: column; align-items: center; cursor: pointer; width: 30px; height: auto; z-index: 10001; margin-top: 0; }
+.menu-toggle span { display: block; width: 100%; height: 3px; background-color: #333 !important; border-radius: 2px; margin: 3px 0; transition: all 0.3s ease; }
+
+/* MOBILE NAV */
+.mobile-nav { position: fixed; top: 0; left: -270px; width: 270px; height: 100%; background: #fff; color: #333; transition: left 0.4s ease; padding: 20px; display: flex; flex-direction: column; z-index: 9998; }
+.mobile-nav.active { left: 0; }
+
+/* MOBILE LOGO */
+.mobile-logo { text-align: center; margin-bottom: 30px; }
+.mobile-logo .logo-img { max-width: 150px; height: 120px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; margin-left: -25px; }
+
+/* CLOSE BUTTON */
+.close-btn { font-size: 30px; color: #333; cursor: pointer; position: absolute; top: 15px; right: 15px; }
+
+/* MENU ITEMS */
+.mobile-nav ul { list-style: none; padding: 0; }
+.mobile-nav ul li { margin-bottom: 20px; }
+.mobile-nav ul li a { color: #333; font-size: 16px; font-weight: 600; }
+.mobile-nav ul li a:hover { color: #ff3c78; }
+.mobile-nav ul li a i { margin-right: 10px; color: #ff3c78; width: 20px; text-align: center; }
+
+/* THIN SEPARATOR LINE */
+.menu-separator { height: 1px; background-color: #ddd; margin: 15px 0; list-style: none; pointer-events: none; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .desktop-nav { display: none; } .menu-toggle { display: flex; } }
+
+
+/* HERO SECTION STYLING */
+.hero-pro { position: relative; width: 100%; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Poppins', sans-serif; color: #fff; overflow: hidden; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1170'); background-size: cover; background-position: center; filter: brightness(0.5) contrast(1.1); z-index: 1; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(22,16,20,0.6); z-index: 2; }
+.hero-content { position: relative; z-index: 3; max-width: 900px; padding: 0 20px; animation: fadeInUp 1s ease forwards; }
+.hero-content h1 { font-size: 3rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+.hero-content .highlight { background: linear-gradient(90deg, #ff3c78, #e6326a, #ffc400); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+.hero-subtitle { font-size: 1.2rem; line-height: 1.6; margin-bottom: 30px; color: #f5f5f5; }
+.hero-cta { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;  }
+.btn-primary { display: inline-block; background: #ff3c78; color: #fff; font-size: 1.2rem ; font-weight: 1000; padding: 14px 36px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(255,60,120,0.5); }
+.btn-primary:hover { background: #333; color: #fff; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,60,120,0.6); }
+.btn-secondary { display: inline-block; background: #fff; color: #ff3c78; font-size: 1.2rem ; font-weight: 1000; padding: 14px 36px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(255,60,120,0.5); }
+.btn-secondary:hover { background: #333; color: #fff; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,60,120,0.6); }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) { .hero-content h1 { font-size: 2.5rem; } .hero-subtitle { font-size: 1.05rem; } }
+@media (max-width: 600px) { .hero-content h1 { font-size: 2rem; } .hero-subtitle { font-size: 0.95rem; } .btn-primary, .btn-secondary { width: 80%; margin: 0 auto; padding: 12px 28px; font-size: 0.95rem; } }
+
+
+/* ===== KEY BENEFITS - ARIDESIGN RESTYLE ===== */
+.key-benefits { position: relative; padding: 100px 20px 140px; background: #fff; text-align: center; overflow: hidden; } 
+/* Soft floating background waves */ 
+.key-benefits::before { content: ""; position: absolute; top: -30%; left: -20%; width: 150%; height: 150%; background: radial-gradient(circle at 25% 25%, rgba(255,60,120,0.08), transparent 70%), radial-gradient(circle at 75% 75%, rgba(255,60,120,0.1), transparent 70%); z-index: 0; animation: floatWaves 15s ease-in-out infinite; } 
+@keyframes floatWaves { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-20px, 20px) scale(1.05); } } 
+.key-benefits .container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; } 
+/* Title and subtitle entrance */ 
+.key-benefits h2 { font-size: 2.5rem; font-weight: 800; color: #ff3c78; margin-bottom: 15px; opacity: 0; transform: translateY(30px); animation: fadeUp 1s ease-out forwards; } 
+.key-benefits .sub-text { font-size: 1.15rem; color: #333; max-width: 1000px; margin: 0 auto 80px; line-height: 1.7; opacity: 0; transform: translateY(30px); animation: fadeUp 1.2s ease-out forwards; } 
+/* Benefit cards grid */ 
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 60px 40px; justify-items: center; } 
+.benefit { background: #fff; border-radius: 20px; padding: 60px 20px 20px; position: relative; transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(255,60,120,0.15); opacity: 0; transform: translateY(40px); animation: fadeUp 0.8s ease-out forwards; } 
+.benefit:nth-child(1) { animation-delay: 0.4s; } 
+.benefit:nth-child(2) { animation-delay: 0.6s; } 
+.benefit:nth-child(3) { animation-delay: 0.8s; } 
+.benefit:nth-child(4) { animation-delay: 1s; } 
+/* Icons */ 
+.benefit i { font-size: 2.4rem; background: #ff3c78; color: #fff; width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; top: -45px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 30px rgba(255,60,120,0.3); transition: all 0.3s ease; } 
+/* Headings and paragraphs */ 
+.benefit h3 { font-size: 1.3rem; font-weight: 600; color: #333; margin-top: 50px; margin-bottom: 10px; transition: color 0.3s ease, transform 0.3s ease; } 
+.benefit p { font-size: 1rem; color: #555; line-height: 1.6; max-width: 280px; margin: 0 auto; } 
+/* Hover effects */ 
+.benefit:hover i { transform: translateX(-50%) translateY(-10px) scale(1.1); box-shadow: 0 14px 40px rgba(255,60,120,0.45); } 
+.benefit:hover h3 { color: #ff3c78; transform: translateY(-3px); } 
+/* Animation keyframes */ 
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } } 
+/* Mobile adjustments */ 
+@media (max-width: 768px) { .key-benefits h2 { font-size: 2.2rem; } .benefit i { width: 70px; height: 70px; font-size: 2rem; top: -35px; } .benefit h3 { font-size: 1.1rem; } .key-benefits { padding: 80px 20px 100px; } }
+
+
+
+/* ===== SERVICES ===== */
+/* ===== SERVICES - ARIDESIGN RESTYLE WITH SECTION SHADOW ===== */
+.services { position: relative; padding: 120px 20px 160px; background: #fff; text-align: center; overflow: hidden; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.05); z-index: 1; }
+.services::before { content: ""; position: absolute; top: -30%; left: -20%; width: 150%; height: 150%; background: radial-gradient(circle at 25% 25%, rgba(255, 60, 120, 0.08), transparent 70%), radial-gradient(circle at 75% 75%, rgba(255, 60, 120, 0.1), transparent 70%); z-index: 0; animation: floatGlow 12s ease-in-out infinite; opacity: 0.8; }
+
+@keyframes floatGlow { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-15px, 15px) scale(1.05); } }
+
+.services .container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
+.services h2 { font-size: 2.5rem; font-weight: 800; color: #ff3c78; margin-bottom: 15px; }
+.services .sub-text { font-size: 1.15rem; color: #333; max-width: 1000px; margin: 0 auto 80px; line-height: 1.7; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px; justify-items: center; }
+.service-item { background: #fff; border-radius: 20px; padding: 60px 25px 25px; position: relative; transition: all 0.4s ease; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06), 0 6px 20px rgba(255, 60, 120, 0.08); }
+.service-item i { font-size: 2.8rem; color: #fff; background: #ff3c78; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; top: -40px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 30px rgba(255, 60, 120, 0.25); transition: all 0.3s ease; }
+.service-item h3 { font-size: 1.3rem; font-weight: 600; color: #333; margin-top: 50px; margin-bottom: 10px; }
+.service-item p { font-size: 1rem; color: #555; line-height: 1.6; max-width: 280px; margin: 0 auto; }
+.service-item:hover { transform: translateY(-12px); box-shadow: 0 16px 45px rgba(255, 60, 120, 0.25); }
+.service-item:hover i { background: #fff; color: #ff3c78; transform: translateX(-50%) translateY(-10px) scale(1.15) rotate(10deg); }
+.service-item:hover h3 { color: #ff3c78; }
+.service-item:hover p { color: #333; }
+
+@media (max-width: 768px) { 
+  .services { padding: 80px 20px 100px; } 
+  .services h2 { font-size: 2.2rem; } 
+  .service-item { padding: 50px 20px; } 
+  .service-item i { width: 70px; height: 70px; font-size: 2rem; top: -35px; } 
+  .service-item h3 { font-size: 1.1rem; } 
+}
+
+
+
+
+/* ===== PACKAGES ===== */
+/* ===== PACKAGES - ARIDESIGN RESTYLE ===== */
+.packages { position: relative; padding: 120px 20px 160px; background: linear-gradient(135deg, #fff 0%, #ffe6f0 100%); text-align: center; overflow: hidden; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.05); z-index: 1; }
+.packages::before { content: ""; position: absolute; top: -30%; right: -20%; width: 150%; height: 150%; background: radial-gradient(circle at 25% 25%, rgba(255,60,120,0.08), transparent 70%), radial-gradient(circle at 75% 75%, rgba(255,60,120,0.12), transparent 70%); z-index: 0; animation: floatGlow 12s ease-in-out infinite; }
+.packages::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 50px; background: linear-gradient(to bottom, rgba(0,0,0,0.08), transparent); z-index: 1; pointer-events: none; }
+
+@keyframes floatGlow { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-15px, 15px) scale(1.05); } }
+
+.packages .container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
+.packages h2 { font-size: 2.5rem; font-weight: 800; color: #ff3c78; margin-bottom: 15px; }
+.packages .sub-text { font-size: 1.15rem; color: #333; max-width: 900px; margin: 0 auto 80px; line-height: 1.7; }
+.package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px; justify-items: center; }
+.package { background: #fff; border-radius: 20px; padding: 60px 25px 25px; position: relative; transition: all 0.4s ease; box-shadow: 0 12px 35px rgba(0,0,0,0.06), 0 6px 20px rgba(255,60,120,0.08); border: 2px solid #eee; max-width: 360px; }
+.package h3 { font-size: 1.4rem; font-weight: 600; color: #333; margin-bottom: 15px; }
+.package .price { color: #ff3c78; font-size: 1.3rem; font-weight: 700; margin-bottom: 25px; }
+.package ul { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; }
+.package ul li { font-size: 0.95rem; color: #555; padding: 8px 0; border-bottom: 1px solid #eee; position: relative; padding-left: 25px; }
+.package ul li::before { content: "✔"; position: absolute; left: 0; color: #ff3c78; font-weight: bold; }
+.package .btn { display: inline-block; background: #ff3c78; color: #fff; padding: 12px 30px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
+.package .btn:hover { background: #333; color: #fff; }
+.package:hover { transform: translateY(-12px); box-shadow: 0 16px 45px rgba(255,60,120,0.25); border-color: #ff3c78; }
+.package.popular { border: 2px solid #ff3c78; position: relative; overflow: hidden; }
+.package.popular .badge { position: absolute; top: 15px; right: -40px; background: #ff3c78; color: #fff; font-weight: 600; font-size: 0.85rem; padding: 6px 45px; transform: rotate(45deg); box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+.package.popular:hover { background: linear-gradient(135deg, #fff, #ffe6f0); }
+
+@media(max-width:768px) { 
+  .packages { padding: 80px 20px 100px; } 
+  .packages h2 { font-size: 2.2rem; } 
+  .package { padding: 50px 20px; } 
+}
+
+
+/* ===== TESTIMONIALS / SOCIAL PROOF - RESTYLE ===== */
+.testimonials { background: linear-gradient(135deg, #fff 10%, #fdd8e6 100%); color: #333; text-align: center; padding: 100px 20px; overflow: hidden; position: relative; box-shadow: 0 -20px 60px rgba(0,0,0,0.05); }
+.top-stars { color: #ff3c78; font-size: 1.6rem; margin-bottom: 10px; letter-spacing: 3px; animation: pulseStars 2s infinite alternate; }
+
+@keyframes pulseStars { from { opacity: 0.8; transform: scale(1); } to { opacity: 1; transform: scale(1.1); } }
+
+.testimonials h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; position: relative; }
+.testimonials h2::after { content: ""; display: block; width: 80px; height: 4px; background: #ff3c78; margin: 15px auto 0; border-radius: 2px; }
+.testimonial-intro { font-size: 1.15rem; color: #333; max-width: 750px; margin: 0 auto 50px; line-height: 1.7; }
+.testimonial-slider { position: relative; overflow: hidden; max-width: 700px; margin: 0 auto; }
+
+.slides { display: flex; transition: transform 0.7s ease-in-out; }
+
+.testimonial { flex: 0 0 100%; background: #fff; border-radius: 20px; padding: 60px 40px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.testimonial:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(255,60,120,0.2); }
+.testimonial p { font-size: 1.1rem; color: #555; font-style: italic; line-height: 1.7; margin-bottom: 20px; max-width: 1000px; }
+.testimonial h4 { color: #333; font-size: 1rem; font-weight: 600; }
+.testimonial .stars { color: #ff3c78; font-size: 1.3rem; margin-top: 15px; }
+.testimonial .stars .empty { color: #ccc; }
+
+.dots { display: flex; justify-content: center; margin-top: 25px; gap: 8px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+.dot.active { background: #ff3c78; transform: scale(1.3); }
+
+@media (max-width: 768px) { .testimonials h2 { font-size: 2.2rem; } .testimonial { padding: 40px 25px; } }
+
+
+
+/* TRUSTED CLENTS */
+/* ===== TRUST SECTION - CREATIVE STYLING ===== */
+.trust { background: linear-gradient(135deg, #fff0f5 0%, #ffe6f0 100%); background-image: repeating-radial-gradient(circle at 50% 50%, rgba(255, 60, 120, 0.05) 0, rgba(255, 60, 120, 0.05) 2px, transparent 2px, transparent 20px); text-align: center; padding: 120px 20px 100px; position: relative; overflow: hidden; }
+.trust h2 { font-size: 2.6rem; font-weight: 900; color: #ff3c78; margin-bottom: 60px; position: relative; }
+.client-logos { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; margin-bottom: 80px; position: relative; }
+.client-logos img { max-height: 70px; filter: grayscale(100%); opacity: 0.7; transition: all 0.5s ease; transform: translateY(0); }
+
+.client-logos img:nth-child(odd) { transform: translateY(-10px); }
+.client-logos img:nth-child(even) { transform: translateY(10px); }
+
+.client-logos img:hover { transform: scale(1.2) translateY(0); opacity: 1; filter: grayscale(0%); z-index: 2; }
+.stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.stat { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 35px 30px; border-radius: 25px; box-shadow: 0 15px 40px rgba(255,60,120,0.2); transition: transform 0.5s ease, box-shadow 0.5s ease; min-width: 160px; position: relative; }
+.stat::before { content: ""; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border-radius: 25px; background: linear-gradient(135deg, #ff3c78, #ff7bb3); opacity: 0.08; z-index: -1; }
+.stat:hover { transform: translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(255,60,120,0.3); }
+.stat h3 { font-size: 2.2rem; color: #ff3c78; margin-bottom: 8px; font-weight: 800; }
+.container p { font-size: 1.1rem; color: #555; line-height: 1.7; margin-bottom: 20px; }     
+.trust .stat, .trust .client-logos img { opacity: 0; animation: floatFadeIn 1s ease forwards; }
+
+.trust .stat:nth-child(1), .trust .client-logos img:nth-child(1) { animation-delay: 0.2s; }
+.trust .stat:nth-child(2), .trust .client-logos img:nth-child(2) { animation-delay: 0.4s; }
+.trust .stat:nth-child(3), .trust .client-logos img:nth-child(3) { animation-delay: 0.6s; }
+.trust .client-logos img:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes floatFadeIn { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) { .stats { flex-direction: column; gap: 30px; } .client-logos { gap: 30px; } }
+
+
+/* ===== FAQ SECTION - RESTYLE ===== */
+/* ===== FAQ SECTION ===== */
+.faq { background: #ffffff; color: #333; padding: 100px 15px; text-align: center; position: relative; overflow: hidden; } 
+/* Floating background glow for FAQ */ 
+.faq::before { content: ""; position: absolute; top: -30%; left: -20%; width: 150%; height: 150%; background: radial-gradient(circle at 25% 25%, rgba(255,60,120,0.08), transparent 70%), radial-gradient(circle at 75% 75%, rgba(255,60,120,0.12), transparent 70%); z-index: 0; opacity: 0.6; animation: floatGlowFAQ 12s ease-in-out infinite; } 
+@keyframes floatGlowFAQ { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-15px, 15px) scale(1.05); } } 
+.faq .container { max-width: 720px; margin: 0 auto; position: relative; z-index: 2; } 
+.faq h2 { font-size: 2.5rem; font-weight: 800; color: #ff3c78; margin-bottom: 40px; position: relative; animation: fadeUp 1s ease forwards; } 
+@keyframes fadeUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } } 
+.faq-item { position: relative; margin-bottom: 15px; border-radius: 12px; background: #fff; border-left: 5px solid #ff3c78; box-shadow: 0 8px 20px rgba(0,0,0,0.05); overflow: hidden; transition: all 0.4s ease; animation: floatFAQCard 6s ease-in-out infinite; } 
+@keyframes floatFAQCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } } 
+.faq-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255,60,120,0.15); } 
+.faq-item input { display: none; } 
+.faq-item label { display: block; padding: 18px 20px; cursor: pointer; position: relative; font-weight: 600; } 
+.faq-item label::after { content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: #ff3c78; transition: transform 0.3s ease, content 0.3s ease; } 
+.faq-item input:checked + label::after { content: '-'; transform: translateY(-50%) rotate(180deg); } 
+.faq-item p { max-height: 0; overflow: hidden; padding: 0 20px; font-size: 1rem; line-height: 1.6; color: #555; transition: max-height 0.5s ease, padding 0.5s ease; } 
+.faq-item input:checked ~ p { max-height: 500px; padding: 12px 20px 20px; } 
+/* Media Queries */ 
+@media (max-width: 768px) { .faq { padding: 70px 15px; } .faq h2 { font-size: 2rem; } .faq-item h3 { font-size: 1.1rem; } .faq-item p { font-size: 0.95rem; } } 
+@media (max-width: 480px) { .faq h2 { font-size: 1.8rem; } .faq-item h3 { font-size: 1rem; } .faq-item p { font-size: 0.9rem; } }
+
+
+/* ===== CTA HIGHLIGHT ===== */
+/* ===== CTA HIGHLIGHT ===== */
+/* CTA HIGHLIGHT */
+.cta-highlight { background: #ff3c78; color: #fff; padding: 100px 20px; text-align: center; position: relative; overflow: hidden; border-radius: 15px 15px 0 0; }
+.cta-highlight::before { content: ""; position: absolute; top: -30%; left: -30%; width: 160%; height: 160%; background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%); animation: ctaPulse 8s infinite alternate, ctaMove 20s linear infinite; z-index: 0; border-radius: 50%; }
+@keyframes ctaPulse { 0% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.15); opacity: 0.6; } 100% { transform: scale(1.3); opacity: 0.8; } }
+@keyframes ctaMove { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(20px,20px) scale(1.15); } 100% { transform: translate(0,0) scale(1.3); } }
+.cta-highlight .container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; animation: fadeInUp 1.2s ease forwards; opacity: 0; }
+.cta-highlight h2 { font-size: 2.6rem; font-weight: 800; margin-bottom: 20px; color: #fff; text-shadow: 0 2px 6px rgba(51,51,51,0.3); animation: slideInFromLeft 1s ease forwards; opacity: 0; }
+.cta-highlight p { font-size: 1.1rem; margin-bottom: 40px; line-height: 1.6; color: #fff; animation: fadeIn 1s ease 0.5s forwards; opacity: 0; }
+.cta-highlight .btn-cta { display: inline-block; background: #fff; color: #ff3c78; padding: 14px 35px; border-radius: 30px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.3s ease, transform 0.3s ease; box-shadow: 0 5px 15px rgba(51,51,51,0.15); }
+.cta-highlight .btn-cta:hover { background: #333; color: #fff; box-shadow: 0 8px 20px rgba(51,51,51,0.25); transform: translateY(-5px) scale(1.05); transition: all 0.3s ease, transform 0.3s ease; }
+@media(max-width: 768px) { .cta-highlight { padding: 70px 15px; } .cta-highlight h2 { font-size: 2rem; } .cta-highlight p { font-size: 1rem; } .cta-highlight .btn-cta { padding: 12px 25px; font-size: 0.95rem; } }
+@media(max-width: 480px) { .cta-highlight h2 { font-size: 1.7rem; } .cta-highlight p { font-size: 0.9rem; } .cta-highlight .btn-cta { padding: 10px 20px; font-size: 0.9rem; } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes slideInFromLeft { 0% { opacity: 0; transform: translateX(-50px); } 100% { opacity: 1; transform: translateX(0); } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+
+/* ===== WhatsApp Floating Button (Modern Creative Style) ===== */
+.whatsapp-floating { position: fixed; bottom: 28px; right: 28px; display: flex; align-items: center; gap: 12px; background: rgba(25, 25, 25, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px; padding: 10px 18px 10px 22px; backdrop-filter: blur(10px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); z-index: 1200; font-family: 'Poppins', sans-serif; animation: floatY 4s ease-in-out infinite; transition: all 0.4s ease; }
+.whatsapp-floating:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 35px rgba(37, 211, 102, 0.3); }
+.help-text { color: #fff; font-weight: 600; font-size: 1rem; letter-spacing: 0.4px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+.whatsapp-float-btn { background: linear-gradient(135deg, #25D366, #1EBE5B); border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 0 25px rgba(37, 211, 102, 0.3); transition: all 0.35s ease; overflow: hidden; }
+.whatsapp-float-btn::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, rgba(37, 211, 102, 0.45) 20%, transparent 70%); opacity: 0; animation: pulseGlow 2.6s infinite ease-in-out; }
+.whatsapp-float-btn img { z-index: 2; width: 28px; height: 28px; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)); }
+.whatsapp-float-btn:hover { transform: scale(1.12) rotate(5deg); box-shadow: 0 0 40px rgba(37, 211, 102, 0.45); }
+@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.2; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.3); } }
+@media (prefers-color-scheme: dark) { .whatsapp-floating { background: rgba(15, 15, 15, 0.8); } }
+@media (max-width: 600px) { .help-text { display: none; } .whatsapp-floating { background: transparent; box-shadow: none; padding: 0; animation: none; } }
+
+
+
+/* ===== FOOTER ===== */
+footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
+.footer-container {max-width:1200px; margin:0 auto;}
+.footer-top {display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; margin-bottom:30px;}
+.footer-logo img { height:100px; width:auto; object-fit:contain;}
+.footer-links h4, .footer-contact h4, .footer-social h4 {color:#ff3c78; margin-bottom:10px;}
+.footer-links ul {list-style:none; padding:0;}
+.footer-links ul li {margin-bottom:8px;}
+.footer-links ul li a {color:#fff; text-decoration:none; transition:0.3s;}
+.footer-links ul li a:hover {color:#ff3c78;}
+.footer-contact p, .footer-social a {margin-bottom:8px; color:#fff; text-decoration:none; }
+.footer-social a {display:inline-block; margin-right:10px; font-size:18px; transition:0.3s; color:#ffffff;}
+.footer-social a:hover {color:#ff3c78;}
+.footer-bottom {border-top:1px solid #333; padding-top:20px; text-align:center; font-size:14px; color:#aaa;}
+
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .desktop-nav {display:none;}
+  .menu-toggle {display:block;}
+  .hero h1 {font-size:2rem;}
+  .hero p {font-size:1rem;}
+  .service-cards {flex-direction:column; align-items:center;}
+  .testimonial-cards {flex-direction:column; align-items:center;}
+  .footer-top {flex-direction:column; text-align:center; gap:20px;}
+  .footer-social a {margin-right:15px;}
+  .footer-logo img {    margin-left: 47px;}
+}
+
+/* ===== SHOW MOBILE NAV ===== */
+.mobile-nav.show {display:block;}
+
+/* ==========================
+   Global Scroll Reveal Animation
+   ========================== */
+.pop-up {opacity: 0;  transform: translateY(20px);  transition: all 0.8s ease-out;}
+
+.pop-up.revealed {opacity: 1;  transform: translateY(0);}
+
+/* Optional: stagger delay for multiple elements in a section */
+.pop-up:nth-of-type(1) { transition-delay: 0.15s; }
+.pop-up:nth-of-type(2) { transition-delay: 0.3s; }
+.pop-up:nth-of-type(3) { transition-delay: 0.45s; }
+.pop-up:nth-of-type(4) { transition-delay: 0.6s; }
+</style>
+
+
+<header>
+  <div class="header-container">
+    <!-- LOGO LEFT -->
+    <div class="logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="Logo" class="logo-img"></a>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="graphic-design.html">Graphic Design</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </nav>
+
+    <!-- HAMBURGER RIGHT -->
+    <div class="menu-toggle" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+
+<!-- MOBILE MENU -->
+<nav class="mobile-nav" id="mobileMenu">
+  <div class="mobile-header">
+    <!-- LOGO ON TOP -->
+    <div class="mobile-logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="Logo" class="logo-img"></a>
+    </div>
+    <span class="close-btn" id="closeMenu">&times;</span>
+  </div>
+
+  <ul>
+    <!-- SERVICES WITH ICONS -->
+    <li>
+      <a href="web-design.html">
+        <i class="fa fa-laptop-code" aria-hidden="true"></i> Web Design
+      </a>
+    </li>
+    <li>
+      <a href="graphic-design.html">
+        <i class="fa fa-paint-brush" aria-hidden="true"></i> Graphic Design
+      </a>
+    </li>
+
+    <!-- THIN SEPARATOR -->
+    <li class="menu-separator"></li>
+
+    <!-- OTHER PAGES -->
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+  </ul>
+</nav>
+</header>
+
+<!-- HERO SECTION -->
+<!-- HERO SECTION -->
+<section class="hero-pro" role="banner" aria-label="Professional Web Design Services in Limpopo & South Africa">
+  <!-- Background Image -->
+  <div class="hero-bg"></div>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <!-- H1: keyword + location rich -->
+    <h1>Professional <span class="highlight">Web Design Services</span> in Limpopo & South Africa</h1>
+    
+    <!-- Subtitle with secondary keywords and audiences -->
+    <p class="hero-subtitle">
+      ARIDESIGN delivers <strong>responsive, fast, and visually stunning websites</strong> for <strong>startups, small businesses, portfolios, and churches</strong> across <strong>Limpopo and South Africa</strong>. Build your online presence and grow your brand today.
+    </p>
+
+    <!-- CTA Buttons with titles for SEO & accessibility -->
+    <div class="hero-cta">
+      <a href="quote.html" class="btn-primary" title="Request a free web design quote from ARIDESIGN">Get a Free Web Quote</a>
+      <a href="portfolio.html" class="btn-secondary" title="View ARIDESIGN portfolio of web design projects">View Our Work</a>
+    </div>
+
+    <!-- Optional hidden image for search engines (helps with image SEO) -->
+    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1170" 
+         alt="Professional web design services for startups, businesses, and churches in Limpopo and South Africa" 
+         style="display:none;">
+  </div>
+</section>
+
+
+<!-- KEY BENEFITS / WHY CHOOSE US >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="key-benefits" aria-label="Why Choose ARIDESIGN for Web Design in Limpopo & South Africa">
+  <div class="container">
+    <h2>Why Choose ARIDESIGN for Professional Web Design in Limpopo & South Africa?</h2>
+    <p class="sub-text">
+      ARIDESIGN delivers expert <strong>web design and graphic design services</strong> for <strong>startups, small businesses, portfolios, and churches</strong> in <strong>Limpopo</strong> and across <strong>South Africa</strong>. Our websites are responsive, fast, SEO-ready, and designed to grow your online presence.
+    </p>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive & Mobile-Friendly Design</h3>
+        <p>Websites optimized for <strong>all devices</strong> — mobile, tablet, and desktop — to ensure a smooth user experience and better search rankings in Limpopo & South Africa.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-rocket"></i>
+        <h3>Fast, SEO-Optimized Websites</h3>
+        <p>Clean, optimized code with <strong>SEO best practices</strong> so your website can rank higher for <strong>web design services in Limpopo and South Africa</strong>.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Brand-Focused Web Design</h3>
+        <p>Every website is custom-built to reflect your brand identity, audience needs, and business goals.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-users"></i>
+        <h3>Support & Guidance for Startups and Businesses</h3>
+        <p>We help <strong>startups, small businesses, and churches</strong> establish a professional online presence quickly and effectively.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES + ICONS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="services" aria-label="Web Design Services in Limpopo & South Africa">
+  <div class="container">
+    <h2>Our Professional Web Design Services</h2>
+    <p class="sub-text">
+      ARIDESIGN offers <strong>responsive, static websites</strong> for <strong>startups, small businesses, portfolios, and churches</strong> in <strong>Limpopo</strong> and <strong>South Africa</strong>. Build a professional online presence that drives growth and credibility.
+    </p>
+    <div class="services-grid">
+      <div class="service-item">
+        <i class="fas fa-code"></i>
+        <h3>Responsive Business Websites</h3>
+        <p>Professional, mobile-friendly, and <strong>SEO-ready business websites</strong> designed for startups and small businesses in <strong>Limpopo & South Africa</strong>.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Portfolio & Personal Websites</h3>
+        <p>Showcase your work or personal brand with a <strong>custom, visually stunning portfolio website</strong> that ranks in search engines.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-columns"></i>
+        <h3>Landing Pages & Campaign Websites</h3>
+        <p>High-converting <strong>landing pages</strong> and campaign websites to boost leads, sales, and online visibility in <strong>Limpopo and South Africa</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PACKAGES + FEATURES + CTA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="packages" aria-label="Web Design Packages for Limpopo & South Africa">
+  <div class="container">
+    <h2>ARIDESIGN Web Design Packages</h2>
+    <p class="sub-text">
+      Choose the perfect <strong>web design package</strong> for your <strong>business, startup, portfolio, or church website</strong> in <strong>Limpopo & South Africa</strong>.
+    </p>
+    <div class="package-grid">
+      <article class="package">
+        <h3>Starter Website Package</h3>
+        <p class="price">From R1,599</p>
+        <ul>
+          <li>3-page <strong>responsive website</strong></li>
+          <li><strong>Professional</strong> design based on your branding (colors & logo)</li>
+          <li>Contact form & Google Maps integration</li>
+          <li>Mobile-friendly, <strong>fast</strong>-loading layout optimized for <strong>SEO</strong></li>
+          <li><strong>1</strong> round of revisions</li>
+        </ul>
+        <a href="quote.html?package=starter" class="btn" title="Choose Starter Web Design Package from ARIDESIGN">Choose Starter</a>
+      </article>
+
+      <article class="package popular">
+        <div class="badge">⭐ Most Popular</div>
+        <h3>Standard Website Package</h3>
+        <p class="price">From R3,199</p>
+        <ul>
+          <li>Up to 7-page <strong>responsive website</strong> for businesses, startups, or churches</li>
+          <li><strong> Fast</strong> -loading & mobile-optimized layout</li>
+          <li>Contact & enquiry forms  for <strong>leads</strong></li>
+          <li>Basic on-page SEO for better <strong>visibility</strong></li>
+          <li><strong>Free</strong> domain (.co.za) & 3-month <strong>free </strong> web hosting</li>
+          <li><strong>2</strong> rounds of revisions</li>
+        </ul>
+        <a href="quote.html?package=standard" class="btn" title="Choose Standard Web Design Package from ARIDESIGN">Choose Standard</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS / SOCIAL PROOF >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="testimonials" aria-label="Client testimonials for ARIDESIGN Web Design Services in Limpopo & South Africa">
+  <div class="container">
+    <div class="top-stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+    <h2>What Clients Say About ARIDESIGN</h2>
+    <p class="testimonial-intro">
+      We take pride in creating <strong>beautiful, professional, and responsive websites</strong> that help our clients grow their online presence across <strong>Limpopo</strong> and <strong>South Africa</strong>.
+    </p>
+
+    <div class="testimonial-slider">
+      <div class="slides">
+        <div class="testimonial">
+          <p>“ARIDESIGN created a professional website for our church. Fast, reliable, and creative!”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Pastor John, Polokwane, Limpopo</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“Our startup’s portfolio site looks amazing. Visitors love it!”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ <span class="empty">★</span></div>
+          <h4>Thabo M., Pretoria, Gauteng</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“Professional service, great communication, and an outstanding website for our small business.”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Lindiwe, Polokwane, Limpopo</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“Very impressed! ARIDESIGN gave us a clean, fast, and mobile-friendly website.”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Sarah T., Giyani, Limpopo</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“Creative and professional from start to finish — highly recommended!”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Michael K., Tzaneen, Limpopo</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“They helped me grow my business online with a modern responsive site.”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Nomsa D., Polokwane, Limpopo</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>“Outstanding design work — my new portfolio looks world-class.”</p>
+          <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+          <h4>Andries M., Makhado, Limpopo</h4>
+        </div>
+      </div>
+
+      <div class="dots"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST / CLIENT LOGOS / STATS - CREATIVE VERSION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="trust" aria-label="ARIDESIGN Web Design Clients and Stats in Limpopo & South Africa">
+  <div class="container">
+    <h2>Trusted by Local Businesses, Startups, and Churches</h2>
+    <p>ARIDESIGN has built <strong>professional, responsive websites</strong> for clients across <strong>Limpopo</strong> and <strong>South Africa</strong>, delivering high-quality web design for startups, small businesses, and churches.</p>
+
+    <div class="client-logos" aria-label="Client logos of ARIDESIGN Web Design services">
+      <img src="images/dhm-logo.png" alt="Deliverance Healing Ministries Website by ARIDESIGN">
+      <img src="images/spa-logo1.png" alt="Spa Website by ARIDESIGN">
+      <img src="images/e-commerce-logo1.png" alt="E-commerce Website by ARIDESIGN">
+      <img src="images/barber.png" alt="Barber Shop Website by ARIDESIGN">
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <h3>30+</h3>
+        <p>Websites Built</p>
+      </div>
+      <div class="stat">
+        <h3>100%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="stat">
+        <h3>8+</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+<!-- FAQ SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="faq" aria-label="Frequently Asked Questions about ARIDESIGN Web Design in Limpopo & South Africa">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq1">
+      <label for="faq1"><h3>Do you offer hosting and domain registration?</h3></label>
+      <p>Yes! All ARIDESIGN web design packages include domain registration and 1-year hosting if needed, making it easy for startups, small businesses, and churches in Limpopo and South Africa to get online.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq2">
+      <label for="faq2"><h3>Can you create websites for churches and startups?</h3></label>
+      <p>Absolutely! We specialize in building responsive, professional websites for small businesses, churches, and startups in Limpopo and across South Africa.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3">
+      <label for="faq3"><h3>How long does a website take to complete?</h3></label>
+      <p>Depending on your selected package, a typical website project is completed within 2-4 weeks, ensuring quality design and SEO-ready structure.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4">
+      <label for="faq4"><h3>Do you provide SEO optimization?</h3></label>
+      <p>Yes! All websites are built with <strong>basic on-page SEO</strong>, including meta tags, responsive design, and keyword-friendly content for better visibility on Google across Limpopo and South Africa.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq5">
+      <label for="faq5"><h3>Can you update my existing website?</h3></label>
+      <p>Absolutely! ARIDESIGN offers website updates, redesigns, and maintenance services to keep your site modern, fast, and optimized for search engines.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA HIGHLIGHT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="cta-highlight" aria-label="Call to Action for Web Design Quote">
+  <div class="container">
+    <h2>Ready to Build Your Professional Website?</h2>
+    <p>Contact <strong>ARIDESIGN</strong> today to get a <strong>free quote</strong> on responsive, SEO-friendly web design services for small businesses, startups, portfolios, and churches in <strong>Limpopo & South Africa</strong>.</p>
+    <a href="quote.html" class="btn btn-cta" aria-label="Request a free web design quote from ARIDESIGN">Request a Free Quote</a>
+  </div>
+</section>
+
+
+
+<!-- Need Help + WhatsApp Floating Button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<div class="whatsapp-floating">
+  <span class="help-text">💬 Need help?</span>
+  <a href="https://wa.me/27684757321?text=Hi%20there!%20I'm%20interested%20in%20your%20services."
+     class="whatsapp-float-btn"
+     target="_blank"
+     aria-label="Chat with us on WhatsApp"
+     title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp"
+         loading="lazy"
+         width="30"
+         height="30">
+  </a>
+</div>
+
+
+<!-- FOOTER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<footer>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-logo"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:infoaridesignza@gmail.com">infoaridesignza@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/27684757321" target="_blank">+27 68 475 7321</a></p>
+        <p>South Africa</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://web.facebook.com/Magicshootstudios/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JS FOR MOBILE MENU >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active"); // <-- toggles open/close
+});
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("active"); // close when clicking X
+});
+
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});
+
+
+
+<!-- JS FOR TESTIMONIALS SLIDE -->
+const slides = document.querySelector(".slides");
+const testimonials = document.querySelectorAll(".testimonial");
+const dotsContainer = document.querySelector(".dots");
+
+let currentIndex = 0;
+
+// Create navigation dots
+testimonials.forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (index === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => showSlide(index));
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  currentIndex = index;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+}
+
+// Auto slide every 6 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showSlide(currentIndex);
+}, 3000);
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // select all headings, paragraphs, buttons, spans inside sections
+  const elements = document.querySelectorAll(
+    "section h1, section h2, section h3, section p, section a, section span"
+  );
+
+  // add pop-up class to all selected elements
+  elements.forEach(el => el.classList.add('pop-up'));
+
+  // function to reveal elements in viewport
+  function reveal() {
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (top < windowHeight - 50) {
+        el.classList.add('revealed');
+      }
+    });
+  }
+
+  // trigger on scroll and on page load
+  window.addEventListener('scroll', reveal);
+  reveal();
+});
+</script>
+</body>
+</html>

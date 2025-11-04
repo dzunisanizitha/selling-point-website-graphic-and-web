@@ -64,75 +64,123 @@
 <!-- INLINE CSS -->
 <style>
 /* ===== GLOBAL ===== */
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif;}
+html, body {
+  overflow-x: hidden;
+}
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
 body {line-height:1.6; color:#333; background:#f9f9f9;}
 a {text-decoration:none; color:inherit;}
 .container {width:90%; max-width:1200px; margin:0 auto; padding:40px 0;}
 
-/* ===== HEADER / NAV ===== */
-header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;}
-.header-container {display:flex; align-items:center; justify-content:space-between; padding:10px 0;}
-.logo-img {height:120px;}
-.desktop-nav ul {list-style:none; display:flex; gap:20px;}
-.desktop-nav ul li a {padding:8px 12px; transition:0.3s; color:#333; font-weight: 550;}
-.desktop-nav ul li a:hover, .btn-quote {background:#ff3c78; color:#fff; border-radius:5px; padding:8px 15px;}
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+/* GLOBAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f9f9f9; color: #333; }
 
-.menu-toggle {display:none; cursor:pointer;}
-.menu-toggle div {width:25px; height:3px; background:#333; margin:5px 0; transition:0.4s;}
-.mobile-nav {display:none; position:absolute; top:60px; right:0; width:250px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); padding:20px;}
-.mobile-nav ul {list-style:none; display:flex; flex-direction:column; gap:15px;}
-.mobile-nav ul li a {padding:8px 12px; display:block; color:#333; border-radius:5px;}
-.mobile-nav ul li a:hover, .mobile-nav .btn-quote {background:#ff3c78; color:#fff;}
-.mobile-nav.show { display: block;}
+/* HEADER */
+header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.15); }
 
-/* ===== HERO ===== */
-.hero {position:relative; text-align:center; color:#fff; padding:40px 20px; background:#000;}
-.hero-bg {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.3; z-index:0;}
-.hero-content {position:relative; z-index:1; max-width:700px; margin:0 auto;}
-.hero h1 {font-size:2.4rem; margin-bottom:20px; color:#ff3c78;}
-.hero p {font-size:1.1rem; margin-bottom:25px; color:#fff;}
+/* HEADER CONTAINER */
+.header-container { width: 90%; max-width: 1200px; margin: 0 auto; height: 70px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+
+/* LOGO */
+.logo-img { height: 120px; display: block; }
+
+/* DESKTOP NAV */
+.desktop-nav ul { display: flex; align-items: center; list-style: none; gap: 25px; }
+.desktop-nav ul li a { color: #333; font-weight: 600; padding: 8px 12px; transition: 0.3s; }
+.desktop-nav ul li a:hover { color: #ff3c78; }
+
+/* DROPDOWN MENU */
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; list-style: none; padding: 10px 0; border-radius: 5px; min-width: 180px; }
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li a { display: block; padding: 10px 18px; color: #333; }
+.dropdown-menu li a:hover { background: #333; color: #fff; }
+
+/* GET A QUOTE BUTTON */
+.btn-quote { background: #ff3c78; color: #fff !important; padding: 8px 20px; border-radius: 25px; font-weight: 600; transition: 0.3s ease; }
+.btn-quote:hover { background: #fff; color: #333 !important; }
+
+/* Dropdown parent */
+.desktop-nav ul li.dropdown { position: relative; }
+.desktop-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; list-style: none; padding: 10px 0; border-radius: 5px; min-width: 180px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+
+/* PROFESSIONAL HAMBURGER */
+.menu-toggle { display: none; flex-direction: column; align-items: center; cursor: pointer; width: 30px; height: auto; z-index: 10001; margin-top: 0; }
+.menu-toggle span { display: block; width: 100%; height: 3px; background-color: #333 !important; border-radius: 2px; margin: 3px 0; transition: all 0.3s ease; }
+
+/* MOBILE NAV */
+.mobile-nav { position: fixed; top: 0; left: -270px; width: 270px; height: 100%; background: #fff; color: #333; transition: left 0.4s ease; padding: 20px; display: flex; flex-direction: column; z-index: 9998; }
+.mobile-nav.active { left: 0; }
+
+/* MOBILE LOGO */
+.mobile-logo { text-align: center; margin-bottom: 30px; }
+.mobile-logo .logo-img { max-width: 150px; height: 120px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; margin-left: -25px; }
+
+/* CLOSE BUTTON */
+.close-btn { font-size: 30px; color: #333; cursor: pointer; position: absolute; top: 15px; right: 15px; }
+
+/* MENU ITEMS */
+.mobile-nav ul { list-style: none; padding: 0; }
+.mobile-nav ul li { margin-bottom: 20px; }
+.mobile-nav ul li a { color: #333; font-size: 16px; font-weight: 600; }
+.mobile-nav ul li a:hover { color: #ff3c78; }
+.mobile-nav ul li a i { margin-right: 10px; color: #ff3c78; width: 20px; text-align: center; }
+
+/* THIN SEPARATOR LINE */
+.menu-separator { height: 1px; background-color: #ddd; margin: 15px 0; list-style: none; pointer-events: none; }
+
+/* RESPONSIVE */
+/* ===== BLOG HERO ===== */
+.blog-hero { position: relative; text-align: center; padding: 120px 20px; overflow: hidden; color: #fff; }
+.blog-hero-bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.blog-hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(36,16,22,0.8); z-index: 2; }
+.blog-hero-content { position: relative; z-index: 3; max-width: 700px; margin: 0 auto; }
+.blog-hero h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 20px; background: linear-gradient(90deg, #ff3c78, #e6326a, #ffc400); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+.blog-hero p { font-size: 1.2rem; line-height: 1.7; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+@media (max-width: 768px) { .blog-hero { padding: 80px 15px; } .blog-hero h1 { font-size: 2rem; } .blog-hero p { font-size: 1rem; } }
+
 
 /* ===== BLOG CONTAINER ===== */
-.blog-container{max-width:850px;margin:40px auto;padding:0 20px;font-family:'Montserrat',sans-serif;line-height:1.6;color:#333;}
-.blog-container h1{color:#e91e63;text-align:center;margin-bottom:20px;font-size:2.3rem;}
-.blog-container h2{color:#e91e63;text-align:left;}
-.blog-container p.intro{text-align:center;font-size:1.1rem;max-width:700px;margin:0 auto 20px auto;}
-.blog-container img{width:90%;max-width:800px;display:block;margin:20px auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
-details{margin-top:10px;}
-details[open] .blog-content{animation:fadeIn 0.4s ease-in-out;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
-summary.read-more-btn{color:#e91e63;cursor:pointer;font-weight:bold;text-decoration:underline;margin-top:15px;display:inline-block;transition:0.3s;list-style:none;}
-summary.read-more-btn:hover{opacity:0.7;}
-summary.read-more-btn::marker{display:none;}
-.cta{text-align:center;margin:50px 0;}
-.cta a{background-color:#e91e63;color:white;text-decoration:none;padding:18px 28px;border-radius:8px;font-weight:600;display:inline-block;transition:0.3s;}
-.cta a:hover{background:#790231;}
-@media(max-width:768px){.blog-container h1{font-size:2rem;}.blog-container img{width:100%;max-width:100%;}}
-
-/* ===== BLOG SECTION DECORATIVE SHAPES ===== */
-.blog-container {position:relative; background:#fff; padding:80px 20px; overflow:hidden; z-index:1;}
-.blog-container::before {content:""; position:absolute; top:-60px; left:-60px; width:220px; height:220px; background:#ff3c78; border-radius:50%; opacity:0.12; animation:floatShape 9s ease-in-out infinite alternate; z-index:0;}
-.blog-container::after {content:""; position:absolute; bottom:-60px; right:-60px; width:170px; height:170px; background:#ff3c78; border-radius:50%; opacity:0.12; animation:floatShape 10s ease-in-out infinite alternate-reverse; z-index:0;}
-.blog-container article, .blog-container h1, .blog-container p, .blog-container img, .blog-container details {position:relative; z-index:2;}
-@keyframes floatShape {0%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(15px) rotate(10deg);}100%{transform:translateY(0) rotate(-10deg);}}
+/* ===== BLOG CONTAINER ===== */
+.blog-container { max-width: 900px; margin: 50px auto; padding: 20px; font-family: 'Poppins', sans-serif; }
+.blog-container article { background: #fff; border-radius: 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); margin-bottom: 40px; overflow: hidden; transition: all 0.4s ease; }
+.blog-container article:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+.blog-container h1 { font-size: 1.7rem; color: #ff3c78; font-weight: 800; text-align: center; margin: 25px 20px 15px; }
+.blog-container .intro { color: #444; font-size: 1rem; line-height: 1.7; text-align: center; padding: 0 20px 15px; }
+.blog-container img { width: 100%; height: auto; display: block; border-radius: 0; margin-bottom: 10px; }
+details { border-top: 1px solid #eee; padding: 0 20px 25px; position: relative; }
+summary.read-more-btn { cursor: pointer; font-weight: 700; text-transform: uppercase; color: #ff3c78; font-size: 0.95rem; text-align: center; background: #fff; border: 2px solid #ff3c78; border-radius: 25px; padding: 10px 25px; margin: 15px auto; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255,60,120,0.25); }
+summary.read-more-btn:hover { background: #ff3c78; color: #fff; transform: translateY(-3px); box-shadow: 0 6px 18px rgba(255,60,120,0.4); }
+details[open] summary.read-more-btn { background: #333; color: #fff; border-color: #333; }
+.blog-content { margin-top: 20px; animation: fadeIn 0.5s ease; }
+.blog-content h2 { font-size: 1.3rem; font-weight: 700; color: #ff3c78; margin-top: 20px; }
+.blog-content p, .blog-content ul { font-size: 1rem; line-height: 1.7; color: #444; margin-top: 10px; }
+.blog-content ul { list-style: disc; margin-left: 25px; }
+.blog-content .cta { margin-top: 30px; text-align: center; }
+.blog-content .btn-cta { background: #ff3c78; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(255,60,120,0.4); }
+.blog-content .btn-cta:hover { background: #333; transform: translateY(-3px); }
+@keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+@media (max-width: 768px) { .blog-container { padding: 10px; } .blog-container h1 { font-size: 1.4rem; } .intro { font-size: 0.95rem; } }
 
 
+/* ===== WhatsApp Floating Button (Modern Creative Style) ===== */
+.whatsapp-floating { position: fixed; bottom: 28px; right: 28px; display: flex; align-items: center; gap: 12px; background: rgba(25, 25, 25, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px; padding: 10px 18px 10px 22px; backdrop-filter: blur(10px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); z-index: 1200; font-family: 'Poppins', sans-serif; animation: floatY 4s ease-in-out infinite; transition: all 0.4s ease; }
+.whatsapp-floating:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 35px rgba(37, 211, 102, 0.3); }
+.help-text { color: #fff; font-weight: 600; font-size: 1rem; letter-spacing: 0.4px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+.whatsapp-float-btn { background: linear-gradient(135deg, #25D366, #1EBE5B); border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 0 25px rgba(37, 211, 102, 0.3); transition: all 0.35s ease; overflow: hidden; }
+.whatsapp-float-btn::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, rgba(37, 211, 102, 0.45) 20%, transparent 70%); opacity: 0; animation: pulseGlow 2.6s infinite ease-in-out; }
+.whatsapp-float-btn img { z-index: 2; width: 28px; height: 28px; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)); }
+.whatsapp-float-btn:hover { transform: scale(1.12) rotate(5deg); box-shadow: 0 0 40px rgba(37, 211, 102, 0.45); }
+@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.2; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.3); } }
+@media (prefers-color-scheme: dark) { .whatsapp-floating { background: rgba(15, 15, 15, 0.8); } }
+@media (max-width: 600px) { .help-text { display: none; } .whatsapp-floating { background: transparent; box-shadow: none; padding: 0; animation: none; } }
 
-.whatsapp-button {
-    position: fixed;bottom: 20px;right: 20px;background-color: #25D366;color: white;display: flex;align-items: center;padding: 10px 15px;border-radius: 50px;text-decoration: none;font-family: Arial, sans-serif;font-weight: bold;box-shadow: 0 4px 6px rgba(0,0,0,0.2);transition: transform 0.2s, box-shadow 0.2s;z-index: 9999;
-}
 
-.whatsapp-button img {
-    width: 24px;height: 24px;margin-right: 10px;
-}
-
-.whatsapp-button span {
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
 
 /* ===== FOOTER ===== */
 footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-serif;}
@@ -173,71 +221,183 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 @keyframes fadeInOut { 0%, 100% { opacity: 0; transform: translateY(10px); } 20%, 80% { opacity: 1; transform: translateY(0); } }
 
 
+/* ==========================
+   Global Scroll Reveal Animation
+   ========================== */
+.pop-up {opacity: 0;  transform: translateY(20px);  transition: all 0.8s ease-out;}
+
+.pop-up.revealed {opacity: 1;  transform: translateY(0);}
+
+/* Optional: stagger delay for multiple elements in a section */
+.pop-up:nth-of-type(1) { transition-delay: 0.15s; }
+.pop-up:nth-of-type(2) { transition-delay: 0.3s; }
+.pop-up:nth-of-type(3) { transition-delay: 0.45s; }
+.pop-up:nth-of-type(4) { transition-delay: 0.6s; }
+
+
 </style>
 </head>
 <body>
 
-<!-- HEADER / NAV -->
+<!-- HEADER / NAV >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <header>
-  <div class="container header-container">
+  <div class="header-container">
+    <!-- LOGO LEFT -->
     <div class="logo">
-      <a href="index.html"><img src="images/MY LOGO.png" alt="ARIDESIGN Logo" class="logo-img"></a>
+      <a href="index.html"><img src="images/MY LOGO.png" alt="Logo" class="logo-img"></a>
     </div>
-    <!-- Desktop Nav -->
+
+    <!-- DESKTOP NAV -->
     <nav class="desktop-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="testimony.html">Testimonials</a></li>
+        <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="graphic-design.html">Graphic Design</a></li>
+          </ul>
+        </li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
       </ul>
     </nav>
-    <!-- Hamburger -->
+
+    <!-- HAMBURGER RIGHT -->
     <div class="menu-toggle" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <!-- Mobile Nav -->
-    <nav class="mobile-nav" id="mobileMenu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="testimony.html">Testimonials</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="https://images.unsplash.com/photo-1516414447565-b14be0adf13e?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-       alt="Creative Graphic and Web Design Blog by ARIDESIGN South Africa" 
-       class="hero-bg" 
-       loading="lazy">
-       
-  <div class="hero-content">
-    <h1>Creative Insights & Design Inspiration</h1>
-    <p>
-      Explore expert tips, design trends, and creative strategies from 
-      <strong>ARIDESIGN</strong> — your South African partner in 
-      <strong>graphic design</strong>, <strong>branding</strong>, and 
-      <strong>web design</strong>. 
-      Stay inspired and grow your brand with our latest articles.
-    </p>
+<!-- MOBILE MENU -->
+<!-- MOBILE MENU -->
+<nav class="mobile-nav" id="mobileMenu">
+  <div class="mobile-header">
+    <!-- LOGO ON TOP -->
+    <div class="mobile-logo">
+      <a href="index.html"><img src="images/MY LOGO.png" alt="Logo" class="logo-img"></a>
+    </div>
+    <span class="close-btn" id="closeMenu">&times;</span>
+  </div>
+
+  <ul>
+    <!-- SERVICES WITH ICONS -->
+    <li>
+      <a href="web-design.html">
+        <i class="fa fa-laptop-code" aria-hidden="true"></i> Web Design
+      </a>
+    </li>
+    <li>
+      <a href="graphic-design.html">
+        <i class="fa fa-paint-brush" aria-hidden="true"></i> Graphic Design
+      </a>
+    </li>
+
+    <!-- THIN SEPARATOR -->
+    <li class="menu-separator"></li>
+
+    <!-- OTHER PAGES -->
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
+  </ul>
+</nav>
+</header>
+
+
+<!-- BLOG HERO SECTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<section class="blog-hero">
+  <img src="images/image-coding.webp" alt="ARIDESIGN Blog" class="blog-hero-bg-img" loading="lazy">
+
+  <div class="blog-hero-overlay"></div>
+
+  <div class="blog-hero-content">
+    <h1>Insights & Tips on Web & Graphic Design</h1>
+    <p>Explore articles, guides, and tutorials on creating stunning websites and graphics that help small businesses, startups, and churches grow online.</p>
   </div>
 </section>
 
-<!-- BLOG GRID -->
 
-<!-- ===== BLOG 3 ===== -->
+<section class="blog-container">
+  <article>
+    <h1>Why Professional Graphic Design is Essential for Small Businesses in Limpopo and South Africa</h1>
+
+    <p class="intro">
+      Graphic design is more than just aesthetics — it’s a powerful tool that communicates your brand’s story, builds credibility, and helps your business stand out online and offline. For startups, small businesses, and churches in <strong>Limpopo</strong> and across <strong>South Africa</strong>, investing in professional graphic design can be the difference between blending in and becoming unforgettable.
+    </p>
+
+    <img src="images/graphic design banner.webp" 
+         alt="Professional graphic design for small businesses in Limpopo and South Africa" 
+         loading="lazy">
+
+    <details>
+      <summary class="read-more-btn">Read More</summary>
+      <div class="blog-content">
+
+        <h2>1. Understanding Graphic Design and Its Role in Branding</h2>
+        <p>
+          Graphic design encompasses everything from logos and typography to marketing materials and website visuals. At its core, it is about **communicating your brand identity visually**. For small businesses and startups, a strong brand presence can instantly build trust with potential clients. Every color, font, and layout choice should convey your business values and personality.
+        </p>
+
+        <h2>2. Logo Design: Your First Impression Matters</h2>
+        <p>
+          A professional logo is often the first touchpoint for your audience. A well-crafted logo tells your story, communicates credibility, and sets the tone for your brand identity. Whether you run a startup, church, or small business in South Africa, a memorable logo ensures your business is instantly recognizable across platforms.
+        </p>
+
+        <h2>3. Marketing Graphics That Convert</h2>
+        <p>
+          From social media posts to flyers, banners, and email campaigns, **marketing graphics** play a key role in attracting clients. Professionally designed visuals not only capture attention but also guide your audience through your message. Consistent and visually appealing graphics improve engagement, increase conversions, and strengthen your brand image.
+        </p>
+
+        <h2>4. Visual Identity Across Web and Print</h2>
+        <p>
+          Graphic design is not limited to physical media. Your **website design** must align with your brand colors, typography, and style. A cohesive visual identity ensures that your audience recognizes your brand, whether they see your logo on social media, your website, or a printed brochure. For small businesses in Limpopo, this consistency is crucial for building long-term trust.
+        </p>
+
+        <h2>5. Branding for Startups and Churches</h2>
+        <p>
+          Startups and churches often face unique challenges when it comes to branding. Startups need **fresh, modern designs** that convey innovation and professionalism, while churches require **welcoming and approachable visuals** that reflect their community values. Professional graphic design helps both sectors communicate effectively, attract the right audience, and make a lasting impression.
+        </p>
+
+        <h2>6. Cost-Effective Design Solutions</h2>
+        <p>
+          Investing in professional graphic design doesn’t have to break the bank. Freelance designers or local agencies can create high-quality visual assets tailored to your budget. Small businesses in South Africa can benefit from **affordable branding solutions**, ensuring that design supports growth without unnecessary expenses.
+        </p>
+
+        <h2>7. Local SEO and Graphic Design</h2>
+        <p>
+          Did you know that good design also impacts your online visibility? Clean, professional graphics improve user experience on your website, reducing bounce rates and increasing engagement — two factors that search engines consider for ranking. Keywords like <em>“graphic design Limpopo”</em>, <em>“small business branding South Africa”</em>, and <em>“logo design for startups”</em> can naturally appear in your website content alongside high-quality visuals for maximum impact.
+        </p>
+
+        <h2>8. Tips for Choosing the Right Graphic Designer</h2>
+        <ul>
+          <li>Look for designers experienced in your industry and region.</li>
+          <li>Review their portfolio to see versatility and quality.</li>
+          <li>Check their understanding of brand strategy and storytelling.</li>
+          <li>Ensure they can deliver consistent design for web and print.</li>
+        </ul>
+
+        <h2>Conclusion: Elevate Your Brand with Professional Design</h2>
+        <p>
+          Investing in professional graphic design is one of the smartest moves for startups, small businesses, and churches in Limpopo and across South Africa. It strengthens your brand, communicates professionalism, and helps you stand out in a competitive market. At <strong>ARIDESIGN</strong>, we specialize in creating visual identities and marketing graphics that grow with your business — helping you make a lasting impression both online and offline.
+        </p>
+
+        <div class="cta">
+          <a href="quote.html" class="btn-cta">
+            Get Professional Graphic Design for Your Business Today
+          </a>
+        </div>
+
+      </div>
+    </details>
+  </article>
+</section>
+
+
+<!-- ===== BLOG 3 ===== >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <section class="blog-container">
   <article>
     <h1>How Great Graphic Design Elevates Your Static Website and Brand</h1>
@@ -293,7 +453,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </article>
 </section>
 <!-- ===== BLOG 1 Done>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ===== -->
-
 
 <!-- ===== BLOG 1 (Optimized) ===== -->
 <section class="blog-container">
@@ -419,12 +578,21 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- ===== BLOG 3  DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ===== -->
 
 
-  <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/27684757321" class="whatsapp-button" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
-  <span>Chat with us</span>
-</a>
-
+<!-- Need Help + WhatsApp Floating Button -->
+<div class="whatsapp-floating">
+  <span class="help-text">💬 Need help?</span>
+  <a href="https://wa.me/27684757321?text=Hi%20there!%20I'm%20interested%20in%20your%20services."
+     class="whatsapp-float-btn"
+     target="_blank"
+     aria-label="Chat with us on WhatsApp"
+     title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp"
+         loading="lazy"
+         width="30"
+         height="30">
+  </a>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -436,13 +604,12 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio-websites">Portfolio</a></li>
-          <li><a href="testimony.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="graphic-design.html">Graphic Design</a></li>
+          <li><a href="about.html">About</a></li>
+                 <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-contact">
@@ -462,12 +629,25 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </footer>
 
-<!-- JS -->
+
+<!-- JS FOR MOBILE MENU .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 <script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('show');
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active"); // <-- toggles open/close
+});
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("active"); // close when clicking X
+});
+
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
 });
 
     function toggleBlog(){
@@ -477,6 +657,36 @@ hamburger.addEventListener('click', () => {
       btn.textContent = content.classList.contains('open') ? 'Read Less' : 'Read More';
     }
   </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // select all headings, paragraphs, buttons, spans inside sections
+  const elements = document.querySelectorAll(
+    "section h1, section h2, section h3, section p, section a, section span"
+  );
+
+  // add pop-up class to all selected elements
+  elements.forEach(el => el.classList.add('pop-up'));
+
+  // function to reveal elements in viewport
+  function reveal() {
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (top < windowHeight - 50) {
+        el.classList.add('revealed');
+      }
+    });
+  }
+
+  // trigger on scroll and on page load
+  window.addEventListener('scroll', reveal);
+  reveal();
+});
+</script>
+
 
 </body>
 </html>
