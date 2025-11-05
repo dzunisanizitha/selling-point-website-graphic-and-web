@@ -213,7 +213,26 @@ a {
 @media (max-width:1024px) { .section-title { font-size:2.4rem; } .service-box { padding:35px 20px; } }
 @media (max-width:768px) { .section-title { font-size:2rem; } .section-subtitle { font-size:1rem; } .icon-circle { width:60px; height:60px; font-size:2rem; } }
 @media (max-width:480px) { .section-title { font-size:1.6rem; } .service-box { padding:25px 15px; } .service-box h3 { font-size:1.2rem; } .service-box p { font-size:0.95rem; } }
+/* ===== FIX RESPONSIVE ALIGNMENT & SPACING ===== */
+@media (max-width:768px) {
+  .services-home-pro {
+    padding: 60px 15px;
+  }
 
+.services-wrapper { display: grid; grid-template-columns: 1fr; justify-items: center; align-items: center; text-align: center; }
+.service-box { max-width: 380px; margin: 0 auto; }
+.section-header { margin-bottom: 40px; padding: 0 10px; }
+.section-subtitle { font-size: 1rem; line-height: 1.6; max-width: 90%; margin: 0 auto; }
+
+@media (max-width:480px) {
+  .services-home-pro { padding: 50px 10px; }
+  .services-wrapper { gap: 20px; }
+  .service-box { max-width: 340px; padding: 25px 18px; }
+  .section-title { font-size: 1.5rem; }
+  .section-subtitle { font-size: 0.95rem; }
+  .btn-cta { padding: 10px 22px; font-size: 0.95rem; }
+}
+}
 
 
 
@@ -619,7 +638,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         </div>
       </div>
       <div class="portfolio-card">
-        <img src="images/ads.webp" alt="Social Media Graphics Project" loading="lazy">
+        <img src="images/social media graphics.webp" alt="Social Media Graphics Project" loading="lazy">
         <div class="portfolio-overlay">
           <h3>Social Media Graphics</h3>
         </div>
@@ -627,7 +646,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
       <!-- Web Design Previews -->
       <div class="portfolio-card">
-        <img src="images/responsive website.webp" alt="Website Project" loading="lazy">
+        <img src="images/website.webp" alt="Website Project" loading="lazy">
         <div class="portfolio-overlay">
           <h3>Website Design</h3>
         </div>
