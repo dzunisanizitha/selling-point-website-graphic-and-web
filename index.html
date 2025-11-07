@@ -168,222 +168,158 @@ a {
 }
 
 /* ===== HERO SECTION ===== */
-/* ===== HERO SECTION - PROFESSIONAL AGENCY STYLE ===== */
-.hero-home { position: relative; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: #fff; background: linear-gradient(135deg, #271821 0%, #161616 100%); font-family: 'Poppins', sans-serif; } 
-.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.6; filter: brightness(0.5) saturate(1.2); animation: zoomIn 20s ease-in-out infinite alternate; } 
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 2; } 
-.hero-content { position: relative; z-index: 3; max-width: 900px; padding: 20px; animation: fadeInUp 1.5s ease forwards; } 
-.hero-content h1 { font-size: 3rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; opacity: 0; } 
-.hero-content h1 .highlight { background: linear-gradient(90deg, #ff3c78, #f7d200); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } 
-.hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: #f8f8f8; opacity: 0; animation: fadeInUp 1.8s ease forwards 0.3s; } 
-.btn-hero { display: inline-block; background: #ff3c78; color: #fff; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1rem; box-shadow: 0 10px 25px rgba(255,60,120,0.4); transition: all 0.4s ease; opacity: 0; animation: fadeInUp 2s ease forwards 0.6s; } 
-.btn-hero:hover { background: #fff; color: #ff3c78; transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 35px rgba(255,60,120,0.5); } 
-.design-shape { position: absolute; border-radius: 50%; opacity: 0.1; z-index: 1; background: linear-gradient(135deg, #ffbb00, #ffffff); animation: float 12s ease-in-out infinite alternate; } 
-.shape1 { width: 180px; height: 180px; top: 15%; left: 5%; animation-delay: 0s; } 
-.shape2 { width: 280px; height: 280px; bottom: 5%; right: 10%; animation-delay: 2s; } 
-.shape3 { width: 150px; height: 150px; top: 35%; right: 20%; animation-delay: 4s; } 
-@keyframes float { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(15deg); } 100% { transform: translateY(0px) rotate(0deg); } } 
-@keyframes zoomIn { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } } 
-@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } } 
-@media (max-width: 1024px) { .hero-content h1 { font-size: 2.4rem; } .hero-content p { font-size: 1.1rem; } .btn-hero { padding: 14px 32px; font-size: 0.95rem; } } 
-@media (max-width: 768px) { .hero-content h1 { font-size: 2rem; } .hero-content p { font-size: 1rem; } }
-
-
-/* ===== SERVICES SECTION ===== */
-/* ===== SERVICES SECTION ===== */
-.services-home-pro { background:linear-gradient(180deg,#fcf3e2 0%,#fdcbdd 100%); padding:80px 20px; font-family:'Poppins',sans-serif; text-align:center; position:relative; overflow:hidden; }
-.services-home-pro::before, .services-home-pro::after { content:""; position:absolute; border-radius:50%; z-index:0; animation:floatGlow 8s ease-in-out infinite alternate; }
-.services-home-pro::before { top:-100px; left:-100px; width:250px; height:250px; background:radial-gradient(circle,rgba(255,60,120,0.5) 0%,transparent 70%); }
-.services-home-pro::after { bottom:-120px; right:-120px; width:300px; height:300px; background:radial-gradient(circle,rgba(255,60,120,0.12) 0%,transparent 70%); animation-duration:10s; animation-direction:alternate-reverse; }
-@keyframes floatGlow { 0% { transform:translateY(0); opacity:0.9; } 100% { transform:translateY(20px); opacity:0.6; } }
-.section-header { position:relative; z-index:2; margin-bottom:60px; max-width:750px; margin-left:auto; margin-right:auto; }
-.section-title { font-size:2.8rem; color:#333; font-weight:800; margin-bottom:15px; }
-.section-title .highlight { background:linear-gradient(90deg,#ff3c78,#fd336f); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.section-subtitle { color:#555; font-size:1.1rem; line-height:1.7; }
-.services-wrapper { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; position:relative; z-index:2; margin-top:40px; padding:0 10px; }
-.service-box { background:#fff; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.15); padding:40px 20px; text-align:center; transition:transform 0.4s ease, box-shadow 0.4s ease; position:relative; overflow:hidden; }
-.service-box::before { content:""; position:absolute; inset:0; background:linear-gradient(145deg,rgba(255,60,120,0.08),transparent); opacity:0; transition:opacity 0.4s ease; }
-.service-box:hover::before { opacity:1; }
-.service-box:hover { transform:translateY(-8px); box-shadow:0 25px 50px rgba(0,0,0,0.12); }
-.icon-circle { font-size:2.5rem; background:rgba(255,60,120,0.1); color:#ff3c78; width:70px; height:70px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin:0 auto 20px; }
-.service-box h3 { font-size:1.4rem; font-weight:700; color:#333; margin-bottom:15px; }
-.service-box p { color:#555; font-size:1rem; line-height:1.6; margin-bottom:25px; }
-.btn-cta { display:inline-block; background:#ff3c78; color:#fff; padding:12px 28px; border-radius:50px; text-decoration:none; font-weight:600; transition:all 0.3s ease; }
-.btn-cta:hover { background:#333; transform:translateY(-3px); }
-@media (max-width:1024px) { .section-title { font-size:2.4rem; } .service-box { padding:35px 20px; } }
-@media (max-width:768px) { .section-title { font-size:2rem; } .section-subtitle { font-size:1rem; } .icon-circle { width:60px; height:60px; font-size:2rem; } }
-@media (max-width:480px) { .section-title { font-size:1.6rem; } .service-box { padding:25px 15px; } .service-box h3 { font-size:1.2rem; } .service-box p { font-size:0.95rem; } }
-/* ===== FIX RESPONSIVE ALIGNMENT & SPACING ===== */
-@media (max-width:768px) {
-  .services-home-pro {
-    padding: 60px 15px;
-  }
-
-.services-wrapper { display: grid; grid-template-columns: 1fr; justify-items: center; align-items: center; text-align: center; }
-.service-box { max-width: 380px; margin: 0 auto; }
-.section-header { margin-bottom: 40px; padding: 0 10px; }
-.section-subtitle { font-size: 1rem; line-height: 1.6; max-width: 90%; margin: 0 auto; }
-
-@media (max-width:480px) {
-  .services-home-pro { padding: 50px 10px; }
-  .services-wrapper { gap: 20px; }
-  .service-box { max-width: 340px; padding: 25px 18px; }
-  .section-title { font-size: 1.5rem; }
-  .section-subtitle { font-size: 0.95rem; }
-  .btn-cta { padding: 10px 22px; font-size: 0.95rem; }
-}
-}
+.hero-home {position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden; color: #fff; font-family: 'Poppins', sans-serif;}
+.hero-bg-wrapper {position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: 1;}
+.hero-bg {width: 100%; height: 100%; object-fit: cover; filter: brightness(0.20) contrast(1.1); animation: bgZoom 30s ease-in-out infinite alternate;}
+.hero-overlay {position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2;}
+.shape {position: absolute; border-radius: 50%; opacity: 0.2; z-index: 3; animation: float 15s ease-in-out infinite alternate;}
+.shape1 {width: 90px; height: 90px; background: #ffc403; top: 20%; left: 15%; animation-delay: 0s;}
+.shape2 {width: 60px; height: 60px; background: #fff; top: 60%; left: 80%; animation-delay: 3s;}
+.shape3 {width: 120px; height: 120px; background: #ffc403; top: 40%; left: 50%; animation-delay: 6s;}
+@keyframes float {0% {transform: translateY(0px) translateX(0px);} 50% {transform: translateY(-20px) translateX(10px);} 100% {transform: translateY(0px) translateX(0px);}}
+@keyframes bgZoom {0% {transform: scale(1);} 100% {transform: scale(1.05);}}
+.hero-content {position: relative; z-index: 4; max-width: 850px; padding: 0 20px;}
+#typewriter {font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); color: #ff3c78;}
+.hero-content p {font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; color: #f2f2f2; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);}
+.cta-buttons {display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
+.btn-hero {font-weight: 700; text-transform: uppercase; padding: 1rem 2rem; border-radius: 50px; background: #ff3c78; color: #fff; text-decoration: none; transition: all 0.3s ease, transform 0.3s ease;}
+.btn-hero:hover {transform: scale(1.05); background: #fff; color:#333;}
+.btn-outline {background: transparent; border: 2px solid #ff3c78; color: #ff3c78;}
+.btn-outline:hover {background: #ff3c78; color: #fff; transform: scale(1.05);}
+.visually-hidden {position: absolute; left: -9999px; height: 1px; width: 1px; overflow: hidden;}
+@media(max-width:768px){#typewriter{font-size:2rem;} .hero-content p{font-size:1rem;} .btn-hero{width:100%; text-align:center;} .shape{display:none;}}
 
 
 
 
 /* ===== PORTFOLIO SECTION ===== */
-/* ===== PORTFOLIO HOME ===== */
-.portfolio-home { background:#fff; padding:80px 20px; color:#333; }
-.portfolio-home .section-header { text-align:center; margin-bottom:60px; }
-.portfolio-home .section-title { font-size:2.5rem; font-weight:800; }
-.portfolio-home .section-title .highlight { background:linear-gradient(90deg,#ff3c78,#ff6899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.portfolio-home .section-subtitle { font-size:1.1rem; color:#555; max-width:700px; margin:0 auto; }
-.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; max-width:1200px; margin:0 auto; }
-.portfolio-card { position:relative; overflow:hidden; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s ease, box-shadow 0.3s ease; }
-.portfolio-card img { width:100%; height:auto; display:block; transition:transform 0.4s ease; }
-.portfolio-card:hover img { transform:scale(1.05); }
-.portfolio-overlay { position:absolute; bottom:0; width:100%; background:linear-gradient(0deg,rgba(0,0,0,0.7),transparent); color:#fff; padding:20px; text-align:left; }
-.portfolio-overlay h3 { margin:0; font-size:1.2rem; font-weight:700; }
-.cta-buttons .btn-cta { display:inline-block; background:#ff3c78; color:#fff; padding:14px 30px; border-radius:50px; text-decoration:none; font-weight:600; margin:10px 10px 0 10px; transition:all 0.3s ease; }
-.cta-buttons .btn-cta:hover { background:#333; }
-@media (max-width:768px) { .portfolio-grid { grid-template-columns:1fr 1fr; gap:20px; } .portfolio-overlay h3 { font-size:1rem; } .cta-buttons .btn-cta { padding:12px 25px; font-size:0.95rem; } }
-@media (max-width:480px) { .portfolio-grid { grid-template-columns:1fr; } }
-
-
-/* ===== BLOG HOME SECTION ===== */
-/* ===== BLOG HOME SECTION ===== */
-.blog-home {
+.portfolio-home {
+  background: #fff;
   padding: 80px 20px;
-  background-color: #ffd8e4;
-  font-family: 'Poppins', sans-serif;
   color: #333;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-  text-align: center;
 }
 
-/* Section Header */
-.blog-home .section-header {
+.portfolio-home .section-header {
+  text-align: center;
   margin-bottom: 50px;
 }
 
-.blog-home .section-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+.portfolio-home .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
-.blog-home .section-title .highlight {
-  color: #ff3c78;
+.portfolio-home .section-title .highlight {
+  background: linear-gradient(90deg,#ff3c78,#ff6899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.blog-home .section-subtitle {
+.portfolio-home .section-subtitle {
   font-size: 1.1rem;
   color: #555;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Blog Grid */
-.blog-home .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* Blog Card */
-.blog-home .blog-card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  padding: 25px 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.blog-home .blog-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
-}
-
-/* Titles & Excerpt */
-.blog-home .blog-card h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.blog-home .blog-card p.blog-excerpt {
-  font-size: 1rem;
-  color: #555;
   line-height: 1.5;
-  margin-bottom: 20px;
 }
 
-/* Buttons */
-.blog-home .btn-blog {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #ff3c78;
+/* ===== SLIDER ===== */
+.portfolio-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.portfolio-card {
+  flex: 0 0 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
   color: #fff;
-  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.cta-buttons .btn-cta {
+  display: inline-block;
+  background: #ff3c78;
+  color: #fff;
+  padding: 14px 30px;
   border-radius: 50px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
-  text-align: center;
-}
-
-.blog-home .btn-blog:hover {
-  background-color: #e6326b;
-  transform: translateY(-2px);
-}
-
-.blog-home .btn-cta {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #ff3c78;
-  color: #fff;
   font-weight: 600;
-  font-size: 1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 10px;
+  transition: all 0.3s ease;
 }
 
-.blog-home .btn-cta:hover {
-  background-color: #e6326b;
-  transform: translateY(-3px);
+.cta-buttons .btn-cta:hover {
+  background: #333;
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .blog-home .section-title { font-size: 2rem; }
-  .blog-home .section-subtitle { font-size: 1rem; }
-  .blog-home .blog-card h3 { font-size: 1.2rem; }
-  .blog-home .blog-card p.blog-excerpt { font-size: 0.95rem; }
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px) {
+  .portfolio-home .section-title { font-size: 2rem; }
+  .portfolio-home .section-subtitle { font-size: 1rem; }
+  .portfolio-card img { height: 250px; }
+  .cta-buttons .btn-cta { padding: 12px 25px; font-size: 0.95rem; }
 }
 
-@media (max-width: 480px) {
-  .blog-home .blog-grid {
-    gap: 20px;
-  }
-  .blog-home .blog-card { padding: 20px 15px; }
-  .blog-home .section-title { font-size: 1.6rem; }
+@media (max-width:480px) {
+  .portfolio-card img { height: 200px; }
 }
 
 
 
+/* ===== BLOG HOME SECTION ===== */
+/* ===== BLOG HOME SECTION ===== */
+.blog-home {padding: 80px 20px; background-color: #ffd8e4; font-family: 'Poppins', sans-serif; color: #333; box-shadow: 0 10px 35px rgba(0,0,0,0.15); text-align: center;}
+.blog-home .section-header {margin-bottom: 50px;}
+.blog-home .section-title {font-size: 2.8rem; font-weight: 700; margin-bottom: 10px;}
+.blog-home .section-title .highlight {color: #ff3c78;}
+.blog-home .section-subtitle {font-size: 1.1rem; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.6;}
+.blog-home .blog-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;}
+.blog-home .blog-card {background-color: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); padding: 25px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;}
+.blog-home .blog-card:hover {transform: translateY(-6px); box-shadow: 0 18px 35px rgba(0,0,0,0.12);}
+.blog-home .blog-card h3 {font-size: 1.4rem; font-weight: 600; color: #333; margin-bottom: 15px;}
+.blog-home .blog-card p.blog-excerpt {font-size: 1rem; color: #555; line-height: 1.5; margin-bottom: 20px;}
+.blog-home .btn-blog {display: inline-block; padding: 10px 25px; background-color: #ff3c78; color: #fff; font-weight: 600; border-radius: 50px; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease; text-align: center;}
+.blog-home .btn-blog:hover {background-color: #e6326b; transform: translateY(-2px);}
+.blog-home .btn-cta {display: inline-block; padding: 12px 30px; background-color: #ff3c78; color: #fff; font-weight: 600; font-size: 1rem; border-radius: 50px; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease;}
+.blog-home .btn-cta:hover {background-color: #e6326b; transform: translateY(-3px);}
+@media (max-width: 768px) {.blog-home .section-title {font-size: 2rem;} .blog-home .section-subtitle {font-size: 1rem;} .blog-home .blog-card h3 {font-size: 1.2rem;} .blog-home .blog-card p.blog-excerpt {font-size: 0.95rem;}}
+@media (max-width: 480px) {.blog-home .blog-grid {gap: 20px;} .blog-home .blog-card {padding: 20px 15px;} .blog-home .section-title {font-size: 1.6rem;}}
 
-/* ===== CONTACT ===== */
+
 /* ===== CONTACT SECTION ===== */
 .contact { background: #fff; text-align: center; padding: 80px 20px; } 
 .contact-title { font-size: 2.5rem; font-weight: 900; color: #ff3c78; margin-bottom: 20px; } 
@@ -489,11 +425,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
 
 
-
-
-
-
-
 <!-- ===== HEADER / NAV ===== -->
 <header>
   <div class="header-container">
@@ -563,109 +494,106 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </header>
 
 <!-- ===== HERO SECTION ===== -->
-<section class="hero-home">
-  <img src="images/graphic-design-banner.webp" alt="Professional Web & Graphic Design in Limpopo & South Africa" class="hero-bg" loading="lazy">
-  <div class="hero-overlay"></div>
+<section class="hero-home" aria-label="ARIDESIGN - Web & Graphic Design in Limpopo & South Africa">
+
+  <!-- Background Wrapper -->
+  <div class="hero-bg-wrapper">
+    <img src="images/graphic-design-banner.webp" 
+         alt="ARIDESIGN Web and Graphic Design Services in Limpopo and South Africa" 
+         class="hero-bg" loading="lazy">
+    <div class="hero-overlay"></div>
+
+    <!-- Floating shapes -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <!-- Hero Content -->
   <div class="hero-content">
-    <h1>Bring Your Brand to Life with <span class="highlight">Creative Web & Graphic Design</span></h1>
-    <p>ARIDESIGN delivers professional design solutions for startups, small businesses, and churches in Limpopo and across South Africa — logos, branding, websites, and marketing visuals.</p>
+    <h1 id="typewriter" class="highlight"></h1>
+    <p>
+      Welcome to <strong>ARIDESIGN</strong> — a professional <strong>web and graphic design studio in Limpopo</strong>, creating bold, responsive, and SEO-optimized designs for small businesses, startups, and churches across South Africa.
+    </p>
+
     <div class="cta-buttons">
-      <a href="quote.html" class="btn-hero">Get Your Free Quote</a>
+      <a href="web-design.html" class="btn-hero">Explore Web Design</a>
+      <a href="graphic-design.html" class="btn-hero btn-outline">Explore Graphic Design</a>
     </div>
   </div>
-  <div class="design-shape shape1"></div>
-</section>
 
+  <!-- Hidden SEO tags -->
+  <h2 class="visually-hidden">Professional Web Design in Limpopo</h2>
+  <h2 class="visually-hidden">Graphic Design Services in South Africa</h2>
+  <p class="visually-hidden">
+    ARIDESIGN specializes in website design, logo design, branding, social media graphics, and marketing materials for businesses in Limpopo and beyond.
+  </p>
 
-<!-- ===== SERVICES SECTION ===== -->
-<!-- ===== SERVICES SECTION ===== -->
-<section id="services" class="services-home-pro">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-      <p class="section-subtitle">
-        We design with clarity and creativity — offering top-tier <strong>Web Design</strong> and <strong>Graphic Design</strong> services for brands, startups, and churches in Limpopo and across South Africa.
-      </p>
-    </div>
-
-    <div class="services-wrapper">
-      <!-- Graphic Design -->
-      <div class="service-box">
-        <div class="service-content">
-          <div class="icon-circle">🎨</div>
-          <h3>Graphic & Branding Design</h3>
-          <p>
-            Professional <strong>logos</strong>, <strong>flyers</strong>, <strong>business cards</strong>, <strong>social media graphics</strong>, and <strong>brochures</strong> — crafted to elevate your visual identity.
-          </p>
-          <a href="graphic-design.html" class="btn-cta">Explore Graphic Design</a>
-        </div>
-      </div>
-
-      <!-- Web Design -->
-      <div class="service-box">
-        <div class="service-content">
-          <div class="icon-circle">🌐</div>
-          <h3>Web Design</h3>
-          <p>
-            Beautiful, fast, and SEO-optimized <strong>static websites</strong> that give your business a bold online presence and a professional edge.
-          </p>
-          <a href="web-design.html" class="btn-cta">Explore Web Design</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 
 
-<!-- ===== PORTFOLIO PREVIEW ===== -->
-<!-- ===== PORTFOLIO PREVIEW ===== -->
+<!-- ===== PORTFOLIO SLIDER ===== -->
 <section id="portfolio" class="portfolio-home section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+      <h2 class="section-title">Featured <span class="highlight">Graphic Design</span></h2>
       <p class="section-subtitle">
-        A glimpse of ARIDESIGN’s creative web & graphic design work for small businesses, startups, and churches.
+        A glimpse of ARIDESIGN’s creative graphic design work for small businesses, startups, and churches.
       </p>
     </div>
 
-    <div class="portfolio-grid">
-      <!-- Graphic Design Previews -->
-      <div class="portfolio-card">
-        <img src="images/logo.webp" alt="Logo Design Project" loading="lazy">
-        <div class="portfolio-overlay">
-          <h3>Logo & Branding</h3>
+    <!-- Graphic Design Slider -->
+    <div class="portfolio-slider">
+      <div class="slider-track">
+        <div class="portfolio-card">
+          <img src="images/logo.webp" alt="Logo Design Project">
+          <div class="portfolio-overlay"><h3>Logo & Branding</h3></div>
         </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="images/social media graphics.webp" alt="Social Media Graphics Project" loading="lazy">
-        <div class="portfolio-overlay">
-          <h3>Social Media Graphics</h3>
-        </div>
-      </div>
-
-      <!-- Web Design Previews -->
-      <div class="portfolio-card">
-        <img src="images/travel-responsive.webp" alt="Website Project" loading="lazy">
-        <div class="portfolio-overlay">
-          <h3>Website Design</h3>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="images/DENTAL SERVICES.webp" alt="Responsive Website Project" loading="lazy">
-        <div class="portfolio-overlay">
-          <h3>Responsive Web Design</h3>
+        <div class="portfolio-card">
+          <img src="images/social media graphics.webp" alt="Social Media Graphics Project">
+          <div class="portfolio-overlay"><h3>Social Media Graphics</h3></div>
         </div>
       </div>
     </div>
 
-    <!-- Full Portfolio CTA -->
-    <div class="cta-buttons" style="text-align:center; margin-top:40px;">
+    <div class="cta-buttons" style="text-align:center; margin-top:20px;">
       <a href="Full-artwork-portfolio.html" class="btn-cta">View Full Graphic Design Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEB DESIGN SLIDER ===== -->
+<section id="portfolio-web" class="portfolio-home section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Featured <span class="highlight">Web Design</span></h2>
+      <p class="section-subtitle">
+        A glimpse of ARIDESIGN’s professional web design work for small businesses, startups, and churches.
+      </p>
+    </div>
+
+    <!-- Web Design Slider -->
+    <div class="portfolio-slider">
+      <div class="slider-track">
+        <div class="portfolio-card">
+          <img src="images/travel-responsive.webp" alt="Website Project">
+          <div class="portfolio-overlay"><h3>Website Design</h3></div>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/DENTAL SERVICES.webp" alt="Responsive Website Project">
+          <div class="portfolio-overlay"><h3>Responsive Web Design</h3></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-buttons" style="text-align:center; margin-top:20px;">
       <a href="portfolio.html" class="btn-cta">View Full Web Design Portfolio</a>
     </div>
   </div>
 </section>
+
+
 
 
 <!-- ===== BLOG PREVIEW ===== -->
@@ -815,8 +743,6 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
 });
 
 
-
-
 const slider = document.querySelector('.testimonials-slider');
 const slides = document.querySelectorAll('.testimonial-card');
 let index = 0;
@@ -858,5 +784,58 @@ document.addEventListener("DOMContentLoaded", function() {
   reveal();
 });
 </script>
+
+
+<script>
+const headline = "Creative Web & Graphic Design That Elevates Your Brand";
+let i = 0;
+const speed = 70;
+
+function typeWriter() {
+  if (i < headline.length) {
+    const typeEl = document.getElementById("typewriter");
+    
+    // Replace only the text content, keep the span intact
+    if(typeEl.querySelector(".highlight-color")){
+      typeEl.querySelector(".highlight-color").textContent += headline.charAt(i);
+    } else {
+      typeEl.innerHTML += headline.charAt(i);
+    }
+    
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeWriter);
+
+</script>
+
+
+
+
+<script>
+function initSlider(sliderSelector) {
+  const sliderTrack = document.querySelector(sliderSelector + ' .slider-track');
+  const slides = document.querySelectorAll(sliderSelector + ' .portfolio-card');
+  let index = 0;
+
+  setInterval(() => {
+    index++;
+    if(index >= slides.length) index = 0;
+    sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000); // 4 seconds
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSlider('#portfolio');      // Graphic Design slider
+  initSlider('#portfolio-web');  // Web Design slider
+});
+</script>
+
+
+
+
+
 </body>
 </html>

@@ -105,19 +105,22 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 @media (max-width: 900px) { .desktop-nav { display: none; } .menu-toggle { display: flex; } }
 
 
-/* ===== HERO SECTION ===== */
-.portfolio-hero { position: relative; background: linear-gradient(135deg, #fff 60%, #ffe4ec 100%); padding: 120px 20px; text-align: center; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); }
-.portfolio-hero .hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
-.portfolio-hero h1 { font-size: 2.8rem; font-weight: 900; color: #333; margin-bottom: 15px; }
-.portfolio-hero h1 span { background: linear-gradient(90deg, #ff3c78, #ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.portfolio-hero p { color: #555; font-size: 1.1rem; margin-bottom: 30px; }
-.hero-btn { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 32px; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 60, 120, 0.4); }
-.hero-btn:hover { background: #e12f68; transform: translateY(-3px); }
-.hero-shape { position: absolute; border-radius: 50%; opacity: 0.15; z-index: 1; }
-.shape1 { width: 250px; height: 250px; background: #ff3c78; top: -60px; left: -60px; }
-.shape2 { width: 300px; height: 300px; background: #ff99b9; bottom: -100px; right: -80px; }
-.shape3 { width: 150px; height: 150px; background: #ffd2e0; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-@media (max-width: 768px) { .portfolio-hero { padding: 80px 15px; } .portfolio-hero h1 { font-size: 2rem; } .portfolio-hero p { font-size: 1rem; } .hero-btn { padding: 12px 28px; font-size: 0.95rem; } }
+/* ===== GRAPHIC DESIGN PORTFOLIO HERO ===== */
+.portfolio-hero { position: relative; background: linear-gradient(to right, #1a1a1a, #1a1a1a, #fff); color: #fff; padding: 100px 20px 80px; text-align: center; overflow: hidden; font-family: 'Poppins', sans-serif; }
+.portfolio-hero .hero-content h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.portfolio-hero .hero-content h1 span { color: #ff3c78; }
+.portfolio-hero .hero-content p { font-size: 1.1rem; max-width: 700px; margin: 20px auto; color: #fff; }
+.portfolio-hero .hero-btn { display: inline-block; background: #ff3c78; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+.portfolio-hero .hero-btn:hover { background: #ffffff; color: #333; }
+.portfolio-hero .hero-shape { position: absolute; width: 100px; height: 100px; background: rgba(252, 188, 50, 0.3); border-radius: 50%; animation: float 6s ease-in-out infinite; }
+
+.portfolio-hero .shape1 { top: 25%; left: 10%; }
+.portfolio-hero .shape2 { bottom: 15%; right: 15%; }
+.portfolio-hero .shape3 { top: 60%; left: 70%; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@media (max-width: 768px) { .portfolio-hero .hero-content h1 { font-size: 2.2rem; } .portfolio-hero { padding: 80px 15px 60px; } }
+@media (max-width: 480px) { .portfolio-hero .hero-content h1 { font-size: 1.8rem; } .portfolio-hero .hero-btn { padding: 10px 24px; font-size: 0.95rem; } }
 
 
 
@@ -292,14 +295,19 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <!-- HERO SECTION -->
 <section class="portfolio-hero">
   <div class="hero-content">
-    <h1>Explore ARIDESIGN’s <span>Graphic Design Portfolio</span></h1>`
+    <h1>Explore ARIDESIGN’s <span>Graphic Design Portfolio</span></h1>
+    <p>
+      View creative branding, logo, and print design projects crafted to elevate small businesses and startups across South Africa.
+    </p>
     <a href="quote.html" class="hero-btn">Start Your Project</a>
   </div>
+
   <!-- soft background shapes -->
   <div class="hero-shape shape1"></div>
   <div class="hero-shape shape2"></div>
   <div class="hero-shape shape3"></div>
 </section>
+
 
 <!-- GRAPHIC DESIGN SHOWCASE / SLIDESHOW -->
 <section class="graphic-samples">
