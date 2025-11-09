@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARIDESIGN Blog | Graphic & Web Design Insights in South Africa</title>
+<title>ARIDESIGN Blog — Web & Graphic Design Tips | Limpopo</title>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/main.js"></script>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/logo-picture.png" sizes="32x32">
@@ -34,9 +38,6 @@
   <meta name="geo.region" content="ZA-LP">
   <meta name="geo.placename" content="Limpopo, South Africa">
   <meta name="ICBM" content="-23.8962, 29.4486">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <!-- Structured Data: Blog Schema -->
   <script type="application/ld+json">
@@ -161,10 +162,41 @@ details[open] summary.read-more-btn { background: #333; color: #fff; border-colo
 .blog-content p, .blog-content ul { font-size: 1rem; line-height: 1.7; color: #444; margin-top: 10px; }
 .blog-content ul { list-style: disc; margin-left: 25px; }
 .blog-content .cta { margin-top: 30px; text-align: center; }
-.blog-content .btn-cta { background: #ff3c78; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(255,60,120,0.4); }
+.blog-content .btn-cta {background: #ff3c78;color: #fff;padding: 12px 30px;border-radius: 30px;text-decoration: none;font-weight: 700;text-transform: uppercase;transition: all 0.3s ease;box-shadow: 0 6px 20px rgba(255,60,120,0.4);display: inline-block;white-space: normal;        /* allow wrapping on smaller screens */word-wrap: break-word;      /* ensure long text wraps properly */max-width: 90%;   }          /* prevent overflowing container */
+
 .blog-content .btn-cta:hover { background: #333; transform: translateY(-3px); }
 @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
 @media (max-width: 768px) { .blog-container { padding: 10px; } .blog-container h1 { font-size: 1.4rem; } .intro { font-size: 0.95rem; } }
+
+/* Hover effect remains */
+.blog-content .btn-cta:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+/* === Mobile adjustments === */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 10px;
+  }
+  .blog-container h1 {
+    font-size: 1.4rem;
+  }
+  .intro {
+    font-size: 0.95rem;
+  }
+  /* CTA button responsive size */
+  .blog-content .btn-cta {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    width: 100%;              /* make full width for mobile */
+    max-width: 320px;         /* keeps it neat */
+  }
+  .blog-content .cta {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 
 /* ===== WhatsApp Floating Button (Modern Creative Style) ===== */
@@ -387,7 +419,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 
         <div class="cta">
           <a href="quote.html" class="btn-cta">
-            Get Professional Graphic Design for Your Business Today
+            Request a Design Quote Today
           </a>
         </div>
 

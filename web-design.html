@@ -1,9 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/main.js"></script>
+
   <!-- Primary Title for SEO -->
-  <title>Professional Web & Graphic Design Services | Limpopo & South Africa | ARIDESIGN</title>
+  <title>Web Design Services in Limpopo & South Africa | ARIDESIGN</title>
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -166,18 +172,18 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .key-benefits { position:relative; padding:100px 20px 140px; background:#fff; text-align:center; overflow:hidden; font-family:'Poppins',sans-serif; }
 .key-benefits::before { content:""; position:absolute; top:-30%; left:-20%; width:150%; height:150%; background:radial-gradient(circle at 25% 25%, rgba(255,60,120,0.08), transparent 70%),radial-gradient(circle at 75% 75%, rgba(255,60,120,0.1), transparent 70%); z-index:0; animation:floatWaves 15s ease-in-out infinite; }
 @keyframes floatWaves { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-20px,20px) scale(1.05); } }
-.key-benefits .container { position:relative; z-index:2; max-width:1100px; margin:0 auto; }
+.key-benefits .container { position:relative; z-index:2; max-width:80%; margin:0 auto; }
 .key-benefits h2 { font-size:2.5rem; font-weight:800; color:#ff3c78; margin-bottom:15px; opacity:0; transform:translateY(30px); animation:fadeUp 1s ease-out forwards; }
 .key-benefits .sub-text { font-size:1.15rem; color:#333; max-width:900px; margin:0 auto 80px; line-height:1.7; opacity:0; transform:translateY(30px); animation:fadeUp 1.2s ease-out forwards; }
-.benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:50px 30px; justify-items:center; }
+.benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:50px 30px; justify-items:stretch; }
 .benefit { background:#fff; border-radius:20px; padding:60px 20px 20px; position:relative; transition:all 0.4s ease; box-shadow:0 8px 25px rgba(255,60,120,0.15); opacity:0; transform:translateY(40px); animation:fadeUp 0.8s ease-out forwards; }
 .benefit:nth-child(1) { animation-delay:0.4s; }
 .benefit:nth-child(2) { animation-delay:0.6s; }
 .benefit:nth-child(3) { animation-delay:0.8s; }
 .benefit:nth-child(4) { animation-delay:1s; }
 .benefit i { font-size:2.2rem; background:#ff3c78; color:#fff; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-40px; left:50%; transform:translateX(-50%); box-shadow:0 8px 25px rgba(255,60,120,0.3); transition:all 0.3s ease; }
-.benefit h3 { font-size:1.25rem; font-weight:600; color:#333; margin-top:45px; margin-bottom:10px; transition:color 0.3s ease, transform 0.3s ease; }
-.benefit p { font-size:1rem; color:#555; line-height:1.6; max-width:280px; margin:0 auto; }
+.benefit h3 {font-size:1.5rem !important; font-weight:700; color:#ff3c78;  margin-top:45px; margin-bottom:10px; transition:color 0.3s ease, transform 0.3s ease; }
+.benefit p { font-size: 1rem !important; color:#555; line-height:1.6; max-width:280px; margin:0 auto; }
 .benefit:hover i { transform:translateX(-50%) translateY(-10px) scale(1.1); box-shadow:0 12px 35px rgba(255,60,120,0.45); }
 .benefit:hover h3 { color:#ff3c78; transform:translateY(-3px); }
 @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
@@ -198,8 +204,8 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:50px 30px; justify-items:center; }
 .service-item { background:#fff; border-radius:20px; padding:60px 25px 25px; position:relative; transition:all 0.4s ease; box-shadow:0 12px 35px rgba(0,0,0,0.06),0 6px 20px rgba(255,60,120,0.08); }
 .service-item i { font-size:2.5rem; color:#fff; background:#ff3c78; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-40px; left:50%; transform:translateX(-50%); box-shadow:0 10px 30px rgba(255,60,120,0.25); transition:all 0.3s ease; }
-.service-item h3 { font-size:1.3rem; font-weight:600; color:#333; margin-top:50px; margin-bottom:10px; transition:color 0.3s ease, transform 0.3s ease; }
-.service-item p { font-size:1rem; color:#555; line-height:1.6; max-width:280px; margin:0 auto; }
+.service-item h3 { font-size:1.5rem !important; font-weight:700; margin-bottom:15px; color:#ff3c78;  margin-top:50px;  transition:color 0.3s ease, transform 0.3s ease; }
+.service-item p { font-size:1rem !important; color:#555 !important; line-height:1.6; max-width:280px; margin:0 auto; }
 .service-item:hover { transform:translateY(-12px); box-shadow:0 16px 45px rgba(255,60,120,0.25); }
 .service-item:hover i { background:#fff; color:#ff3c78; transform:translateX(-50%) translateY(-10px) scale(1.15) rotate(10deg); }
 .service-item:hover h3 { color:#ff3c78; }
@@ -505,7 +511,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
     <div class="benefits-grid">
       <div class="benefit">
         <i class="fas fa-mobile-alt"></i>
-        <h3>Responsive & Mobile-Friendly Design</h3>
+        <h3>Responsive Design</h3>
         <p>Websites optimized for <strong>all devices</strong> — mobile, tablet, and desktop — to ensure a smooth user experience and better search rankings in Limpopo & South Africa.</p>
       </div>
       <div class="benefit">
@@ -520,7 +526,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       </div>
       <div class="benefit">
         <i class="fas fa-users"></i>
-        <h3>Support & Guidance for Startups and Businesses</h3>
+        <h3>Support for Small Businesses</h3>
         <p>We help <strong>startups, small businesses, and churches</strong> establish a professional online presence quickly and effectively.</p>
       </div>
     </div>
@@ -528,6 +534,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </section>
 
 <!-- SERVICES + ICONS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- SERVICES + ICONS -->
 <section class="services" aria-label="Web Design Services in Limpopo & South Africa">
   <div class="container">
     <h2>Our Professional Web Design Services</h2>
@@ -535,24 +542,30 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       ARIDESIGN offers <strong>responsive, static websites</strong> for <strong>startups, small businesses, portfolios, and churches</strong> in <strong>Limpopo</strong> and <strong>South Africa</strong>. Build a professional online presence that drives growth and credibility.
     </p>
     <div class="services-grid">
+      
       <div class="service-item">
         <i class="fas fa-code"></i>
         <h3>Responsive Business Websites</h3>
-        <p>Professional, mobile-friendly, and <strong>SEO-ready business websites</strong> designed for startups and small businesses in <strong>Limpopo & South Africa</strong>.</p>
+        <p>Professional, mobile-friendly, and <strong>SEO-ready business websites</strong> designed for startups and small businesses in <strong>Limpopo & South Africa</strong>. Ideal for attracting more clients and improving online visibility.</p>
       </div>
+      
       <div class="service-item">
         <i class="fas fa-laptop-code"></i>
         <h3>Portfolio & Personal Websites</h3>
-        <p>Showcase your work or personal brand with a <strong>custom, visually stunning portfolio website</strong> that ranks in search engines.</p>
+        <p>Showcase your work or personal brand with a <strong>custom, visually stunning portfolio website</strong>. Perfect for freelancers and creatives who want to impress clients online.</p>
       </div>
+      
       <div class="service-item">
         <i class="fas fa-columns"></i>
         <h3>Landing Pages & Campaign Websites</h3>
-        <p>High-converting <strong>landing pages</strong> and campaign websites to boost leads, sales, and online visibility in <strong>Limpopo and South Africa</strong>.</p>
+        <p>High-converting <strong>landing pages</strong> and campaign websites to boost leads and sales. Designed with clear calls-to-action for better results.</p>
       </div>
+
     </div>
   </div>
 </section>
+
+
 
 
 <!-- PACKAGES + FEATURES + CTA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
