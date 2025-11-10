@@ -185,7 +185,7 @@ a {
 #typewriter {font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); color: #ff3c78;}
 .hero-content p {font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; color: #f2f2f2; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);}
 .cta-buttons {display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
-.btn-hero {font-weight: 700; text-transform: uppercase; padding: 1rem 2rem; border-radius: 50px; background: #ff3c78; color: #fff; text-decoration: none; transition: all 0.3s ease, transform 0.3s ease;}
+.btn-hero {font-weight: 700; text-transform: uppercase; padding: 0.90rem 1.85rem; border-radius: 10px; background: #ff3c78; color: #fff; text-decoration: none; transition: all 0.3s ease, transform 0.3s ease;}
 .btn-hero:hover {transform: scale(1.05); background: #fff; color:#333;}
 .btn-outline {background: transparent; border: 2px solid #ff3c78; color: #ff3c78;}
 .btn-outline:hover {background: #ff3c78; color: #fff; transform: scale(1.05);}
@@ -238,7 +238,7 @@ a {
 
 /* ===== CTA BUTTONS ===== */
 .cta-buttons { text-align: center; margin-top: 20px; }
-.cta-buttons .btn-cta { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+.cta-buttons .btn-cta { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
 .cta-buttons .btn-cta:hover { background: #333; }
 
 
@@ -285,10 +285,10 @@ a {
 
 
 /* ===== CTA PORTFOLIO ===== */
-.cta-portfolio { background: #ff3c78; color: #fff; padding: 80px 20px; text-align: center; border-radius: 20px; margin: 60px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+.cta-portfolio { background: #ff3c78; color: #fff; padding: 80px 20px; text-align: center; border-radius: 0 50px 0 0; margin: 60px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
 .cta-portfolio h2 { font-size: 2.6rem; font-weight: 800; margin-bottom: 20px; }
 .cta-portfolio p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; line-height: 1.7; }
-.cta-portfolio .btn-cta { display: inline-block; background: #fff; color: #ff3c78; font-weight: 700; text-transform: uppercase; padding: 15px 35px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(255,60,120,0.4); }
+.cta-portfolio .btn-cta { display: inline-block; background: #fff; color: #ff3c78; font-weight: 700; text-transform: uppercase; padding: 15px 35px; border-radius: 10px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(255,60,120,0.4); }
 .cta-portfolio .btn-cta:hover { background: #333; color: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255,60,120,0.5); }
 @media (max-width:768px) { .cta-portfolio h2 { font-size: 2rem; } .cta-portfolio p { font-size: 1rem; } .cta-portfolio .btn-cta { padding: 12px 28px; font-size: 0.95rem; } }
 
@@ -301,7 +301,7 @@ a {
 .cta-shape { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.2); top: 10%; left: -50px; }
 .contact-home { background: #fafafa; padding: 80px 20px; text-align: center; }
 .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
-.contact-link { display: inline-flex; align-items: center; padding: 12px 20px; border-radius: 50px; font-weight: 600; color: #fff; transition: all 0.3s ease; }
+.contact-link { display: inline-flex; align-items: center; padding: 12px 20px; border-radius: 10px; font-weight: 600; color: #fff; transition: all 0.3s ease; }
 .contact-link i { margin-right: 8px; }
 .contact-link.whatsapp { background: #25D366; }
 .contact-link.email { background: #0072c6; }
@@ -720,32 +720,33 @@ document.addEventListener("DOMContentLoaded", function() {
   if (!localStorage.getItem("cookieConsent")) {
     const banner = document.createElement("div");
     banner.id = "cookie-banner";
-    banner.style.cssText = `
-      position: fixed;
-      bottom: -100px;
-      left: 0;
-      width: 100%;
-      background: #ff3c78;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      z-index: 1000; /* below hamburger */
-      box-sizing: border-box;
-      transition: bottom 0.5s ease-in-out;
-    `;
+banner.style.cssText = `
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  color: #333;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 9999; /* now above WhatsApp button */
+  box-sizing: border-box;
+  transition: bottom 0.5s ease-in-out;
+`;
+
 
     banner.innerHTML = `
       <span>
         We use cookies to improve your experience on <strong>ARIDESIGN</strong>.
-        Read our <a href="privacy-policy.html" style="color:#000; text-decoration:underline;">Privacy Policy</a>.
+        Read our <a href="privacy-policy.html" style="color:#ff3c78; text-decoration:underline;">Privacy Policy</a>.
       </span>
       <button id="allowCookies" style="
-        background:#000;
-        color:#fff;
+        background:#ff3c78;
+        color:#000;
         padding:8px 16px;
         border:none;
         cursor:pointer;
