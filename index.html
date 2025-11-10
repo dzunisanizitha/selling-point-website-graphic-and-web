@@ -202,181 +202,39 @@ a {
 }
 
 /* ===== PORTFOLIO SECTION ===== */
-.portfolio-home {
-  background: #fff;
-  padding: 60px 20px; /* reduce top/bottom padding slightly */
-  color: #333;
-}
-
-.portfolio-home .section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.portfolio-home .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-}
-
-.portfolio-home .section-title .highlight {
-  background: linear-gradient(90deg,#ff3c78,#ff6899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.portfolio-home .section-subtitle {
-  font-size: 1rem;
-  color: #555;
-  max-width: 650px;   /* restrict width */
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-/* ===== SLIDER ===== */
-.portfolio-slider {
-  overflow: hidden;
-  position: relative;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-}
-
-.portfolio-card {
-  min-width: 100%; /* 100% of container */
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  position: relative;
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: auto; /* maintain aspect ratio */
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.portfolio-card:hover img {
-  transform: scale(1.05);
-}
-
-.portfolio-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 12px 15px;
-  background: linear-gradient(0deg, rgba(0,0,0,0.6), transparent);
-  color: #fff;
-  text-align: center;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.portfolio-card:hover .portfolio-overlay {
-  opacity: 1;
-}
+.portfolio-home { background: #fff; padding: 60px 20px; color: #333; }
+.portfolio-home .section-header { text-align: center; margin-bottom: 40px; }
+.portfolio-home .section-title { font-size: 2.2rem; font-weight: 800; }
+.portfolio-home .section-title .highlight { background: linear-gradient(90deg,#ff3c78,#ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.portfolio-home .section-subtitle { font-size: 1rem; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.5; }
+.portfolio-slider { overflow: hidden; position: relative; }
+.slider-track { display: flex; transition: transform 0.6s ease-in-out; width: 100%; }
+.portfolio-card { min-width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); position: relative; }
+.portfolio-card img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+.portfolio-card:hover img { transform: scale(1.05); }
+.portfolio-overlay { position: absolute; bottom: 0; width: 100%; padding: 12px 15px; background: linear-gradient(0deg, rgba(0,0,0,0.6), transparent); color: #fff; text-align: center; font-weight: 600; opacity: 0; transition: opacity 0.3s ease; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+.portfolio-card:hover .portfolio-overlay { opacity: 1; }
 
 /* ===== CTA BUTTONS ===== */
-.cta-buttons {
-  text-align: center;
-  margin-top: 20px;
-}
+.cta-buttons { text-align: center; margin-top: 20px; }
+.cta-buttons .btn-cta { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+.cta-buttons .btn-cta:hover { background: #333; }
 
-.cta-buttons .btn-cta {
-  display: inline-block;
-  background: #ff3c78;
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.cta-buttons .btn-cta:hover {
-  background: #333;
-}
 
 /* ===== BLOG HOME SECTION ===== */
-.blog-home {
-  padding: 60px 20px;
-  background-color: #ffd8e4;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  text-align: center;
-}
-
-.blog-home .section-header {
-  margin-bottom: 40px;
-}
-
-.blog-home .section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
+.blog-home { padding: 60px 20px; background-color: #ffd8e4; font-family: 'Poppins', sans-serif; color: #333; text-align: center; }
+.blog-home .section-header { margin-bottom: 40px; }
+.blog-home .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
 .blog-home .section-title .highlight { color: #ff3c78; }
-
-.blog-home .section-subtitle {
-  font-size: 1rem;
-  color: #555;
-  max-width: 650px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-.blog-home .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.blog-home .blog-card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  padding: 25px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-home .blog-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
-}
-
+.blog-home .section-subtitle { font-size: 1rem; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.5; }
+.blog-home .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+.blog-home .blog-card { background-color: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); padding: 25px 20px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.blog-home .blog-card:hover { transform: translateY(-6px); box-shadow: 0 18px 35px rgba(0,0,0,0.12); }
 .blog-home .blog-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; }
-
 .blog-home .blog-card p.blog-excerpt { font-size: 1rem; color: #555; line-height: 1.5; margin-bottom: 20px; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .portfolio-home .section-title,
-  .blog-home .section-title { font-size: 2rem; }
-  .portfolio-home .section-subtitle,
-  .blog-home .section-subtitle { font-size: 0.95rem; }
-}
-
-@media (max-width: 768px) {
-  .portfolio-card img { height: 180px; object-fit: cover; }
-}
-
-@media (max-width: 480px) {
-  .portfolio-card img { height: 150px; }
-  .blog-home .blog-card { padding: 20px 15px; }
-  .portfolio-home .section-title,
-  .blog-home .section-title { font-size: 1.6rem; }
-}
+@media (max-width: 1024px) { .portfolio-home .section-title, .blog-home .section-title { font-size: 2rem; } .portfolio-home .section-subtitle, .blog-home .section-subtitle { font-size: 0.95rem; } }
+@media (max-width: 768px) { .portfolio-card img { height: 180px; object-fit: cover; } }
+@media (max-width: 480px) { .portfolio-card img { height: 150px; } .blog-home .blog-card { padding: 20px 15px; } .portfolio-home .section-title, .blog-home .section-title { font-size: 1.6rem; } }
 
 
 
@@ -785,90 +643,123 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </footer>
 
-<!-- JS FOR MOBILE MENU >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // select all headings, paragraphs, buttons, spans inside sections
-  const elements = document.querySelectorAll(
-    "section h1, section h2, section h3, section p, section a, section span"
-  );
 
-  // add pop-up class to all selected elements
-  elements.forEach(el => el.classList.add('pop-up'));
+  // -------------------------
+  // 1. Hamburger menu
+  // -------------------------
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
 
-  // function to reveal elements in viewport
-  function reveal() {
-    elements.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (top < windowHeight - 50) {
-        el.classList.add('revealed');
-      }
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
     });
   }
 
-  // trigger on scroll and on page load
+  if (closeMenu && mobileMenu) {
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  }
+
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+  // -------------------------
+  // 2. Cookie banner
+  // -------------------------
+  if (!localStorage.getItem("cookieConsent")) {
+    const banner = document.createElement("div");
+    banner.id = "cookie-banner";
+    banner.style.cssText = `
+      position: fixed;
+      bottom: -100px;
+      left: 0;
+      width: 100%;
+      background: #ff3c78;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      z-index: 1000; /* below hamburger */
+      box-sizing: border-box;
+      transition: bottom 0.5s ease-in-out;
+    `;
+
+    banner.innerHTML = `
+      <span>
+        We use cookies to improve your experience on <strong>ARIDESIGN</strong>.
+        Read our <a href="privacy-policy.html" style="color:#000; text-decoration:underline;">Privacy Policy</a>.
+      </span>
+      <button id="allowCookies" style="
+        background:#000;
+        color:#fff;
+        padding:8px 16px;
+        border:none;
+        cursor:pointer;
+        border-radius:4px;
+      ">Allow</button>
+    `;
+
+    document.body.appendChild(banner);
+
+    setTimeout(() => {
+      banner.style.bottom = "0";
+    }, 100);
+
+    document.getElementById("allowCookies").addEventListener("click", function() {
+      localStorage.setItem("cookieConsent", "true");
+      banner.style.bottom = "-100px";
+      setTimeout(() => banner.remove(), 500);
+    });
+  }
+
+  // -------------------------
+  // 3. Typewriter
+  // -------------------------
+  const headline = "Creative Web & Graphic Design That Elevates Your Brand";
+  let i = 0;
+  const typeEl = document.getElementById("typewriter");
+
+  function typeWriter() {
+    if (!typeEl) return;
+    if (i < headline.length) {
+      typeEl.innerHTML += headline.charAt(i);
+      i++;
+      setTimeout(typeWriter, 70);
+    }
+  }
+  typeWriter();
+
+  // -------------------------
+  // 4. Scroll reveal
+  // -------------------------
+  const elements = document.querySelectorAll("section h1, section h2, section h3, section p, section a, section span");
+  elements.forEach(el => el.classList.add('pop-up'));
+
+  function reveal() {
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < windowHeight - 50) el.classList.add('revealed');
+    });
+  }
+
   window.addEventListener('scroll', reveal);
   reveal();
+
 });
 </script>
 
-
-<script>
-const headline = "Creative Web & Graphic Design That Elevates Your Brand";
-let i = 0;
-const speed = 70;
-
-function typeWriter() {
-  if (i < headline.length) {
-    const typeEl = document.getElementById("typewriter");
-    
-    // Replace only the text content, keep the span intact
-    if(typeEl.querySelector(".highlight-color")){
-      typeEl.querySelector(".highlight-color").textContent += headline.charAt(i);
-    } else {
-      typeEl.innerHTML += headline.charAt(i);
-    }
-    
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", typeWriter);
-
-</script>
-
-
-
-
-<script>
-function initSlider(sliderSelector) {
-  const sliderTrack = document.querySelector(sliderSelector + ' .slider-track');
-  const slides = document.querySelectorAll(sliderSelector + ' .portfolio-card');
-  let index = 0;
-
-  function goSlide(i) {
-    const slideWidth = slides[0].offsetWidth;
-    sliderTrack.style.transform = `translateX(-${i * slideWidth}px)`;
-  }
-
-  window.addEventListener('resize', () => goSlide(index));
-
-  setInterval(() => {
-    index++;
-    if(index >= slides.length) index = 0;
-    goSlide(index);
-  }, 4000); // 4 seconds
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  initSlider('#portfolio');      // Graphic Design slider
-  initSlider('#portfolio-web');  // Web Design slider
-});
-</script>
 
 
 
