@@ -1,10 +1,8 @@
-// cookie.js - ARIDESIGN cookie consent banner
-(function() {
-  if(localStorage.getItem('cookieConsent') === 'true') return;
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("cookieConsent") === "true") return;
 
-  // Create banner container
-  var banner = document.createElement('div');
-  banner.id = 'cookie-banner';
+  var banner = document.createElement("div");
+  banner.id = "cookie-banner";
   banner.style.cssText = `
     position: fixed; bottom: 0; left: 0; width: 100%;
     background: #ff3c78; color: #fff; padding: 12px 20px;
@@ -13,7 +11,10 @@
     flex-wrap: wrap;
   `;
   banner.innerHTML = `
-    <span>We use cookies to improve your experience on <strong>ARIDESIGN</strong>. By continuing, you agree to our <a href="privacy.html" style="color:#333; text-decoration:underline;">Privacy Policy</a>.</span>
+    <span>We use cookies to improve your experience on <strong>ARIDESIGN</strong>.
+    By continuing, you agree to our 
+    <a href="privacy.html" style="color:#333; text-decoration:underline;">Privacy Policy</a>.</span>
+
     <button id="cookie-accept" style="
       background: #333;
       color: #fff;
@@ -26,12 +27,10 @@
     ">Allow</button>
   `;
 
-  // Add banner to body
   document.body.appendChild(banner);
 
-  // Click handler
-  document.getElementById('cookie-accept').addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.style.display = 'none';
+  document.getElementById("cookie-accept").addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "true");
+    banner.remove();
   });
-})();
+});
