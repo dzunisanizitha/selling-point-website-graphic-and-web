@@ -207,18 +207,40 @@ a {
 .portfolio-home .section-title { font-size: 2.2rem; font-weight: 800; }
 .portfolio-home .section-title .highlight { background: linear-gradient(90deg,#ff3c78,#ff6899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .portfolio-home .section-subtitle { font-size: 1rem; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.5; }
-.portfolio-slider { overflow: hidden; position: relative; }
-.slider-track { display: flex; transition: transform 0.6s ease-in-out; width: 100%; }
-.portfolio-card { min-width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15); position: relative; }
-.portfolio-card img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-.portfolio-card:hover img { transform: scale(1.05); }
-.portfolio-overlay { position: absolute; bottom: 0; width: 100%; padding: 12px 15px; background: linear-gradient(0deg, rgba(0,0,0,0.6), transparent); color: #fff; text-align: center; font-weight: 600; opacity: 0; transition: opacity 0.3s ease; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
-.portfolio-card:hover .portfolio-overlay { opacity: 1; }
+
+.portfolio-slider {  overflow: hidden;  position: relative;}
+.slider-track {  display: flex;  transition: transform 0.6s ease-in-out;  width: 100%;}
+.portfolio-card {  min-width: 100%;       /* show 1 full card at a time */  max-width: 100%;  border-radius: 16px;  overflow: hidden;  box-shadow: 0 10px 25px rgba(0,0,0,0.15);  position: relative;  flex-shrink: 0;  margin: 0 auto;}
+.portfolio-card img {  width: 100%;  height: auto;  display: block;  object-fit: cover;  transition: transform 0.4s ease;}
+.portfolio-card:hover img {  transform: scale(1.05);}
+.portfolio-overlay {position: absolute; bottom: 0; width: 100%; padding: 12px 15px; background: linear-gradient(0deg, rgba(0,0,0,0.6), transparent); color: #fff; text-align: center; font-weight: 600;  opacity: 0;  transition: opacity 0.3s ease;  border-bottom-left-radius: 16px;  border-bottom-right-radius: 16px;}
+.portfolio-card:hover .portfolio-overlay { opacity: 1;}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-card { min-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {  min-width: 100%;}
+}
+
+/* Desktop: make card smaller but centered */
+@media (min-width: 1025px) {
+  .portfolio-card {min-width: 100%;   /* smaller width */ max-width: 100%; margin: 0;    /* center card in the viewport */ }
+}
+
+/* Keep full width on tablets and mobiles */
+@media (max-width: 1024px) {
+  .portfolio-card { min-width: 100%;  max-width: 100%;  margin: 0; }
+}
+
 
 /* ===== CTA BUTTONS ===== */
 .cta-buttons { text-align: center; margin-top: 20px; }
 .cta-buttons .btn-cta { display: inline-block; background: #ff3c78; color: #fff; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
 .cta-buttons .btn-cta:hover { background: #333; }
+
 
 
 /* ===== BLOG HOME SECTION ===== */
@@ -230,8 +252,16 @@ a {
 .blog-home .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
 .blog-home .blog-card { background-color: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); padding: 25px 20px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .blog-home .blog-card:hover { transform: translateY(-6px); box-shadow: 0 18px 35px rgba(0,0,0,0.12); }
-.blog-home .blog-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; }
+.blog-home .blog-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; color: #ff3c78;}
 .blog-home .blog-card p.blog-excerpt { font-size: 1rem; color: #555; line-height: 1.5; margin-bottom: 20px; }
+.blog-home .btn-blog {color: #ff3c78; text-decoration: underline; font-weight: 600; /* optional: make it stand out */ transition: color 0.3s ease;}
+
+.blog-home .btn-blog:hover {
+  color: #333c; /* slightly darker/redder on hover */
+}
+
+
+
 @media (max-width: 1024px) { .portfolio-home .section-title, .blog-home .section-title { font-size: 2rem; } .portfolio-home .section-subtitle, .blog-home .section-subtitle { font-size: 0.95rem; } }
 @media (max-width: 768px) { .portfolio-card img { height: 180px; object-fit: cover; } }
 @media (max-width: 480px) { .portfolio-card img { height: 150px; } .blog-home .blog-card { padding: 20px 15px; } .portfolio-home .section-title, .blog-home .section-title { font-size: 1.6rem; } }
@@ -320,6 +350,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   .footer-social a {margin-right:15px;}
   .footer-logo img {    margin-left: 47px;}
 }
+
 
 /* PRIVACY -POLICY STYLE*/
 .footer-bottom a {color: #ff3c78;text-decoration: none;transition: 0.3s;}
@@ -629,7 +660,7 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-            <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="web-design.html">Web Design</a></li>
           <li><a href="graphic-design.html">Graphic Design</a></li>
           <li><a href="about.html">About</a></li>
@@ -652,7 +683,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 <div class="footer-bottom">
   <p>&copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN | <a href="privacy-policy.html">Privacy Policy</a></p>
 </div>
-
   </div>
 </footer>
 
@@ -773,9 +803,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
+const portfolioSliders = document.querySelectorAll('.portfolio-slider');
+
+portfolioSliders.forEach(slider => {
+  const track = slider.querySelector('.slider-track');
+  const slides = slider.querySelectorAll('.portfolio-card');
+  let index = 0;
+
+  function slidePortfolio() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    index++;
+    if (index >= slides.length) index = 0;
+  }
+
+  setInterval(slidePortfolio, 4000); // change every 4 seconds
+});
 
 
-
-
+</script>
 </body>
 </html>
