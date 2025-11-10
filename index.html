@@ -26,8 +26,7 @@
   <!-- Favicon -->
   <link rel="icon" href="https://aridesign.co.za/images/favicon.ico" type="image/x-icon">
 
-         <!-- this is cookie notification  -->
-  <script src="js/cookie.js" defer></script>
+
 
   <!-- Styles & Fonts -->
   <script src="js/main.js"></script>
@@ -747,6 +746,10 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </a>
 </div>
 
+         <!-- this is cookie notification  -->
+  <script src="js/cookie.js"></script>
+
+
 
 <!-- FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <footer>
@@ -783,39 +786,6 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
 </footer>
 
 <!-- JS FOR MOBILE MENU >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-<script>
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenu = document.getElementById("closeMenu");
-
-hamburger.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active"); // <-- toggles open/close
-});
-
-closeMenu.addEventListener("click", () => {
-  mobileMenu.classList.remove("active"); // close when clicking X
-});
-
-document.querySelectorAll("#mobileMenu a").forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
-  });
-});
-
-
-const slider = document.querySelector('.testimonials-slider');
-const slides = document.querySelectorAll('.testimonial-card');
-let index = 0;
-
-function slideTestimonials() {
-  index++;
-  if(index >= slides.length) index = 0;
-  slider.style.transform = `translateX(-${index * 100}%)`; // moves exactly one card at a time
-}
-
-// Slide every 4 seconds
-setInterval(slideTestimonials, 4000);
-</script>
 
 
 <script>
