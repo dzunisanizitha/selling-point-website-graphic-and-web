@@ -266,6 +266,21 @@ a {
 @media (max-width: 768px) { .portfolio-card img { height: 180px; object-fit: cover; } }
 @media (max-width: 480px) { .portfolio-card img { height: 150px; } .blog-home .blog-card { padding: 20px 15px; } .portfolio-home .section-title, .blog-home .section-title { font-size: 1.6rem; } }
 
+/* ===== CORPOTAE AND GOVERMENT PROJECTS ===== */
+.corporate-slider { background-color: #333; color: #fff; padding: 50px 20px; text-align: center; } 
+.corporate-slider h2 { font-size:2.5rem; font-weight:800; color:#ff3c78; margin-bottom:15px; }
+.corporate-slider p { font-size:1rem !important; color:#ffffff !important; line-height:1.6; max-width:800px; margin:0 auto; margin-bottom: 20px; }
+.slides-wrapper { overflow: hidden; max-width: 800px; margin: 0 auto; border-radius: 8px; } 
+.slides { display: flex; width: 100%; animation: slideAnimation 16s infinite; } 
+.slide { flex: 0 0 100%; position: relative; } 
+.slide img { width: 100%; height: auto; display: block; object-fit: contain; max-height: 500px; margin: 0 auto; } 
+.slide-label { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); background: #ff3c78; color: #fff; padding: 8px 15px; font-size: 20px; font-weight: bold; border-radius: 5px; z-index: 10; white-space: nowrap; } 
+@keyframes slideAnimation { 0% { transform: translateX(0%); } 18.75% { transform: translateX(0%); } 25% { transform: translateX(-100%); } 43.75% { transform: translateX(-100%); } 50% { transform: translateX(-200%); } 68.75% { transform: translateX(-200%); } 75% { transform: translateX(-300%); } 93.75% { transform: translateX(-300%); } 100% { transform: translateX(0%); } } 
+@media (max-width: 1024px) { .slide img { max-height: 400px; } } 
+@media (max-width: 768px) { .corporate-slider h2 { font-size: 1.5rem; } .slide-label { font-size: 11px; padding: 6px 12px; margin-bottom: -10px; } .slide img { max-height: 300px; } } 
+@media (max-width: 480px) { .slide img { max-height: 200px; } }
+
+
 
 
 /* ===== CONTACT SECTION ===== */
@@ -553,6 +568,35 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   </div>
 </section>
 
+
+
+<section class="corporate-slider">
+  <div class="container">
+    <h2>Corporate & Government Design Concepts</h2>
+    <p>Professional designs demonstrating ARIDESIGN’s capability to deliver high-quality visual solutions for organizations and institutions.</p>
+
+    <div class="slides-wrapper">
+      <div class="slides">
+        <div class="slide">
+          <img src="images/annual report-mockup.webp" alt="Annual Report">
+          <div class="slide-label">Annual Report</div>
+        </div>
+        <div class="slide">
+          <img src="images/brochure-coroporate.webp" alt="Corporate Brochure">
+          <div class="slide-label">Corporate Brochure</div>
+        </div>
+        <div class="slide">
+          <img src="images/company profile-mockup.webp" alt="Company Profile">
+          <div class="slide-label">Company Profile</div>
+        </div>
+        <div class="slide">
+          <img src="images/campaign-mockup.webp" alt="Awareness Campaign">
+          <div class="slide-label">Awareness Campaign</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
