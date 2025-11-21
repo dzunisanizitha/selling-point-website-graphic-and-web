@@ -154,7 +154,7 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .blog-container article { background: #fff; border-radius: 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); margin-bottom: 40px; overflow: hidden; transition: all 0.4s ease; }
 .blog-container article:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
 .blog-container h1 { font-size: 1.7rem; color: #ff3c78; font-weight: 800; text-align: center; margin: 25px 20px 15px; }
-.blog-container .intro { color: #444; font-size: 1rem; line-height: 1.7; text-align: center; padding: 0 20px 15px; }
+.blog-container .intro { color: #444; font-size: 0.95rem; line-height: 1.7; text-align: center; padding: 0 20px 15px; }
 .blog-container img { width: 100%; height: auto; display: block; border-radius: 0; margin-bottom: 10px; }
 details { border-top: 1px solid #eee; padding: 0 20px 25px; position: relative; }
 summary.read-more-btn { cursor: pointer; font-weight: 700; text-transform: uppercase; color: #ff3c78; font-size: 0.95rem; text-align: center; background: #fff; border: 2px solid #ff3c78; border-radius: 10px; padding: 10px 25px; margin: 15px auto; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255,60,120,0.25); }
@@ -162,7 +162,7 @@ summary.read-more-btn:hover { background: #ff3c78; color: #fff; transform: trans
 details[open] summary.read-more-btn { background: #333; color: #fff; border-color: #333; }
 .blog-content { margin-top: 20px; animation: fadeIn 0.5s ease; }
 .blog-content h2 { font-size: 1.3rem; font-weight: 700; color: #ff3c78; margin-top: 20px; }
-.blog-content p, .blog-content ul { font-size: 1rem; line-height: 1.7; color: #444; margin-top: 10px; }
+.blog-content p, .blog-content ul { font-size: 0.95rem; line-height: 1.7; color: #444; margin-top: 10px; }
 .blog-content ul { list-style: disc; margin-left: 25px; }
 .blog-content .cta { margin-top: 30px; text-align: center; }
 .blog-content .btn-cta {background: #ff3c78;color: #fff;padding: 12px 30px;border-radius: 10px;text-decoration: none;font-weight: 700;text-transform: uppercase;transition: all 0.3s ease;box-shadow: 0 6px 20px rgba(255,60,120,0.4);display: inline-block;white-space: normal;        /* allow wrapping on smaller screens */word-wrap: break-word;      /* ensure long text wraps properly */max-width: 90%;   }          /* prevent overflowing container */
@@ -178,39 +178,49 @@ details[open] summary.read-more-btn { background: #333; color: #fff; border-colo
 }
 
 /* === Mobile adjustments === */
+/* MOBILE FIXES — Keep design but reduce height + improve spacing */
 @media (max-width: 768px) {
+
+  /* Reduce empty space inside post */
+  .blog-container article {
+    padding-bottom: 15px;
+  }
+
+  /* Keep H1 centered, only text becomes left-aligned */
+  .blog-container .intro,
+  .blog-content p,
+  .blog-content ul {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Adjust spacing so it matches heading margins */
+  .blog-container .intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+  }
+
+  /* Reduce padding around container (avoid huge sides) */
   .blog-container {
-    padding: 10px;
+    padding: 15px;
   }
-  .blog-container h1 {
-    font-size: 1.4rem;
-  }
-  .intro {
-    font-size: 0.95rem;
-  }
-  /* CTA button responsive size */
+
+  /* Make button elegant on mobile */
   .blog-content .btn-cta {
-    font-size: 0.9rem;
+    width: 100%;
+    max-width: 320px;
     padding: 12px 20px;
-    width: 100%;              /* make full width for mobile */
-    max-width: 320px;         /* keeps it neat */
+    font-size: 0.9rem;
   }
+
+  /* Center the CTA wrapper */
   .blog-content .cta {
     display: flex;
     justify-content: center;
   }
 }
-
-
-.blog-container a {
-  color: #ff3c78; /* your brand pink */
-  text-decoration: underline; /* makes it obvious it’s clickable */
-  transition: color 0.3s;
-}
-.blog-container a:hover {
-  color: #333; /* optional: darken on hover */
-}
-
 
 
 
@@ -309,8 +319,8 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
         <li class="dropdown">
           <a href="#">Services ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="web-design.html">Web Design</a></li>
             <li><a href="graphic-design.html">Graphic Design</a></li>
+            <li><a href="web-design.html">Web Design</a></li>
           </ul>
         </li>
         <li><a href="blog.html">Blog</a></li>
@@ -341,13 +351,13 @@ footer {background:#111; color:#fff; padding:50px 20px; font-family:Arial, sans-
   <ul>
     <!-- SERVICES WITH ICONS -->
     <li>
-      <a href="web-design.html">
-        <i class="fa fa-laptop-code" aria-hidden="true"></i> Web Design
+      <a href="graphic-design.html">
+        <i class="fa fa-paint-brush" aria-hidden="true"></i> Graphic Design
       </a>
     </li>
     <li>
-      <a href="graphic-design.html">
-        <i class="fa fa-paint-brush" aria-hidden="true"></i> Graphic Design
+      <a href="web-design.html">
+        <i class="fa fa-laptop-code" aria-hidden="true"></i> Web Design
       </a>
     </li>
 
