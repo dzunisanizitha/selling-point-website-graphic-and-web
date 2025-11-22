@@ -191,8 +191,6 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 @media (max-width: 480px) { .portfolio-hero { padding: 60px 15px; } .portfolio-hero h1 { font-size: 1.6rem; } .portfolio-hero p { font-size: 0.9rem; } .hero-btn { padding: 10px 22px; font-size: 0.9rem; } .portfolio-gallery { padding-left: 40px; padding-right: 40px; padding-top: 60px; padding-bottom: 60px; } .portfolio-grid { gap: 10px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } .portfolio-card { border-radius: 10px; } .portfolio-card img { height: 130px; object-fit: cover; } .portfolio-info { padding: 12px; } .portfolio-info h3 { font-size: 0.95rem; } .portfolio-info p { font-size: 0.8rem; } .cta-title { font-size: 1.4rem; } .cta-subtitle { font-size: 0.9rem; } .btn-cta { padding: 10px 24px; font-size: 0.9rem; } }
 
 
-
-
 /* ===== CTA SECTION ===== */
 .cta-portfolio { background: #ff3c78; color: #fff; padding: 80px 20px; text-align: center; border-radius: 0 50px 0 0; margin: 60px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
 .cta-portfolio .cta-title { font-size: 2rem; font-weight: 900; margin-bottom: 20px; }
@@ -201,32 +199,13 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .cta-portfolio .btn-cta:hover { background: #333; color: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255,60,120,0.5); }
 /* ===== CTA PORTFOLIO MOBILE FIX ===== */
 @media (max-width: 768px) {
-
-  .cta-portfolio {
-    padding: 60px 20px; /* reduced height for mobile */
-  }
-
+  .cta-portfolio { padding: 60px 20px; /* reduced height for mobile */}
   /* Heading stays centered */
-  .cta-portfolio .cta-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-
+  .cta-portfolio .cta-title { font-size: 2rem; text-align: center; }
   /* Subtitle left-aligned on mobile */
-  .cta-portfolio .cta-subtitle {
-    font-size: 0.95rem;
-    text-align: center;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+  .cta-portfolio .cta-subtitle { font-size: 0.95rem; text-align: center; max-width: 100%;  margin-left: auto; margin-right: auto; }
   /* Button stays centered */
-  .cta-portfolio .btn-cta {
-    padding: 12px 28px;
-    font-size: 0.95rem;
-  }
-}
+  .cta-portfolio .btn-cta {  padding: 12px 28px; font-size: 0.95rem;}}
 
 /* ===== WhatsApp Floating Button (Modern Creative Style) ===== */
 .whatsapp-floating { position: fixed; bottom: 28px; right: 28px; display: flex; align-items: center; gap: 12px; background: rgba(25, 25, 25, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px; padding: 10px 18px 10px 22px; backdrop-filter: blur(10px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); z-index: 1200; font-family: 'Poppins', sans-serif; animation: floatY 4s ease-in-out infinite; transition: all 0.4s ease; }
