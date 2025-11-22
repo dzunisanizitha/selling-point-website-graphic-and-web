@@ -175,48 +175,18 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .quote-form button { background:#ff3c78; color:#fff; padding:16px 32px; font-weight:700; font-size:1.1rem; border:none; border-radius:10px; cursor:pointer; transition:all 0.3s ease; }
 .quote-form button:hover { background:#e12f68; transform:translateY(-3px); box-shadow:0 8px 20px rgba(255,60,120,0.4); }
 /* === MOBILE FIXES FOR QUOTE FORM === */
-@media (max-width: 768px) {
-
-  /* Reduce padding + prevent tall section */
-  .quote-form {
-    padding: 50px 20px;
-    margin: 30px auto;
-  }
-
+@media (max-width: 768px) { .quote-form { padding: 50px 20px;  margin: 30px auto;}
   /* Keep heading centered */
-  .quote-form h2 {
-    font-size: 1.8rem;
-  }
-
+  .quote-form h2 { font-size: 1.8rem;}
   /* Left align ONLY the paragraph text */
-  .quote-form p {
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.95rem;
-  }
-
+  .quote-form p { text-align: left; padding-left: 10px; padding-right: 10px; margin-left: auto; margin-right: auto; font-size: 0.95rem;}
   /* Stack fields properly */
-  .quote-form .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-
+  .quote-form .form-row {  flex-direction: column; gap: 15px;}
   /* Reduce input & textarea padding slightly */
   .quote-form input,
-  .quote-form textarea {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
-
+  .quote-form textarea { padding: 10px 14px;  font-size: 0.95rem; }
   /* Smaller button but still bold */
-  .quote-form button {
-    font-size: 1rem;
-    padding: 14px 26px;
-  }
-}
+  .quote-form button { font-size: 1rem;padding: 14px 26px; }}
 
 
 /* ===== CONTACT ===== */
@@ -234,44 +204,15 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
 .contact-link:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.25); }
 /* === MOBILE & TABLET FIXES FOR CONTACT SECTION === */
 @media (max-width: 768px) {
-
-  .contact {
-    padding: 60px 20px;
-  }
-
+.contact {   padding: 60px 20px; }
   /* Keep heading centered */
-  .contact-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
+  .contact-title { font-size: 1.8rem; text-align: center; }
   /* Left align ONLY this text, with clean spacing */
-  .contact-subtitle {
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.95rem;
-  }
-
+  .contact-subtitle { text-align: left; padding-left: 10px; padding-right: 10px; margin-left: auto;  margin-right: auto; font-size: 0.95rem; }
   /* Stack buttons vertically */
-  .contact-links {
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-  }
-
+  .contact-links {  flex-direction: column;  gap: 15px; justify-content: center; align-items: center;}
   /* Make each contact button full-width (but neat) */
-  .contact-link {
-    width: 100%;
-    max-width: 330px;
-    justify-content: center;
-    padding: 14px 20px;
-    font-size: 1rem;
-  }
-}
+  .contact-link { width: 100%;  max-width: 330px; justify-content: center; padding: 14px 20px; font-size: 1rem; }}
 
 /* ===== QUOTE FORM DECORATIVE SHAPES ===== */
 .quote-form {position:relative; background:#f9f9f9; padding:80px 20px; overflow:hidden; z-index:1;}
