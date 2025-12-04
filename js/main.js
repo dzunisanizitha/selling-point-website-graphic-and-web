@@ -300,3 +300,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent default submission
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/mrbykzgp", {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = "https://aridesign.co.za/thank-you.html"; // redirect on success
+    } else {
+      alert("Oops! There was a problem submitting your form.");
+    }
+  }).catch(error => {
+    alert("Oops! There was a problem submitting your form.");
+  });
+});
+
+
+
