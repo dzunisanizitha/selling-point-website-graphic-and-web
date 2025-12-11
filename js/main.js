@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // -------------------------
   // 3. Typewriter
   // -------------------------
-  const headline = "Creative Web & Graphic Design That Elevates Your Brand";
+  const headline = "Helping Your Brand Stand Out with Graphic Design, Web & Photography";
   let i = 0;
   const typeEl = document.getElementById("typewriter");
 
@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
   typeWriter();
+  
 
   // -------------------------
   // 4. Scroll reveal
