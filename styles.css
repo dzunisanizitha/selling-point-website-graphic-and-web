@@ -2574,7 +2574,7 @@ input[type="radio"] {
 header { text-align: center; margin-bottom: 30px; }
 /* Header container */
 .rolling-header { background-color: #ff3c78; padding: 7px 0; overflow: hidden; white-space: nowrap; box-shadow: 0 4px 10px rgba(0,0,0,0.2); border-radius: 8px; max-width: 100%; margin: 20px auto; text-align: center; position: relative; }
-.rolling-header span { display: inline-block; color: #fff; font-size: 2.2rem; font-weight: bold; font-family: 'Arial', sans-serif; padding-left: 100%; animation: roll 10s linear infinite; }
+.rolling-header span { display: inline-block; color: #fff; font-size: 2.2rem; font-weight: bold; font-family: 'Arial', sans-serif; padding-left: 100%; animation: roll 35s linear infinite; }
 @keyframes roll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 main { max-width: 900px; margin: 40px auto; padding: 30px 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); font-family: 'Arial', sans-serif; color: #333; line-height: 1.6; }
 main h1 { text-align: center; color: #ff3c78; margin-bottom: 25px; font-size: 2rem; }
