@@ -1264,7 +1264,7 @@ a { text-decoration: none; transition: all 0.3s ease;}
   color: #ff3c78;
 }
 
-.section-subtitle {
+.section-subtitle-service {
   text-align: center;
   font-size: 1.1rem;
   margin-bottom: 40px;
@@ -1564,7 +1564,7 @@ input[type="radio"] {
 
 
 .featured-corporate .section-subtitle {
-  font-size: 16px;
+  font-size: 0.9rem !important;
   color: #333;           /* better contrast for visibility */
   max-width: 700px;
   margin: 0 auto 50px;
@@ -1638,9 +1638,6 @@ input[type="radio"] {
   color: #333; /* dark gray text */
   line-height: 1.5;
 }
-
-
-
 
 
 /* ===== BLOG HOME SECTION ===== */
