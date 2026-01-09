@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // -------------------------
   // 3. Typewriter
   // -------------------------
-  const headline = "Helping Your Brand Stand Out with Graphic Design, Web & Photography";
+  const headline = "Graphic Design That Makes Your Brand Stand Out";
   let i = 0;
   const typeEl = document.getElementById("typewriter");
 
@@ -200,6 +200,61 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   typeWriter();
   
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.projects-track');
+  const cards = document.querySelectorAll('.project-card');
+  const slider = document.querySelector('.projects-slider');
+  let index = 0;
+
+  if (!track || cards.length === 0) return;
+
+  // Show card at index
+  function showCard(i) {
+    const cardWidth = slider.offsetWidth;
+    track.style.transform = `translateX(-${cardWidth * i}px)`;
+    updateDots(i);
+  }
+
+  // Next card
+  function nextCard() {
+    index++;
+    if (index >= cards.length) index = 0;
+    showCard(index);
+  }
+
+  // Auto-slide every 4 seconds
+  setInterval(nextCard, 4000);
+
+  // Dots navigation
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'projects-dots';
+  cards.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      index = i;
+      showCard(index);
+    });
+    dotsContainer.appendChild(dot);
+  });
+  slider.appendChild(dotsContainer);
+
+  function updateDots(activeIndex) {
+    const dots = document.querySelectorAll('.projects-dots span');
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[activeIndex]) dots[activeIndex].classList.add('active');
+  }
+
+  // Responsive: adjust card width on resize
+  window.addEventListener('resize', () => showCard(index));
+});
+
+
+
+
+
 
   // -------------------------
   // 4. Scroll reveal

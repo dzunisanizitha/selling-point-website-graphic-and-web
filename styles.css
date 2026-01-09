@@ -1544,6 +1544,103 @@ input[type="radio"] {
 }
 
 
+/* ===============================
+   Corporate & Institutional Design
+=============================== */
+/* ===== Featured Corporate Projects Styling ===== */
+.featured-corporate {
+  padding: 80px 20px;
+  background-color: #fff; /* white background */
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.featured-corporate .section-title {
+  font-size: 2.5rem;
+  font-weight: 800 !important;
+  color: #ff3c78; /* dark text */
+  margin-bottom: 10px;
+}
+
+
+.featured-corporate .section-subtitle {
+  font-size: 16px;
+  color: #333;           /* better contrast for visibility */
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;      /* improves readability */
+  display: block;        /* ensures paragraph displays correctly */
+}
+
+.section-subtitle{color: #333 !important;}
+
+.projects-slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.projects-track {
+  display: flex;
+  gap: 30px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.project-image img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: block;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333; /* dark gray for titles */
+  margin-bottom: 5px;
+}
+
+.project-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff3c78; /* brand primary pink */
+  display: inline-block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #333; /* dark gray text */
+  line-height: 1.5;
+}
+
+
+
 
 
 /* ===== BLOG HOME SECTION ===== */
@@ -1686,175 +1783,7 @@ input[type="radio"] {
 }
 
 
-/* ===== CORPOTAE AND GOVERMENT PROJECTS ===== */
-.corporate-slider {
-  width: 100vw;          /* full viewport width */
-  position: relative;
-  background: #333;      /* or any color you want */
-  padding: 40px 0;
-  margin-left: calc(-50vw + 50%);  /* removes container padding effect */
-  box-sizing: border-box;
-}
 
-.corporate-slider .container {
-  width: 100%;
-  padding: 0 20px;
-}
-
-.corporate-slider h2 {
-  font-size: clamp(24px, 3vw, 32px);
-  margin-bottom: 8px;
-  font-weight: 800;
-  color: #ff3c78;
-}
-
-.corporate-slider .corporate-lead {
-  margin-bottom: 24px;
-  color: #333;
-  font-size: 16px;
-}
-
-/* ===== SLIDER TRACK ===== */
-.corp-slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.corp-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll-left 15s linear infinite;
-}
-
-.corp-item {
-  flex: 0 0 auto; /* prevents shrinking */
-  width: 300px; /* adjust width of each item */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.corp-item img {
-  width: 100%;
-  height: 185px; /* adjust as needed */
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.corp-item span {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* ===== SCROLL ANIMATION ===== */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* ===== DUPLICATE SLIDES FOR SEAMLESS LOOP ===== */
-.corp-track {
-  /* duplicate content in HTML for seamless effect if needed */
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .corp-item {
-    width: 250px;
-  }
-}
-
-@media (max-width: 640px) {
-  .corp-item {
-    width: 250px;
-  }
-  .corporate-slider h2 {font-size: 1.8rem !important;}
-
-  .corp-item img {
-    height: 170px;
-  }
-}
-
-
-
-/* 1) Make the whole CTA section full-bleed (edge-to-edge) */
-.cta-section {
-  position: relative;
-  width: 100vw;                  /* full viewport width */
-  left: 50%;
-  margin-left: -50vw;            /* break out of parent container */
-  margin-right: -50vw;
-  background-color: #ff3c78;     /* full-bleed background */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  border-radius: 0 50px 0 0;
-  padding: 80px 0;               /* vertical spacing; content is padded by inner container */
-  box-sizing: border-box;
-  z-index: 1;
-  overflow: visible;
-}
-
-
-/* CTA button styling (you can keep your existing styles) */
-.cta-section .btn-cta {
-  display: inline-block;
-  background:#fff;
-  color: #ff3c78;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 15px 35px;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.cta-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px;  line-height: 1.2; color: #fff;}
-.cta-subtitle { font-size: 1rem; max-width: 900px; margin: 0 auto 30px; line-height: 1.5; color: #fff; }
-
-
-/* Default shape size (desktop) */
-.cta-section .cta-shape.shape1 {
-  width: 180px;
-  height: 180px;
-  position: absolute;
-  top: 10px;
-  right: -30px;
-  border-radius: 10%;
-  background: rgb(251, 197, 90);
-  filter: blur(1px);
-  z-index: 0;
-}
-
-
-/* Tablet size */
-@media (max-width: 768px) {
-  .cta-section .cta-shape.shape1 {
-    width: 120px;
-    height: 120px;
-    top: 10px;
-    right: -20px;
-  }
-}
-
-/* Mobile size — make it small and subtle */
-@media (max-width: 480px) {
-  .cta-section .cta-shape.shape1 {
-    width: 60px;
-    height: 60px;
-    top: 2px;
-    right: -10px;
-  }
-}
-
-
-
-
-/* ===== CONTACT SECTION ===== */
 /* ===== CONTACT SECTION FULL WIDTH >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===== */
 .contact {
   width: 100vw;                         /* full viewport width */
