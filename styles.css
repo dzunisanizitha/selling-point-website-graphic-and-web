@@ -1297,7 +1297,7 @@ a { text-decoration: none; transition: all 0.3s ease;}
   border-radius: 10px 10px 0 0;
 }
 
-.section-title {
+.section-title-serve {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
@@ -1647,7 +1647,6 @@ a { text-decoration: none; transition: all 0.3s ease;}
 
 /* ============ FEATURED AGENCY STYLE ============ */
 /* Keep all previous styling */
-
 :root {
   --primary: #e62b65; /* Your brand color */
   --text-dark: #111;
