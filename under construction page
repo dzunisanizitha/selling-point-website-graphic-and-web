@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Under Construction | ARIDESIGN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: #ff3c78;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      color: #ffdd00; /* yellow accent */
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      max-width: 180px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 35px;
+      background: #fff;
+      color: #ff3c78;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: #ffdd00;
+      color: #333;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/images/MY LOGO.png" alt="ARIDESIGN Logo">
+    </div>
+    <h1>Page Under <span class="highlight">Construction</span></h1>
+    <p>We're currently updating this page. Please check back in a few hours for the latest content.</p>
+    <a href="index.html" class="btn-back">Back to Home</a>
+  </div>
+</body>
+</html>

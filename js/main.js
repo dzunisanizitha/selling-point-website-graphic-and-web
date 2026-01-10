@@ -202,57 +202,52 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.projects-track');
-  const cards = document.querySelectorAll('.project-card');
-  const slider = document.querySelector('.projects-slider');
+
+  const carousel = document.querySelector('.carousel');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+
+  function getScrollAmount() {
+    const card = document.querySelector('.project-card');
+    const gap = 48; // must match CSS gap
+    return card.offsetWidth + gap;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: -getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+
+
+
+  
+document.querySelectorAll('.category-slider').forEach(slider => {
+  const track = slider.querySelector('.slider-track');
+  const slides = slider.querySelectorAll('.slide');
   let index = 0;
 
-  if (!track || cards.length === 0) return;
-
-  // Show card at index
-  function showCard(i) {
-    const cardWidth = slider.offsetWidth;
-    track.style.transform = `translateX(-${cardWidth * i}px)`;
-    updateDots(i);
+  function showSlide(i) {
+    index = (i + slides.length) % slides.length;
+    const width = slides[0].clientWidth;
+    track.style.transform = `translateX(-${index * width}px)`;
   }
 
-  // Next card
-  function nextCard() {
-    index++;
-    if (index >= cards.length) index = 0;
-    showCard(index);
-  }
+  // Auto slide every 4 seconds
+  setInterval(() => showSlide(index + 1), 4000);
 
-  // Auto-slide every 4 seconds
-  setInterval(nextCard, 4000);
-
-  // Dots navigation
-  const dotsContainer = document.createElement('div');
-  dotsContainer.className = 'projects-dots';
-  cards.forEach((_, i) => {
-    const dot = document.createElement('span');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      index = i;
-      showCard(index);
-    });
-    dotsContainer.appendChild(dot);
-  });
-  slider.appendChild(dotsContainer);
-
-  function updateDots(activeIndex) {
-    const dots = document.querySelectorAll('.projects-dots span');
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[activeIndex]) dots[activeIndex].classList.add('active');
-  }
-
-  // Responsive: adjust card width on resize
-  window.addEventListener('resize', () => showCard(index));
+  // Adjust on resize
+  window.addEventListener('resize', () => showSlide(index));
 });
-
-
-
 
 
 

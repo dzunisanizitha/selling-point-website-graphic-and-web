@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARIDESIGN | Freelance Graphic & Web Design</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+/* --- ROOT VARIABLES --- */
+:root {
+  --primary-color: #ff3c78;
+  --secondary-color: #f7d200;
+  --text-dark: #333;
+  --text-light: #fff;
+  --font-sans: 'Open Sans', Arial, sans-serif;
+}
+
+/* --- RESET & GLOBAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.2;
+}
+
+/* --- VISUALLY HIDDEN (SEO) --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- SECTIONS --- */
+section {
+  width: 100%;
+  padding: 80px 20px;
+}
+
+h2.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2.section-title .highlight {
+  color: var(--primary-color);
+}
+
+p.section-subtitle {
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+/* --- HERO --- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top:0; left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index:2;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index:3;
+  text-align: center;
+  color: var(--text-light);
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.about-hero-content h1 span {
+  color: var(--secondary-color);
+}
+
+.btn-hero {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-hero:hover {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+/* --- MISSION / VISION GRID --- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.mv-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  max-width: 450px;
+  text-align: center;
+}
+
+/* --- FEATURES GRID --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* --- CTA --- */
+.cta-links {
+  background: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-outline:hover {
+  background: var(--text-light);
+  color: var(--text-dark);
+}
+
+/* --- CLIENT LOGOS / STATS --- */
+.trust {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.client-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.stats h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials-section {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 80px 20px;
+}
+
+.testimonials-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.testimonial-initial {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* --- FULL CTA --- */
+.cta-portfolio-full {
+  background: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.btn-cta {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 28px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* --- WHATSAPP FLOAT --- */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-floating img {
+  width: 40px;
+  height: 40px;
+}
+
+/* --- FOOTER --- */
+.footer-clean {
+  background: #111;
+  color: var(--text-light);
+  padding: 60px 20px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-top a {
+  color: var(--text-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 14px;
+}
+
+/* --- RESPONSIVE --- */
+@media(max-width:768px){
+  .cta-buttons, .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mv-grid, .features-grid, .client-logos, .testimonials-slider {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="about-hero">
+  <img src="/images/graphic design banner.webp" alt="ARIDESIGN Banner" class="about-hero-bg">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <h1>Grow Your Brand with <span>Creative Design</span></h1>
+    <h1 class="visually-hidden">ARIDESIGN | Freelance Graphic & Web Design</h1>
+    <p>ARIDESIGN helps small businesses, startups, and churches stand out with modern, professional web and graphic design across Limpopo and South Africa.</p>
+    <a href="quote.html" class="btn-hero">Request a Free Quote</a>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="about-intro">
+  <h2 class="section-title">Who <span class="highlight">We Are at ARIDESIGN</span></h2>
+  <p class="section-subtitle">ARIDESIGN is a freelance graphic and web design studio in Limpopo, South Africa, helping small businesses, startups, and churches create powerful brand identities.</p>
+</section>
+
+<!-- MISSION / VISION -->
+<section class="mission-vision">
+  <h2 class="section-title">Our <span class="highlight">Mission & Vision</span></h2>
+  <div class="mv-grid">
+    <div class="mv-card">
+      <h3>Our Mission</h3>
+      <p>Empower small businesses, startups, and churches in Limpopo and South Africa with creative, professional, and affordable design solutions.</p>
+    </div>
+    <div class="mv-card">
+      <h3>Our Vision</h3>
+      <p>Establish ARIDESIGN as Limpopo’s most trusted freelance graphic and web design studio — recognized for creativity, reliability, and helping local brands make a lasting impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="about-values">
+  <h2 class="section-title">Why Work With <span class="highlight">ARIDESIGN</span>?</h2>
+  <p class="section-subtitle">We combine creativity, reliability, and SEO-friendly design to help small businesses, startups, and churches grow online with confidence.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🖌️</div><h3>Creative & Strategic Design</h3><p>Logos, websites, and graphics crafted to reflect your unique brand identity.</p></div>
+    <div class="feature-card"><div class="feature-icon">⚡</div><h3>Fast, Reliable Turnaround</h3><p>Projects completed quickly without compromising creativity or quality.</p></div>
+    <div class="feature-card"><div class="feature-icon">🔍</div><h3>SEO & Performance Focused</h3><p>Optimized for Google search and seamless user experience across devices.</p></div>
+    <div class="feature-card"><div class="feature-icon">🤝</div><h3>Trusted Local Support</h3><p>Clear communication and personal support from a Limpopo-based designer.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-links">
+  <h2>Ready to Grow Your Brand?</h2>
+  <p>ARIDESIGN helps small businesses, startups, and churches with modern, affordable web & graphic design that gets real results.</p>
+  <div class="cta-buttons">
+    <a href="web-design.html" class="btn-primary">Web Design</a>
+    <a href="graphic-design.html" class="btn-outline">Graphic Design</a>
+    <a href="photo-videography.html" class="btn-primary">Photo & Videography</a>
+  </div>
+</div>
+
+<!-- CLIENTS / STATS -->
+<section class="trust">
+  <h2>Trusted by Local Businesses & Startups</h2>
+  <div class="client-logos">
+    <img src="/images/dhm-logo.png" alt="DHM">
+    <img src="/images/spa-logo1.png" alt="Spa">
+    <img src="/images/e-commerce-logo1.png" alt="E-commerce">
+    <img src="/images/barber.png" alt="Barber Shop">
+  </div>
+  <div class="stats">
+    <div class="stat"><h3>30+</h3><p>Websites Built</p></div>
+    <div class="stat"><h3>100%</h3><p>Client Satisfaction</p></div>
+    <div class="stat"><h3>8+</h3><p>Years Experience</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <h2 class="section-title">What <span class="highlight">Our Clients Say</span></h2>
+  <div class="testimonials-slider">
+    <div class="testimonial-card"><div class="testimonial-initial">M</div><p>"Transformed our brand identity!"</p></div>
+    <div class="testimonial-card"><div class="testimonial-initial">T</div><p>"Professional and creative."</p></div>
+    <div class="testimonial-card"><div class="testimonial-initial">L</div><p>"Delivered exactly what our website needed."</p></div>
+    <div class="testimonial-card"><div class="testimonial-initial">K</div><p>"Social media graphics increased engagement."</p></div>
+    <div class="testimonial-card"><div class="testimonial-initial">N</div><p>"Professional website that drives results."</p></div>
+  </div>
+</section>
+
+<!-- FULL CTA -->
+<section class="cta-portfolio-full">
+  <h2>Ready to Transform Your Brand?</h2>
+  <p>Partner with ARIDESIGN for creative freelance graphic design, branding, and website solutions tailored for small businesses, churches, and startups.</p>
+  <a href="quote.html" class="btn-cta">Get Your Free Quote</a>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-floating">
+  <a href="https://wa.me/27684757321" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-clean">
+  <div class="footer-top">
+    <div class="footer-logo"><img src="/images/MY LOGO.png" alt="ARIDESIGN Logo"></div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="graphic-design.html">Graphic Design</a></li>
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="photo-videography.html">Photo & Videography</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="mailto:infoaridesignza@gmail.com">infoaridesignza@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/27684757321">+27 68 475 7321</a></p>
+      <p>South Africa</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 ARIDESIGN. All Rights Reserved. | Designed & Developed by ARIDESIGN
+  </div>
+</footer>
+
+</body>
+</html>
