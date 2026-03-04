@@ -678,8 +678,81 @@ details[open] summary.read-more-btn { background: #333; color: #fff; border-colo
 .hero-graphic .highlight-graphic { background: linear-gradient(90deg, #ff3c78, #e6326a, #ffc400); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
 .hero-graphic .hero-subtitle { font-size: 1.2rem; line-height: 1.6; margin-bottom: 30px; max-width: 650px; margin-left: auto; margin-right: auto; color: #f5f5f5; }
 .hero-graphic .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
-.btn-hero-graphic { display: inline-block; background: #ff3c78; color: #fff; font-weight: 1000;  font-size: 1.2rem;  padding: 14px 36px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(255,60,120,0.5); }
-.btn-hero-graphic:hover { background: #333; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,60,120,0.6); }
+
+/* HERO CTA BUTTONS (make both equal) */
+.cta-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Shared button style for both */
+.cta-buttons .btn-hero-graphic,
+.cta-buttons .btn-cta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;          /* makes them equal width */
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 800;          /* IMPORTANT: remove px */
+  line-height: 1;
+  border-radius: 30px;       /* same shape */
+  text-decoration: none;
+  white-space: nowrap;       /* keeps text neat */
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(255,60,120,0.5);
+}
+
+/* Primary (Quote) */
+.cta-buttons .btn-hero-graphic{
+  background: #ff3c78;
+  color: #fff;
+}
+
+/* Secondary (WhatsApp) — outline style so it doesn’t look like same button */
+.cta-buttons .btn-cta{
+  background: transparent;
+  color: #fff;
+  border: 2px solid #ff3c78;
+  box-shadow: none;
+}
+
+/* Hover */
+.cta-buttons .btn-cta:hover{
+  background: #fff;
+  border-color: #ff3c78;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255,60,120,0.6);
+}
+
+.cta-buttons .btn-hero-graphic:hover {
+  background:#333;
+  border-color: #ff3c78;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255,60,120,0.6);
+}
+
+/* Mobile: stack and keep equal */
+@media (max-width: 600px){
+  .cta-buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn-hero-graphic,
+  .cta-buttons .btn-cta{
+    width: 90%;
+    max-width: 320px;
+    min-width: 0;
+    white-space: normal;   /* allow wrap if needed on small screens */
+    text-align: center;
+  }
+}
+
 .design-shape { position: absolute; border-radius: 50%; opacity: 0.15; animation: floatShape 12s infinite ease-in-out alternate; }
 .design-shape.shape1 { width: 180px; height: 180px; background: #ff3c78; top: 10%; left: 10%; animation-delay: 0s; }
 .design-shape.shape2 { width: 130px; height: 130px; background: #ffc400; top: 25%; right: 15%; animation-delay: 3s; }
@@ -697,9 +770,6 @@ details[open] summary.read-more-btn { background: #333; color: #fff; border-colo
   margin-top: 30px; /* optional, adjust vertical spacing */
   border-radius: 10px !important
 }
-.btn-cta { display: inline-block; background: #ff3c78; color: #fff; font-size: 1.2rem; font-weight: 1000px; padding: 14px 36px; border-radius: 10px !important; text-decoration: none; box-shadow: 0 6px 25px rgba(255,60,120,0.5); transition: all 0.3s ease; }
-.btn-cta:hover { background: #333; color: #fff; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,60,120,0.6); }
-@media (max-width:480px) { .btn-cta { width: 80%; max-width: 280px; margin: 0 auto; } }
 
 
 /* ===== FREE RESOURCES HIGHLIGHT BANNER ===== */
@@ -2932,6 +3002,68 @@ main a:hover { color: #222; text-decoration: none; }
   }
 }
 
+/* Local Areas section................................................ */
+:root{
+  --brand:#ff3c78;
+  --dark:#333;
+  --white:#fff;
+  --brandTint: rgba(255, 60, 120, 0.03); /* soft pink tint */
+}
+
+/* Local Areas section */
+.local-areas{
+  padding: 50px 0;
+  background: var(--brandTint);
+}
+
+.local-areas .container{
+  background: var(--white);
+  border: 1px solid rgba(255, 60, 120, 0.25);
+  border-left: 6px solid var(--brand);
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.local-areas h2{
+  color: var(--brand);
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+  font-size: 1.7rem;
+}
+
+.local-areas p{
+  color: var(--dark);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.local-areas p strong{
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* Optional: make the city list look like a highlight */
+.local-areas p strong{
+  background: rgba(255, 60, 120, 0.12);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px){
+  .local-areas{
+    padding: 35px 0;
+  }
+  .local-areas .container{
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+}
+
+
 /* ===== PACKAGES + FEATURES ===== */
 .packages { position:relative; padding:90px 20px 110px; background:linear-gradient(135deg,#fff 0%,#ffe6f0 100%); text-align:center; overflow:hidden; font-family:'Poppins',sans-serif; box-shadow:0 -20px 60px rgba(0,0,0,0.05); z-index:1; }
 .packages::before { content:""; position:absolute; top:-30%; right:-20%; width:150%; height:150%; background:radial-gradient(circle at 25% 25%, rgba(255,60,120,0.08), transparent 70%),radial-gradient(circle at 75% 75%, rgba(255,60,120,0.12), transparent 70%); z-index:0; animation:floatGlow 12s ease-in-out infinite; }
@@ -2958,6 +3090,99 @@ main a:hover { color: #222; text-decoration: none; }
 @media (max-width: 1024px) { .packages h2 { font-size: 2.2rem; } .packages .sub-text { font-size: 1.05rem; margin-bottom: 40px; } .package ul li { font-size: 0.9rem; } }
 @media (max-width: 768px) { .packages { padding: 60px 15px 70px; } .packages .sub-text { text-align: center; margin-bottom: 35px; } .package-grid { grid-template-columns: 1fr; gap: 25px; } .package { padding: 35px 20px; max-width: 100%; } .package h3 { font-size: 1.25rem; } .package .price { font-size: 1.2rem; } .package ul li { font-size: 0.88rem; padding-left: 20px; } .package.popular .badge { top: 12px; right: -30px; padding: 5px 35px; font-size: 0.78rem; } }
 @media (max-width: 480px) { .packages { padding: 50px 15px 60px; } .packages h2 { font-size: 1.8rem !important; text-align: center; font-weight: 800;} .packages .sub-text { font-size: 0.9rem !important; } .package h3 { font-size: 1.1rem !important; text-align: left !important; } .package .price { font-size: 1.1rem; text-align: center;} .package ul li { font-size: 0.85rem; padding-left: 18px; } .package.popular .badge { top: 10px; right: -25px; padding: 4px 28px; } }
+
+
+/* CLIENT INFORMATION PART...................... */
+/* Brand variables (optional but clean) */
+:root{
+  --brand: #ff3c78;
+  --dark: #333;
+  --white: #fff;
+  --tint: #fff5f8;   /* soft pink background */
+  --border: #ffd1df; /* light pink border */
+}
+
+/* Hero trust line */
+.hero-trust{
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--dark);
+  opacity: 0.9;
+}
+
+/* Checklist section */
+.client-checklist{
+  padding: 60px 0;
+  background: var(--tint); /* adds brand feel */
+}
+
+.checklist-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.checklist{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each checklist item: clean card with brand accent */
+.checklist li{
+  background: var(--white);
+  color: var(--dark);
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--brand); /* brand accent */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* If you use icons inside li (recommended) */
+.checklist li i{
+  color: var(--brand);
+  margin-right: 10px;
+}
+
+.client-checklist h2{
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+/* CTA area */
+.checklist-cta{
+  margin-top: 22px;
+}
+
+/* Link styling inside the note */
+.small-note{
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  opacity: 0.9;
+}
+
+.small-note a{
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.small-note a:hover{
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .checklist-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 /* ===== TESTIMONIALS / SOCIAL PROOF - RESTYLE ===== */
