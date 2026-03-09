@@ -6,66 +6,75 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Primary SEO -->
-  <title>ARIDESIGN — Professional Web & Graphic Design in Limpopo & South Africa</title>
+  <title>Affordable Web Design, Graphic Design & Photography in Limpopo | ARIDESIGN</title>
 
-  <meta name="description" content="ARIDESIGN offers expert web and graphic design services for startups, small businesses, and churches in Limpopo and South Africa. Logos, branding, websites, and marketing visuals.">
-  <meta name="keywords" content="web design Limpopo, graphic design Limpopo, branding, logo design, small business design South Africa, website design, ARIDESIGN">
+  <meta name="description" content="ARIDESIGN offers affordable web design, graphic design, branding, photography and videography services in Limpopo. We help small businesses, startups and organisations build strong brands and professional websites.">
+
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aridesign.co.za/">
 
-  <!-- Open Graph / Social Sharing -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ARIDESIGN — Professional Web & Graphic Design in Limpopo & South Africa">
-  <meta property="og:description" content="Expert web and graphic design services for startups, small businesses, and churches in Limpopo and South Africa. Logos, branding, websites, and marketing visuals.">
+  <meta property="og:title" content="Web Design, Graphic Design & Photography in Limpopo | ARIDESIGN">
+  <meta property="og:description" content="Affordable web design, graphic design, branding, photography and videography services in Limpopo for small businesses, startups and organisations.">
   <meta property="og:image" content="https://aridesign.co.za/images/graphic-design-workspace.webp">
   <meta property="og:url" content="https://aridesign.co.za/">
   <meta property="og:site_name" content="ARIDESIGN">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://aridesign.co.za/">
-
   <!-- Favicon -->
   <link rel="icon" href="https://aridesign.co.za/images/favicon.ico" type="image/x-icon">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Stylesheet -->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Performance -->
+  <link rel="preload" as="image" href="https://aridesign.co.za/images/graphic-design-banner.webp">
 
-  <!-- Performance / Preload -->
-  <link rel="preload" as="image" href="https://aridesign.co.za/images/graphic-design-workspace.webp">
-
-  <!-- Structured Data (JSON-LD for Local SEO) -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "ARIDESIGN",
     "image": "https://aridesign.co.za/images/graphic-design-workspace.webp",
-    "@id": "https://aridesign.co.za/",
     "url": "https://aridesign.co.za/",
     "telephone": "+277684757321",
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Limpopo"
+      },
+      {
+        "@type": "Country",
+        "name": "South Africa"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Your Street Address",
-      "addressLocality": "Limpopo",
-      "addressRegion": "ZA",
-      "postalCode": "0000",
+      "addressRegion": "Limpopo",
       "addressCountry": "ZA"
     },
     "sameAs": [
       "https://web.facebook.com/Magicshootstudios/",
-      "https://www.instagram.com/yourprofile/",
       "https://wa.me/27684757321"
+    ],
+    "serviceType": [
+      "Web Design",
+      "Graphic Design",
+      "Branding",
+      "Photography",
+      "Videography"
     ]
   }
   </script>
+</head>
+  
 
 <!-- ===== HEADER / NAV ===== -->
 <header>
@@ -140,37 +149,44 @@
     <li><a href="quote.html" class="btn-quote">Get a Quote</a></li>
   </ul>
 </nav>
-</header>
 
+
+<body>
 <!-- ===== HERO SECTION ===== -->
-<section class="hero-home" aria-label="ARIDESIGN - Graphic Design, Web & Photography in Limpopo & South Africa">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-home" aria-label="ARIDESIGN hero section">
   <div class="hero-bg-wrapper">
-    <img src="images/graphic-design-banner.webp" 
-         alt="Laptop on a desk with design sketches and creative workspace elements" 
-         class="hero-bg" loading="lazy">
+    <img
+      src="images/graphic-design-banner.webp"
+      alt="Creative workspace for graphic design, web design and photography services"
+      class="hero-bg"
+      fetchpriority="high"
+    >
     <div class="hero-overlay"></div>
-
-    <!-- Optional Floating Shapes -->
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
-    <div class="shape shape3"></div>
   </div>
 
-  <div class="hero-content">
-<h1 id="typewriter" class="highlight"></h1>
-<p>
-  Welcome to <strong>ARIDESIGN</strong> — professional <strong>Graphic Design</strong>, <strong>Web Design</strong>, and <strong>Photography</strong> for small businesses, startups, and churches across Limpopo and South Africa.
-</p>
+  <div class="hero-shell">
+    <div class="hero-content">
+      <span class="hero-line"></span>
 
+      <h1>
+        Helping Your Brand<br>
+        <span>Stand Out</span>
+      </h1>
 
-    <div class="cta-buttons">
-      <a href="graphic-design.html" class="btn-hero btn-outline">Explore Graphic Design</a>
-      <a href="web-design.html" class="btn-hero">Explore Web Design</a>
-      <a href="photo-videography.html" class="btn-hero">Explore Photography</a>
+      <p class="hero-description">
+        Graphic design, web design and photography for businesses in Limpopo and across South Africa.
+      </p>
+
+      <div class="hero-actions">
+        <a href="quote.html" class="btn-hero btn-primary">Get a Free Quote</a>
+        <a href="graphic-design.html" class="btn-hero btn-secondary">Explore Graphic Design</a>
+        <a href="web-design.html" class="btn-hero btn-secondary">Explore Web Design</a>
+        
+      </div>
     </div>
   </div>
 </section>
-
 
 <!-- ===== SERVICES OVERVIEW ===== -->
 <section class="services-overview section">
@@ -190,7 +206,7 @@
         </svg>" alt="Graphic Design Icon" />
 
         <h3>Graphic Design</h3>
-        <p>Logo design, branding, brochures, social media graphics, and all visual materials that make your brand unforgettable.</p>
+        <p>Professional logo design, branding, brochures, social media graphics and marketing materials for businesses across Limpopo.</p>
         <a href="graphic-design.html" class="btn-service">View Portfolio</a>
       </div>
 
@@ -227,7 +243,31 @@
 </section>
 
 
+<!-- Location for better seo------------------- -->
+<section class="location-seo">
+  <div class="container">
 
+    <h2>Creative Design Services in Limpopo</h2>
+
+    <p>
+      ARIDESIGN provides professional <strong>web design</strong>, 
+      <strong>graphic design</strong>, and <strong>photography services</strong> 
+      for businesses across Limpopo including 
+      <strong>Polokwane, Thohoyandou, Giyani, Louis Trichardt, Mokopane</strong>.
+    </p>
+
+    <p>
+      If you're searching for a <strong>web designer in Limpopo</strong>, 
+      a <strong>graphic designer near you</strong>, or a 
+      <strong>wedding photographer in Limpopo</strong>, ARIDESIGN works with clients
+      across Limpopo and all of South Africa remotely via WhatsApp and email.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- FEATURED PROJECT SECTION------------------- -->
 <main class="featured">
 <header>
 <h2>Featured Projects</h2>
@@ -259,7 +299,7 @@
 
       <!-- SLIDES -->
       <div class="slides">
-<div class="slide"><img src="images/logo.webp" alt="Logo design showcasing typography and brand identity for a client"></div>
+<div class="slide"><img src="images/logo.webp" alt="Logo design project by ARIDESIGN graphic designer in Limpopo"></div>
 <div class="slide"><img src="images/campaign-mockup.webp" alt="Awareness campaign mockup with posters and banners for corporate client"></div>
 <div class="slide"><img src="images/consulting group branding.webp" alt="Branding visuals and design for a consulting group"></div>
 <div class="slide"><img src="images/brouchure design.webp" alt="Brochure design with modern layout, typography, and graphics"></div>
@@ -397,7 +437,7 @@
 <section id="blog" class="blog-home section">
   <div class="section-header">
     <h2 class="section-title">Latest <span class="highlight">Articles</span></h2>
-    <p class="section-subtitle">Tips, insights, and tutorials on web & graphic design to help your business grow online.</p>
+    <p class="section-subtitle"> Tips, insights and practical advice on web design, graphic design, branding and online growth for small businesses in Limpopo and South Africa.</p>
   </div>
 
   <div class="blog-grid">
@@ -453,23 +493,22 @@
 <!-- CONTACT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 <section id="contact" class="contact">
   <div class="container">
-    <h2 class="contact-title">Contact ARIDESIGN — Graphic, Web & Photography</h2>
+    <h2 class="contact-title">Contact ARIDESIGN for Web Design, Graphic Design & Photography in Limpopo</h2>
     <p class="contact-subtitle">
-      Reach out for professional <strong>graphic design</strong>, <strong>branding</strong>, and <strong>web design</strong> solutions for small businesses, churches, startups, and community projects across <strong>Limpopo</strong> and South Africa.
+      Looking for a professional <strong>web designer</strong>, <strong>graphic designer</strong>,
+      <strong>branding specialist</strong>, or <strong>photographer in Limpopo</strong>?
+      Contact ARIDESIGN today for creative services tailored to your business or project.
     </p>
-    
+
     <div class="contact-links">
-      <a href="https://wa.me/27684757321" target="_blank" class="contact-link whatsapp">
+      <a href="https://wa.me/27684757321" target="_blank" rel="noopener" class="contact-link whatsapp">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
-      <a href="mailto:infoaridesignza@gmail.com" target="_blank" class="contact-link email">
+      <a href="mailto:infoaridesignza@gmail.com" class="contact-link email">
         <i class="fas fa-envelope"></i> Email
       </a>
-      <a href="https://web.facebook.com/Magicshootstudios/" target="_blank" class="contact-link facebook">
+      <a href="https://web.facebook.com/Magicshootstudios/" target="_blank" rel="noopener" class="contact-link facebook">
         <i class="fab fa-facebook"></i> Facebook
-      </a>
-      <a href="#" target="_blank" class="contact-link instagram">
-        <i class="fab fa-instagram"></i> Instagram
       </a>
     </div>
   </div>
