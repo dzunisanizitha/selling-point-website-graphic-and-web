@@ -3138,6 +3138,65 @@ input[type="radio"] {
   transform: translateY(-2px);
 }
 
+/* CTA Services Section */
+.cta-services {
+  background-color: #ff3c78; /* brand pink */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.cta-services h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.cta-services p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cta-buttons-grid .cta-btn {
+  background-color: #fff;
+  color: #ff3c78;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons-grid .cta-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Make sure the Quote button stands out */
+.cta-buttons-grid .btn-quote {
+  background-color: #333; /* brand dark */
+  color: #fff;
+}
+
+.cta-buttons-grid .btn-quote:hover {
+  background-color: #fff;
+  color: #ff3c78;
+  border: 1px solid #ff3c78;
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .blog-home .blog-grid {
