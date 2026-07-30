@@ -152,97 +152,7 @@ faqItems.forEach(item => {
 // -------------------------
 // Cookie banner homepage>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // -------------------------
-if (!localStorage.getItem("cookieConsent")) {
-  const banner = document.createElement("div");
-  banner.id = "cookie-banner";
 
-  banner.innerHTML = `
-    <span>
-      We use cookies to improve your experience on <strong>ARIDESIGN</strong>.
-      Read our <a href="privacy-policy.html">Privacy Policy</a>.
-    </span>
-    <button id="allowCookies">Allow</button>
-  `;
-
-  document.body.appendChild(banner);
-
-  // Slide-up animation
-  setTimeout(() => {
-    banner.style.bottom = "0";
-  }, 100);
-
-  document
-    .getElementById("allowCookies")
-    .addEventListener("click", function () {
-      localStorage.setItem("cookieConsent", "true");
-      banner.style.bottom = "-120px";
-      setTimeout(() => banner.remove(), 500);
-    });
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  // -------------------------
-  // 3. Typewriter
-  // -------------------------
-  const headline = "Helping Your Brand Stand Out with Graphic Design, Web & Photography";
-  let i = 0;
-  const typeEl = document.getElementById("typewriter");
-
-  function typeWriter() {
-    if (!typeEl) return;
-    if (i < headline.length) {
-      typeEl.innerHTML += headline.charAt(i);
-      i++;
-      setTimeout(typeWriter, 70);
-    }
-  }
-  typeWriter();
-  
-
-  // -------------------------
-  // 4. Scroll reveal
-  // -------------------------
-  const elements = document.querySelectorAll(
-    "section h1, section h2, section h3, section p, section a, section span"
-  );
-  elements.forEach(el => el.classList.add('pop-up'));
-
-  function reveal() {
-    const windowHeight = window.innerHeight;
-    elements.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < windowHeight - 50) el.classList.add('revealed');
-    });
-  }
-
-  window.addEventListener('scroll', reveal);
-  reveal();
-
-  // -------------------------
-  // 5. Portfolio slider
-  // -------------------------
-  const portfolioSliders = document.querySelectorAll('.portfolio-slider');
-
-  portfolioSliders.forEach(slider => {
-    const track = slider.querySelector('.slider-track');
-    const slides = slider.querySelectorAll('.portfolio-card');
-    let index = 0;
-
-    function slidePortfolio() {
-      if (slides.length === 0) return; // safety check
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${index * slideWidth}px)`;
-      track.style.transition = 'transform 0.5s ease-in-out';
-      index++;
-      if (index >= slides.length) index = 0;
-    }
-
-    setInterval(slidePortfolio, 4000);
-  });
-
-});
   // -------------------------
   // HOMEPAGE DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   // -------------------------
@@ -271,6 +181,9 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', reveal);
   reveal();
 });
+
+
+
 
   // WEB DESIGN PAGE JS STARTS HERE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
