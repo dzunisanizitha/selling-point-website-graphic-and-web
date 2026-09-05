@@ -75,32 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  // select all headings, paragraphs, buttons, spans inside sections
-  const elements = document.querySelectorAll(
-    "section h1, section h2, section h3, section p, section a, section span"
-  );
 
-  // add pop-up class to all selected elements
-  elements.forEach(el => el.classList.add('pop-up'));
 
-  // function to reveal elements in viewport
-  function reveal() {
-    elements.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (top < windowHeight - 50) {
-        el.classList.add('revealed');
-      }
-    });
-  }
-
-  // trigger on scroll and on page load
-  window.addEventListener('scroll', reveal);
-  reveal();
-});
-
-  // ARTWORK PORTFOLIO DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // GRAPHIC DESIGN PAGE>>>>>
 document.addEventListener("DOMContentLoaded", function() {
