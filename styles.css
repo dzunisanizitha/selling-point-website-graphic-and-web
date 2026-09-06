@@ -11399,6 +11399,145 @@ font-size:16px;
 }
 
 
+/* =========================================
+   PREMIUM WEBSITE DESIGN BLOG CTA latest blog 
+   ========================================= */
+
+.website-cta {
+    margin: 60px 0 30px;
+    padding: 55px 45px;
+    text-align: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #212121, #212121);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative glow */
+.website-cta::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: -100px;
+    right: -80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.website-cta::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    bottom: -100px;
+    left: -60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* CTA heading */
+.website-cta h3 {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 15px;
+    max-width: 700px;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+/* CTA paragraph */
+.website-cta p {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto 25px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* Main CTA button */
+.website-cta .btn-cta {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 8px 0 20px;
+    padding: 14px 30px;
+    border-radius: 8px;
+    background: #ff3c78;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+.website-cta .btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* WhatsApp / contact line */
+.website-cta .cta-contact {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* WhatsApp link */
+.website-cta .cta-contact a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+}
+
+
+.website-cta .cta-contact a:hover {
+    opacity: 0.75;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .website-cta {
+        margin: 45px 0 25px;
+        padding: 40px 22px;
+        border-radius: 14px;
+    }
+
+    .website-cta h3 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .website-cta p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .website-cta .btn-cta {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 20px;
+    }
+
+}
+
 /* ===== FOOTER ===================================================== */
 .site-footer {
   --footer-bg: #111;
