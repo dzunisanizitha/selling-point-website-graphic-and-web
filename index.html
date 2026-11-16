@@ -163,62 +163,51 @@
 
 
 <!--================ HERO =================-->
-<section class="hero" aria-labelledby="hero-title">
+
+<!--================ HERO SECTION ================-->
+<section class="hero" id="home-hero" aria-labelledby="hero-title">
     <div class="hero-container">
 
-        <!-- Left Content -->
+        <!-- Left: Hero message -->
         <div class="hero-content">
-            
+
             <span class="hero-label">
-                Creative Design Agency &bull; South Africa
+                Corporate Graphic Design &amp; Visual Communication
             </span>
 
-            <!-- Upgraded to include high-value semantic terms naturally -->
             <h1 id="hero-title">
-                Strategic Design <span>Solutions.</span><br>Powerful Brands.
+                Professional design.
+                <span>Clear communication.</span>
             </h1>
 
-            <!-- Enhanced with "we" narrative, strong commercial intent keywords, and geographic scope -->
             <p>
-                We deliver high-impact graphic design, custom website design, and visual content production that scale businesses and organizations across South Africa.
+                We create thoughtful, high-quality graphic design that helps
+                businesses and organisations present their ideas, services
+                and information with confidence.
             </p>
 
             <div class="hero-buttons">
-                <a href="quote.html" class="btn-primary">
-                    Let's Talk
+                <a href="quote.html" class="hero-btn hero-btn-primary">
+                    Discuss a Project
                 </a>
-                <a href="portfolio.html" class="btn-secondary">
-                    View Portfolio
+
+                <a href="portfolio.html" class="hero-btn hero-btn-secondary">
+                    View Our Work
                 </a>
             </div>
 
-            <!-- Injected anchor-relevant titles for descriptive crawling context -->
-            <div class="hero-services">
-                <a href="graphic-design.html" title="Graphic Design and Corporate Branding Services">Graphic Design</a>
-                <span>&bull;</span>
-                <a href="web-design.html" title="Responsive Website Design and Development">Web Design</a>
-                <span>&bull;</span>
-                <a href="photo-videography.html" title="Commercial Photography and Videography Assets">Photography &amp; Videography</a>
-            </div>
         </div>
 
-        <!-- Right Content -->
+        <!-- Right: Featured design work -->
         <div class="hero-image">
-            <!-- Laptop Element -->
-            <div class="laptop">
-                <div class="screen">
-                    <!-- 
-                      1. Added high fetchpriority to boost LCP (Largest Contentful Paint) speeds.
-                      2. Upgraded alt text with localized semantic terms for image searches.
-                      3. Injected dimensions to stabilize Cumulative Layout Shift (CLS).
-                    -->
-                    <img src="images/responsive website.webp" 
-                         alt="ARIDESIGN showcase of responsive corporate website design in South Africa" 
-                         fetchpriority="high" 
-                         width="600" 
-                         height="380">
-                </div>
-                <div class="base"></div>
+            <div class="hero-image-frame">
+                <img
+                    src="images/Company mockup-website.webp"
+                    alt="ARIDESIGN corporate graphic design and visual communication portfolio"
+                    width="900"
+                    height="700"
+                    fetchpriority="high"
+                >
             </div>
         </div>
 
@@ -227,149 +216,70 @@
 
 
 
-<!--================ ABOUT SECTION ================-->
-<section class="about" aria-labelledby="about-title">
-    <div class="about-container">
 
-        <div class="about-heading">
-            <span class="about-label">
-                Who We Are &bull; ARIDESIGN
-            </span>
-            <h2 id="about-title">
-                We create <span>visual experiences</span> that build market trust.
-            </h2>
-        </div>
+<!--================ WHO WE SERVE ================-->
 
-        <div class="about-content">
-            <!-- Strategic inclusion of location scope, remote delivery, and "we" corporate narrative -->
-            <p>
-                <strong>ARIDESIGN</strong> is a modern, results-driven creative agency specializing in professional 
-                <strong>graphic design, corporate branding, and responsive website design</strong>. Operating remotely from 
-                Limpopo, we help businesses, large organizations, and entrepreneurs across South Africa communicate 
-                professionally, dominate their niche, and establish a commanding online presence.
-            </p>
-            
-            <!-- Optimized descriptive anchor text for internal linking authority -->
-            <a href="about.html" class="about-link" title="Learn more about the ARIDESIGN team and design process">
-                Read About Our Creative Agency &rarr;
-            </a>
-        </div>
+<section class="who-we-serve" id="who-we-serve"
+         aria-labelledby="who-we-serve-title">
 
-    </div>
+    <div class="serve-container">
 
-    <div class="about-line"></div>
+        <!-- Section introduction -->
+        <div class="serve-intro">
 
-    <!-- Upgraded from vague terms to high-value commercial search phrases -->
-    <div class="about-bottom">
-        
-            Corporate Branding
-        </span>
-        <span title="Custom UI/UX and Website Design">
-            Website Design
-        </span>
-        <span title="Professional Business Collateral and Visual Content Production">
-            Visual Content Production
-        </span>
-    </div>
-</section>
+            <span class="serve-label">WHO WE WORK WITH</span>
 
-
-<!--================ SERVICES SECTION //////////////////////////////////////////////////================-->
-
-<section class="creative-services">
-
-    <div class="creative-services-container">
-
-
-        <div class="services-intro">
-
-            <span>
-                OUR SERVICES
-            </span>
-
-            <h2>
-                Creative design solutions
-                <br>
-                <strong>for growing businesses.</strong>
+            <h2 id="who-we-serve-title">
+                Design that supports
+                <span>organisations with purpose.</span>
             </h2>
 
             <p>
-                Professional graphic design, branding and website design
-                for businesses, organisations and entrepreneurs across
-                South Africa.
+                We work with businesses, organisations and institutions
+                that need professional visual communication to present
+                their work, share information and connect with their audiences.
             </p>
 
         </div>
 
+        <!-- Audience groups -->
+        <div class="serve-grid">
 
+            <article class="serve-item">
+                <span class="serve-number">01</span>
 
-        <div class="services-menu">
+                <h3>Businesses</h3>
 
+                <p>
+                    Helping businesses communicate their brand,
+                    promote their services and present a consistent,
+                    professional image.
+                </p>
+            </article>
 
-            <!-- Graphic Design -->
+            <article class="serve-item">
+                <span class="serve-number">02</span>
 
-            <a href="graphic-design.html" class="service-line">
+                <h3>Organisations &amp; NGOs</h3>
 
-                <div class="service-name">
-                    Graphic Design &amp; Branding
-                </div>
+                <p>
+                    Supporting organisations with clear, engaging
+                    designs for publications, campaigns, reports
+                    and communication materials.
+                </p>
+            </article>
 
-                <div class="service-description">
-                    Professional graphic design and branding solutions,
-                    including logos, company profiles and marketing
-                    materials for digital and print.
-                </div>
+            <article class="serve-item">
+                <span class="serve-number">03</span>
 
-                <div class="service-arrow">
-                    ↗
-                </div>
+                <h3>Public Institutions</h3>
 
-            </a>
-
-
-
-            <!-- Website Design -->
-
-            <a href="web-design.html" class="service-line">
-
-                <div class="service-name">
-                    Website Design
-                </div>
-
-                <div class="service-description">
-                    Responsive, professional websites designed for
-                    small businesses, organisations and entrepreneurs
-                    across South Africa.
-                </div>
-
-                <div class="service-arrow">
-                    ↗
-                </div>
-
-            </a>
-
-
-
-            <!-- Visual Content -->
-
-            <a href="photo-videography.html" class="service-line">
-
-                <div class="service-name">
-                    Visual Content Production
-                </div>
-
-                <div class="service-description">
-                    Professional photography and visual content that
-                    helps businesses communicate their brand and
-                    connect with their audience.
-                </div>
-
-                <div class="service-arrow">
-                    ↗
-                </div>
-
-            </a>
-
+                <p>
+                    Creating professional visual materials that help
+                    institutions present information, communicate
+                    initiatives and reach their communities.
+                </p>
+            </article>
 
         </div>
 
@@ -378,92 +288,278 @@
 </section>
 
 
+<!--================ FEATURED CREATIVE WORK ================-->
 
-<!--================ FEATURED PORTFOLIO ================-->
+<section class="featured-work-section" id="featured-work">
 
-<section class="portfolio-section">
+    <div class="featured-work-container">
 
-    <div class="portfolio-container">
-
-        <div class="portfolio-header">
-
+        <div class="work-heading">
             <div>
-
-                <span class="portfolio-tag">
-                    FEATURED PROJECTS
-                </span>
+                <span class="work-eyebrow">SELECTED CREATIVE WORK</span>
 
                 <h2>
-                    Graphic &amp; Website Design Projects
+                    Design made to
+                    <span>make an impression.</span>
                 </h2>
-
             </div>
 
-            <a href="portfolio.html" class="portfolio-btn">
-                View More Projects
+            <a href="portfolio.html" class="work-view-all">
+                Explore Our Portfolio <span>↗</span>
+            </a>
+        </div>
+
+
+        <div class="work-gallery">
+
+            <!-- FEATURED PROJECT -->
+            <a href="graphic-design.html"
+               class="work-item work-featured">
+
+                <div class="work-image">
+                    <img
+                        src="images/corporate identity,.webp"
+                        alt="Corporate identity and branding design by ARIDESIGN"
+                        loading="lazy">
+                </div>
+
+                <div class="work-caption">
+                    <div>
+                        <span>BRANDING &amp; IDENTITY</span>
+                        <h3>Corporate Identity Design</h3>
+                    </div>
+
+                    <span class="work-arrow">↗</span>
+                </div>
+
+            </a>
+
+
+            <!-- WEBSITE DESIGN -->
+            <a href="web-design.html" class="work-item">
+
+                <div class="work-image">
+                    <img
+                        src="images/responsive-web-design-.webp"
+                        alt="Responsive website design by ARIDESIGN"
+                        loading="lazy">
+                </div>
+
+                <div class="work-caption">
+                    <div>
+                        <span>DIGITAL DESIGN</span>
+                        <h3>Website Design</h3>
+                    </div>
+
+                    <span class="work-arrow">↗</span>
+                </div>
+
+            </a>
+
+
+            <!-- COMPANY PROFILE -->
+            <a href="graphic-design.html" class="work-item">
+
+                <div class="work-image">
+                    <img
+                        src="images/brochure-college...webp"
+                        alt="Company profile and brochure design by ARIDESIGN"
+                        loading="lazy">
+                </div>
+
+                <div class="work-caption">
+                    <div>
+                        <span>EDITORIAL DESIGN</span>
+                        <h3>Company Profile Design</h3>
+                    </div>
+
+                    <span class="work-arrow">↗</span>
+                </div>
+
+            </a>
+
+
+            <!-- LOGO DESIGN -->
+            <a href="graphic-design.html" class="work-item">
+
+                <div class="work-image">
+                    <img
+                        src="images/logo.webp"
+                        alt="Logo design and visual identity by ARIDESIGN"
+                        loading="lazy">
+                </div>
+
+                <div class="work-caption">
+                    <div>
+                        <span>VISUAL IDENTITY</span>
+                        <h3>Logo Design</h3>
+                    </div>
+
+                    <span class="work-arrow">↗</span>
+                </div>
+
             </a>
 
         </div>
 
 
-        <!-- Featured Project -->
+        <div class="work-bottom">
+            <p>Thoughtful design. Professional presentation. Lasting impressions.</p>
 
-        <a href="graphic-design.html" class="featured-work">
+            <a href="quote.html">
+                Have a project in mind? Let's talk <span>↗</span>
+            </a>
+        </div>
 
-            <img src="images/corporate identity,.webp" 
-                 alt="Corporate identity and branding design by AriDesign">
+    </div>
 
-            <div class="featured-overlay">
+</section>
 
-                <div>
 
-                    <small>Graphic Design &amp; Branding</small>
 
-                    <h3>
-                        Corporate Identity Design
-                    </h3>
+
+
+<!--================ OUR CREATIVE SERVICES ================-->
+
+<section class="home-services" id="our-services">
+
+    <div class="home-services-container">
+
+        <!-- SECTION HEADING -->
+        <div class="home-services-heading">
+            <span class="services-eyebrow">WHAT WE CREATE</span>
+
+            <h2>
+                Creative solutions for
+                <span>professional brands.</span>
+            </h2>
+
+            <p>
+                From corporate communication to digital experiences,
+                we help organisations present themselves with confidence.
+            </p>
+        </div>
+
+
+        <!-- SERVICE CARDS -->
+        <div class="home-services-grid">
+
+
+            <!-- 01 GRAPHIC DESIGN -->
+            <a href="graphic-design.html"
+               class="home-service-card">
+
+                <div class="service-visual">
+
+                    <img src="images/company profile-mockup.webp"
+                         alt="Corporate Graphic Design and Branding Portfolio"
+                         class="service-image">
+
+                    <span class="visual-number">01</span>
+
+                    <span class="image-overlay"></span>
 
                 </div>
 
-                <span>View Project →</span>
+                <div class="home-service-info">
 
-            </div>
+                    <span class="service-category">
+                        CORPORATE COMMUNICATION
+                    </span>
 
-        </a>
+                    <h3>Graphic Design &amp; Branding</h3>
 
+                    <p>
+                        Company profiles, brochures, prospectuses,
+                        brand identities and marketing materials.
+                    </p>
 
-        <!-- Smaller Projects -->
+                    <span class="service-link">
+                        Explore Service <span>↗</span>
+                    </span>
 
-        <div class="portfolio-grid">
-
-            <a href="web-design.html" class="portfolio-card">
-
-                <img src="images/responsive-web-design-.webp" 
-                     alt="Responsive website design by AriDesign">
-
-                <h4>Website Design</h4>
-
-            </a>
-
-
-            <a href="graphic-design.html" class="portfolio-card">
-
-                <img src="images/brochure-college...webp" 
-                     alt="Professional company profile design by AriDesign">
-
-                <h4>Company Profile Design</h4>
+                </div>
 
             </a>
 
 
-            <a href="graphic-design.html" class="portfolio-card">
 
-                <img src="images/logo.webp" 
-                     alt="Professional logo design by AriDesign">
+            <!-- 02 WEBSITE DESIGN -->
+            <a href="web-design.html"
+               class="home-service-card">
 
-                <h4>Logo Design</h4>
+                <div class="service-visual">
+
+                    <img src="images/responsive website.webp"
+                         alt="Professional Website Design Portfolio"
+                         class="service-image">
+
+                    <span class="visual-number">02</span>
+
+                    <span class="image-overlay"></span>
+
+                </div>
+
+                <div class="home-service-info">
+
+                    <span class="service-category">
+                        DIGITAL EXPERIENCES
+                    </span>
+
+                    <h3>Website Design</h3>
+
+                    <p>
+                        Professional, responsive websites for
+                        businesses and organisations.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service <span>↗</span>
+                    </span>
+
+                </div>
 
             </a>
+
+
+
+            <!-- 03 PHOTOGRAPHY & VIDEOGRAPHY -->
+            <a href="photo-videography.html"
+               class="home-service-card">
+
+                <div class="service-visual">
+
+                    <img src="images/mhluri 1.webp"
+                         alt="Professional Photography and Videography Portfolio"
+                         class="service-image">
+
+                    <span class="visual-number">03</span>
+
+                    <span class="image-overlay"></span>
+
+                </div>
+
+                <div class="home-service-info">
+
+                    <span class="service-category">
+                        VISUAL STORYTELLING
+                    </span>
+
+                    <h3>Photography &amp; Videography</h3>
+
+                    <p>
+                        Professional visual content that helps
+                        communicate your brand and message.
+                    </p>
+
+                    <span class="service-link">
+                        Explore Service <span>↗</span>
+                    </span>
+
+                </div>
+
+            </a>
+
 
         </div>
 
@@ -472,108 +568,8 @@
 </section>
 
 
-<!--================ WHY CHOOSE US =================-->
-
-<section class="why-us">
-
-    <div class="why-container">
-
-        <!-- Heading -->
-
-        <div class="why-header">
-
-            <span class="section-tag">
-                WHY CHOOSE ARIDESIGN
-            </span>
-
-            <h2>
-                Professional design built around 
-                your brand and business goals.
-            </h2>
-
-        </div>
 
 
-
-        <!-- Content -->
-
-        <div class="why-grid">
-
-            <div class="why-card">
-
-                <span>01</span>
-
-                <h3>
-                    Strategic Graphic Design
-                </h3>
-
-                <p>
-                    From logos and branding to company profiles and marketing
-                    materials, every design is created to communicate your
-                    brand clearly and professionally.
-                </p>
-
-            </div>
-
-
-
-            <div class="why-card">
-
-                <span>02</span>
-
-                <h3>
-                    Professional Website Design
-                </h3>
-
-                <p>
-                    Responsive, user-focused websites designed to give
-                    businesses and organisations a professional online
-                    presence across desktop and mobile devices.
-                </p>
-
-            </div>
-
-
-
-            <div class="why-card">
-
-                <span>03</span>
-
-                <h3>
-                    Collaborative Approach
-                </h3>
-
-                <p>
-                    We work closely with our clients to understand their
-                    goals, refine their ideas and create design solutions
-                    that represent their brand effectively.
-                </p>
-
-            </div>
-
-
-
-            <div class="why-card">
-
-                <span>04</span>
-
-                <h3>
-                    Reliable &amp; Consistent Service
-                </h3>
-
-                <p>
-                    Clear communication, attention to detail and dependable
-                    project delivery from the initial concept through to
-                    the final design.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 
@@ -675,38 +671,159 @@
 
 </section>
 
+<!--================ MORE CREATIVE WORK ================-->
 
+<section class="more-creative-work" id="more-creative-work">
 
-<!--================ CALL TO ACTION =================-->
+    <div class="more-work-container">
 
-<section class="cta">
+        <!-- HEADING -->
+        <div class="more-work-heading">
 
-    <div class="cta-container">
+            <div>
+                <span class="more-work-eyebrow">EXPLORE OUR CREATIVITY</span>
 
-        <span class="section-tag">
-            LET'S WORK TOGETHER
-        </span>
+                <h2>
+                    More than design.
+                    <span>Creative impact.</span>
+                </h2>
+            </div>
 
-        <h2>
-            Ready to bring your
-            <span>brand</span> to life?
-        </h2>
-
-        <p>
-            Whether you need professional graphic design, branding,
-            a business website or creative marketing materials,
-            we're ready to help bring your ideas to life.
-        </p>
-
-
-        <div class="cta-buttons">
-
-            <a href="quote.html" class="cta-btn-primary">
-                Start Your Project
+            <a href="portfolio.html" class="more-work-link">
+                View All Projects <span>↗</span>
             </a>
 
-            <a href="portfolio.html" class="cta-btn-secondary">
-                View Our Work
+        </div>
+
+
+        <!-- VISUAL GALLERY -->
+        <div class="more-work-grid">
+
+            <!-- CORPORATE BRANDING -->
+            <a href="graphic-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/company branding.webp"
+                         alt="Corporate branding and identity design"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Corporate Branding</h3>
+                    <span>01</span>
+                </div>
+
+            </a>
+
+
+            <!-- COMPANY PROFILES -->
+            <a href="graphic-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/Company mockup-website.webp"
+                         alt="Professional company profile design"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Company Profiles</h3>
+                    <span>02</span>
+                </div>
+
+            </a>
+
+
+            <!-- MARKETING MATERIALS -->
+            <a href="graphic-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/billboard1.webp"
+                         alt="Marketing flyer and promotional graphic design"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Marketing Materials</h3>
+                    <span>03</span>
+                </div>
+
+            </a>
+
+
+            <!-- SOCIAL MEDIA -->
+            <a href="graphic-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/real-estate -instagram ads.webp"
+                         alt="Social media campaign graphic design"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Social Media Designs</h3>
+                    <span>04</span>
+                </div>
+
+            </a>
+
+
+            <!-- WEBSITE DESIGN -->
+            <a href="web-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/resturant-responsive.webp"
+                         alt="Professional website design project"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Website Design</h3>
+                    <span>05</span>
+                </div>
+
+            </a>
+
+
+            <!-- CAMPAIGN DESIGN -->
+            <a href="graphic-design.html" class="more-work-item">
+
+                <div class="more-work-image">
+                    <img src="images/campaign-mockup.webp"
+                         alt="Campaign and event graphic design"
+                         loading="lazy">
+
+                    <span class="more-work-overlay">↗</span>
+                </div>
+
+                <div class="more-work-caption">
+                    <h3>Campaign &amp; Event Design</h3>
+                    <span>06</span>
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- BOTTOM LINK -->
+        <div class="more-work-bottom">
+
+            <p>
+                A selection of creative possibilities by ARIDESIGN.
+            </p>
+
+            <a href="portfolio.html">
+                Discover More of Our Work <span>↗</span>
             </a>
 
         </div>
@@ -715,6 +832,75 @@
 
 </section>
 
+
+
+<!--================ FINAL CALL TO ACTION ================-->
+
+<section class="home-cta" id="contact-cta">
+
+    <div class="home-cta-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="home-cta-content">
+
+            <span class="home-cta-eyebrow">
+                HAVE A PROJECT IN MIND?
+            </span>
+
+            <h2>
+                Let's bring your
+                <span>ideas to life.</span>
+            </h2>
+
+            <p>
+                From corporate branding to creative campaigns,
+                let's create something exceptional together.
+            </p>
+
+            <div class="home-cta-buttons">
+
+                <a href="quote.html" class="home-cta-primary">
+                    Request a Quote <span>↗</span>
+                </a>
+
+                <a href="portfolio.html" class="home-cta-secondary">
+                    Explore Our Work
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT VISUAL -->
+        <div class="home-cta-visual">
+
+            <div class="cta-shape cta-shape-one"></div>
+            <div class="cta-shape cta-shape-two"></div>
+
+            <div class="cta-design-card">
+
+                <span class="cta-card-label">ARIDESIGN</span>
+
+                <div class="cta-card-art">
+                    <div class="cta-art-circle"></div>
+                    <div class="cta-art-block"></div>
+                    <div class="cta-art-line"></div>
+                </div>
+
+                <div class="cta-card-bottom">
+                    <span>CREATIVE THINKING.</span>
+                    <span>POWERFUL DESIGN.</span>
+                </div>
+
+            </div>
+
+ 
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- Need Help + WhatsApp Floating Button -->
