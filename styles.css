@@ -8825,12 +8825,35 @@ header { width: 100%; background: #fff; color: #333; position: sticky; top: 0; z
    ARTICLE PREVIEW
 ===================================== */
 
+
+/* =====================================
+   ARTICLE PREVIEW
+===================================== */
+
 .blog-container .intro {
     color: #666666;
     font-size: 16px;
-    line-height: 1.85;
-    margin-bottom: 25px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+
+    /* Display only 2 lines */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 }
+
+.blog-container .intro a {
+    color: #ff3c78;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog-container .intro a:hover {
+    text-decoration: underline;
+}
+
 
 .blog-container .intro a {
     color: #ff3c78;
